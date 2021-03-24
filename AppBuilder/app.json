@@ -1,7 +1,7 @@
 {
   "ApplicationName": "Zone5 Consulting",
   "GitRepositoryUrl": "https://github.com/Zone5Con/Z5Portal.git",
-  "EnableMobileLogin": false,
+  "EnableMobileLogin": true,
   "ResetPasswordTabId": 33,
   "ResetPasswordTabName": "reset-password",
   "ResetPassowrdTabPath": "//reset-password",
