@@ -1,5 +1,5 @@
 {
-  "Name": "TestAdmins",
+  "Name": "TextAdmins",
   "Description": "Returns the information of all TextAdmin records in JSON object format.",
   "HttpMethod": "GET",
   "IsEnabled": true,
@@ -32,7 +32,7 @@
       "ActionType": "PlantAnApp.ReadAllEntity.0.TextAdmin",
       "OrderIndex": 0,
       "Parameters": {
-        "OutputToken": "TestAdmins",
+        "OutputToken": "TextAdmins",
         "RowLimit": "[RowLimit]"
       },
       "IsEnabled": true,
@@ -47,7 +47,7 @@
       "OrderIndex": 1,
       "Parameters": {
         "HttpCode": "200 OK",
-        "Content": "{\"TestAdmins\" : [TestAdmins:json]}",
+        "Content": "{\"TextAdmins\" : [TextAdmins:json]}",
         "Headers": [
           {
             "name": "Content-Type",
