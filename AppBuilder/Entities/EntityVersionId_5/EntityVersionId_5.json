@@ -1,0 +1,13 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 7,
+  "Id": 5,
+  "VersionId": 5,
+  "EntityTabId": 48,
+  "Name": "TextAdmin",
+  "PluralName": "TestAdmins",
+  "Icon": "cogs",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
