@@ -1,0 +1,285 @@
+{
+  "Name": "TextMessage",
+  "Description": "Creates a new record of type TextMessage",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 16,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "CompanyId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"CompanyId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "LoanGuid",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LoanNumber",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "MessageId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TextMessage",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TextMessageHTML",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DateSent",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DeliveryStatus",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DeliveryStatusHTML",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SentTo",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CellPhone",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SentBy",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SentByEmail",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Party",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 13,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Response",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 14,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.TextMessage",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "CompanyId": "[CompanyId]",
+        "LoanGuid": "[LoanGuid]",
+        "LoanNumber": "[LoanNumber]",
+        "MessageId": "[MessageId]",
+        "TextMessage": "[TextMessage]",
+        "TextMessageHTML": "[TextMessageHTML]",
+        "DateSent": "[DateSent]",
+        "DeliveryStatus": "[DeliveryStatus]",
+        "DeliveryStatusHTML": "[DeliveryStatusHTML]",
+        "SentTo": "[SentTo]",
+        "CellPhone": "[CellPhone]",
+        "SentBy": "[SentBy]",
+        "SentByEmail": "[SentByEmail]",
+        "Party": "[Party]",
+        "Response": "[Response]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "TextMessage"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.TextMessage",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "TextMessage"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "CompanyId",
+            "value": "[CreatedRecord:CompanyId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[CreatedRecord:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[CreatedRecord:LoanNumber]"
+          },
+          {
+            "name": "MessageId",
+            "value": "[CreatedRecord:MessageId]"
+          },
+          {
+            "name": "TextMessage",
+            "value": "[CreatedRecord:TextMessage]"
+          },
+          {
+            "name": "TextMessageHTML",
+            "value": "[CreatedRecord:TextMessageHTML]"
+          },
+          {
+            "name": "DateSent",
+            "value": "[CreatedRecord:DateSent]"
+          },
+          {
+            "name": "DeliveryStatus",
+            "value": "[CreatedRecord:DeliveryStatus]"
+          },
+          {
+            "name": "DeliveryStatusHTML",
+            "value": "[CreatedRecord:DeliveryStatusHTML]"
+          },
+          {
+            "name": "SentTo",
+            "value": "[CreatedRecord:SentTo]"
+          },
+          {
+            "name": "CellPhone",
+            "value": "[CreatedRecord:CellPhone]"
+          },
+          {
+            "name": "SentBy",
+            "value": "[CreatedRecord:SentBy]"
+          },
+          {
+            "name": "SentByEmail",
+            "value": "[CreatedRecord:SentByEmail]"
+          },
+          {
+            "name": "Party",
+            "value": "[CreatedRecord:Party]"
+          },
+          {
+            "name": "Response",
+            "value": "[CreatedRecord:Response]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://z5portal.com/api/TextMessage?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
