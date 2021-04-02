@@ -1,0 +1,20 @@
+{
+  "id": 46,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "OptInMessageAgent",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>true</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select OptInMessageAgent from TextAdmin \nwhere CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "OptInMessageAgent",
+    "connectionString": "",
+    "type": "db"
+  }
+}
