@@ -270,15 +270,6 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
-    },
-    {
-      "Name": "TemplateId",
-      "IsDeleted": false,
-      "IsEnabled": false,
-      "OrderIndex": 27,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
     }
   ],
   "Actions": [
@@ -312,8 +303,7 @@
         "Temp8Name": "[Temp8Name]",
         "Temp8Message": "[Temp8Message]",
         "OptInMessage": "[OptInMessage]",
-        "FooterMessage": "[FooterMessage]",
-        "TemplateId": "[TemplateId]"
+        "FooterMessage": "[FooterMessage]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
