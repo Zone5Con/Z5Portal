@@ -1,10 +1,13 @@
 <module type="ActionGrid" version="05.12.05.00">
+    <contentKey />
     <moduleID>426</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>TextMessages Listing</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>5bfd9038-5efa-4313-a466-26f3ad739d66</uniqueId>
+    <uniqueId>7ff7046c-deea-4bd3-ab72-f432917d7eca</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Grid</definition>
