@@ -270,6 +270,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "OptInMessageAgent",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 27,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -303,7 +312,8 @@
         "Temp8Message": "[Temp8Message]",
         "OptInMessage": "[OptInMessage]",
         "FooterMessage": "[FooterMessage]",
-        "CallBackURL": "[CallBackURL]"
+        "CallBackURL": "[CallBackURL]",
+        "OptInMessageAgent": "[OptInMessageAgent]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
