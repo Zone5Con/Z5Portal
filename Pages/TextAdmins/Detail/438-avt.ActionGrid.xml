@@ -1,10 +1,13 @@
 <module type="ActionGrid" version="05.12.05.00">
+    <contentKey />
     <moduleID>438</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>TextQueue Listing</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>2d8e6dc3-6842-493c-864e-dd80f390ca90</uniqueId>
+    <uniqueId>492543b4-0249-4eea-8475-579108ef68ab</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Grid</definition>
