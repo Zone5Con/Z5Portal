@@ -496,7 +496,7 @@
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;open-text&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;Value&quot;:&quot;&quot;,&quot;AutocompleteUrl&quot;:&quot;&quot;,&quot;AutofillName&quot;:{&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AutofillAttribute&quot;:{&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Mask&quot;:&quot;&quot;,&quot;MaskOptions&quot;:&quot;&quot;,&quot;MaxLength&quot;:&quot;&quot;,&quot;DeferRequestBy&quot;:&quot;300&quot;,&quot;ConfirmationOfTextBox&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;Readonly&quot;:false,&quot;SaveToReport&quot;:false,&quot;AllowTokens&quot;:&quot;&quot;,&quot;SecureInput&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;yes&quot;,&quot;AutocompleteUrl&quot;:&quot;&quot;,&quot;AutofillName&quot;:{&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AutofillAttribute&quot;:{&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Mask&quot;:&quot;&quot;,&quot;MaskOptions&quot;:&quot;&quot;,&quot;MaxLength&quot;:&quot;&quot;,&quot;DeferRequestBy&quot;:&quot;300&quot;,&quot;ConfirmationOfTextBox&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;Readonly&quot;:false,&quot;SaveToReport&quot;:false,&quot;AllowTokens&quot;:&quot;&quot;,&quot;SecureInput&quot;:true}&lt;/InputData&gt;
       &lt;AutocompleteUrl /&gt;
       &lt;AutofillName&gt;
         &lt;Value /&gt;
@@ -521,7 +521,7 @@
       &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
       &lt;AllowTokens /&gt;
       &lt;SecureInput&gt;True&lt;/SecureInput&gt;
-      &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
+      &lt;Value&gt;&lt;![CDATA[yes]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
       &lt;EnableCondition /&gt;
