@@ -250,6 +250,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "OptInMessageAgent",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 26,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -283,7 +292,8 @@
         "Temp8Message": "[Temp8Message]",
         "OptInMessage": "[OptInMessage]",
         "FooterMessage": "[FooterMessage]",
-        "CallBackURL": "[CallBackURL]"
+        "CallBackURL": "[CallBackURL]",
+        "OptInMessageAgent": "[OptInMessageAgent]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -317,8 +327,8 @@
             "value": "[CreatedRecordId]"
           },
           {
-            "name": "CallBackURL",
-            "value": "[CreatedRecord:CallBackURL]"
+            "name": "OptInMessageAgent",
+            "value": "[CreatedRecord:OptInMessageAgent]"
           },
           {
             "name": "CompanyId",
@@ -419,6 +429,10 @@
           {
             "name": "FooterMessage",
             "value": "[CreatedRecord:FooterMessage]"
+          },
+          {
+            "name": "CallBackURL",
+            "value": "[CreatedRecord:CallBackURL]"
           }
         ],
         "Headers": [
