@@ -10,5 +10,11 @@
     "EntityVersionId": 8,
     "RelationName": "TextMessages",
     "OrderIndex": 28
+  },
+  {
+    "Id": 3,
+    "EntityVersionId": 7,
+    "RelationName": "TextOptIn",
+    "OrderIndex": 29
   }
 ]
