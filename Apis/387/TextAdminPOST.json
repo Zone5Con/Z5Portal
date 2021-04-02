@@ -43,6 +43,213 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "Prefix",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "UtilizeOptIn",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "ShowOther",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "AllowManual",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Animation",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp1Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp1Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp2Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp2Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp3Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp3Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 13,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp4Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 14,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp4Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 15,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp5Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 16,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp5Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 17,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp6Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 18,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp6Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 19,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp7Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 20,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp7Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 21,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp8Name",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 22,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Temp8Message",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 23,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "OptInMessage",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 24,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "FooterMessage",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 25,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -53,7 +260,30 @@
         "OutputToken": "CreatedRecordId",
         "CompanyId": "[CompanyId]",
         "SMSFrom": "[SMSFrom]",
-        "CallBackURL": "[CallBackURL]"
+        "CallBackURL": "[CallBackURL]",
+        "Prefix": "[Prefix]",
+        "UtilizeOptIn": "[UtilizeOptIn]",
+        "ShowOther": "[ShowOther]",
+        "AllowManual": "[AllowManual]",
+        "Animation": "[Animation]",
+        "Temp1Name": "[Temp1Name]",
+        "Temp1Message": "[Temp1Message]",
+        "Temp2Name": "[Temp2Name]",
+        "Temp2Message": "[Temp2Message]",
+        "Temp3Name": "[Temp3Name]",
+        "Temp3Message": "[Temp3Message]",
+        "Temp4Name": "[Temp4Name]",
+        "Temp4Message": "[Temp4Message]",
+        "Temp5Name": "[Temp5Name]",
+        "Temp5Message": "[Temp5Message]",
+        "Temp6Name": "[Temp6Name]",
+        "Temp6Message": "[Temp6Message]",
+        "Temp7Name": "[Temp7Name]",
+        "Temp7Message": "[Temp7Message]",
+        "Temp8Name": "[Temp8Name]",
+        "Temp8Message": "[Temp8Message]",
+        "OptInMessage": "[OptInMessage]",
+        "FooterMessage": "[FooterMessage]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -85,6 +315,98 @@
           {
             "name": "Id",
             "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "Prefix",
+            "value": "[CreatedRecord:Prefix]"
+          },
+          {
+            "name": "UtilizeOptIn",
+            "value": "[CreatedRecord:UtilizeOptIn]"
+          },
+          {
+            "name": "ShowOther",
+            "value": "[CreatedRecord:ShowOther]"
+          },
+          {
+            "name": "AllowManual",
+            "value": "[CreatedRecord:AllowManual]"
+          },
+          {
+            "name": "Animation",
+            "value": "[CreatedRecord:Animation]"
+          },
+          {
+            "name": "Temp1Name",
+            "value": "[CreatedRecord:Temp1Name]"
+          },
+          {
+            "name": "Temp1Message",
+            "value": "[CreatedRecord:Temp1Message]"
+          },
+          {
+            "name": "Temp2Name",
+            "value": "[CreatedRecord:Temp2Name]"
+          },
+          {
+            "name": "Temp2Message",
+            "value": "[CreatedRecord:Temp2Message]"
+          },
+          {
+            "name": "Temp3Name",
+            "value": "[CreatedRecord:Temp3Name]"
+          },
+          {
+            "name": "Temp3Message",
+            "value": "[CreatedRecord:Temp3Message]"
+          },
+          {
+            "name": "Temp4Name",
+            "value": "[CreatedRecord:Temp4Name]"
+          },
+          {
+            "name": "Temp4Message",
+            "value": "[CreatedRecord:Temp4Message]"
+          },
+          {
+            "name": "Temp5Name",
+            "value": "[CreatedRecord:Temp5Name]"
+          },
+          {
+            "name": "Temp5Message",
+            "value": "[CreatedRecord:Temp5Message]"
+          },
+          {
+            "name": "Temp6Name",
+            "value": "[CreatedRecord:Temp6Name]"
+          },
+          {
+            "name": "Temp6Message",
+            "value": "[CreatedRecord:Temp6Message]"
+          },
+          {
+            "name": "Temp7Name",
+            "value": "[CreatedRecord:Temp7Name]"
+          },
+          {
+            "name": "Temp7Message",
+            "value": "[CreatedRecord:Temp7Message]"
+          },
+          {
+            "name": "Temp8Name",
+            "value": "[CreatedRecord:Temp8Name]"
+          },
+          {
+            "name": "Temp8Message",
+            "value": "[CreatedRecord:Temp8Message]"
+          },
+          {
+            "name": "OptInMessage",
+            "value": "[CreatedRecord:OptInMessage]"
+          },
+          {
+            "name": "FooterMessage",
+            "value": "[CreatedRecord:FooterMessage]"
           },
           {
             "name": "CompanyId",
