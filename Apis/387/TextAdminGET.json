@@ -53,6 +53,22 @@
             "value": "[RecordId]"
           },
           {
+            "name": "TemplateId",
+            "value": "[Record:TemplateId]"
+          },
+          {
+            "name": "CompanyId",
+            "value": "[Record:CompanyId]"
+          },
+          {
+            "name": "SMSFrom",
+            "value": "[Record:SMSFrom]"
+          },
+          {
+            "name": "CallBackURL",
+            "value": "[Record:CallBackURL]"
+          },
+          {
             "name": "Prefix",
             "value": "[Record:Prefix]"
           },
@@ -143,18 +159,6 @@
           {
             "name": "FooterMessage",
             "value": "[Record:FooterMessage]"
-          },
-          {
-            "name": "CompanyId",
-            "value": "[Record:CompanyId]"
-          },
-          {
-            "name": "SMSFrom",
-            "value": "[Record:SMSFrom]"
-          },
-          {
-            "name": "CallBackURL",
-            "value": "[Record:CallBackURL]"
           }
         ],
         "Headers": []
