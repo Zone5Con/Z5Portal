@@ -1,10 +1,13 @@
 <module type="ActionForm" version="05.12.11.00">
+    <contentKey />
     <moduleID>427</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>TextMessages Add Existing Form</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>b4ca8d75-acfc-4eb6-9520-b67c01dc9048</uniqueId>
+    <uniqueId>03ce29e1-5a84-4433-a7f9-75485f5754ea</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Form</definition>
