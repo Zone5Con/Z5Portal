@@ -1,0 +1,20 @@
+{
+  "id": 10,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "Temp1Name",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select Temp1Name from TextAdmin\nwhere CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "Temp1Name",
+    "connectionString": "",
+    "type": "db"
+  }
+}
