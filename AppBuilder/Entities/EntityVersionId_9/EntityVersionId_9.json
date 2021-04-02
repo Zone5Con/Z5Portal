@@ -1,0 +1,13 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 68,
+  "Id": 9,
+  "VersionId": 9,
+  "EntityTabId": 56,
+  "Name": "TextQueue",
+  "PluralName": "TextQueues",
+  "Icon": "warehouse",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}

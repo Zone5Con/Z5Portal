@@ -1,0 +1,244 @@
+[
+  {
+    "Id": 67,
+    "EntityVersionId": 9,
+    "Name": "ItemId",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 68,
+    "EntityVersionId": 9,
+    "Name": "CompanyId",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 2
+  },
+  {
+    "Id": 69,
+    "EntityVersionId": 9,
+    "Name": "LoanGuid",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 3
+  },
+  {
+    "Id": 70,
+    "EntityVersionId": 9,
+    "Name": "LoanNumber",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 4
+  },
+  {
+    "Id": 71,
+    "EntityVersionId": 9,
+    "Name": "TextMessage",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 5
+  },
+  {
+    "Id": 72,
+    "EntityVersionId": 9,
+    "Name": "TextMessageHTML",
+    "Type": {
+      "Id": "LargeText",
+      "Name": "Large Text",
+      "InputType": {
+        "Id": "LargeText",
+        "Name": "Large Text",
+        "ValueType": "String",
+        "Length": 2147483647,
+        "Icon": "notes"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 6
+  },
+  {
+    "Id": 73,
+    "EntityVersionId": 9,
+    "Name": "DateSent",
+    "Type": {
+      "Id": "DateTimeOffset",
+      "Name": "Local Date and Time",
+      "InputType": {
+        "Id": "DateTimeOffset",
+        "Name": "Local Date and Time",
+        "ValueType": "DateTimeOffset",
+        "Length": 10,
+        "Icon": "calendar_today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 7
+  },
+  {
+    "Id": 74,
+    "EntityVersionId": 9,
+    "Name": "SentTo",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 8
+  },
+  {
+    "Id": 75,
+    "EntityVersionId": 9,
+    "Name": "CellPhone",
+    "Type": {
+      "Id": "Phone",
+      "Name": "Phone",
+      "InputType": {
+        "Id": "Phone",
+        "Name": "Phone",
+        "ValueType": "String",
+        "Length": 15,
+        "Icon": "phone"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 9
+  },
+  {
+    "Id": 76,
+    "EntityVersionId": 9,
+    "Name": "SentBy",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 10
+  },
+  {
+    "Id": 77,
+    "EntityVersionId": 9,
+    "Name": "Party",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 11
+  }
+]
