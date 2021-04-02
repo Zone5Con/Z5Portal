@@ -1,10 +1,13 @@
 <module type="ActionForm" version="05.12.11.00">
+    <contentKey />
     <moduleID>440</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>TextQueue Add Form</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>4f871ed4-5f4a-441b-9226-afa9140286f0</uniqueId>
+    <uniqueId>00fd87d2-3217-4894-9f76-a632cd69089f</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Form</definition>
