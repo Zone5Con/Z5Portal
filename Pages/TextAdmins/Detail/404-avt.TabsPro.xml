@@ -7,6 +7,7 @@
     <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -152,6 +153,12 @@
           &lt;ModuleOrder&gt;1&lt;/ModuleOrder&gt;
           &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
         &lt;/Module&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;403&lt;/ModuleId&gt;
+          &lt;ModuleTitle&gt;View Form&lt;/ModuleTitle&gt;
+          &lt;ModuleOrder&gt;1&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
       &lt;/Modules&gt;
     &lt;/Tab&gt;
     &lt;Tab&gt;
@@ -173,6 +180,12 @@
         &lt;en-US&gt;TemplateId&lt;/en-US&gt;
       &lt;/Localization&gt;
       &lt;Modules&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;411&lt;/ModuleId&gt;
+          &lt;ModuleTitle&gt;TemplateId Listing&lt;/ModuleTitle&gt;
+          &lt;ModuleOrder&gt;2&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
         &lt;Module&gt;
           &lt;ModuleId&gt;411&lt;/ModuleId&gt;
           &lt;ModuleTitle&gt;TemplateId Listing&lt;/ModuleTitle&gt;
@@ -266,6 +279,12 @@
           &lt;ModuleOrder&gt;12&lt;/ModuleOrder&gt;
           &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
         &lt;/Module&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;426&lt;/ModuleId&gt;
+          &lt;ModuleTitle&gt;TextMessages Listing&lt;/ModuleTitle&gt;
+          &lt;ModuleOrder&gt;12&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
       &lt;/Modules&gt;
     &lt;/Tab&gt;
     &lt;Tab&gt;
@@ -311,6 +330,12 @@
           &lt;ModuleOrder&gt;5&lt;/ModuleOrder&gt;
           &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
         &lt;/Module&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;429&lt;/ModuleId&gt;
+          &lt;ModuleTitle&gt;TextOptIn Listing&lt;/ModuleTitle&gt;
+          &lt;ModuleOrder&gt;5&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
       &lt;/Modules&gt;
     &lt;/Tab&gt;
     &lt;Tab&gt;
@@ -332,6 +357,12 @@
         &lt;en-US&gt;TextQueue&lt;/en-US&gt;
       &lt;/Localization&gt;
       &lt;Modules&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;438&lt;/ModuleId&gt;
+          &lt;ModuleTitle&gt;TextQueue Listing&lt;/ModuleTitle&gt;
+          &lt;ModuleOrder&gt;9&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
         &lt;Module&gt;
           &lt;ModuleId&gt;438&lt;/ModuleId&gt;
           &lt;ModuleTitle&gt;TextQueue Listing&lt;/ModuleTitle&gt;
