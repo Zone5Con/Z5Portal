@@ -53,6 +53,98 @@
             "value": "[RecordId]"
           },
           {
+            "name": "Prefix",
+            "value": "[Record:Prefix]"
+          },
+          {
+            "name": "UtilizeOptIn",
+            "value": "[Record:UtilizeOptIn]"
+          },
+          {
+            "name": "ShowOther",
+            "value": "[Record:ShowOther]"
+          },
+          {
+            "name": "AllowManual",
+            "value": "[Record:AllowManual]"
+          },
+          {
+            "name": "Animation",
+            "value": "[Record:Animation]"
+          },
+          {
+            "name": "Temp1Name",
+            "value": "[Record:Temp1Name]"
+          },
+          {
+            "name": "Temp1Message",
+            "value": "[Record:Temp1Message]"
+          },
+          {
+            "name": "Temp2Name",
+            "value": "[Record:Temp2Name]"
+          },
+          {
+            "name": "Temp2Message",
+            "value": "[Record:Temp2Message]"
+          },
+          {
+            "name": "Temp3Name",
+            "value": "[Record:Temp3Name]"
+          },
+          {
+            "name": "Temp3Message",
+            "value": "[Record:Temp3Message]"
+          },
+          {
+            "name": "Temp4Name",
+            "value": "[Record:Temp4Name]"
+          },
+          {
+            "name": "Temp4Message",
+            "value": "[Record:Temp4Message]"
+          },
+          {
+            "name": "Temp5Name",
+            "value": "[Record:Temp5Name]"
+          },
+          {
+            "name": "Temp5Message",
+            "value": "[Record:Temp5Message]"
+          },
+          {
+            "name": "Temp6Name",
+            "value": "[Record:Temp6Name]"
+          },
+          {
+            "name": "Temp6Message",
+            "value": "[Record:Temp6Message]"
+          },
+          {
+            "name": "Temp7Name",
+            "value": "[Record:Temp7Name]"
+          },
+          {
+            "name": "Temp7Message",
+            "value": "[Record:Temp7Message]"
+          },
+          {
+            "name": "Temp8Name",
+            "value": "[Record:Temp8Name]"
+          },
+          {
+            "name": "Temp8Message",
+            "value": "[Record:Temp8Message]"
+          },
+          {
+            "name": "OptInMessage",
+            "value": "[Record:OptInMessage]"
+          },
+          {
+            "name": "FooterMessage",
+            "value": "[Record:FooterMessage]"
+          },
+          {
             "name": "CompanyId",
             "value": "[Record:CompanyId]"
           },
