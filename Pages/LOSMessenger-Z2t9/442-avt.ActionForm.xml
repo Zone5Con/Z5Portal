@@ -51,7 +51,7 @@
       &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
       &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
       &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
-      &lt;BindShow&gt;&lt;![CDATA[[ShowBorOptin] == &quot;yes&quot;]]&gt;&lt;/BindShow&gt;
+      &lt;BindShow&gt;&lt;![CDATA[[ShowBorOptIn] == &quot;yes&quot;]]&gt;&lt;/BindShow&gt;
       &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
       &lt;BindPreserveLayout&gt;&lt;![CDATA[True]]&gt;&lt;/BindPreserveLayout&gt;
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
