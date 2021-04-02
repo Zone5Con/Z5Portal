@@ -57,7 +57,7 @@
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-primary&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;localize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Please wait...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-info&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Sending...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -68,7 +68,7 @@
       &lt;/ButtonSize&gt;
       &lt;ButtonType&gt;
         &lt;Expression /&gt;
-        &lt;Value&gt;btn-primary&lt;/Value&gt;
+        &lt;Value&gt;btn-info&lt;/Value&gt;
         &lt;IsExpression&gt;False&lt;/IsExpression&gt;
         &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
       &lt;/ButtonType&gt;
@@ -81,11 +81,11 @@
       &lt;ButtonIcon /&gt;
       &lt;ButtonExecutingActionMessage&gt;
         &lt;Expression /&gt;
-        &lt;Value&gt;localize&lt;/Value&gt;
+        &lt;Value&gt;custom&lt;/Value&gt;
         &lt;IsExpression&gt;False&lt;/IsExpression&gt;
         &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
       &lt;/ButtonExecutingActionMessage&gt;
-      &lt;ButtonWaitingMessage&gt;Please wait...&lt;/ButtonWaitingMessage&gt;
+      &lt;ButtonWaitingMessage&gt;Sending...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
