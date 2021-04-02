@@ -1,0 +1,20 @@
+{
+  "id": 22,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "btn7Name",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "SELECT ISNULL(Temp7Name, '' ) FROM TextAdmin\nwhere CompanyId = '[Get:CID]'\n",
+    "defaultColumn": "",
+    "columns": "Temp7Name",
+    "connectionString": "",
+    "type": "db"
+  }
+}
