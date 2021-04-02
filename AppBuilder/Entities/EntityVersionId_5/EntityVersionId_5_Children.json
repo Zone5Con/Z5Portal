@@ -16,5 +16,11 @@
     "EntityVersionId": 7,
     "RelationName": "TextOptIn",
     "OrderIndex": 29
+  },
+  {
+    "Id": 4,
+    "EntityVersionId": 9,
+    "RelationName": "TextQueue",
+    "OrderIndex": 30
   }
 ]
