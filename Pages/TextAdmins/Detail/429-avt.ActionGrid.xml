@@ -1,10 +1,13 @@
 <module type="ActionGrid" version="05.12.05.00">
+    <contentKey />
     <moduleID>429</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>TextOptIn Listing</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>ccad3506-93dc-4669-9848-a17dc2429567</uniqueId>
+    <uniqueId>d04748f6-6f73-4be4-969b-9898237c5edf</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Grid</definition>
