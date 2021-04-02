@@ -13,7 +13,7 @@
   "src": {
     "sql": "select Temp1Message from TextAdmin\nwhere CompanyId = '[Get:CID]'",
     "defaultColumn": "",
-    "columns": "btn1Message",
+    "columns": "Temp1Message",
     "connectionString": "",
     "type": "db"
   }
