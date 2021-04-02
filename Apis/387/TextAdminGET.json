@@ -61,10 +61,6 @@
             "value": "[Record:SMSFrom]"
           },
           {
-            "name": "CallBackURL",
-            "value": "[Record:CallBackURL]"
-          },
-          {
             "name": "Prefix",
             "value": "[Record:Prefix]"
           },
