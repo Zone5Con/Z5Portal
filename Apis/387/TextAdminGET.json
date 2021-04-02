@@ -53,8 +53,8 @@
             "value": "[RecordId]"
           },
           {
-            "name": "CallBackURL",
-            "value": "[Record:CallBackURL]"
+            "name": "OptInMessageAgent",
+            "value": "[Record:OptInMessageAgent]"
           },
           {
             "name": "CompanyId",
@@ -155,6 +155,10 @@
           {
             "name": "FooterMessage",
             "value": "[Record:FooterMessage]"
+          },
+          {
+            "name": "CallBackURL",
+            "value": "[Record:CallBackURL]"
           }
         ],
         "Headers": []
