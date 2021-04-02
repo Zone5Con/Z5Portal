@@ -1,0 +1,13 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 52,
+  "Id": 8,
+  "VersionId": 8,
+  "EntityTabId": 54,
+  "Name": "TextMessage",
+  "PluralName": "TextMessages",
+  "Icon": "sms",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
