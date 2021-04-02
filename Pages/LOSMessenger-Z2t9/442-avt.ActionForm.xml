@@ -102,7 +102,7 @@
       &lt;ValidationGroup /&gt;
       &lt;GroupValidator /&gt;
       &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;1&lt;/ViewOrder&gt;
+      &lt;ViewOrder&gt;2&lt;/ViewOrder&gt;
       &lt;RowIndex&gt;0&lt;/RowIndex&gt;
       &lt;ColSpan&gt;1&lt;/ColSpan&gt;
       &lt;ColOffset&gt;1&lt;/ColOffset&gt;
@@ -215,7 +215,7 @@
       &lt;ValidationGroup /&gt;
       &lt;GroupValidator /&gt;
       &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;6&lt;/ViewOrder&gt;
+      &lt;ViewOrder&gt;7&lt;/ViewOrder&gt;
       &lt;RowIndex&gt;0&lt;/RowIndex&gt;
       &lt;ColSpan&gt;1&lt;/ColSpan&gt;
       &lt;ColOffset&gt;1&lt;/ColOffset&gt;
