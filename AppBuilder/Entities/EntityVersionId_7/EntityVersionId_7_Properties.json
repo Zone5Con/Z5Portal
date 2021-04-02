@@ -1,0 +1,288 @@
+[
+  {
+    "Id": 39,
+    "EntityVersionId": 7,
+    "Name": "CompanyId",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 40,
+    "EntityVersionId": 7,
+    "Name": "PortalId",
+    "Type": {
+      "Id": "Integer",
+      "Name": "Number (Integer)",
+      "InputType": {
+        "Id": "Integer",
+        "Name": "Number (Integer)",
+        "ValueType": "Integer",
+        "Length": 4,
+        "Icon": "looks_one"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 2
+  },
+  {
+    "Id": 41,
+    "EntityVersionId": 7,
+    "Name": "LoanGuid",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 3
+  },
+  {
+    "Id": 42,
+    "EntityVersionId": 7,
+    "Name": "LoanNumber",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 4
+  },
+  {
+    "Id": 43,
+    "EntityVersionId": 7,
+    "Name": "DateSent",
+    "Type": {
+      "Id": "DateTimeOffset",
+      "Name": "Local Date and Time",
+      "InputType": {
+        "Id": "DateTimeOffset",
+        "Name": "Local Date and Time",
+        "ValueType": "DateTimeOffset",
+        "Length": 10,
+        "Icon": "calendar_today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 5
+  },
+  {
+    "Id": 44,
+    "EntityVersionId": 7,
+    "Name": "Name",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 6
+  },
+  {
+    "Id": 45,
+    "EntityVersionId": 7,
+    "Name": "CellPhone",
+    "Type": {
+      "Id": "Phone",
+      "Name": "Phone",
+      "InputType": {
+        "Id": "Phone",
+        "Name": "Phone",
+        "ValueType": "String",
+        "Length": 15,
+        "Icon": "phone"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 7
+  },
+  {
+    "Id": 46,
+    "EntityVersionId": 7,
+    "Name": "Party",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 8
+  },
+  {
+    "Id": 47,
+    "EntityVersionId": 7,
+    "Name": "OptIn",
+    "Type": {
+      "Id": "Boolean",
+      "Name": "Boolean",
+      "InputType": {
+        "Id": "Boolean",
+        "Name": "Boolean",
+        "ValueType": "Boolean",
+        "Length": 1,
+        "Icon": "check_circle_outline"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 9
+  },
+  {
+    "Id": 48,
+    "EntityVersionId": 7,
+    "Name": "DateOptIn",
+    "Type": {
+      "Id": "DateTimeOffset",
+      "Name": "Local Date and Time",
+      "InputType": {
+        "Id": "DateTimeOffset",
+        "Name": "Local Date and Time",
+        "ValueType": "DateTimeOffset",
+        "Length": 10,
+        "Icon": "calendar_today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 10
+  },
+  {
+    "Id": 49,
+    "EntityVersionId": 7,
+    "Name": "DateStop",
+    "Type": {
+      "Id": "DateTimeOffset",
+      "Name": "Local Date and Time",
+      "InputType": {
+        "Id": "DateTimeOffset",
+        "Name": "Local Date and Time",
+        "ValueType": "DateTimeOffset",
+        "Length": 10,
+        "Icon": "calendar_today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 11
+  },
+  {
+    "Id": 50,
+    "EntityVersionId": 7,
+    "Name": "AllowAgents",
+    "Type": {
+      "Id": "Boolean",
+      "Name": "Boolean",
+      "InputType": {
+        "Id": "Boolean",
+        "Name": "Boolean",
+        "ValueType": "Boolean",
+        "Length": 1,
+        "Icon": "check_circle_outline"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 12
+  },
+  {
+    "Id": 51,
+    "EntityVersionId": 7,
+    "Name": "MasterOptIn",
+    "Type": {
+      "Id": "Boolean",
+      "Name": "Boolean",
+      "InputType": {
+        "Id": "Boolean",
+        "Name": "Boolean",
+        "ValueType": "Boolean",
+        "Length": 1,
+        "Icon": "check_circle_outline"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 13
+  }
+]

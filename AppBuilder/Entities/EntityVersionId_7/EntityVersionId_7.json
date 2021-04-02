@@ -1,0 +1,13 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 39,
+  "Id": 7,
+  "VersionId": 7,
+  "EntityTabId": 52,
+  "Name": "TextOptIn",
+  "PluralName": "TextOptIns",
+  "Icon": "thumbs-up",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
