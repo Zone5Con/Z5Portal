@@ -1,0 +1,221 @@
+{
+  "Name": "TextMessage",
+  "Description": "Updates the information of the provided TextMessage record",
+  "HttpMethod": "PUT",
+  "IsEnabled": true,
+  "OrderIndex": 19,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CompanyId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"CompanyId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "LoanGuid",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LoanNumber",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "MessageId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TextMessage",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TextMessageHTML",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DateSent",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DeliveryStatus",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DeliveryStatusHTML",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SentTo",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CellPhone",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SentBy",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SentByEmail",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 13,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Party",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 14,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Response",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 15,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.UpdateEntity.0.TextMessage",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "CompanyId": "[CompanyId]",
+        "LoanGuid": "[LoanGuid]",
+        "LoanNumber": "[LoanNumber]",
+        "MessageId": "[MessageId]",
+        "TextMessage": "[TextMessage]",
+        "TextMessageHTML": "[TextMessageHTML]",
+        "DateSent": "[DateSent]",
+        "DeliveryStatus": "[DeliveryStatus]",
+        "DeliveryStatusHTML": "[DeliveryStatusHTML]",
+        "SentTo": "[SentTo]",
+        "CellPhone": "[CellPhone]",
+        "SentBy": "[SentBy]",
+        "SentByEmail": "[SentByEmail]",
+        "Party": "[Party]",
+        "Response": "[Response]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.UpdateEntity",
+        "EntityIdentifier": "TextMessage"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
