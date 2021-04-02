@@ -250,6 +250,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "TemplateId",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 26,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -283,7 +292,8 @@
         "Temp8Name": "[Temp8Name]",
         "Temp8Message": "[Temp8Message]",
         "OptInMessage": "[OptInMessage]",
-        "FooterMessage": "[FooterMessage]"
+        "FooterMessage": "[FooterMessage]",
+        "TemplateId": "[TemplateId]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -315,6 +325,22 @@
           {
             "name": "Id",
             "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "TemplateId",
+            "value": "[CreatedRecord:TemplateId]"
+          },
+          {
+            "name": "CompanyId",
+            "value": "[CreatedRecord:CompanyId]"
+          },
+          {
+            "name": "SMSFrom",
+            "value": "[CreatedRecord:SMSFrom]"
+          },
+          {
+            "name": "CallBackURL",
+            "value": "[CreatedRecord:CallBackURL]"
           },
           {
             "name": "Prefix",
@@ -407,18 +433,6 @@
           {
             "name": "FooterMessage",
             "value": "[CreatedRecord:FooterMessage]"
-          },
-          {
-            "name": "CompanyId",
-            "value": "[CreatedRecord:CompanyId]"
-          },
-          {
-            "name": "SMSFrom",
-            "value": "[CreatedRecord:SMSFrom]"
-          },
-          {
-            "name": "CallBackURL",
-            "value": "[CreatedRecord:CallBackURL]"
           }
         ],
         "Headers": [
