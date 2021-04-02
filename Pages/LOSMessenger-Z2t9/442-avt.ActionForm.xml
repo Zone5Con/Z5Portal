@@ -24,7 +24,7 @@
             <rolename>Administrators</rolename>
         </permission>
     </modulepermissions>
-    <title>avt.Action Form</title>
+    <title>LOS Messenger</title>
     <startdate>0001-01-01T00:00:00</startdate>
     <uniqueId>d07983b8-2851-424f-a212-b5258fa6ddef</uniqueId>
     <visibility>Maximized</visibility>
@@ -36,8 +36,8 @@
     <content type="ActionForm" version="05.12.11.00"><![CDATA[&lt;ActionForm&gt;
   &lt;Fields /&gt;
   &lt;Settings&gt;
-    &lt;Title&gt;avt.Action Form&lt;/Title&gt;
-    &lt;CssName&gt;avt-action-form&lt;/CssName&gt;
+    &lt;Title&gt;LOS Messenger&lt;/Title&gt;
+    &lt;CssName&gt;los-messenger&lt;/CssName&gt;
     &lt;Version&gt;5.12.0&lt;/Version&gt;
     &lt;Build&gt;5.12.11&lt;/Build&gt;
     &lt;CultureCode&gt;en&lt;/CultureCode&gt;
@@ -53,7 +53,7 @@
 &amp;lt;div style=&amp;quot;width: 40%; float: left; margin: 0px 20px 0px 0px;&amp;quot;&amp;gt;[Fields:NewField]&amp;lt;/div&amp;gt;
 &amp;lt;div style=&amp;quot;clear: both;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;]]&gt;&lt;/LayoutHtml&gt;
     &lt;CurrentContext&gt;ExportImport&lt;/CurrentContext&gt;
-    &lt;LabelAlign&gt;right&lt;/LabelAlign&gt;
+    &lt;LabelAlign&gt;top&lt;/LabelAlign&gt;
     &lt;LabelWidth&gt;3&lt;/LabelWidth&gt;
     &lt;FieldSpacing&gt;normal&lt;/FieldSpacing&gt;
     &lt;OpenFormMode&gt;Always&lt;/OpenFormMode&gt;
@@ -62,8 +62,8 @@
     &lt;TabId&gt;58&lt;/TabId&gt;
     &lt;ModuleBaseUrl&gt;/DesktopModules/DnnSharp/ActionForm&lt;/ModuleBaseUrl&gt;
     &lt;ResourceBaseUrl&gt;/DesktopModules/DnnSharp/ActionForm/static&lt;/ResourceBaseUrl&gt;
-    &lt;FormTemplate&gt;bootstrap&lt;/FormTemplate&gt;
-    &lt;FormTemplateFolder&gt;/DesktopModules/DnnSharp/ActionForm/templates/Form/bootstrap&lt;/FormTemplateFolder&gt;
+    &lt;FormTemplate&gt;material&lt;/FormTemplate&gt;
+    &lt;FormTemplateFolder&gt;/DesktopModules/DnnSharp/ActionForm/templates/Form/material&lt;/FormTemplateFolder&gt;
     &lt;ModuleId&gt;442&lt;/ModuleId&gt;
     &lt;IsDebug&gt;False&lt;/IsDebug&gt;
     &lt;EnableReports&gt;False&lt;/EnableReports&gt;
@@ -78,7 +78,7 @@
     &lt;WidthCoordinate&gt;px&lt;/WidthCoordinate&gt;
     &lt;PopupHeight&gt;300&lt;/PopupHeight&gt;
     &lt;jQueryTheme&gt;sunny&lt;/jQueryTheme&gt;
-    &lt;SubmitHiddenFields&gt;False&lt;/SubmitHiddenFields&gt;
+    &lt;SubmitHiddenFields&gt;True&lt;/SubmitHiddenFields&gt;
     &lt;IncludeBootstrap&gt;True&lt;/IncludeBootstrap&gt;
     &lt;IncludeFontAwesome&gt;True&lt;/IncludeFontAwesome&gt;
     &lt;FloatingLabels&gt;False&lt;/FloatingLabels&gt;
@@ -93,7 +93,7 @@
     &lt;LeftSidebarHtml /&gt;
     &lt;RightSidebarHtml /&gt;
     &lt;RootClasses /&gt;
-    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en-US&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
+    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
     &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
   &lt;/Settings&gt;
   &lt;Actions xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;
