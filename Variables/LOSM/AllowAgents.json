@@ -1,0 +1,20 @@
+{
+  "id": 1,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "AllowAgents",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Portal",
+  "src": {
+    "sql": "select Top 1 AllowAgents \nfrom LOSMOptIn\nwhere LoanNumber = '[Get:LN]' and Party = 'borrower' and CompanyId = '[Get:CID]'\nOrder By AllowAgents DESC",
+    "defaultColumn": "",
+    "columns": "AllowAgents",
+    "connectionString": "",
+    "type": "db"
+  }
+}
