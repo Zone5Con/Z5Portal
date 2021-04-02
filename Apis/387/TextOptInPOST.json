@@ -1,0 +1,257 @@
+{
+  "Name": "TextOptIn",
+  "Description": "Creates a new record of type TextOptIn",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 11,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "CompanyId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"CompanyId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PortalId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LoanGuid",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LoanNumber",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DateSent",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Name",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CellPhone",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Party",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "OptIn",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DateOptIn",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "DateStop",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "AllowAgents",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "MasterOptIn",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.TextOptIn",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "CompanyId": "[CompanyId]",
+        "PortalId": "[PortalId]",
+        "LoanGuid": "[LoanGuid]",
+        "LoanNumber": "[LoanNumber]",
+        "DateSent": "[DateSent]",
+        "Name": "[Name]",
+        "CellPhone": "[CellPhone]",
+        "Party": "[Party]",
+        "OptIn": "[OptIn]",
+        "DateOptIn": "[DateOptIn]",
+        "DateStop": "[DateStop]",
+        "AllowAgents": "[AllowAgents]",
+        "MasterOptIn": "[MasterOptIn]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "TextOptIn"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.TextOptIn",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "TextOptIn"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "CompanyId",
+            "value": "[CreatedRecord:CompanyId]"
+          },
+          {
+            "name": "PortalId",
+            "value": "[CreatedRecord:PortalId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[CreatedRecord:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[CreatedRecord:LoanNumber]"
+          },
+          {
+            "name": "DateSent",
+            "value": "[CreatedRecord:DateSent]"
+          },
+          {
+            "name": "Name",
+            "value": "[CreatedRecord:Name]"
+          },
+          {
+            "name": "CellPhone",
+            "value": "[CreatedRecord:CellPhone]"
+          },
+          {
+            "name": "Party",
+            "value": "[CreatedRecord:Party]"
+          },
+          {
+            "name": "OptIn",
+            "value": "[CreatedRecord:OptIn]"
+          },
+          {
+            "name": "DateOptIn",
+            "value": "[CreatedRecord:DateOptIn]"
+          },
+          {
+            "name": "DateStop",
+            "value": "[CreatedRecord:DateStop]"
+          },
+          {
+            "name": "AllowAgents",
+            "value": "[CreatedRecord:AllowAgents]"
+          },
+          {
+            "name": "MasterOptIn",
+            "value": "[CreatedRecord:MasterOptIn]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://z5portal.com/api/TextOptIn?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
