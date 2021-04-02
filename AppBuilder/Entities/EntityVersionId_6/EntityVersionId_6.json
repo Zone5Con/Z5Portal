@@ -1,0 +1,13 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 36,
+  "Id": 6,
+  "VersionId": 6,
+  "EntityTabId": 50,
+  "Name": "TextTemplate",
+  "PluralName": "TextTemplates",
+  "Icon": "clipboard-list",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
