@@ -11,7 +11,7 @@
   "cacheTime": 0,
   "cacheLayer": "Global",
   "src": {
-    "sql": "select Animation from LOSMAdmin\t\nwhere CompanyId = '[Get:CID]'",
+    "sql": "select Animation from TextAdmin\t\nwhere CompanyId = '[Get:CID]'",
     "defaultColumn": "",
     "columns": "Animation",
     "connectionString": "",
