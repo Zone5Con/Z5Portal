@@ -1,0 +1,20 @@
+{
+  "id": 37,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "GetOptInData",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Portal",
+  "src": {
+    "sql": "Select Name, CellPhone, OptIn, DateOptIn from TextOptIn\nWhere CellPhone = '[Get:BCP]' or CellPhone= '[Get:CCP]' or CellPhone = '[Get:BACP]' or CellPhone = '[Get:SACP]'\nOrder By DateSent DESC",
+    "defaultColumn": "DateOptIn",
+    "columns": "Name\nCellPhone\nOptIn\nDateOptIn",
+    "connectionString": "",
+    "type": "db"
+  }
+}
