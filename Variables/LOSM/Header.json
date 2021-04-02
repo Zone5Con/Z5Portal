@@ -1,0 +1,20 @@
+{
+  "id": 52,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "Header",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "Select Header from TextAdmin\nwhere CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "Header",
+    "connectionString": "",
+    "type": "db"
+  }
+}
