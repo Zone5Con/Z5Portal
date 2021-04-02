@@ -11,7 +11,7 @@
   "cacheTime": 0,
   "cacheLayer": "Global",
   "src": {
-    "sql": "select AllowManual from TextAdmin \nwhere CompanyId = '[Get:CID]' and CompanyId = '[Get:CID]'",
+    "sql": "select AllowManual from TextAdmin \nwhere CompanyId = '[Get:CID]'",
     "defaultColumn": "",
     "columns": "AllowManual",
     "connectionString": "",
