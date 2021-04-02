@@ -1,0 +1,20 @@
+{
+  "id": 39,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "GetReportData",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Portal",
+  "src": {
+    "sql": "Select SentTo, CellPhone, TextMessage, SentBy, DateSent from TextMessage\nWhere LoanNumber = '[Get:LN]'\nOrder By DateSent DESC",
+    "defaultColumn": "DateSent",
+    "columns": "SentTo\nCellPhone\nTextMessage\nSentBy\nDateSent",
+    "connectionString": "",
+    "type": "db"
+  }
+}
