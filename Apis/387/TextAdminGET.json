@@ -53,10 +53,6 @@
             "value": "[RecordId]"
           },
           {
-            "name": "TemplateId",
-            "value": "[Record:TemplateId]"
-          },
-          {
             "name": "CompanyId",
             "value": "[Record:CompanyId]"
           },
