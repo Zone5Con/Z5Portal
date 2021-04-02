@@ -1,0 +1,118 @@
+{
+  "Name": "TextOptIn",
+  "Description": "Returns the information of a TextOptIn record in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 12,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.TextOptIn",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "TextOptIn"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "CompanyId",
+            "value": "[Record:CompanyId]"
+          },
+          {
+            "name": "PortalId",
+            "value": "[Record:PortalId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[Record:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[Record:LoanNumber]"
+          },
+          {
+            "name": "DateSent",
+            "value": "[Record:DateSent]"
+          },
+          {
+            "name": "Name",
+            "value": "[Record:Name]"
+          },
+          {
+            "name": "CellPhone",
+            "value": "[Record:CellPhone]"
+          },
+          {
+            "name": "Party",
+            "value": "[Record:Party]"
+          },
+          {
+            "name": "OptIn",
+            "value": "[Record:OptIn]"
+          },
+          {
+            "name": "DateOptIn",
+            "value": "[Record:DateOptIn]"
+          },
+          {
+            "name": "DateStop",
+            "value": "[Record:DateStop]"
+          },
+          {
+            "name": "AllowAgents",
+            "value": "[Record:AllowAgents]"
+          },
+          {
+            "name": "MasterOptIn",
+            "value": "[Record:MasterOptIn]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
