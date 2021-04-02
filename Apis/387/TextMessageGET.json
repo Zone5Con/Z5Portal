@@ -1,0 +1,126 @@
+{
+  "Name": "TextMessage",
+  "Description": "Returns the information of a TextMessage record in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 17,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.TextMessage",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "TextMessage"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "CompanyId",
+            "value": "[Record:CompanyId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[Record:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[Record:LoanNumber]"
+          },
+          {
+            "name": "MessageId",
+            "value": "[Record:MessageId]"
+          },
+          {
+            "name": "TextMessage",
+            "value": "[Record:TextMessage]"
+          },
+          {
+            "name": "TextMessageHTML",
+            "value": "[Record:TextMessageHTML]"
+          },
+          {
+            "name": "DateSent",
+            "value": "[Record:DateSent]"
+          },
+          {
+            "name": "DeliveryStatus",
+            "value": "[Record:DeliveryStatus]"
+          },
+          {
+            "name": "DeliveryStatusHTML",
+            "value": "[Record:DeliveryStatusHTML]"
+          },
+          {
+            "name": "SentTo",
+            "value": "[Record:SentTo]"
+          },
+          {
+            "name": "CellPhone",
+            "value": "[Record:CellPhone]"
+          },
+          {
+            "name": "SentBy",
+            "value": "[Record:SentBy]"
+          },
+          {
+            "name": "SentByEmail",
+            "value": "[Record:SentByEmail]"
+          },
+          {
+            "name": "Party",
+            "value": "[Record:Party]"
+          },
+          {
+            "name": "Response",
+            "value": "[Record:Response]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
