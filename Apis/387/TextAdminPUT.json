@@ -56,15 +56,6 @@
       "Validations": []
     },
     {
-      "Name": "CallBackURL",
-      "IsDeleted": false,
-      "IsEnabled": true,
-      "OrderIndex": 3,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
-    },
-    {
       "Name": "Prefix",
       "IsDeleted": false,
       "IsEnabled": false,
@@ -280,7 +271,6 @@
         "RecordId": "[RecordId]",
         "CompanyId": "[CompanyId]",
         "SMSFrom": "[SMSFrom]",
-        "CallBackURL": "[CallBackURL]",
         "Prefix": "[Prefix]",
         "UtilizeOptIn": "[UtilizeOptIn]",
         "ShowOther": "[ShowOther]",
