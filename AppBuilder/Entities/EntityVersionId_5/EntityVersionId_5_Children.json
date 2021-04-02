@@ -4,5 +4,11 @@
     "EntityVersionId": 6,
     "RelationName": "TemplateId",
     "OrderIndex": 2
+  },
+  {
+    "Id": 2,
+    "EntityVersionId": 8,
+    "RelationName": "TextMessages",
+    "OrderIndex": 28
   }
 ]
