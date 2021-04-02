@@ -9,18 +9,18 @@
     "Id": 2,
     "EntityVersionId": 8,
     "RelationName": "TextMessages",
-    "OrderIndex": 28
+    "OrderIndex": 29
   },
   {
     "Id": 3,
     "EntityVersionId": 7,
     "RelationName": "TextOptIn",
-    "OrderIndex": 29
+    "OrderIndex": 30
   },
   {
     "Id": 4,
     "EntityVersionId": 9,
     "RelationName": "TextQueue",
-    "OrderIndex": 30
+    "OrderIndex": 31
   }
 ]
