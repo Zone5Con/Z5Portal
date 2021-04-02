@@ -53,6 +53,10 @@
             "value": "[RecordId]"
           },
           {
+            "name": "CallBackURL",
+            "value": "[Record:CallBackURL]"
+          },
+          {
             "name": "CompanyId",
             "value": "[Record:CompanyId]"
           },
