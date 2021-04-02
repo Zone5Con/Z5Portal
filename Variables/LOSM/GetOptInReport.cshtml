@@ -1,0 +1,23 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+<div>
+  <table>
+     <thead>
+      <tr>
+        <th style="text-align:left; width:25%; color:blue;">Name</th>
+        <th style="text-align:left; width:25%; color:blue;">Cell Phone</th>
+        <th style="text-align:left; width:25%; color:blue;">Opt In</th>
+        <th style="text-align:left; width:25%; color:blue;">Opt In Date</th>
+      </tr>
+     </thead>
+     <tbody>
+     @foreach (var row in Text.GetOptInData("LoanNumber='[Get:LN]'")) {
+      <tr>
+        <td style="padding-right: 15px; padding-bottom:10px;">@row.Name</td>
+        <td style="padding-right: 15px; padding-bottom:10px;">@row.CellPhone</td>
+        <td style="padding-right: 15px; padding-bottom:10px;">@row.OptIn</td>
+        <td style="padding-right: 15px; padding-bottom:10px;">@row.DateOptIn</td>
+      </tr>            
+       }
+    </tbody>
+  <table>
+</div>  
