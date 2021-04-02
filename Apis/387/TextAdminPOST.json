@@ -36,15 +36,6 @@
       "Validations": []
     },
     {
-      "Name": "CallBackURL",
-      "IsDeleted": false,
-      "IsEnabled": true,
-      "OrderIndex": 2,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
-    },
-    {
       "Name": "Prefix",
       "IsDeleted": false,
       "IsEnabled": false,
@@ -260,7 +251,6 @@
         "OutputToken": "CreatedRecordId",
         "CompanyId": "[CompanyId]",
         "SMSFrom": "[SMSFrom]",
-        "CallBackURL": "[CallBackURL]",
         "Prefix": "[Prefix]",
         "UtilizeOptIn": "[UtilizeOptIn]",
         "ShowOther": "[ShowOther]",
@@ -323,10 +313,6 @@
           {
             "name": "SMSFrom",
             "value": "[CreatedRecord:SMSFrom]"
-          },
-          {
-            "name": "CallBackURL",
-            "value": "[CreatedRecord:CallBackURL]"
           },
           {
             "name": "Prefix",
