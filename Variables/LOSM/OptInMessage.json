@@ -1,0 +1,20 @@
+{
+  "id": 45,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "OptInMessage",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>true</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select OptInMessage from TextAdmin \nwhere CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "OptInMessage",
+    "connectionString": "",
+    "type": "db"
+  }
+}
