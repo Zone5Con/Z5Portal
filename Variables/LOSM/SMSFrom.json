@@ -1,0 +1,20 @@
+{
+  "id": 53,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "SMSFrom",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select SMSFrom from TextAdmin\nwhere CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "SMSFrom",
+    "connectionString": "",
+    "type": "db"
+  }
+}
