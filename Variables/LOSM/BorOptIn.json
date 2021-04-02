@@ -1,0 +1,20 @@
+{
+  "id": 5,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "BorOptIn",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Portal",
+  "src": {
+    "sql": "select OptIn from LOSMOptIn where\nCellPhone = '[Get:BCP]' ",
+    "defaultColumn": "",
+    "columns": "OptIn",
+    "connectionString": "",
+    "type": "db"
+  }
+}
