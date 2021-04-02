@@ -1,0 +1,20 @@
+{
+  "id": 32,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "COBStop",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "Select OptIn, CASE\n    WHEN OptIn = 'stop' THEN '-- Opted Out'\n    ELSE NULL\nEND AS COBOptInStop\nFrom TextOptIn\nwhere CellPhone = '[Get:CCP]' and CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "COBOptInStop\nOptIn",
+    "connectionString": "",
+    "type": "db"
+  }
+}
