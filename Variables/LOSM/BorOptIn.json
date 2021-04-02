@@ -11,7 +11,7 @@
   "cacheTime": 0,
   "cacheLayer": "Portal",
   "src": {
-    "sql": "select OptIn from LOSMOptIn where\nCellPhone = '[Get:BCP]' ",
+    "sql": "select OptIn from TextOptIn where\nCellPhone = '[Get:BCP]' ",
     "defaultColumn": "",
     "columns": "OptIn",
     "connectionString": "",
