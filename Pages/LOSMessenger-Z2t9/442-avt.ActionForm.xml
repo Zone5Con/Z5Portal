@@ -76,11 +76,11 @@
     &lt;/Field&gt;
     &lt;Field&gt;
       &lt;Id&gt;&lt;![CDATA[261]]&gt;&lt;/Id&gt;
-      &lt;Title&gt;&lt;![CDATA[Borrower Name]]&gt;&lt;/Title&gt;
+      &lt;Title&gt;&lt;![CDATA[Borrower]]&gt;&lt;/Title&gt;
       &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
       &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
       &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
-      &lt;OverrideName /&gt;
+      &lt;OverrideName&gt;BorrowerName&lt;/OverrideName&gt;
       &lt;Name&gt;BorrowerName&lt;/Name&gt;
       &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
       &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
