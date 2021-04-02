@@ -1,0 +1,20 @@
+{
+  "id": 51,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "ShowOther",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select ShowOther from TextAdmin\nwhere CompanyId = '[Get:CID]'",
+    "defaultColumn": "",
+    "columns": "ShowOther",
+    "connectionString": "",
+    "type": "db"
+  }
+}
