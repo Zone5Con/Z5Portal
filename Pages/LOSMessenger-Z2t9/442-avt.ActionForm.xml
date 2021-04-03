@@ -313,7 +313,7 @@
     &lt;/Field&gt;
     &lt;Field&gt;
       &lt;Id&gt;&lt;![CDATA[261]]&gt;&lt;/Id&gt;
-      &lt;Title&gt;&lt;![CDATA[Borrower]]&gt;&lt;/Title&gt;
+      &lt;Title&gt;&lt;![CDATA[Borrower - [LOSM:Test]]]&gt;&lt;/Title&gt;
       &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
       &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
       &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
