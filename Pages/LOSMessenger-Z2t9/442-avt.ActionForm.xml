@@ -280,8 +280,8 @@
       &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
       &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
-      &lt;BindOnChange&gt;&lt;![CDATA[var elBor1Select = document.getElementById(form.fields.Bor1Select.id);
-elBor1Select.value=&quot;True&quot;;]]&gt;&lt;/BindOnChange&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[var elBorSelect = document.getElementById(form.fields.BorSelect.id);
+elBorSelect.value=&quot;True&quot;;]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;open-text&lt;/InputType&gt;
       &lt;InputData&gt;{&quot;Value&quot;:&quot;[Get:BFN] - [Get:BCP]&quot;,&quot;AutocompleteUrl&quot;:&quot;&quot;,&quot;AutofillName&quot;:{&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AutofillAttribute&quot;:{&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Mask&quot;:&quot;&quot;,&quot;MaskOptions&quot;:&quot;&quot;,&quot;MaxLength&quot;:&quot;&quot;,&quot;DeferRequestBy&quot;:&quot;300&quot;,&quot;ConfirmationOfTextBox&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;Readonly&quot;:true,&quot;SaveToReport&quot;:false,&quot;AllowTokens&quot;:&quot;&quot;,&quot;SecureInput&quot;:true}&lt;/InputData&gt;
       &lt;AutocompleteUrl /&gt;
