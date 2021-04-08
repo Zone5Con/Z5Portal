@@ -22,12 +22,6 @@
     margin-top: 0px!important;
 }
 
-input#dnn442BorSelect {
-    height: 60%;
-    width: 60%;
-    margin-top: 24px;
-    margin-left: 12px;
-}
 
 &lt;/style&gt;</header>
     <iconfile />
