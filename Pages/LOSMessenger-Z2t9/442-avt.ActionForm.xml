@@ -14,13 +14,6 @@
     <enddate>0001-01-01T00:00:00</enddate>
     <footer />
     <header>&lt;style&gt;
-.field-container.af-slide.col-sm-1.form-checkbox {
-    text-align: right;
-}
-
-.bstrap3-material .label-align-top .btn-form {
-    margin-top: 0px!important;
-}
 
 input#dnn442BorSelect {
     height: 60%;
