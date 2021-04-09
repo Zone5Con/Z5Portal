@@ -1,0 +1,13 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 80,
+  "Id": 10,
+  "VersionId": 10,
+  "EntityTabId": 59,
+  "Name": "Test",
+  "PluralName": "Tests",
+  "Icon": "user-cog",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
