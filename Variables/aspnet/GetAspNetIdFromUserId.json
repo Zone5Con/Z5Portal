@@ -1,0 +1,20 @@
+{
+  "id": 58,
+  "namespace": {
+    "id": 2,
+    "name": "aspnet"
+  },
+  "name": "GetAspNetIdFromUserId",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 60,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "\r\nselect au.UserId as AspNetId ,u.UserID, u.Username, u.Email, u.FirstName, u.LastName\r\nfrom  aspnet_Users au \r\ninner join users u on au.UserName=u.Username \r\ninner join aspnet_Applications app on au.ApplicationId=app.ApplicationId \r\ninner join UserPortals up on u.UserID=up.UserId \r\nwhere app.ApplicationName='DotNetNuke' \r\nand up.PortalId=[TknParams:PortalId]\r\nand up.IsDeleted=0 \r\nand u.userid= [TknParams:UserId]\r\n",
+    "defaultColumn": "AspNetId",
+    "columns": "AspNetId\nUserID\nUsername\nEmail\nFirstName\nLastName",
+    "connectionString": "",
+    "type": "db"
+  }
+}
