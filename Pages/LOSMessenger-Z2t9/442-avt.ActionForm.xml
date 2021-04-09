@@ -23,6 +23,38 @@ input#dnn442BorSelect {
 }
 
 
+input#dnn442CobSelect {
+    height: 60%;
+    width: 60%;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+
+input#dnn442LOSelect {
+    height: 60%;
+    width: 60%;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+
+input#dnn442BuyersSelect {
+    height: 60%;
+    width: 60%;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+
+input#dnn442SellersSelect {
+    height: 60%;
+    width: 60%;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+
 &lt;/style&gt;</header>
     <iconfile />
     <inheritviewpermissions>true</inheritviewpermissions>
