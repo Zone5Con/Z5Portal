@@ -197,6 +197,16 @@
       "RoleId": 9,
       "RoleName": "Users",
       "Value": "all"
+    },
+    {
+      "Id": 101,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "true"
     }
   ]
 }
