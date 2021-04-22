@@ -570,7 +570,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;UserManagement_UserRegistration&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-22T19:40:54.043&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.617&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;UsernameField&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Email&quot;,&quot;IsExpression&quot;:false},&quot;RegisterWithEmail&quot;:true,&quot;PasswordField&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Password&quot;,&quot;IsExpression&quot;:false},&quot;RandomPass&quot;:&quot;&quot;,&quot;EmailField&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Email&quot;,&quot;IsExpression&quot;:false},&quot;FirstName&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;FirstName&quot;,&quot;IsExpression&quot;:false},&quot;LastName&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;LastName&quot;,&quot;IsExpression&quot;:false},&quot;SendDnnMail&quot;:&quot;&quot;,&quot;LoginIfExists&quot;:&quot;&quot;,&quot;Authorization&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Authorize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;492&lt;/ModuleId&gt;
@@ -583,7 +583,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RedirectToPage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-22T19:40:54.087&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.633&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;PageId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:21,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;EnforceCurrentLocale&quot;:&quot;&quot;,&quot;QueryString&quot;:&quot;&quot;,&quot;QueryStringUseUrlProvider&quot;:true,&quot;OpenInPopup&quot;:&quot;&quot;,&quot;PopupTitle&quot;:&quot;&quot;,&quot;OpenInNewTab&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;492&lt;/ModuleId&gt;
@@ -594,9 +594,22 @@
     &lt;/ActionInfo&gt;
     &lt;ActionInfo&gt;
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;ActionType&gt;RedirectToPage&lt;/ActionType&gt;
+      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
+      &lt;Condition&gt;[User:UserId] &amp;gt; 0 &amp;amp;&amp;amp; ![HasRole:Administrators] &amp;amp;&amp;amp; ![HasRole:Low-Code Engineer]&lt;/Condition&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.647&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
+      &lt;ActionData&gt;{&quot;PageId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:21,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;EnforceCurrentLocale&quot;:&quot;&quot;,&quot;QueryString&quot;:&quot;&quot;,&quot;QueryStringUseUrlProvider&quot;:true,&quot;OpenInPopup&quot;:&quot;&quot;,&quot;PopupTitle&quot;:&quot;&quot;,&quot;OpenInNewTab&quot;:&quot;&quot;}&lt;/ActionData&gt;
+      &lt;ModuleId&gt;492&lt;/ModuleId&gt;
+      &lt;EventName&gt;pageload&lt;/EventName&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/ActionInfo&gt;
+    &lt;ActionInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;GrantUserRole&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-22T19:40:54.043&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.617&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;RoleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;9&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;RoleNames&quot;:&quot;&quot;,&quot;DateSelectionMode&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ExtensionDays&quot;:&quot;&quot;,&quot;StartDate&quot;:{&quot;Date&quot;:&quot;&quot;},&quot;StartDateToken&quot;:&quot;&quot;,&quot;ExpireDate&quot;:{&quot;Date&quot;:&quot;&quot;},&quot;ExpireDateToken&quot;:&quot;&quot;,&quot;RoleExpiration&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;492&lt;/ModuleId&gt;
@@ -609,7 +622,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;SendMail&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-22T19:40:54.057&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.617&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;From&quot;:&quot;admin@z5portal.com&quot;,&quot;DetermineEmail&quot;:&quot;&quot;,&quot;To&quot;:&quot;[Email]&quot;,&quot;ToAllUsers&quot;:&quot;&quot;,&quot;ReplyTo&quot;:&quot;&quot;,&quot;Cc&quot;:&quot;&quot;,&quot;Bcc&quot;:&quot;&quot;,&quot;Subject&quot;:&quot;&quot;,&quot;Format&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Html&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;DnnEmailTemplate&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;EMAIL_USER_REGISTRATION_PUBLIC_SUBJECT.Text&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Body&quot;:&quot;&quot;,&quot;Headers&quot;:&quot;&quot;,&quot;PortalFiles&quot;:&quot;&quot;,&quot;FileField1&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField2&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField3&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField4&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField5&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileToken1&quot;:&quot;&quot;,&quot;IgnoreErros&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;492&lt;/ModuleId&gt;
@@ -622,7 +635,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;UserManagement_UserLogin&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-22T19:40:54.057&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.617&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;UsernameField&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Email&quot;,&quot;IsExpression&quot;:false},&quot;PasswordField&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Password&quot;,&quot;IsExpression&quot;:false},&quot;TryEmailAsUsername&quot;:true}&lt;/ActionData&gt;
       &lt;ModuleId&gt;492&lt;/ModuleId&gt;
@@ -635,7 +648,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RedirectToPage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-22T19:40:54.073&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-22T19:43:17.633&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;PageId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:21,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;EnforceCurrentLocale&quot;:&quot;&quot;,&quot;QueryString&quot;:&quot;&quot;,&quot;QueryStringUseUrlProvider&quot;:true,&quot;OpenInPopup&quot;:&quot;&quot;,&quot;PopupTitle&quot;:&quot;&quot;,&quot;OpenInNewTab&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;492&lt;/ModuleId&gt;
