@@ -36,7 +36,7 @@
             <rolename>Citizen Developers</rolename>
         </permission>
     </modulepermissions>
-    <title>avt.Action Form</title>
+    <title>Registration</title>
     <startdate>0001-01-01T00:00:00</startdate>
     <uniqueId>789efdbb-b271-49c1-aa57-7688c2e00a63</uniqueId>
     <visibility>Maximized</visibility>
@@ -48,8 +48,8 @@
     <content type="ActionForm" version="05.13.33.00"><![CDATA[&lt;ActionForm&gt;
   &lt;Fields /&gt;
   &lt;Settings&gt;
-    &lt;Title&gt;avt.Action Form&lt;/Title&gt;
-    &lt;CssName&gt;avt-action-form&lt;/CssName&gt;
+    &lt;Title&gt;Registration&lt;/Title&gt;
+    &lt;CssName&gt;registration&lt;/CssName&gt;
     &lt;Version&gt;5.13.0&lt;/Version&gt;
     &lt;Build&gt;5.13.33&lt;/Build&gt;
     &lt;CultureCode&gt;en&lt;/CultureCode&gt;
