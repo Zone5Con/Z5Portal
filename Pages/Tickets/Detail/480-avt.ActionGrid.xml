@@ -1,10 +1,13 @@
 <module type="ActionGrid" version="05.13.19.00">
+    <contentKey />
     <moduleID>480</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>Notes Listing</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>297ca732-2a34-4924-b5ee-1c1912e6cb8a</uniqueId>
+    <uniqueId>1bd1eb9d-a55f-4e44-b7fc-bb779c68dbb2</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Grid</definition>
