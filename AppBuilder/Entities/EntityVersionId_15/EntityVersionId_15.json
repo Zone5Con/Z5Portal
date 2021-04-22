@@ -1,6 +1,6 @@
 {
-  "DisplayInMenu": true,
-  "ParentPageId": -1,
+  "DisplayInMenu": false,
+  "ParentPageId": 61,
   "RecordNamePropertyId": 93,
   "ShowDashboardModule": false,
   "Id": 15,
