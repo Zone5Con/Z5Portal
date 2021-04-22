@@ -53,8 +53,8 @@
             "value": "[RecordId]"
           },
           {
-            "name": "Status",
-            "value": "[Record:Status]"
+            "name": "SupportAgent",
+            "value": "[Record:SupportAgent]"
           },
           {
             "name": "Subject",
@@ -79,6 +79,10 @@
           {
             "name": "Phone",
             "value": "[Record:Phone]"
+          },
+          {
+            "name": "Status",
+            "value": "[Record:Status]"
           }
         ],
         "Headers": []
