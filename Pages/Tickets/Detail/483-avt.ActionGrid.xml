@@ -1,10 +1,13 @@
 <module type="ActionGrid" version="05.13.19.00">
+    <contentKey />
     <moduleID>483</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>Attachments Listing</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>a730b116-0c32-49d5-85b7-57789fde0469</uniqueId>
+    <uniqueId>141c15b8-f739-4d5d-97cb-fb6971b2490c</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Grid</definition>
