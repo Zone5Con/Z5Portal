@@ -134,6 +134,15 @@
           }
         }
       ]
+    },
+    {
+      "Name": "SupportAgent",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -148,7 +157,8 @@
         "LastName": "[LastName]",
         "Email": "[Email]",
         "Phone": "[Phone]",
-        "Status": "[Status]"
+        "Status": "[Status]",
+        "SupportAgent": "[SupportAgent]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -182,8 +192,8 @@
             "value": "[CreatedRecordId]"
           },
           {
-            "name": "Status",
-            "value": "[CreatedRecord:Status]"
+            "name": "SupportAgent",
+            "value": "[CreatedRecord:SupportAgent]"
           },
           {
             "name": "Subject",
@@ -208,6 +218,10 @@
           {
             "name": "Phone",
             "value": "[CreatedRecord:Phone]"
+          },
+          {
+            "name": "Status",
+            "value": "[CreatedRecord:Status]"
           }
         ],
         "Headers": [
