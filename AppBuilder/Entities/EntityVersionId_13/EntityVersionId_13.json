@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 88,
+  "ShowDashboardModule": false,
+  "Id": 13,
+  "VersionId": 13,
+  "EntityTabId": 65,
+  "Name": "Note",
+  "PluralName": "Notes",
+  "Icon": "table",
+  "Type": "UserCreated",
+  "EnableIndexing": true
+}
