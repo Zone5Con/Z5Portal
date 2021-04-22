@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 87,
+  "ShowDashboardModule": false,
+  "Id": 12,
+  "VersionId": 12,
+  "EntityTabId": 63,
+  "Name": "Status",
+  "PluralName": "Statuses",
+  "Icon": "hourglass-start",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
