@@ -1,10 +1,13 @@
 <module type="ActionForm" version="05.13.33.00">
+    <contentKey />
     <moduleID>487</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>Activities Add Form</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>e9f621e9-76ad-47c0-8e63-17cd0d63c844</uniqueId>
+    <uniqueId>dd6a6433-9abc-4caa-a067-eef139f94819</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Form</definition>
