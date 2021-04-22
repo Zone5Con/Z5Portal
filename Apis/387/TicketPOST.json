@@ -192,10 +192,6 @@
             "value": "[CreatedRecordId]"
           },
           {
-            "name": "SupportAgent",
-            "value": "[CreatedRecord:SupportAgent]"
-          },
-          {
             "name": "Subject",
             "value": "[CreatedRecord:Subject]"
           },
@@ -222,6 +218,10 @@
           {
             "name": "Status",
             "value": "[CreatedRecord:Status]"
+          },
+          {
+            "name": "SupportAgent",
+            "value": "[CreatedRecord:SupportAgent]"
           }
         ],
         "Headers": [
