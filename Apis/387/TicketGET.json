@@ -53,10 +53,6 @@
             "value": "[RecordId]"
           },
           {
-            "name": "SupportAgent",
-            "value": "[Record:SupportAgent]"
-          },
-          {
             "name": "Subject",
             "value": "[Record:Subject]"
           },
@@ -83,6 +79,10 @@
           {
             "name": "Status",
             "value": "[Record:Status]"
+          },
+          {
+            "name": "SupportAgent",
+            "value": "[Record:SupportAgent]"
           }
         ],
         "Headers": []
