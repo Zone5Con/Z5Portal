@@ -29,6 +29,16 @@
       "RoleId": 9,
       "RoleName": "Users",
       "Value": "own"
+    },
+    {
+      "Id": 125,
+      "PermissionType": {
+        "Id": 4,
+        "Name": "Can Delete"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "all"
     }
   ],
   "10": [
