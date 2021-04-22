@@ -130,5 +130,27 @@
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 6
+  },
+  {
+    "Id": 97,
+    "EntityVersionId": 11,
+    "Name": "Status",
+    "Type": {
+      "Id": "EntityRef",
+      "Name": "Entity Reference",
+      "InputType": {
+        "Id": "EntityRef",
+        "Name": "Entity Reference",
+        "ValueType": "EntityRef",
+        "Length": 4
+      }
+    },
+    "EntityVersionRefId": 12,
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": false,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 7
   }
 ]
