@@ -4,5 +4,17 @@
     "EntityVersionId": 13,
     "RelationName": "Notes",
     "OrderIndex": 8
+  },
+  {
+    "Id": 6,
+    "EntityVersionId": 3,
+    "RelationName": "Attachments",
+    "OrderIndex": 10
+  },
+  {
+    "Id": 7,
+    "EntityVersionId": 15,
+    "RelationName": "Activities",
+    "OrderIndex": 11
   }
 ]

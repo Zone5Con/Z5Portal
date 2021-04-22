@@ -152,5 +152,27 @@
     "IsFilterable": true,
     "IsSortable": true,
     "OrderIndex": 7
+  },
+  {
+    "Id": 98,
+    "EntityVersionId": 11,
+    "Name": "Support Agent",
+    "Type": {
+      "Id": "EntityRef",
+      "Name": "Entity Reference",
+      "InputType": {
+        "Id": "EntityRef",
+        "Name": "Entity Reference",
+        "ValueType": "EntityRef",
+        "Length": 4
+      }
+    },
+    "EntityVersionRefId": 1,
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 9
   }
 ]
