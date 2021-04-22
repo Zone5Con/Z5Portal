@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 81,
+  "ShowDashboardModule": false,
+  "Id": 11,
+  "VersionId": 11,
+  "EntityTabId": 61,
+  "Name": "Ticket",
+  "PluralName": "Tickets",
+  "Icon": "question",
+  "Type": "UserCreated",
+  "EnableIndexing": true
+}
