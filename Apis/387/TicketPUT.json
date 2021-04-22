@@ -154,6 +154,15 @@
           }
         }
       ]
+    },
+    {
+      "Name": "SupportAgent",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -168,7 +177,8 @@
         "LastName": "[LastName]",
         "Email": "[Email]",
         "Phone": "[Phone]",
-        "Status": "[Status]"
+        "Status": "[Status]",
+        "SupportAgent": "[SupportAgent]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
