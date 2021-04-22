@@ -1,10 +1,13 @@
 <module type="ActionForm" version="05.13.33.00">
+    <contentKey />
     <moduleID>481</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
+    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -16,8 +19,9 @@
     <modulepermissions />
     <title>Notes Add Existing Form</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>7107afd5-8f11-4e26-8d0c-9adfbe0759e4</uniqueId>
+    <uniqueId>b065ab41-870d-4c01-b02d-03d548b97820</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Form</definition>
