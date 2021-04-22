@@ -53,6 +53,10 @@
             "value": "[RecordId]"
           },
           {
+            "name": "Status",
+            "value": "[Record:Status]"
+          },
+          {
             "name": "Subject",
             "value": "[Record:Subject]"
           },
