@@ -1,0 +1,247 @@
+{
+  "Id": 1,
+  "Name": "Registration of Public User",
+  "Description": "Will grant the Users role",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 1,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 1,
+        "ActionType": "UserManagement_UserRegistration",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 1,
+            "Name": "UsernameField",
+            "Value": "[Email]",
+            "IsExpression": true,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 2,
+            "Name": "RegisterWithEmail",
+            "Value": true,
+            "IsExpression": false,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 3,
+            "Name": "PasswordField",
+            "Value": "[Password]",
+            "IsExpression": true,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 4,
+            "Name": "RandomPass",
+            "IsExpression": false,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 5,
+            "Name": "EmailField",
+            "Value": "[Email]",
+            "IsExpression": true,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 6,
+            "Name": "FirstName",
+            "Value": "[FirstName]",
+            "IsExpression": true,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 7,
+            "Name": "LastName",
+            "Value": "[LastName]",
+            "IsExpression": true,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 8,
+            "Name": "SendDnnMail",
+            "Value": true,
+            "IsExpression": false,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 9,
+            "Name": "LoginIfExists",
+            "IsExpression": false,
+            "ActionId": 1,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 10,
+            "Name": "Authorization",
+            "Value": "Authorize",
+            "IsExpression": false,
+            "ActionId": 1,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_11bwvsr"
+      },
+      {
+        "Id": 2,
+        "ActionType": "GrantUserRole",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 11,
+            "Name": "RoleId",
+            "Value": "9",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 12,
+            "Name": "RoleNames",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 13,
+            "Name": "DateSelectionMode",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 14,
+            "Name": "ExtensionDays",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 15,
+            "Name": "StartDate",
+            "Value": {
+              "Date": ""
+            },
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 16,
+            "Name": "StartDateToken",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 17,
+            "Name": "ExpireDate",
+            "Value": {
+              "Date": ""
+            },
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 18,
+            "Name": "ExpireDateToken",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 19,
+            "Name": "RoleExpiration",
+            "IsExpression": false,
+            "ActionId": 2,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0ysmgq1"
+      },
+      {
+        "Id": 3,
+        "ActionType": "UserManagement_UserLogin",
+        "OrderIndex": 2,
+        "ActionParameters": [
+          {
+            "Id": 20,
+            "Name": "UsernameField",
+            "Value": "[Email]",
+            "IsExpression": true,
+            "ActionId": 3,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 21,
+            "Name": "PasswordField",
+            "Value": "[Password]",
+            "IsExpression": true,
+            "ActionId": 3,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 22,
+            "Name": "TryEmailAsUsername",
+            "Value": true,
+            "IsExpression": false,
+            "ActionId": 3,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1hkpw3r"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T15:44:21.6467765+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T15:44:21.6467765+00:00",
+  "InputFields": [
+    {
+      "Required": true,
+      "Id": 1,
+      "Name": "FirstName",
+      "InputType": "Text",
+      "WorkflowId": 1,
+      "IsDeleted": false
+    },
+    {
+      "Required": true,
+      "Id": 2,
+      "Name": "LastName",
+      "InputType": "Text",
+      "WorkflowId": 1,
+      "IsDeleted": false
+    },
+    {
+      "Required": true,
+      "Id": 3,
+      "Name": "Email",
+      "InputType": "Text",
+      "WorkflowId": 1,
+      "IsDeleted": false
+    },
+    {
+      "Required": true,
+      "Id": 4,
+      "Name": "Password",
+      "InputType": "Text",
+      "WorkflowId": 1,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": []
+}
