@@ -1,0 +1,143 @@
+{
+  "Id": 2,
+  "Name": "Sample Workflow",
+  "Description": "Sample Work Flow",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 2,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 4,
+        "Description": "",
+        "ActionErrorMessage": "",
+        "Condition": "",
+        "ActionType": "PlantAnApp.ExecuteConditionally",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 23,
+            "Name": "ConditionedActions",
+            "Value": [
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[option] == \"normal\""
+                },
+                "Actions": {
+                  "Id": 3,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 5,
+                      "ActionType": "InjectData",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 25,
+                          "Name": "Data",
+                          "Value": [
+                            {
+                              "value": "[word1] [word2]",
+                              "name": "result"
+                            }
+                          ],
+                          "IsExpression": false,
+                          "ActionId": 5,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_0h5uxiz"
+                    }
+                  ]
+                }
+              },
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[option] == \"reverse\""
+                },
+                "Actions": {
+                  "Id": 4,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 6,
+                      "ActionType": "InjectData",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 28,
+                          "Name": "Data",
+                          "Value": [
+                            {
+                              "value": "[word2] [word1]",
+                              "name": "result"
+                            }
+                          ],
+                          "IsExpression": false,
+                          "ActionId": 6,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_11f74qk"
+                    }
+                  ]
+                }
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 4,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Gateway_0r97zva"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T17:43:35.1832598+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T17:43:35.1832598+00:00",
+  "InputFields": [
+    {
+      "Required": false,
+      "DefaultValue": "Hello",
+      "Id": 5,
+      "Name": "word1",
+      "InputType": "Text",
+      "WorkflowId": 2,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "DefaultValue": "World",
+      "Id": 6,
+      "Name": "word2",
+      "InputType": "Text",
+      "WorkflowId": 2,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "DefaultValue": "normal",
+      "Id": 7,
+      "Name": "option",
+      "InputType": "Text",
+      "WorkflowId": 2,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Value": "[result]",
+      "Id": 8,
+      "Name": "words",
+      "InputType": "Text",
+      "WorkflowId": 2,
+      "IsDeleted": false
+    }
+  ]
+}
