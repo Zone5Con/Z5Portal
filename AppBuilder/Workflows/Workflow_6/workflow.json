@@ -1,0 +1,288 @@
+{
+  "Id": 6,
+  "Name": "Enforce SLA",
+  "Description": "Automatically change Ticket",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 9,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 22,
+        "ActionType": "LoadUser",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 80,
+            "Name": "Id",
+            "Value": "1",
+            "IsExpression": false,
+            "ActionId": 22,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 81,
+            "Name": "Portal",
+            "Value": "0",
+            "IsExpression": false,
+            "ActionId": 22,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0qdts2j"
+      },
+      {
+        "Id": 23,
+        "ActionType": "PlantAnApp.ReadAllEntity.0.Ticket",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 82,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 23,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 83,
+            "Name": "Where",
+            "Value": "Status in ([StatusIdsToEnforceOn]) and DateDiff(hour,isnull(LastModifiedDate,CreatedDate), SYSDATETIMEOFFSET()) >= [Hours]",
+            "IsExpression": false,
+            "ActionId": 23,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 84,
+            "Name": "RowLimit",
+            "Value": "1000",
+            "IsExpression": false,
+            "ActionId": 23,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 85,
+            "Name": "OrderByClauses",
+            "Value": [],
+            "IsExpression": false,
+            "ActionId": 23,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 86,
+            "Name": "OutputToken",
+            "Value": "SLAEntries",
+            "IsExpression": false,
+            "ActionId": 23,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0zzjd8t"
+      },
+      {
+        "Id": 24,
+        "ActionType": "LoadEntitiesFromJson",
+        "OrderIndex": 2,
+        "ActionParameters": [
+          {
+            "Id": 87,
+            "Name": "JsonModel",
+            "Value": "[SLAEntries:JSON]",
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 88,
+            "Name": "EntityName",
+            "Value": "EntriesToEnforceSLA",
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 89,
+            "Name": "OnError",
+            "Value": {
+              "Id": 10,
+              "EventName": "OnError",
+              "Actions": []
+            },
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 90,
+            "Name": "EnforceISODateTime",
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0oeqn78"
+      },
+      {
+        "Id": 25,
+        "ActionType": "ExecuteActionsOnEntityList",
+        "OrderIndex": 3,
+        "ActionParameters": [
+          {
+            "Id": 91,
+            "Name": "EntityName",
+            "Value": "EntriesToEnforceSLA",
+            "IsExpression": false,
+            "ActionId": 25,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 92,
+            "Name": "Filters",
+            "IsExpression": false,
+            "ActionId": 25,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 93,
+            "Name": "ContextBehavior",
+            "IsExpression": false,
+            "ActionId": 25,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 101,
+            "Name": "ActionList",
+            "Value": {
+              "Id": 11,
+              "EventName": "click",
+              "Actions": [
+                {
+                  "Id": 26,
+                  "ActionType": "PlantAnApp.ExecuteWorkflow.5",
+                  "OrderIndex": 0,
+                  "ActionParameters": [
+                    {
+                      "Id": 94,
+                      "Name": "InputHelpText",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 95,
+                      "Name": "Ticket",
+                      "Value": "[EntriesToEnforceSLA:Id]",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 96,
+                      "Name": "NewStatus",
+                      "Value": "[Status:Id]",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 97,
+                      "Name": "Details",
+                      "Value": "Changed by System on [Date:Now]",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 98,
+                      "Name": "OutputHelpText",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 99,
+                      "Name": "Log",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 100,
+                      "Name": "Activity",
+                      "IsExpression": false,
+                      "ActionId": 26,
+                      "OrderIndex": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "IsExpression": false,
+            "ActionId": 25,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 102,
+            "Name": "ContinueOnError",
+            "IsExpression": false,
+            "ActionId": 25,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 103,
+            "Name": "OnError",
+            "Value": {
+              "Id": 12,
+              "EventName": "OnError",
+              "Actions": []
+            },
+            "IsExpression": false,
+            "ActionId": 25,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_040ujzb"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T20:05:31.8680991+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T20:05:31.8680991+00:00",
+  "InputFields": [
+    {
+      "Required": false,
+      "Id": 28,
+      "Name": "Status",
+      "InputType": "EntityRef",
+      "EntityVersionId": 12,
+      "WorkflowId": 6,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 29,
+      "Name": "Hours",
+      "InputType": "Integer",
+      "WorkflowId": 6,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 30,
+      "Name": "StatusIdsToEnforceOn",
+      "InputType": "Text",
+      "WorkflowId": 6,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Value": "[SLAEntries:JSON]",
+      "Id": 31,
+      "Name": "TicketsJSON",
+      "InputType": "Text",
+      "WorkflowId": 6,
+      "IsDeleted": false
+    }
+  ]
+}
