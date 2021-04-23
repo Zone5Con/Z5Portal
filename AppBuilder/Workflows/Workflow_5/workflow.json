@@ -1,0 +1,227 @@
+{
+  "Id": 5,
+  "Name": "Change Ticket Status",
+  "Description": "Provide the ticket and the new status",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 8,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 18,
+        "ActionType": "PlantAnApp.ReadEntity.0.Status",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 63,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 18,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 64,
+            "Name": "RecordId",
+            "Value": "[Ticket:Status]",
+            "IsExpression": false,
+            "ActionId": 18,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 65,
+            "Name": "OutputToken",
+            "Value": "OldStatus",
+            "IsExpression": false,
+            "ActionId": 18,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0fwo3w1"
+      },
+      {
+        "Id": 19,
+        "ActionType": "PlantAnApp.PartialUpdateEntity.0.Ticket",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 66,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 67,
+            "Name": "RecordId",
+            "Value": "[Ticket:Id]",
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 68,
+            "Name": "UpdatedProperties",
+            "Value": [
+              {
+                "PropertyName": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "Status"
+                },
+                "PropertyValue": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[NewStatus:Id]"
+                }
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0drclum"
+      },
+      {
+        "Id": 20,
+        "ActionType": "InjectData",
+        "OrderIndex": 2,
+        "ActionParameters": [
+          {
+            "Id": 71,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "Status Changed from [OldStatus:Name] to [NewStatus:Name]",
+                "name": "LogName"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1qwv8pj"
+      },
+      {
+        "Id": 21,
+        "ActionType": "PlantAnApp.ExecuteWorkflow.3",
+        "OrderIndex": 3,
+        "ActionParameters": [
+          {
+            "Id": 72,
+            "Name": "InputHelpText",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 73,
+            "Name": "CurrentUser",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 74,
+            "Name": "TicketID",
+            "Value": "[Ticket:Id]",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 75,
+            "Name": "ActivityCode",
+            "Value": "StatusChange",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 76,
+            "Name": "Detail",
+            "Value": "[Details]",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 77,
+            "Name": "Name",
+            "Value": "[LogName]",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 78,
+            "Name": "OutputHelpText",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 79,
+            "Name": "ActivityID",
+            "Value": "NewActivityId",
+            "IsExpression": false,
+            "ActionId": 21,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1prfeu4"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T19:53:09.6960005+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T19:53:09.6960005+00:00",
+  "InputFields": [
+    {
+      "Required": false,
+      "Id": 23,
+      "Name": "Ticket",
+      "InputType": "EntityRef",
+      "EntityVersionId": 11,
+      "WorkflowId": 5,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 24,
+      "Name": "NewStatus",
+      "InputType": "EntityRef",
+      "EntityVersionId": 12,
+      "WorkflowId": 5,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 25,
+      "Name": "Details",
+      "InputType": "Text",
+      "WorkflowId": 5,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Value": "[LogName]",
+      "Id": 26,
+      "Name": "Log",
+      "InputType": "Text",
+      "WorkflowId": 5,
+      "IsDeleted": false
+    },
+    {
+      "Value": "[NewActivityId]",
+      "Id": 27,
+      "Name": "Activity",
+      "InputType": "Text",
+      "WorkflowId": 5,
+      "IsDeleted": false
+    }
+  ]
+}
