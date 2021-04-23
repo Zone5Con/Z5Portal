@@ -35,10 +35,25 @@
   "Actions": [
     {
       "ActionType": "PlantAnApp.ExecuteWorkflow.6",
-      "Description": "24 hours have passed",
+      "Description": "48 hours have passed",
       "ExecutionType": "OnExecute",
       "IsEnabled": true,
       "OrderIndex": 0,
+      "Parameters": {
+        "InputHelpText": "",
+        "Status": "6",
+        "Hours": "48",
+        "StatusIdsToEnforceOn": "1,2,6",
+        "OutputHelpText": "",
+        "TicketsJSON": ""
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ExecuteWorkflow.6",
+      "Description": "24 hours have passed",
+      "ExecutionType": "OnExecute",
+      "IsEnabled": true,
+      "OrderIndex": 1,
       "Parameters": {
         "InputHelpText": "",
         "Status": "5",
