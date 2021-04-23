@@ -1,0 +1,256 @@
+{
+  "Id": 3,
+  "Name": "Log Ticket Activity",
+  "Description": "Pass in active user and activity",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 5,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 7,
+        "ActionType": "LoadUser",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 30,
+            "Name": "Id",
+            "Value": "1",
+            "IsExpression": false,
+            "ActionId": 7,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 31,
+            "Name": "Portal",
+            "Value": "0",
+            "IsExpression": false,
+            "ActionId": 7,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0n8yah9"
+      },
+      {
+        "Id": 8,
+        "ActionType": "RunSql",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 32,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 33,
+            "Name": "QueryTimeout",
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 34,
+            "Name": "SqlQuery",
+            "Value": "Select Id, Name From app.ActivityType \nWhere ActivityCode = @ActivityCode",
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 35,
+            "Name": "BindTokens",
+            "Value": [
+              {
+                "value": "[ActivityCode]",
+                "name": "ActivityCode"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 36,
+            "Name": "OutputTokenName",
+            "Value": "Type",
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 37,
+            "Name": "ExtractColumns",
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 38,
+            "Name": "OnError",
+            "Value": {
+              "Id": 6,
+              "EventName": "OnError",
+              "Actions": []
+            },
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 39,
+            "Name": "ShowErrors",
+            "IsExpression": false,
+            "ActionId": 8,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_00xqc0x"
+      },
+      {
+        "Id": 9,
+        "ActionType": "PlantAnApp.CreateEntity.0.Activity",
+        "OrderIndex": 2,
+        "ActionParameters": [
+          {
+            "Id": 40,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 41,
+            "Name": "Name",
+            "Value": "[Name=[Type:Name]]",
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 42,
+            "Name": "Details",
+            "Value": "[Detail]",
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 43,
+            "Name": "Type",
+            "Value": "[Type:Id]",
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 44,
+            "Name": "User",
+            "Value": "[CurrentUser]",
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 45,
+            "Name": "OutputToken",
+            "Value": "ActivityID",
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_06ydr88"
+      },
+      {
+        "Id": 10,
+        "ActionType": "PlantAnApp.LinkChildEntity.0.TicketActivities",
+        "OrderIndex": 3,
+        "ActionParameters": [
+          {
+            "Id": 46,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 10,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 47,
+            "Name": "ParentRecordId",
+            "Value": "[TicketID:Id]",
+            "IsExpression": false,
+            "ActionId": 10,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 48,
+            "Name": "ChildRecordId",
+            "Value": "[ActivityID]",
+            "IsExpression": false,
+            "ActionId": 10,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1wepkge"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T18:04:30.0074984+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T18:04:30.0074984+00:00",
+  "InputFields": [
+    {
+      "Required": false,
+      "Id": 9,
+      "Name": "CurrentUser",
+      "InputType": "Integer",
+      "WorkflowId": 3,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 10,
+      "Name": "TicketID",
+      "InputType": "EntityRef",
+      "EntityVersionId": 11,
+      "WorkflowId": 3,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 11,
+      "Name": "ActivityCode",
+      "InputType": "Text",
+      "WorkflowId": 3,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 12,
+      "Name": "Detail",
+      "InputType": "LargeText",
+      "WorkflowId": 3,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 13,
+      "Name": "Name",
+      "InputType": "Text",
+      "WorkflowId": 3,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Value": "[ActivityID]",
+      "Id": 14,
+      "Name": "ActivityID",
+      "InputType": "Text",
+      "WorkflowId": 3,
+      "IsDeleted": false
+    }
+  ]
+}
