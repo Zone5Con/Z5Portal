@@ -1,0 +1,53 @@
+{
+  "ApiId": "924ed48a8526c22d741739",
+  "ContextPortal": 0,
+  "ContextUser": 2,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "SLA Enforcement",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "RepeatInterval",
+      "Parameters": {
+        "Start": {
+          "Date": "",
+          "Time": "12:00:00AM"
+        },
+        "Interval": {
+          "Qty": 1,
+          "Unit": {
+            "Value": "Hours",
+            "IsExpression": false,
+            "Parameters": {}
+          }
+        },
+        "SkipIfRunning": true,
+        "OnMissfire": {
+          "Expression": "",
+          "Value": "FireNow",
+          "IsExpression": false,
+          "Parameters": {}
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ExecuteWorkflow.6",
+      "Description": "24 hours have passed",
+      "ExecutionType": "OnExecute",
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "InputHelpText": "",
+        "Status": "5",
+        "Hours": "24",
+        "StatusIdsToEnforceOn": "1,2",
+        "OutputHelpText": "",
+        "TicketsJSON": ""
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
