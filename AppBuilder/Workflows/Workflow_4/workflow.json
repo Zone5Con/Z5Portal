@@ -1,0 +1,286 @@
+{
+  "Id": 4,
+  "Name": "Add Field Updates Activity",
+  "Description": "Pass in new field values to add an activity showing updates",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 7,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 11,
+        "ActionType": "InjectData",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 49,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "",
+                "name": "UpdateList"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 11,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1p04u6h"
+      },
+      {
+        "Id": 12,
+        "Condition": "[NewSubj] != [TicketID:Subject]",
+        "ActionType": "InjectData",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 50,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[UpdateList]Subject Changed from <strong>[TicketID:Subject]</strong> to <strong>[NewSubj]</strong><br>",
+                "name": "UpdateList"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 12,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1e8e2no"
+      },
+      {
+        "Id": 13,
+        "Condition": "[NewFN] != [TicketID:FirstName]",
+        "ActionType": "InjectData",
+        "OrderIndex": 2,
+        "ActionParameters": [
+          {
+            "Id": 51,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[UpdateList]First Name Changed from <strong>[TicketID:FirstName]</strong> to <strong>[NewFN]</strong><br>",
+                "name": "UpdateList"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 13,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1dxgw1n"
+      },
+      {
+        "Id": 14,
+        "Condition": "[NewLN] != [TicketID:LastName]",
+        "ActionType": "InjectData",
+        "OrderIndex": 3,
+        "ActionParameters": [
+          {
+            "Id": 52,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[UpdateList]Last Name Changed from <strong>[TicketID:LastName]</strong> to <strong>[NewLN]</strong><br>",
+                "name": "UpdateList"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 14,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1urgwp3"
+      },
+      {
+        "Id": 15,
+        "Condition": "[NewEmail] != [TicketID:Email]",
+        "ActionType": "InjectData",
+        "OrderIndex": 4,
+        "ActionParameters": [
+          {
+            "Id": 53,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[UpdateList]Email Changed from <strong>[TicketID:Email]</strong> to <strong>[NewEmail]</strong><br>",
+                "name": "UpdateList"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 15,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0d3ec53"
+      },
+      {
+        "Id": 16,
+        "Condition": "[NewPhone] != [TicketID:Phone]",
+        "ActionType": "InjectData",
+        "OrderIndex": 5,
+        "ActionParameters": [
+          {
+            "Id": 54,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[UpdateList]Phone Changed from <strong>[TicketID:Phone]</strong> to <strong>[NewPhone]</strong><br>",
+                "name": "UpdateList"
+              }
+            ],
+            "IsExpression": false,
+            "ActionId": 16,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1p0mekd"
+      },
+      {
+        "Id": 17,
+        "ActionType": "PlantAnApp.ExecuteWorkflow.3",
+        "OrderIndex": 6,
+        "ActionParameters": [
+          {
+            "Id": 55,
+            "Name": "InputHelpText",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 56,
+            "Name": "CurrentUser",
+            "Value": "[CurrentUser]",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 57,
+            "Name": "TicketID",
+            "Value": "[TicketID:Id]",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 58,
+            "Name": "ActivityCode",
+            "Value": "FieldUpdate",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 59,
+            "Name": "Detail",
+            "Value": "[UpdateList]",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 60,
+            "Name": "Name",
+            "Value": "Fields Updated",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 61,
+            "Name": "OutputHelpText",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 62,
+            "Name": "ActivityID",
+            "Value": "ActivityID",
+            "IsExpression": false,
+            "ActionId": 17,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_19ikc6q"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T18:22:38.2360709+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T18:22:38.2360709+00:00",
+  "InputFields": [
+    {
+      "Required": false,
+      "Id": 15,
+      "Name": "CurrentUser",
+      "InputType": "Integer",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 16,
+      "Name": "TicketID",
+      "InputType": "EntityRef",
+      "EntityVersionId": 11,
+      "WorkflowId": 4,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 17,
+      "Name": "NewSubj",
+      "InputType": "Text",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 18,
+      "Name": "NewFN",
+      "InputType": "Text",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 19,
+      "Name": "NewLN",
+      "InputType": "Text",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 20,
+      "Name": "NewEmail",
+      "InputType": "Text",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    },
+    {
+      "Required": false,
+      "Id": 21,
+      "Name": "NewPhone",
+      "InputType": "Text",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Value": "[ActivityID]",
+      "Id": 22,
+      "Name": "ActivityID",
+      "InputType": "Text",
+      "WorkflowId": 4,
+      "IsDeleted": false
+    }
+  ]
+}
