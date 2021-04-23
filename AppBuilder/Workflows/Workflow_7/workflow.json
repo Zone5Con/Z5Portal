@@ -1,0 +1,256 @@
+{
+  "Id": 7,
+  "Name": "Notify Support Agents",
+  "Description": "Send Email to Users",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 13,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 27,
+        "ActionType": "LoadEntitiesFromSql",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 104,
+            "Name": "ConnectionString",
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 105,
+            "Name": "SqlQuery",
+            "Value": "Select u.* From dbo.Users u\nInner Join dbo.UserRoles ur On ur.UserId = u.UserId\nWhere ur.RoleId = 10 -- Support Agents",
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 106,
+            "Name": "BindTokens",
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 107,
+            "Name": "EntityName",
+            "Value": "Agents",
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 108,
+            "Name": "EntityProps",
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 109,
+            "Name": "OnError",
+            "Value": {
+              "Id": 14,
+              "EventName": "OnError",
+              "Actions": []
+            },
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_003t9jr"
+      },
+      {
+        "Id": 28,
+        "ActionType": "ExecuteActionsOnEntityList",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 110,
+            "Name": "EntityName",
+            "Value": "Agents",
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 111,
+            "Name": "Filters",
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 112,
+            "Name": "ContextBehavior",
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 126,
+            "Name": "ActionList",
+            "Value": {
+              "Id": 15,
+              "EventName": "click",
+              "Actions": [
+                {
+                  "Id": 29,
+                  "ActionType": "SendMail",
+                  "OrderIndex": 0,
+                  "ActionParameters": [
+                    {
+                      "Id": 113,
+                      "Name": "From",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 114,
+                      "Name": "To",
+                      "Value": "[Agents:Email]",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 115,
+                      "Name": "DetermineEmail",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 116,
+                      "Name": "ToAllUsers",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 117,
+                      "Name": "ReplyTo",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 118,
+                      "Name": "Cc",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 119,
+                      "Name": "Bcc",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 120,
+                      "Name": "Subject",
+                      "Value": "[Subject]",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 121,
+                      "Name": "Format",
+                      "Value": "Html",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 122,
+                      "Name": "Body",
+                      "Value": "<p>[Details]</p>",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 123,
+                      "Name": "Headers",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 124,
+                      "Name": "PortalFiles",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 125,
+                      "Name": "FileToken1",
+                      "IsExpression": false,
+                      "ActionId": 29,
+                      "OrderIndex": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 127,
+            "Name": "ContinueOnError",
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 128,
+            "Name": "OnError",
+            "Value": {
+              "Id": 16,
+              "EventName": "OnError",
+              "Actions": []
+            },
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1f2b8yb"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-23T20:24:33.3927241+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-23T20:24:33.3927241+00:00",
+  "InputFields": [
+    {
+      "Required": true,
+      "Id": 32,
+      "Name": "Subject",
+      "InputType": "Text",
+      "WorkflowId": 7,
+      "IsDeleted": false
+    },
+    {
+      "Required": true,
+      "Id": 33,
+      "Name": "Details",
+      "InputType": "LargeText",
+      "WorkflowId": 7,
+      "IsDeleted": false
+    }
+  ],
+  "OutputFields": []
+}
