@@ -1,0 +1,121 @@
+{
+  "Id": 8,
+  "Name": "Send Email",
+  "Description": "Sends an Email",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 17,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 30,
+        "ActionType": "SendMail",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 129,
+            "Name": "From",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 130,
+            "Name": "To",
+            "Value": "craig@verticaldemand.com",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 131,
+            "Name": "DetermineEmail",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 132,
+            "Name": "ToAllUsers",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 133,
+            "Name": "ReplyTo",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 134,
+            "Name": "Cc",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 135,
+            "Name": "Bcc",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 136,
+            "Name": "Subject",
+            "Value": "Test from API workflow",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 137,
+            "Name": "Format",
+            "Value": "Html",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 138,
+            "Name": "Body",
+            "Value": "<p>Test email to make sure emails are sending from API workflow</p>",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 139,
+            "Name": "Headers",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 140,
+            "Name": "PortalFiles",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 141,
+            "Name": "FileToken1",
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1twvjzz"
+      }
+    ]
+  },
+  "CreatedBy": "Craig Anderson",
+  "CreatedOn": "2021-04-24T14:43:00.6961458+00:00",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-04-24T14:43:00.6961458+00:00",
+  "InputFields": [],
+  "OutputFields": []
+}
