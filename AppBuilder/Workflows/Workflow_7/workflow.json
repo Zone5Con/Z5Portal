@@ -106,7 +106,6 @@
                     {
                       "Id": 113,
                       "Name": "From",
-                      "Value": "notifications@z5portal.com",
                       "IsExpression": false,
                       "ActionId": 29,
                       "OrderIndex": 0
@@ -234,7 +233,7 @@
   "CreatedBy": "Craig Anderson",
   "CreatedOn": "2021-04-23T20:24:33.3927241+00:00",
   "LastModifiedBy": "Craig Anderson",
-  "LastModifiedOn": "2021-04-23T20:27:56.4428241+00:00",
+  "LastModifiedOn": "2021-04-24T14:45:28.8398916+00:00",
   "InputFields": [
     {
       "Required": true,
