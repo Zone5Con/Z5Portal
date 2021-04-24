@@ -1,0 +1,159 @@
+{
+  "Name": "MepCondition",
+  "Description": "Creates a new record of type MepCondition",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 61,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "LoanGuid",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LoanNumber",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"LoanNumber is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PTA",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "PTD",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "PTC",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "PTF",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.MepCondition",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "LoanGuid": "[LoanGuid]",
+        "LoanNumber": "[LoanNumber]",
+        "PTA": "[PTA]",
+        "PTD": "[PTD]",
+        "PTC": "[PTC]",
+        "PTF": "[PTF]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "MepCondition"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.MepCondition",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "MepCondition"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[CreatedRecord:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[CreatedRecord:LoanNumber]"
+          },
+          {
+            "name": "PTA",
+            "value": "[CreatedRecord:PTA]"
+          },
+          {
+            "name": "PTD",
+            "value": "[CreatedRecord:PTD]"
+          },
+          {
+            "name": "PTC",
+            "value": "[CreatedRecord:PTC]"
+          },
+          {
+            "name": "PTF",
+            "value": "[CreatedRecord:PTF]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://z5portal.com/api/MepCondition?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
