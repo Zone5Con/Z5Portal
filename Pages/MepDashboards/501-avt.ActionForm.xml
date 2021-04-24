@@ -7,7 +7,6 @@
     <cachemethod />
     <cachetime>0</cachetime>
     <color />
-    <containersrc />
     <displayprint>true</displayprint>
     <displaysyndicate>false</displaysyndicate>
     <displaytitle>true</displaytitle>
@@ -2167,7 +2166,7 @@
       &lt;ActionType&gt;ShowError&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
       &lt;Condition&gt;![h_isEdit] &amp;amp;&amp;amp; ![HasRole:6] &amp;amp;&amp;amp; ![HasRole:7] &amp;amp;&amp;amp; ![HasRole:5] &amp;amp;&amp;amp; ![HasRole:8]&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-04-24T21:03:32.66&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-24T21:09:38.0182906+00:00&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Message&quot;:&quot;You are not allowed to add items.&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;501&lt;/ModuleId&gt;
@@ -2182,7 +2181,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-24T21:03:32.677&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-24T21:09:38.0182906+00:00&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;name&quot;:&quot;isEdit&quot;,&quot;value&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;popupTitle&quot;,&quot;value&quot;:&quot;Add MepDashboard&quot;},{&quot;name&quot;:&quot;original:LoanGuid&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanNumber&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:BorFirstName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:BorLastName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:BorCellPhone&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:BorEmail&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CobFirstName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CobLastName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CobCellPhone&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CobEmail&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:SubjectPropertyAddr&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanAmount&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanType&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanNotes&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanStory&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CurrentMilestone&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CurrentTeamMember&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanOfficerName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:LoanPartnerName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:ProcessorName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:UnderwriterName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CloserName&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:WelcomeLetterSentDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:ApprovalDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:CommitmentSentDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:ContingencyDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:TitleOrderDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:TitleReceivedDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:AppraisalOrderDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:AppraisalReceivedDate:ISO&quot;,&quot;value&quot;:&quot;&quot;},{&quot;name&quot;:&quot;original:ClosingDate:ISO&quot;,&quot;value&quot;:&quot;&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;501&lt;/ModuleId&gt;
@@ -2229,7 +2228,7 @@
       &lt;ActionType&gt;ShowError&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
       &lt;Condition&gt;[h_isEdit] &amp;amp;&amp;amp; ![HasRole:6] &amp;amp;&amp;amp; ![HasRole:7] &amp;amp;&amp;amp; ![HasRole:5] &amp;amp;&amp;amp; ![HasRole:8]&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-04-24T21:03:32.66&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-24T21:09:38.0182906+00:00&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Message&quot;:&quot;You are not allowed to edit items.&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;501&lt;/ModuleId&gt;
@@ -2246,14 +2245,15 @@
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
       &lt;Condition&gt;!string.IsNullOrWhiteSpace([QueryString:MepDashboardId=])&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-04-24T21:03:32.677&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-24T21:09:38.0339294+00:00&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;name&quot;:&quot;isEdit&quot;,&quot;value&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;popupTitle&quot;,&quot;value&quot;:&quot;Edit MepDashboard&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;501&lt;/ModuleId&gt;
       &lt;EventName&gt;preinit&lt;/EventName&gt;
-      &lt;MetadataJson&gt;{&quot;PAP_InternalIdentifier&quot;:&quot;PreInit.CheckEditMode&quot;}&lt;/MetadataJson&gt;
+      &lt;MetadataJson&gt;{&quot;PAP_InternalIdentifier&quot;:&quot;PreInit.CheckEditMode&quot;,&quot;PAP_GeneratedCondition&quot;:&quot;!string.IsNullOrWhiteSpace([QueryString:MepDashboardId=])&quot;}&lt;/MetadataJson&gt;
       &lt;Metadata&gt;
         &lt;PAP_InternalIdentifier&gt;PreInit.CheckEditMode&lt;/PAP_InternalIdentifier&gt;
+        &lt;PAP_GeneratedCondition&gt;!string.IsNullOrWhiteSpace([QueryString:MepDashboardId=])&lt;/PAP_GeneratedCondition&gt;
       &lt;/Metadata&gt;
     &lt;/ActionInfo&gt;
     &lt;ActionInfo&gt;
@@ -2293,7 +2293,7 @@
       &lt;ActionType&gt;PlantAnApp.ReadEntity.0.MepDashboard&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
       &lt;Condition&gt;[isEdit]&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-04-24T21:03:32.677&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-24T21:09:38.0495439+00:00&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;RecordId&quot;:&quot;[QueryString:MepDashboardId=]&quot;,&quot;OutputToken&quot;:&quot;original&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;501&lt;/ModuleId&gt;
