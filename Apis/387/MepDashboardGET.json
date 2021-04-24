@@ -1,0 +1,190 @@
+{
+  "Name": "MepDashboard",
+  "Description": "Returns the information of a MepDashboard record in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 57,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.MepDashboard",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "MepDashboard"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[Record:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[Record:LoanNumber]"
+          },
+          {
+            "name": "BorFirstName",
+            "value": "[Record:BorFirstName]"
+          },
+          {
+            "name": "BorLastName",
+            "value": "[Record:BorLastName]"
+          },
+          {
+            "name": "BorCellPhone",
+            "value": "[Record:BorCellPhone]"
+          },
+          {
+            "name": "BorEmail",
+            "value": "[Record:BorEmail]"
+          },
+          {
+            "name": "CobFirstName",
+            "value": "[Record:CobFirstName]"
+          },
+          {
+            "name": "CobLastName",
+            "value": "[Record:CobLastName]"
+          },
+          {
+            "name": "CobCellPhone",
+            "value": "[Record:CobCellPhone]"
+          },
+          {
+            "name": "CobEmail",
+            "value": "[Record:CobEmail]"
+          },
+          {
+            "name": "SubjectPropertyAddr",
+            "value": "[Record:SubjectPropertyAddr]"
+          },
+          {
+            "name": "LoanAmount",
+            "value": "[Record:LoanAmount]"
+          },
+          {
+            "name": "LoanType",
+            "value": "[Record:LoanType]"
+          },
+          {
+            "name": "LoanNotes",
+            "value": "[Record:LoanNotes]"
+          },
+          {
+            "name": "LoanStory",
+            "value": "[Record:LoanStory]"
+          },
+          {
+            "name": "CurrentMilestone",
+            "value": "[Record:CurrentMilestone]"
+          },
+          {
+            "name": "CurrentTeamMember",
+            "value": "[Record:CurrentTeamMember]"
+          },
+          {
+            "name": "LoanOfficerName",
+            "value": "[Record:LoanOfficerName]"
+          },
+          {
+            "name": "LoanPartnerName",
+            "value": "[Record:LoanPartnerName]"
+          },
+          {
+            "name": "ProcessorName",
+            "value": "[Record:ProcessorName]"
+          },
+          {
+            "name": "UnderwriterName",
+            "value": "[Record:UnderwriterName]"
+          },
+          {
+            "name": "CloserName",
+            "value": "[Record:CloserName]"
+          },
+          {
+            "name": "WelcomeLetterSentDate",
+            "value": "[Record:WelcomeLetterSentDate]"
+          },
+          {
+            "name": "ApprovalDate",
+            "value": "[Record:ApprovalDate]"
+          },
+          {
+            "name": "CommitmentSentDate",
+            "value": "[Record:CommitmentSentDate]"
+          },
+          {
+            "name": "ContingencyDate",
+            "value": "[Record:ContingencyDate]"
+          },
+          {
+            "name": "TitleOrderDate",
+            "value": "[Record:TitleOrderDate]"
+          },
+          {
+            "name": "TitleReceivedDate",
+            "value": "[Record:TitleReceivedDate]"
+          },
+          {
+            "name": "AppraisalOrderDate",
+            "value": "[Record:AppraisalOrderDate]"
+          },
+          {
+            "name": "AppraisalReceivedDate",
+            "value": "[Record:AppraisalReceivedDate]"
+          },
+          {
+            "name": "ClosingDate",
+            "value": "[Record:ClosingDate]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
