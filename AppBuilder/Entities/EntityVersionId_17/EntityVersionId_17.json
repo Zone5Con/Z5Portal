@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 131,
+  "ShowDashboardModule": false,
+  "Id": 17,
+  "VersionId": 17,
+  "EntityTabId": 77,
+  "Name": "MepCondition",
+  "PluralName": "MepConditions",
+  "Icon": "file-medical",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
