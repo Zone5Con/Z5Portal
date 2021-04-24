@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 100,
+  "ShowDashboardModule": false,
+  "Id": 16,
+  "VersionId": 16,
+  "EntityTabId": 75,
+  "Name": "MepDashboard",
+  "PluralName": "MepDashboards",
+  "Icon": "chart-area",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
