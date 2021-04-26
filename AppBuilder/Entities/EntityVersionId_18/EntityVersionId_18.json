@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 136,
+  "ShowDashboardModule": false,
+  "Id": 18,
+  "VersionId": 18,
+  "EntityTabId": 79,
+  "Name": "Calendar",
+  "PluralName": "Calendars",
+  "Icon": "calendar-alt",
+  "Type": "UserCreated",
+  "EnableIndexing": true
+}
