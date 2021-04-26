@@ -1,0 +1,257 @@
+{
+  "Name": "Calendar",
+  "Description": "Creates a new record of type Calendar",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 66,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "TheDate",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"TheDate is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TheDayNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheDayName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheDayOfWeekNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheDayOfYear",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheIsWeekend",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheWeekNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheWeekISO",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheMonthNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheMonthName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheQuarter",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheIsHoliday",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TheHolidayName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.Calendar",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "TheDate": "[TheDate]",
+        "TheDayNbr": "[TheDayNbr]",
+        "TheDayName": "[TheDayName]",
+        "TheDayOfWeekNbr": "[TheDayOfWeekNbr]",
+        "TheDayOfYear": "[TheDayOfYear]",
+        "TheIsWeekend": "[TheIsWeekend]",
+        "TheWeekNbr": "[TheWeekNbr]",
+        "TheWeekISO": "[TheWeekISO]",
+        "TheMonthNbr": "[TheMonthNbr]",
+        "TheMonthName": "[TheMonthName]",
+        "TheQuarter": "[TheQuarter]",
+        "TheIsHoliday": "[TheIsHoliday]",
+        "TheHolidayName": "[TheHolidayName]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "Calendar"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.Calendar",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "Calendar"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "TheDate",
+            "value": "[CreatedRecord:TheDate]"
+          },
+          {
+            "name": "TheDayNbr",
+            "value": "[CreatedRecord:TheDayNbr]"
+          },
+          {
+            "name": "TheDayName",
+            "value": "[CreatedRecord:TheDayName]"
+          },
+          {
+            "name": "TheDayOfWeekNbr",
+            "value": "[CreatedRecord:TheDayOfWeekNbr]"
+          },
+          {
+            "name": "TheDayOfYear",
+            "value": "[CreatedRecord:TheDayOfYear]"
+          },
+          {
+            "name": "TheIsWeekend",
+            "value": "[CreatedRecord:TheIsWeekend]"
+          },
+          {
+            "name": "TheWeekNbr",
+            "value": "[CreatedRecord:TheWeekNbr]"
+          },
+          {
+            "name": "TheWeekISO",
+            "value": "[CreatedRecord:TheWeekISO]"
+          },
+          {
+            "name": "TheMonthNbr",
+            "value": "[CreatedRecord:TheMonthNbr]"
+          },
+          {
+            "name": "TheMonthName",
+            "value": "[CreatedRecord:TheMonthName]"
+          },
+          {
+            "name": "TheQuarter",
+            "value": "[CreatedRecord:TheQuarter]"
+          },
+          {
+            "name": "TheIsHoliday",
+            "value": "[CreatedRecord:TheIsHoliday]"
+          },
+          {
+            "name": "TheHolidayName",
+            "value": "[CreatedRecord:TheHolidayName]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://z5portal.com/api/Calendar?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
