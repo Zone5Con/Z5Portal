@@ -1,0 +1,14 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 149,
+  "ShowDashboardModule": false,
+  "Id": 19,
+  "VersionId": 19,
+  "EntityTabId": 81,
+  "Name": "CustInfo",
+  "PluralName": "CustInfos",
+  "Icon": "person-booth",
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
