@@ -584,7 +584,23 @@
     &lt;ShowTooltips&gt;False&lt;/ShowTooltips&gt;
     &lt;ShowTooltipTitle&gt;True&lt;/ShowTooltipTitle&gt;
     &lt;ShowFormCondition /&gt;
-    &lt;InitJs&gt;&lt;![CDATA[]]&gt;&lt;/InitJs&gt;
+    &lt;InitJs&gt;&lt;![CDATA[
+var pusher = new Pusher(&#39;1b2cf98ed23e60ee65c0&#39;, {
+      cluster: &#39;us2&#39;,
+      forceTLS: true
+    });
+
+var channel = pusher.subscribe(&#39;wingman&#39;);
+   
+    channel.bind(&#39;refreshPage&#39;, function(data) {
+      var refreshAudio = document.GetElementById(&quot;PlayRefreshAudio&quot;);
+      refreshAudio.play();
+      dnnsf.api.actionForm.initForm(moduleid, 528);
+      
+    });
+
+
+]]&gt;&lt;/InitJs&gt;
     &lt;PopupWidth&gt;400&lt;/PopupWidth&gt;
     &lt;WidthCoordinate&gt;px&lt;/WidthCoordinate&gt;
     &lt;PopupHeight&gt;300&lt;/PopupHeight&gt;
@@ -604,7 +620,7 @@
     &lt;LeftSidebarHtml /&gt;
     &lt;RightSidebarHtml /&gt;
     &lt;RootClasses /&gt;
-    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en-US&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
+    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
     &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
   &lt;/Settings&gt;
   &lt;Actions xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
@@ -612,7 +628,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.867&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.38&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select * from app.CustInfo\nwhere LoanGuid = &#39;[Get:LG]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:[{&quot;value&quot;:&quot;FirstName&quot;,&quot;name&quot;:&quot;FirstName&quot;},{&quot;value&quot;:&quot;LastName&quot;,&quot;name&quot;:&quot;LastName&quot;},{&quot;value&quot;:&quot;CellPhone&quot;,&quot;name&quot;:&quot;CellPhone&quot;},{&quot;value&quot;:&quot;Email&quot;,&quot;name&quot;:&quot;Email&quot;},{&quot;value&quot;:&quot;Notes&quot;,&quot;name&quot;:&quot;Notes&quot;},{&quot;value&quot;:&quot;CIID&quot;,&quot;name&quot;:&quot;ID&quot;}],&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;528&lt;/ModuleId&gt;
@@ -624,7 +640,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.PartialUpdateEntity.0.CustInfo&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.757&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.333&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[CIID]&quot;,&quot;UpdatedProperties&quot;:[{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;FirstName&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;[FirstName]&quot;,&quot;IsExpression&quot;:false}},{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;LastName&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;[LastName]&quot;,&quot;IsExpression&quot;:false}},{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;CellPhone&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;[CellPhone]&quot;,&quot;IsExpression&quot;:false}},{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;Email&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;[Email]&quot;,&quot;IsExpression&quot;:false}}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;528&lt;/ModuleId&gt;
@@ -637,7 +653,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PostData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.85&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.253&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;InputParameters&quot;:&quot;&quot;,&quot;URL&quot;:&quot;https://z5portal.com/Portals/0/craig.txt&quot;,&quot;UrlTokenContext&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Url&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;UseSSL&quot;:true,&quot;Timeout&quot;:&quot;&quot;,&quot;HttpMethod&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;GET&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Data&quot;:&quot;&quot;,&quot;DoNotEscapeTokens&quot;:&quot;&quot;,&quot;DisableReferer&quot;:&quot;&quot;,&quot;Headers&quot;:&quot;&quot;,&quot;UseDNNProxySettings&quot;:&quot;&quot;,&quot;AddCurrentCookies&quot;:&quot;&quot;,&quot;OutputParameters&quot;:&quot;&quot;,&quot;CookieContainerToken&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;MyJSON&quot;,&quot;OutputHeaders&quot;:&quot;&quot;,&quot;IgnoreErrors&quot;:&quot;&quot;,&quot;Events&quot;:&quot;&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;528&lt;/ModuleId&gt;
@@ -648,22 +664,9 @@
     &lt;/ActionInfo&gt;
     &lt;ActionInfo&gt;
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
-      &lt;ActionType&gt;ShowToastAndContinue&lt;/ActionType&gt;
-      &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.773&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
-      &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h4 style=\&quot;color:#fff;\&quot;&amp;gt;Updated&amp;lt;/h4&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;success&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;2000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;top-right&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
-      &lt;ModuleId&gt;528&lt;/ModuleId&gt;
-      &lt;FieldName&gt;Update&lt;/FieldName&gt;
-      &lt;EventName&gt;click&lt;/EventName&gt;
-      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
-      &lt;Metadata /&gt;
-    &lt;/ActionInfo&gt;
-    &lt;ActionInfo&gt;
-      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;ParseJsonIntoTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.85&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.27&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JsonString&quot;:&quot;[MyJSON]&quot;,&quot;BaseTokenName&quot;:&quot;New&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;528&lt;/ModuleId&gt;
@@ -674,11 +677,24 @@
     &lt;/ActionInfo&gt;
     &lt;ActionInfo&gt;
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
-      &lt;ActionType&gt;InitActionForm&lt;/ActionType&gt;
+      &lt;ActionType&gt;SendMail&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.787&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.287&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
-      &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:528,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:[{&quot;value&quot;:&quot;[Get:LG]&quot;,&quot;name&quot;:&quot;LG&quot;}]}&lt;/ActionData&gt;
+      &lt;ActionData&gt;{&quot;From&quot;:&quot;&quot;,&quot;DetermineEmail&quot;:&quot;&quot;,&quot;To&quot;:&quot;craig@verticaldemand.com&quot;,&quot;ToAllUsers&quot;:&quot;&quot;,&quot;ReplyTo&quot;:&quot;&quot;,&quot;Cc&quot;:&quot;&quot;,&quot;Bcc&quot;:&quot;&quot;,&quot;Subject&quot;:&quot;New&quot;,&quot;Format&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Html&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;DnnEmailTemplate&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Body&quot;:&quot;&amp;lt;p&amp;gt;Name:&amp;amp;nbsp; &amp;amp;nbsp;[New:Name]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Last Name:&amp;amp;nbsp; &amp;amp;nbsp;[New:LastName]&amp;lt;/p&amp;gt;&quot;,&quot;Headers&quot;:&quot;&quot;,&quot;PortalFiles&quot;:&quot;&quot;,&quot;FileField1&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField2&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField3&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField4&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField5&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileToken1&quot;:&quot;&quot;,&quot;IgnoreErros&quot;:&quot;&quot;}&lt;/ActionData&gt;
+      &lt;ModuleId&gt;528&lt;/ModuleId&gt;
+      &lt;FieldName&gt;FileUpload&lt;/FieldName&gt;
+      &lt;EventName&gt;click&lt;/EventName&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/ActionInfo&gt;
+    &lt;ActionInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;ActionType&gt;ExecuteJsCode&lt;/ActionType&gt;
+      &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.347&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
+      &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;var Pusher = require(\&quot;pusher\&quot;);\n\nvar pusher = new Pusher({\n  appId: \&quot;1196400\&quot;,\n  key: \&quot;1b2cf98ed23e60ee65c0\&quot;,\n  secret: \&quot;3b64ad4333979823b978\&quot;,\n  cluster: \&quot;us2\&quot;,\n});\n\npusher.trigger(\&quot;wingman\&quot;, \&quot;refreshPage\&quot;, { message: \&quot;hello world\&quot; });&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;528&lt;/ModuleId&gt;
       &lt;FieldName&gt;Update&lt;/FieldName&gt;
       &lt;EventName&gt;click&lt;/EventName&gt;
@@ -687,13 +703,28 @@
     &lt;/ActionInfo&gt;
     &lt;ActionInfo&gt;
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
-      &lt;ActionType&gt;SendMail&lt;/ActionType&gt;
-      &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-04-29T23:28:55.85&lt;/LastModified&gt;
+      &lt;ActionType&gt;ShowToastAndContinue&lt;/ActionType&gt;
+      &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
+      &lt;Condition&gt;false&lt;/Condition&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.363&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
-      &lt;ActionData&gt;{&quot;From&quot;:&quot;&quot;,&quot;DetermineEmail&quot;:&quot;&quot;,&quot;To&quot;:&quot;craig@verticaldemand.com&quot;,&quot;ToAllUsers&quot;:&quot;&quot;,&quot;ReplyTo&quot;:&quot;&quot;,&quot;Cc&quot;:&quot;&quot;,&quot;Bcc&quot;:&quot;&quot;,&quot;Subject&quot;:&quot;New&quot;,&quot;Format&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Html&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;DnnEmailTemplate&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Body&quot;:&quot;&amp;lt;p&amp;gt;Name:&amp;amp;nbsp; &amp;amp;nbsp;[New:Name]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Last Name:&amp;amp;nbsp; &amp;amp;nbsp;[New:LastName]&amp;lt;/p&amp;gt;&quot;,&quot;Headers&quot;:&quot;&quot;,&quot;PortalFiles&quot;:&quot;&quot;,&quot;FileField1&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField2&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField3&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField4&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileField5&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false},&quot;FileToken1&quot;:&quot;&quot;,&quot;IgnoreErros&quot;:&quot;&quot;}&lt;/ActionData&gt;
+      &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h4 style=\&quot;color:#fff;\&quot;&amp;gt;Updated&amp;lt;/h4&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;success&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;2000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;top-right&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;528&lt;/ModuleId&gt;
-      &lt;FieldName&gt;FileUpload&lt;/FieldName&gt;
+      &lt;FieldName&gt;Update&lt;/FieldName&gt;
+      &lt;EventName&gt;click&lt;/EventName&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/ActionInfo&gt;
+    &lt;ActionInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;ActionType&gt;InitActionForm&lt;/ActionType&gt;
+      &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
+      &lt;Condition&gt;false&lt;/Condition&gt;
+      &lt;LastModified&gt;2021-04-30T18:20:22.363&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
+      &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:528,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:[{&quot;value&quot;:&quot;[Get:LG]&quot;,&quot;name&quot;:&quot;LG&quot;}]}&lt;/ActionData&gt;
+      &lt;ModuleId&gt;528&lt;/ModuleId&gt;
+      &lt;FieldName&gt;Update&lt;/FieldName&gt;
       &lt;EventName&gt;click&lt;/EventName&gt;
       &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
       &lt;Metadata /&gt;
