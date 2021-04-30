@@ -1,0 +1,10 @@
+{
+  "Name": "MyObject",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [],
+  "Actions": [],
+  "OnErrorActions": []
+}
