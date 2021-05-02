@@ -1,0 +1,17 @@
+{
+  "id": 64,
+  "namespace": {
+    "id": 4,
+    "name": "Pusher"
+  },
+  "name": "SetupAuthKey",
+  "description": "Default key for subscription",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "xxx",
+    "type": "string"
+  }
+}
