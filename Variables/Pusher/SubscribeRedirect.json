@@ -1,0 +1,17 @@
+{
+  "id": 71,
+  "namespace": {
+    "id": 4,
+    "name": "Pusher"
+  },
+  "name": "SubscribeRedirect",
+  "description": "Use this in an HTML module to subscribe your page to redirect to a different url when the Action occurs",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "<script>\nvar pusherSubscription = { action: \"[TknParams:Action]\" , moduleid: \"[Module:ModuleID]\" , type: \"Redirect\" , url: \"[TknParams:url]\" };\nif (typeof pusherSubscriptions === \"undefined\") \n  { alert(\"Warning in Pusher:Subscribe: The page has not been configured with Pusher:SubscribePage\");}\nelse\n  { pusherSubscriptions.push(pusherSubscription); };\n</script>",
+    "type": "string"
+  }
+}
