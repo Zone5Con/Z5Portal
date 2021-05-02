@@ -1,0 +1,17 @@
+{
+  "id": 65,
+  "namespace": {
+    "id": 4,
+    "name": "Pusher"
+  },
+  "name": "SetupCluster",
+  "description": "Default cluster for subscription",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "us2",
+    "type": "string"
+  }
+}
