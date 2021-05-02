@@ -13,7 +13,7 @@
   "src": {
     "language": "vbnet",
     "additionalAssemblies": "~/bin/PusherServer.dll\n~/bin/Newtonsoft.json.dll",
-    "debug": false,
+    "debug": true,
     "type": "razor"
   }
 }
