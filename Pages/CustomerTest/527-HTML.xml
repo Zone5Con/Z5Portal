@@ -1,9 +1,10 @@
 <module type="DNNHTML" version="09.08.01.00">
+    <contentKey />
     <moduleID>527</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
-    <cachemethod />
+    <cachemethod>MemoryModuleCachingProvider</cachemethod>
     <cachetime>1200</cachetime>
     <color />
     <containersrc />
@@ -25,11 +26,30 @@
     </modulepermissions>
     <title>Enter Title</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>7d4701aa-6795-4bdb-bf70-52c81b13e5c8</uniqueId>
+    <uniqueId>08febf78-f00b-485e-ae2f-1b468239a1bd</uniqueId>
     <visibility>Maximized</visibility>
     <cultureCode />
-    <modulesettings />
+    <modulesettings>
+        <modulesetting>
+            <settingname>HtmlText_UseDecorate</settingname>
+            <settingvalue>True</settingvalue>
+        </modulesetting>
+        <modulesetting>
+            <settingname>WorkFlowID</settingname>
+            <settingvalue>-1</settingvalue>
+        </modulesetting>
+        <modulesetting>
+            <settingname>HtmlText_ReplaceTokens</settingname>
+            <settingvalue>True</settingvalue>
+        </modulesetting>
+        <modulesetting>
+            <settingname>HtmlText_SearchDescLength</settingname>
+            <settingvalue>100</settingvalue>
+        </modulesetting>
+    </modulesettings>
     <tabmodulesettings />
     <definition>DNN_HTML</definition>
     <moduledefinition>Text/HTML</moduledefinition>
+    <content type="DNNHTML" version="09.08.01.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&amp;lt;p&amp;gt;[Pusher:SubscribePage(Channel=mychannel)]&amp;lt;/p&amp;gt;
+]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
 </module>
