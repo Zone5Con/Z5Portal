@@ -1,0 +1,17 @@
+{
+  "id": 72,
+  "namespace": {
+    "id": 4,
+    "name": "Pusher"
+  },
+  "name": "SubscribeRedirectMessage",
+  "description": "Use this in an HTML module to subscribe your page to redirect to the data.message url when the Action occurs.  Allows selection of destination by the notifier.",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "<script>\nvar pusherSubscription = { action: \"[TknParams:Action]\" , moduleid: \"[Module:ModuleID]\" , type: \"RedirectMessage\" };\nif (typeof pusherSubscriptions === \"undefined\") \n  { alert(\"Warning in Pusher:Subscribe: The page has not been configured with Pusher:SubscribePage\");}\nelse\n  { pusherSubscriptions.push(pusherSubscription); };\n</script>",
+    "type": "string"
+  }
+}
