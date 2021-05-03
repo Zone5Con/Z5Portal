@@ -1,0 +1,26 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@Code
+
+    dim app_id as string = "[Pusher:SetupAppId]"            ' Bring in setup parameters
+    dim key as string = "[Pusher:SetupAuthKey]"
+    dim secret as string = "[Pusher:SetupSecretKey]"
+    dim cluster as string = "[Pusher:SetupCluster]"    
+    
+    Dim Channel As String   = TknParams.Channel.ToString()  ' Bring in token parameters
+    dim msg as string       = TknParams.Msg.ToString()
+    dim EventName as string = TknParams.Event.ToString()
+
+    msg = msg.replace("+{","[")                             ' Brackets in the input Msg are using special
+    msg = msg.replace("}+","]")                             ' substitutions to prevent premature expansion
+
+
+    Dim _pusherOptions As New PusherServer.PusherOptions
+        _pusherOptions.Cluster = cluster
+    
+    Dim _pusher = New PusherServer.Pusher(app_id, key, secret, _pusherOptions)
+
+    Dim objMsg As Newtonsoft.Json.Linq.JObject = Newtonsoft.Json.Linq.JObject.Parse(msg)
+    
+    _pusher.TriggerAsync(Channel, EventName, objMsg)
+
+End Code
