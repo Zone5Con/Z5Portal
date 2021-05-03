@@ -1,0 +1,17 @@
+{
+  "id": 76,
+  "namespace": {
+    "id": 5,
+    "name": "Pusher"
+  },
+  "name": "SetupAppId",
+  "description": "The pusher app_id",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "xxx",
+    "type": "string"
+  }
+}
