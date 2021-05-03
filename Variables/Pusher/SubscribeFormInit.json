@@ -1,0 +1,17 @@
+{
+  "id": 81,
+  "namespace": {
+    "id": 5,
+    "name": "Pusher"
+  },
+  "name": "SubscribeFormInit",
+  "description": "Use this in an HTML module, one per form.  When an Action notification is received on the channel, the form will be initialized.\n\nDo not place this  in the On Init Javascript of your Action Form.  It will cause the form to be subscribed multiple times result in CPU overload.\n\nDEVNOTE: Prevent duplicate subscriptions",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "var pusherSubscription = { action: \"[TknParams:Action]\" , moduleid: \"[TknParams:ModuleID]\" , type: \"ActionFormInit\" };\nif (typeof pusherSubscriptions === \"undefined\") \n  { alert(\"Warning in Pusher:Subscribe: The page has not been configured with Pusher:SubscribePage\");}\nelse\n  { pusherSubscriptions.push(pusherSubscription); };",
+    "type": "string"
+  }
+}
