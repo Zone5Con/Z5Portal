@@ -1,0 +1,17 @@
+{
+  "id": 74,
+  "namespace": {
+    "id": 5,
+    "name": "Pusher"
+  },
+  "name": "Setup Notes 1 IE Page Setup",
+  "description": "The following script may be required to be added to the Page / Advanced / SEO / Page Header Tags for compatibility with IE.  In our dev environment, IE does not declare the global variable before it needs to be present for the various modules to use it.\n\nAfter further research, the html module's script doesn't load & execute the script",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "<script>\n/* declare global variable - required for IE compatibility */\nif (typeof pusherSubscriptions === \"undefined\") \n    var pusherSubscriptions = [\"\"];\n</script>",
+    "type": "string"
+  }
+}
