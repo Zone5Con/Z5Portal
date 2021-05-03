@@ -1,0 +1,17 @@
+{
+  "id": 83,
+  "namespace": {
+    "id": 5,
+    "name": "Pusher"
+  },
+  "name": "SubscribePage",
+  "description": "This subscribes your page to notification.  Provide the channel that will be used.  Code provides for refreshing grids, redirects, message display, and audio.",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "<!-- *Pusher Subscriptions happen here* -->\n<script src=\"//js.pusher.com/5.1/pusher.min.js\"></script><script>\n\nif (typeof pusherSubscriptions === \"undefined\") \n    var pusherSubscriptions = [\"\"];\n  \n\n    var pusher = new Pusher('[Pusher:SetupAuthKey]', {\n      cluster: '[Pusher:SetupCluster]',\n      forceTLS: true\n    });\n\n    var channel = pusher.subscribe('[TknParams:Channel]');\n    channel.bind(\"notify\", processPusherSubscriptions);\n\n\nfunction processPusherSubscriptions(data)\n{\n\tfor (i = 1; i < pusherSubscriptions.length; i++)\n\t{\t\n\t\tif (pusherSubscriptions[i].type == \"ActionGrid\") \n\t\t{\n\t\t\tif (pusherSubscriptions[i].action == data.action) \n\t\t\t{\n\t\t\t\tdnnsf.api.actionGrid.refresh(pusherSubscriptions[i].moduleid); \n\t\t\t}\n\t\t}\n\t\t\n\t\tif (pusherSubscriptions[i].type == \"ActionFormInit\") \n\t\t{\n\t\t\tif (pusherSubscriptions[i].action == data.action) \n\t\t\t{\n\t\t\t\tdnnsf.api.actionForm.initForm(pusherSubscriptions[i].moduleid, {});\n\t\t\t}\n\t\t}\n\n\t\tif (pusherSubscriptions[i].type == \"ActionFormFields\") \n\t\t{\n\t\t\tif (pusherSubscriptions[i].action == data.action) \n\t\t\t{\n\t\t\t\t/* Each field in the subscribed ActionForm(s) is retrieved.  If a field by the same name exists in the data.fields object, the form will be updated with the new value */\n\t\t\t\ttry \n\t\t\t\t{\n\t\t\t\t\tvar fld;\n\t\t\t\t\tvar module = \"#dnn\" + pusherSubscriptions[i].moduleid + \"root\"\n\t\t\t\t\tfor (fld in angular.element($(module)).scope().form.fields) \n\t\t\t\t\t\t{\n\t\t\t\t\t\tconsole.log(fld);\n\t\t\t\t\t\tconsole.log(angular.element($(module)).scope().form.fields[fld].value);\n\t\t\t\t\t\t\n\t\t\t\t\t\tfor (fldval in data.fields)\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tif (data.fields[fldval].name == fld) \n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tangular.element($(module)).scope().form.fields[fld].value = data.fields[fldval].value;\n\t\t\t\t\t\t\t\t}\t\t\t\t\t\t\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\n\t\t\t\t\tangular.element($(module)).scope().$apply();\n\t\t\t\t}\n\t\t\t\tcatch(err)\n\t\t\t\t{\n\t\t\t\t\tconsole.log(\"Error in process ActionForm\");\n\t\t\t\t};\n\t\t\t}\n\t\t}\n\t\tif (pusherSubscriptions[i].type == \"Redirect\") \n\t\t{\n\t\t\tif (pusherSubscriptions[i].action == data.action) \n\t\t\t{\n\t\t\t\twindow.location.href = pusherSubscriptions[i].url;\n\t\t\t}\n\t\t}\n\t\tif (pusherSubscriptions[i].type == \"RedirectMessage\") \n\t\t{\n\t\t\tif (pusherSubscriptions[i].action == data.action) \n\t\t\t{\n\t\t\t\twindow.location.href = data.message;\n\t\t\t}\n\t\t}\n\t}\n\t\n\t/* Show the message on the screen if there is an [action]Message html element, and ignore any errors */\n\ttry \n\t{\n\t\tdocument.getElementById(data.action + \"Message\").innerHTML = data.message;\n\t}\n\tcatch(err) {};\n\t/* Play the audio if there is an [action]Audio html element, and ignore any errors */\n\ttry \n\t{\n\t\tdocument.getElementById(data.action + \"Audio\").play();\n\t}\n\tcatch(err) {};\n\n}\n\n\n</script>",
+    "type": "string"
+  }
+}
