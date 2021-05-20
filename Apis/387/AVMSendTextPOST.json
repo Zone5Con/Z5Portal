@@ -1,0 +1,117 @@
+{
+  "Name": "AVMSendText",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [],
+  "Actions": [
+    {
+      "ActionType": "ParseJsonIntoTokens",
+      "OrderIndex": 0,
+      "Parameters": {
+        "JsonString": "[RawInput]",
+        "BaseTokenName": "AMC"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 1,
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "2",
+          "EntireGroup": false,
+          "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
+        },
+        "FromNumber": "+18032052806",
+        "ToNumber": "+1[AMC:CellPhone]",
+        "SmsBody": "[AMC:Message]",
+        "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageStatus",
+        "OutputMessageId": "MessageId",
+        "IgnoreErrors": "",
+        "OnError": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "PostData",
+      "OrderIndex": 2,
+      "Parameters": {
+        "InputParameters": "",
+        "URL": "http://example.com",
+        "UrlTokenContext": {
+          "Expression": "",
+          "Value": "Url",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "UseSSL": "",
+        "Timeout": "",
+        "HttpMethod": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Data": "name=[FirstName]\npage=[Tab:TabName]",
+        "DoNotEscapeTokens": "",
+        "DisableReferer": "",
+        "Headers": "",
+        "UseDNNProxySettings": "",
+        "AddCurrentCookies": "",
+        "OutputParameters": "",
+        "CookieContainerToken": "",
+        "OutputTokenName": "",
+        "OutputHeaders": "",
+        "IgnoreErrors": "",
+        "Events": "",
+        "OnError": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "SendMail",
+      "OrderIndex": 3,
+      "Condition": "0",
+      "Parameters": {
+        "From": "",
+        "To": "craig@verticaldemand.com",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "Message Id",
+        "Format": {
+          "Expression": "",
+          "Value": "Html",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "DnnEmailTemplate": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Body": "<p>[MessageId]</p>",
+        "Headers": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "IgnoreErros": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
