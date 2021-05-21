@@ -1,0 +1,17 @@
+{
+  "id": 86,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "TestHover",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "<button type=\"button\" class=\"btn btn-secondary\" data-toggle=\"tooltip\" data-placement=\"left\" title=\"Tooltip on left\">\n  Tooltip on left\n</button>",
+    "type": "string"
+  }
+}
