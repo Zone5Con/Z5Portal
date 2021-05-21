@@ -1,0 +1,17 @@
+{
+  "id": 87,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "TestHoverDate",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>true</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "f",
+    "type": "string"
+  }
+}
