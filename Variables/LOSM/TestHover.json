@@ -11,7 +11,7 @@
   "cacheTime": 0,
   "cacheLayer": "Global",
   "src": {
-    "value": "<button type=\"button\" class=\"btn btn-secondary\" data-toggle=\"tooltip\" data-placement=\"left\" title=\"Tooltip on left\">\n  Tooltip on left\n</button>",
+    "value": "<a href=\"#\" data-toggle=\"popover\" title=\"Popover Header\" data-content=\"Some content inside the popover\">Toggle popover</a>",
     "type": "string"
   }
 }
