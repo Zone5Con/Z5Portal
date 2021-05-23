@@ -1,4 +1,5 @@
 <module type="DNNHTML" version="09.08.01.00">
+    <contentKey />
     <moduleID>441</moduleID>
     <alignment />
     <alltabs>false</alltabs>
@@ -23,13 +24,19 @@
             <rolename>Administrators</rolename>
         </permission>
     </modulepermissions>
-    <title>Enter Title</title>
+    <title>Text/HTML</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>00fb94a1-27bd-484e-9e8b-3e002c379883</uniqueId>
+    <uniqueId>1d4ceb3b-3f6c-475b-8787-4125f23845f5</uniqueId>
     <visibility>Maximized</visibility>
     <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>DNN_HTML</definition>
     <moduledefinition>Text/HTML</moduledefinition>
+    <content type="DNNHTML" version="09.08.01.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&amp;lt;div style=&amp;quot;background-color: #1e73be; height: 120%; padding-top:5px; padding-bottom: 5px; padding-left: 15px;&amp;quot;&amp;gt;
+&amp;lt;div style=&amp;quot;display:inline;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color:#fff;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size:14px;&amp;quot;&amp;gt;LOS &amp;lt;i&amp;gt;Messenger&amp;lt;/i&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div style=&amp;quot;display:inline; float: right; margin-right:25px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color:#fff;&amp;quot;&amp;gt;powered by &amp;lt;/span&amp;gt;&amp;lt;em&amp;gt;&amp;lt;span style=&amp;quot;color:#fff;&amp;quot;&amp;gt;VerticalDemand&amp;lt;/span&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
 </module>
