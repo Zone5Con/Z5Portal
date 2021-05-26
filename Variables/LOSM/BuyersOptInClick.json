@@ -1,0 +1,20 @@
+{
+  "id": 104,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "BuyersOptInClick",
+  "description": "Buyers Agent opt in click options",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "IF EXISTS (SELECT LoanGuid FROM app.TextOptIn \r\nWHERE CellPhone = '[Get:BACP]' )\r\nBEGIN\r\nselect OptIn,\r\n\r\nCASE\r\n\r\nWhen OptIn IS NULL or OptIn = '' Then 'dnnsf.api.tabspro.openModal({mid:[LOSM:BuyersOptInPopUp]}); return false();'\r\nWhen OptIn IS NOT NULL or OptIn <> '' Then 'return false();'\r\nElse 'dnnsf.api.tabspro.openModal({mid:[LOSM:BuyersOptInPopUp]}); return false();'\r\nEND AS Click\r\nfrom app.TextOptIn\r\nwhere LoanGuid = '[Get:LG]' and CellPhone = '[Get:BACP]'\r\n\r\nEND\r\nELSE\r\nBEGIN\r\n\r\nselect 'dnnsf.api.tabspro.openModal({mid:[LOSM:BuyersOptInPopUp]}); return false();' AS Click\r\nEND",
+    "defaultColumn": "",
+    "columns": "OptIn\nClick",
+    "connectionString": "",
+    "type": "db"
+  }
+}
