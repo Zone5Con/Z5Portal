@@ -1,0 +1,20 @@
+{
+  "id": 96,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "CobOptInClick",
+  "description": "Co-Borrower opt in click options",
+  "parser": "<parser><type>string</type><replace>true</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "NA",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select OptIn,\n\nCASE\nWhen '[LOSM:CobOptInClick.Click]' = 'NA' Then 'dnnsf.api.tabspro.openModal({mid:544}); return false();'\nWhen OptIn IS NULL or OptIn = '' Then 'dnnsf.api.tabspro.openModal({mid:544}); return false();'\nWhen OptIn IS NOT NULL or OptIn <> '' Then 'return false();'\n\nEND AS Click\nfrom app.TextOptIn\nwhere LoanGuid = 'ab86932f-e0c0-450e-bc5a-b140dce00987' and CellPhone = '803-207-9209'",
+    "defaultColumn": "",
+    "columns": "OptIn\nClick",
+    "connectionString": "",
+    "type": "db"
+  }
+}
