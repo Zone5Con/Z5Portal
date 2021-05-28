@@ -15,126 +15,6 @@
     <footer />
     <header>&lt;style&gt;
 
-.message-blue {
-position: relative;
-    margin-bottom: 10px;
-    padding: 0px 10px 15px 5px;
-    background-color: #A8DDFD;
-    width: 300px;    
-    height: auto;
-    text-align: left;
-    font: 400 1em 'Open Sans', sans-serif;
-    border: 1px solid #97C6E3;
-    border-radius: 10px;
-}
-
-.message-grey {
-    position: relative;
-    margin-bottom: 10px;
-    margin-left: calc(100% - 330px);
-    padding: 5px 10px 15px 5px;
-    background-color: #dedede;
-    width: 300px;
-    height: auto;
-    text-align: left;
-    font: 400 1em 'Open Sans', sans-serif;
-    border: 1px solid #dedede;
-    border-radius: 10px;
-}
-
-.message-content {
-    padding: 5px;
-    margin: 0;
-    line-height: 20px;
-    font-size: .9em;
-}
-
-.message-name-right {
-    position: absolute;
-    font-size: .85em;
-    font-weight: 300;
-    bottom: 16px;
-    right: 10px;
-    letter-spacing: .1em;
-    padding-top: 10px;
-}
-
-.message-timestamp-right {
-    position: absolute;
-    font-size: .85em;
-    font-weight: 300;
-    bottom: 2px;
-    right: 10px;
-    letter-spacing: .02em;
-}
-
-.message-name-left{
-    position: absolute;
-    font-size: .85em;
-    font-weight: 300;
-    bottom: 16px;
-    left: 10px;
-    letter-spacing: .1em;
-    padding-top: 10px;
-}
-
-.message-timestamp-left {
-    position: absolute;
-    font-size: .85em;
-    font-weight: 300;
-    bottom: 2px;
-    left: 10px;
-    letter-spacing: .02em;
-}
-
-.message-blue:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 15px solid #A8DDFD;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    top: 0;
-    left: -15px;
-}
-
-.message-blue:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 17px solid #97C6E3;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
-    top: -1px;
-    left: -17px;
-}
-
-.message-grey:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 15px solid #dedede;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    bottom: 0;
-    right: -15px;
-}
-
-.message-grey:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 17px solid #dedede;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
-    bottom: -1px;
-    right: -17px;
-}
-
 .bstrap30 .input-group[class*=col-] {
  
  //   max-width: 30%;
@@ -152,56 +32,42 @@ thead.ng-scope {
     color: steelblue!important;
 }
 
+.bstrap30 .table&gt;tbody&gt;tr&gt;td {
+    border-top: 1px solid #fff;
+}
+
 .bstrap30 .table-responsive {
     overflow: hidden!important;
 }
 
-.speech-wrapper{
-  padding: 30px 40px;
- .bubbleBor{
-    width: 300px;
+ .bubbleBor {
+    width: 350px;
+     padding: 2px 2px;
     height: auto;
     display: block;
-    background: #0023FF;
+    background: #2070b7;
     border-radius: 10px;
-    box-shadow: 1px 3px 3px #5c5c5c;
-   -webkit-box-shadow: 1px 3px 3px #5c5c5c;
-    position: relative;
-    margin: 0 0 25px;
-    &amp;.alt{
-      margin: 0 0 0 60px;
-      background-color:#E7E7E7;
-      -webkit-box-shadow: 0 8px 6px -6px #5c5c5c;
-	    box-shadow: 0 8px 6px -6px #5c5c5c;
-    }
-    .txt{
+   position: relative;
+   letter-spacing: .03em;
+   font-family: Helvetica;
+   margin-left: 5px;
+  }
+    .txt {
       padding: 8px 55px 8px 14px;
-      .name{
+}
+   .name {
         font-weight: 600;
         font-size: 12px;
         margin: 4px 0 10px 0;
         color: #f8f8f8;
-        &amp;.alt{
-          color: #000;
-          position: absolute;
-          right: 10px;
-          
-        }
       }
-      .messageBor{
+
+  .messageBor {
         font-size: 12px;
         margin: 0;
         line-height: 18px;
         color: #f7f7f7;
       }
-    .messageEnc{
-        font-size: 12px;
-        padding-top:7px;
-        margin: 0;
-        line-height: 18px;
-        color: #000;
-      }
-
       .timestampBor{
         font-size: 11px;
         position: absolute;
@@ -209,6 +75,59 @@ thead.ng-scope {
         right: 10px;
         text-transform: uppercase; color: #f8f8f8
       }
+
+    .bubble-arrow {
+      position: absolute;
+      width: 0;
+      bottom:40px;
+      left: -16px;
+      height: 0;
+    }
+
+    .bubble-arrow:after {
+      content: "";
+      position: absolute;
+      border: 0 solid transparent;
+      border-top: 9px solid #2070b7;
+      border-radius: 0 20px 0;
+      width: 15px;
+      height: 30px;
+      transform: rotate(145deg);
+    }
+
+ .bubbleEnc {
+    width: 350px;
+    padding: 2px 2px;
+    height: auto;
+    display: block;
+    background: #E7E7E7;
+    border-radius: 10px;
+    position: relative;
+   letter-spacing: .03em;
+   font-family: Helvetica;
+   float: right;
+
+  }
+    .txt {
+      padding: 8px 55px 8px 14px;
+}
+   .nameEnc {
+        font-weight: 600;
+        font-size: 12px;
+        margin: 4px 0 10px 0;
+        color: #000;
+        position: absolute;
+        right: 10px;
+      }
+
+  .messageEnc {
+        font-size: 12px;
+        padding-top:7px;
+        margin: 0;
+        line-height: 18px;
+        color: #000;
+      }
+
       .timestampEnc{
         font-size: 11px;
         position: absolute;
@@ -216,37 +135,28 @@ thead.ng-scope {
         right: 10px;
         text-transform: uppercase; color: #000
       }
-    }   
-   
- 
-    .bubble-arrow {
+
+    .bubble-arrowEnc {
       position: absolute;
       width: 0;
       bottom:40px;
       left: -16px;
       height: 0;
-      &amp;.alt{
-        right: -2px;      
+       right: -2px;      
         bottom: 40px;
         left: auto;
-      }
     }
-    .bubble-arrow:after {
+
+    .bubble-arrowEnc:after {
       content: "";
       position: absolute;
       border: 0 solid transparent;
-      border-top: 9px solid #0023FF;
+      border-top: 9px solid #E7E7E7;
       border-radius: 0 20px 0;
       width: 15px;
       height: 30px;
-      transform: rotate(145deg);
-    }
-    .bubble-arrow.alt:after {
       transform: rotate(45deg) scaleY(-1);
-      border-top: 9px solid #E7E7E7;
     }
-  }
-}
 
 &lt;/style&gt;</header>
     <iconfile />
@@ -376,68 +286,6 @@ thead.ng-scope {
     &lt;FieldInfo&gt;
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;Title /&gt;
-      &lt;RefName&gt;DeliveryStatusHTML&lt;/RefName&gt;
-      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
-      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
-      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
-      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
-      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
-      &lt;AllowHtml&gt;true&lt;/AllowHtml&gt;
-      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
-      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
-      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
-      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
-      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;FormatterParameters /&gt;
-      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
-      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
-      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
-      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
-      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
-      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
-      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
-      &lt;ColumnWidth&gt;2&lt;/ColumnWidth&gt;
-      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
-      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
-      &lt;ColumnWidthCoordinate&gt;%&lt;/ColumnWidthCoordinate&gt;
-      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
-      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
-      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
-      &lt;EditFieldTypeParameters /&gt;
-      &lt;Validation /&gt;
-      &lt;FieldType&gt;Field&lt;/FieldType&gt;
-      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
-      &lt;FormFields /&gt;
-      &lt;FormSettings&gt;
-        &lt;LabelAlign&gt;
-          &lt;Value&gt;Inside&lt;/Value&gt;
-          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
-          &lt;Inherit&gt;true&lt;/Inherit&gt;
-        &lt;/LabelAlign&gt;
-        &lt;LabelWidth&gt;
-          &lt;Value&gt;3&lt;/Value&gt;
-          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
-          &lt;Inherit&gt;true&lt;/Inherit&gt;
-        &lt;/LabelWidth&gt;
-        &lt;FieldSpacing&gt;
-          &lt;Value&gt;Normal&lt;/Value&gt;
-          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
-          &lt;Inherit&gt;true&lt;/Inherit&gt;
-        &lt;/FieldSpacing&gt;
-        &lt;FormId&gt;0&lt;/FormId&gt;
-        &lt;Cache&gt;false&lt;/Cache&gt;
-        &lt;MasterCacheKey /&gt;
-      &lt;/FormSettings&gt;
-      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
-      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
-      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
-      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
-      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
-      &lt;Metadata /&gt;
-    &lt;/FieldInfo&gt;
-    &lt;FieldInfo&gt;
-      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
-      &lt;Title /&gt;
       &lt;RefName&gt;TextMessageHTML&lt;/RefName&gt;
       &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
       &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
@@ -449,7 +297,7 @@ thead.ng-scope {
       &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
       &lt;CanBeFilterable&gt;false&lt;/CanBeFilterable&gt;
       &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
-      &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
+      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
       &lt;FormatterParameters /&gt;
       &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
       &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
@@ -458,7 +306,7 @@ thead.ng-scope {
       &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
       &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
       &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
-      &lt;ColumnWidth&gt;98&lt;/ColumnWidth&gt;
+      &lt;ColumnWidth /&gt;
       &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
       &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
       &lt;ColumnWidthCoordinate&gt;%&lt;/ColumnWidthCoordinate&gt;
