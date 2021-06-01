@@ -73,7 +73,7 @@ thead.ng-scope {
         position: absolute;
         bottom: 2px;
         right: 10px;
-        text-transform: uppercase; color: #fcfcfc;
+        color: #fcfcfc;
       }
 
     .bubble-arrow {
@@ -137,7 +137,7 @@ thead.ng-scope {
         position: absolute;
         bottom: 2px;
         right: 10px;
-        text-transform: uppercase; color: #000
+        color: #000
       }
 
     .bubble-arrowEnc {
@@ -176,12 +176,6 @@ thead.ng-scope {
             <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
             <permissionkey>EDIT</permissionkey>
             <allowaccess>true</allowaccess>
-            <rolename>Low-Code Engineer</rolename>
-        </permission>
-        <permission>
-            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
-            <permissionkey>EDIT</permissionkey>
-            <allowaccess>true</allowaccess>
             <rolename>Admins</rolename>
         </permission>
         <permission>
@@ -189,6 +183,12 @@ thead.ng-scope {
             <permissionkey>EDIT</permissionkey>
             <allowaccess>true</allowaccess>
             <rolename>Citizen Developers</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Low-Code Engineer</rolename>
         </permission>
         <permission>
             <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
