@@ -1,0 +1,140 @@
+{
+  "Name": "MessageStatus",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [
+    {
+      "Name": "MessageStatus",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "TwilioParseWebhook",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "Return"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update delivery status",
+      "ActionType": "RunSql",
+      "OrderIndex": 1,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "UPDATE app.TextMessage SET DeliveryStatus = '[MessageStatus]',\nDeliveryStatusHTML = CASE  \n     WHEN '[MessageStatus]' = 'delivered' THEN '<p><strong><span style=\"color: #339966;\">&#10004;</span></strong></p>' \n     WHEN '[MessageStatus]' = 'undelivered' THEN '<p><strong><span style=\"color: #ff0000;\">&#10008;</span></strong></p>' \n     WHEN '[MessageStatus]' = 'failed' THEN '<p><strong><span style=\"color: #ff0000;\">&#10008;</span></strong></p>' \n     ELSE '[MessageStatus]'\nEND \nWHERE  MessageId = '[Return:MessageSid]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Delay 3 sec",
+      "ActionType": "RunSql",
+      "OrderIndex": 2,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "WAITFOR DELAY '00:00:03'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Grab text message html",
+      "ActionType": "RunSql",
+      "OrderIndex": 3,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select TextMessageHTML from app.TextMessage\nwhere  MessageId = '[Return:MessageSid]'",
+        "BindTokens": "",
+        "OutputTokenName": "RawHTML",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update delivery status check mark",
+      "ActionType": "RunSql",
+      "OrderIndex": 4,
+      "Condition": "",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "UPDATE app.TextMessage SET TextMessageHTML = CASE  \n     WHEN '[MessageStatus]' = 'delivered' THEN '[RawHTML]'\n     WHEN '[MessageStatus]' = 'undelivered' THEN '[RawHTML]<div class=\"redX\">&nbsp;✘</div>' \n     WHEN '[MessageStatus]' = 'failed' THEN '[RawHTML]<div class=\"redX\">&nbsp;✘</div>' \n     ELSE ''\nEND \nWHERE  MessageId = '[Return:MessageSid]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "SendMail",
+      "OrderIndex": 5,
+      "Parameters": {
+        "From": "",
+        "To": "craig@verticaldemand.com",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "Testing",
+        "Format": {
+          "Expression": "",
+          "Value": "Html",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "DnnEmailTemplate": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Body": "<p>[RawHTML]</p><p><br></p><p><br></p><p><br><br><!--StartFragment--><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">[MessageStatus]</span><!--EndFragment--><br><br><br></p>",
+        "Headers": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "IgnoreErros": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
