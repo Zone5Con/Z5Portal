@@ -6,7 +6,7 @@
     <border />
     <cachemethod>MemoryModuleCachingProvider</cachemethod>
     <cachetime>0</cachetime>
-    <color />
+    <color>#ffffff</color>
     <containersrc />
     <displayprint>false</displayprint>
     <displaysyndicate>false</displaysyndicate>
@@ -15,26 +15,23 @@
     <footer />
     <header>&lt;style&gt;
 
-.bstrap30 .input-group[class*=col-] {
- 
- //   max-width: 30%;
-  //  margin-top: 25px;
- //   margin-left: 520px;
-}
-
-.btnReport {
-//    margin: -60px 20px 0px 0px!important;
-    
+div.angrid .angrid-search {
+    padding: 25px 0 20px 0;
 }
 
 thead.ng-scope {
-//    font-size: 125%!important;
-    color: steelblue!important;
+    display: none;
 }
 
 .bstrap30 .table&gt;tbody&gt;tr&gt;td {
     border-top: 1px solid #fff;
 }
+
+.bstrap30 .table-striped&gt;tbody&gt;tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+
 
 .bstrap30 .table-responsive {
     overflow: hidden!important;
@@ -46,11 +43,14 @@ thead.ng-scope {
     height: auto;
     display: block;
     background: #2070b7;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    // border-radius: 10px;
    position: relative;
    letter-spacing: .03em;
    font-family: Helvetica;
-   margin-left: 5px;
+   margin-left: 20px;
   }
     .txt {
       padding: 8px 55px 8px 14px;
@@ -58,29 +58,29 @@ thead.ng-scope {
    .name {
         font-weight: 600;
         font-size: 12px;
-        margin: 4px 0 10px 0;
-        color: #f8f8f8;
+        margin: 4px 0 5px 0;
+        color: #fff;
       }
 
   .messageBor {
         font-size: 12px;
         margin: 0;
         line-height: 18px;
-        color: #f7f7f7;
+        color: #fff;
       }
       .timestampBor{
         font-size: 11px;
         position: absolute;
-        bottom: 8px;
+        bottom: 2px;
         right: 10px;
-        text-transform: uppercase; color: #f8f8f8
+        text-transform: uppercase; color: #fcfcfc;
       }
 
     .bubble-arrow {
       position: absolute;
       width: 0;
-      bottom:40px;
-      left: -16px;
+      bottom: 26px;
+      left: -13px;
       height: 0;
     }
 
@@ -90,9 +90,9 @@ thead.ng-scope {
       border: 0 solid transparent;
       border-top: 9px solid #2070b7;
       border-radius: 0 20px 0;
-      width: 15px;
-      height: 30px;
-      transform: rotate(145deg);
+      width: 12px;
+      height: 28px;
+      transform: rotate(161deg);
     }
 
  .bubbleEnc {
@@ -101,11 +101,15 @@ thead.ng-scope {
     height: auto;
     display: block;
     background: #E7E7E7;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+   // border-radius: 10px;
     position: relative;
    letter-spacing: .03em;
    font-family: Helvetica;
    float: right;
+   margin-right: 20px;
 
   }
     .txt {
@@ -131,7 +135,7 @@ thead.ng-scope {
       .timestampEnc{
         font-size: 11px;
         position: absolute;
-        bottom: 8px;
+        bottom: 2px;
         right: 10px;
         text-transform: uppercase; color: #000
       }
@@ -143,7 +147,7 @@ thead.ng-scope {
       left: -16px;
       height: 0;
        right: -2px;      
-        bottom: 40px;
+        bottom: 25px;
         left: auto;
     }
 
@@ -153,9 +157,9 @@ thead.ng-scope {
       border: 0 solid transparent;
       border-top: 9px solid #E7E7E7;
       border-radius: 0 20px 0;
-      width: 15px;
-      height: 30px;
-      transform: rotate(45deg) scaleY(-1);
+      width: 12px;
+      height: 28px;
+      transform: rotate(30deg) scaleY(-1);
     }
 
 &lt;/style&gt;</header>
@@ -172,6 +176,12 @@ thead.ng-scope {
             <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
             <permissionkey>EDIT</permissionkey>
             <allowaccess>true</allowaccess>
+            <rolename>Low-Code Engineer</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
             <rolename>Admins</rolename>
         </permission>
         <permission>
@@ -179,12 +189,6 @@ thead.ng-scope {
             <permissionkey>EDIT</permissionkey>
             <allowaccess>true</allowaccess>
             <rolename>Citizen Developers</rolename>
-        </permission>
-        <permission>
-            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
-            <permissionkey>EDIT</permissionkey>
-            <allowaccess>true</allowaccess>
-            <rolename>Low-Code Engineer</rolename>
         </permission>
         <permission>
             <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
@@ -229,7 +233,7 @@ thead.ng-scope {
     &lt;DefaultPageSize&gt;10&lt;/DefaultPageSize&gt;
     &lt;IsDebug&gt;False&lt;/IsDebug&gt;
     &lt;SearchEnabled&gt;True&lt;/SearchEnabled&gt;
-    &lt;HideEmptyGrid&gt;False&lt;/HideEmptyGrid&gt;
+    &lt;HideEmptyGrid&gt;True&lt;/HideEmptyGrid&gt;
     &lt;LoadOnSearch&gt;False&lt;/LoadOnSearch&gt;
     &lt;HideTableHead&gt;False&lt;/HideTableHead&gt;
     &lt;EnableStickyHead&gt;False&lt;/EnableStickyHead&gt;
