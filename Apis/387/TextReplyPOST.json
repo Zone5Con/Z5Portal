@@ -1,0 +1,235 @@
+{
+  "Name": "TextReply",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [
+    {
+      "Name": "MessageStatus",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "TwilioParseWebhook",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "Parsed"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Get Cell from SMS Message",
+      "ActionType": "RunSql",
+      "OrderIndex": 1,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Select RIGHT('[Parsed:From]',10)",
+        "BindTokens": "",
+        "OutputTokenName": "CellRaw",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Format Cell with - - -",
+      "ActionType": "RunSql",
+      "OrderIndex": 2,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Select Format([CellRaw], '###-###-####')",
+        "BindTokens": "",
+        "OutputTokenName": "CellFormatted",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Get Loan Data",
+      "ActionType": "RunSql",
+      "OrderIndex": 3,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Select Top 1 *  from app.TextMessage  Where\nCellPhone = '[CellFormatted]' and LoanGUID IS NOT NULL\nOrder By DateSent DESC",
+        "BindTokens": "",
+        "OutputTokenName": "LoanData",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Delay 2 sec",
+      "ActionType": "RunSql",
+      "OrderIndex": 4,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "WAITFOR DELAY '00:00:02'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "When customer replies with STOP - Update Text Opt In",
+      "ActionType": "RunSql",
+      "OrderIndex": 5,
+      "Condition": "[Parsed:Body].ToLower == \"stop\" || [Parsed:Body].ToLower == \"stop \" || [Parsed:Body].ToLower == \" stop\" || [Parsed:Body].ToLower == \" stop \"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Update app.TextOptIn \nSet OptIn = 'stop', DateOptIn = NULL, DateStop = '[Date:CentralDateTime]'\nwhere CellPhone = '[CellFormatted]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "When customer replies with START - Update Text Opt In",
+      "ActionType": "RunSql",
+      "OrderIndex": 6,
+      "Condition": "[Parsed:Body].ToLower == \"start\" || [Parsed:Body].ToLower == \"start \" || [Parsed:Body].ToLower == \" start\" || [Parsed:Body].ToLower == \" start \"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Update app.TextOptIn \nSet OptIn = 'yes', DateOptIn = '[Date:CentralDateTime]', DateStop = NULL\nwhere CellPhone = '[CellFormatted]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update OptIn - customer replies with YES TEXT",
+      "ActionType": "RunSql",
+      "OrderIndex": 7,
+      "Condition": "[Parsed:Body].ToLower == \"yes text\" || [Parsed:Body].ToLower == \"yes text \" || [Parsed:Body].ToLower == \"yestext \" || [Parsed:Body].ToLower == \"yestext\" || [Parsed:Body].ToLower == \" yes text \" || [Parsed:Body].ToLower == \" yes text  \"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Update app.TextOptIn Set OptIn = case when OptIn is null then 'yes' else OptIn end, DateOptIn = case when DateOptIn is null then '[Date:CentralDateTime]' else DateOptIn end\nwhere CellPhone = '[CellFormatted]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update Text Messages - Insert reply from customer",
+      "ActionType": "RunSql",
+      "OrderIndex": 8,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, TotalCount  ) Values (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"nameBor\">[LoanData:SentTo]</p><br /><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampBor\">[Time:CentralShort]</span></div><div class=\"bubble-arrowBor\"></div></div></div>,\n'[Date:CentralDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update Credit Authorization - YES Credit",
+      "ActionType": "RunSql",
+      "OrderIndex": 9,
+      "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Update app.TextCreditAuth \nSet CreditAuthorization = 'yes', DateAuthorization = '[Date:CentralDateTime]' \nwhere LoanGuid = '[LoanData:LoanGuid]' and CellPhone = '[CellFormatted]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Send email to Processor or Manual User",
+      "ActionType": "SendMail",
+      "OrderIndex": 10,
+      "Condition": "[LoanData:Party]  != \"Enc\"",
+      "Parameters": {
+        "From": "",
+        "To": "[LoanData:SentByEmail]",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "You Have a New Text Message from - [LoanData:SentTo] Loan# [LoanData:LoanNumber]",
+        "Format": {
+          "Expression": "",
+          "Value": "Html",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "DnnEmailTemplate": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/Email-Reply?CompanyId=[LoanData:CompanyId]&amp;CellPhone=[Parsed:From]&amp;Name=[LoanData:SentTo]&amp;LoanNumber=[LoanData:LoanNumber]&amp;SentByEmail=[LoanData:SentByEmail]&amp;SentBy=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n</tbody>\n</table>",
+        "Headers": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "IgnoreErros": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
