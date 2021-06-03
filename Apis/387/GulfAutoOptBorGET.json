@@ -1,0 +1,240 @@
+{
+  "Name": "GulfAutoOptBor",
+  "Description": "Auto Opt In Borrower - Gulf Coast Bank - Gulf",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [
+    {
+      "Name": "LG",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LN",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CPB",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Description": "Cell Phone Borrower",
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BST",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BAN",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BAC",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SAN",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SAC",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "Description": "Check if Okay to send Central TimeZone",
+      "ActionType": "RunSql",
+      "OrderIndex": 0,
+      "Condition": "",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select Case\n  When '[Time:Central]' > '08:05:00' and '[Time:Central]' < '20:50:00' Then 'yes'\n  Else 'no'\n  End",
+        "BindTokens": "",
+        "OutputTokenName": "SendText",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false,
+        "-1": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Bor - Opt In Message",
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 1,
+      "Condition": "[Gulf:BorOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "1",
+          "EntireGroup": false,
+          "Entry": "64deabdc-87a0-4074-b0e0-8b8f812ca52e"
+        },
+        "FromNumber": "+1[Gulf:SMSFrom]",
+        "ToNumber": "+1[CPB]",
+        "SmsBody": "[Gulf:OptInMessage]",
+        "StatusCallbackUrl": "[Gulf:CBUrlSMS]",
+        "OutputMessageId": "MessageIdBor",
+        "OnError": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert Text Message Bor",
+      "ActionType": "RunSql",
+      "OrderIndex": 2,
+      "Condition": "[Gulf:BorOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into GulfTextMessages (MessageId, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, SentBy, Party, DateSent, LoanGuid) Values (\n@MessageIdBor,\n@LoanNumber,\n@CellPhoneBor,\n@FirstLastBor,\n'[Gulf:OptInMessage]',\n'<div class=\"message-grey\">\n<p class=\"message-content\">[Gulf:OptInMessage]</p>\n<div class=\"message-timestamp-right\">Encompass</div>\n</div>', \n@CurrentUser,\n'1',  \n'[Date:CentralDateTime]',\nREPLACE(REPLACE('[LG]', '{', ''), '}', '')\n)",
+        "BindTokens": [
+          {
+            "value": "[LN]",
+            "name": "LoanNumber"
+          },
+          {
+            "value": "[CPB]",
+            "name": "CellPhoneBor"
+          },
+          {
+            "value": "[BST]",
+            "name": "FirstLastBor"
+          },
+          {
+            "value": "Encompass",
+            "name": "CurrentUser"
+          },
+          {
+            "value": "[LG]",
+            "name": "LoanGuid"
+          },
+          {
+            "value": "[MessageIdBor]",
+            "name": "MessageIdBor"
+          }
+        ],
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert Opt In Bor",
+      "ActionType": "RunSql",
+      "OrderIndex": 3,
+      "Condition": "[Gulf:BorOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "IF NOT EXISTS (SELECT CellPhone FROM GulfOptIn WHERE \n CellPhone = @CellPhoneBor )\nBEGIN\nINSERT INTO GulfOptIn (DateSent, Name, CellPhone, LoanNumber, Party)\nVALUES (\n'[Date:CentralDateTime]',\n@FirstLastBor,\n@CellPhoneBor,\n@LoanNumber,\n'borrower'\n)\nEND",
+        "BindTokens": [
+          {
+            "value": "[BST]",
+            "name": "FirstLastBor"
+          },
+          {
+            "value": "[CPB]",
+            "name": "CellPhoneBor"
+          },
+          {
+            "value": "[LN]",
+            "name": "LoanNumber"
+          }
+        ],
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert Agent into Loan",
+      "ActionType": "RunSql",
+      "OrderIndex": 4,
+      "Condition": "",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "IF NOT EXISTS (SELECT LoanGuid FROM GulfLoan\nWHERE LoanGuid = REPLACE(REPLACE('[Get:LG]', '{', ''), '}', '') )\nBEGIN\nINSERT INTO GulfLoan (LoanGuid, LoanNumber, BorCellPhone, BuyersName, BuyersCellPhone, SellersName, SellersCellPhone)\nValues (\nREPLACE(REPLACE('[Get:LG]', '{', ''), '}', ''),\n'[LN]',\n'[CPB]',\n'[BAN]',\n'[BAC]',\n'[SAN]',\n'[SAC]'\n)\n\nEND\nELSE\nBEGIN\n\nUpdate GulfLoan\nSet BorCellPhone = '[CPB]', BuyersName = '[BAN]', BuyersCellPhone = '[BAC]', SellersName = '[SAN]', SellersCellPhone = '[SAC]'\nWHERE LoanGuid = REPLACE(REPLACE('[Get:LG]', '{', ''), '}', '')\nEND",
+        "BindTokens": [],
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
