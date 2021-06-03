@@ -1,4 +1,5 @@
 <module type="ActionGrid" version="05.13.19.00">
+    <contentKey />
     <moduleID>580</moduleID>
     <alignment />
     <alltabs>false</alltabs>
@@ -25,7 +26,7 @@
     </modulepermissions>
     <title>Page Management</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>f7a50619-3786-4dba-a9c4-d29cc42c86c7</uniqueId>
+    <uniqueId>86d0d79e-6fca-4839-970a-035d37fcad13</uniqueId>
     <visibility>Maximized</visibility>
     <cultureCode />
     <modulesettings />
