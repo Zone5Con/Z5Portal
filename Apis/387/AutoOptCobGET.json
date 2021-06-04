@@ -1,0 +1,293 @@
+{
+  "Name": "AutoOptCob",
+  "Description": "Auto Opt In from Encompass - Cob",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [
+    {
+      "Name": "LG",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LN",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CCP",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CST",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BAN",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BAC",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SAN",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "SAC",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CID",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "SendMail",
+      "OrderIndex": 0,
+      "Condition": "",
+      "Parameters": {
+        "From": "",
+        "To": "craig@verticaldemand.com",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "",
+        "Format": {
+          "Expression": "",
+          "Value": "Html",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "DnnEmailTemplate": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Body": "<p>LG -- [Get:LG]</p><p><!--StartFragment--><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">LN -- [Get:LN]</span></p><p><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">CCP -- [Get:CCP]</span></p><p><!--StartFragment--><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">CST -- [Get:CST]</span><br><br><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">BAN -- [Get:BAN]</span><br><br><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">BAC -- [Get:BAC]</span><br><br><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">SAN -- [Get:SAN]</span></p><p><!--StartFragment--><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">SAC -- [Get:SAC]<br></span><br><!--StartFragment--><span style=\"color: rgb(102, 102, 102); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">CID -- [Get:CID]</span><!--EndFragment--><br><br><br><br><br><br><br><br><br><br><br><br></p>",
+        "Headers": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "IgnoreErros": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Check if Okay to send Central TimeZone",
+      "ActionType": "RunSql",
+      "OrderIndex": 1,
+      "Condition": "",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select Case\n  When '[Time:Central]' > '08:05:00' and '[Time:Central]' < '20:50:00' Then 'yes'\n  Else 'no'\n  End",
+        "BindTokens": "",
+        "OutputTokenName": "SendText",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false,
+        "-1": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Bor - Opt In Message",
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 2,
+      "Condition": "[LOSM:CobOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "2",
+          "EntireGroup": false,
+          "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
+        },
+        "FromNumber": "+1[LOSM:SMSFrom]",
+        "ToNumber": "+1[CCP]",
+        "SmsBody": "[LOSM:OptInMessage]",
+        "StatusCallbackUrl": "[LOSM:CallBackURL]",
+        "OutputMessageId": "MessageIdCob",
+        "OnError": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert Text Message Cob",
+      "ActionType": "RunSql",
+      "OrderIndex": 3,
+      "Condition": "[LOSM:CobOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, MessageId, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, SentBy, Party, DateSent, LoanGuid) \nValues (\n@CompanyId,\n@MessageIdCob,\n@LoanNumber,\n@CellPhoneCob,\n@FirstLastCob,\n'[LOSM:OptInMessage]',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeft\">Sent To: [CST]</p><p class=\"messageEnc\">[LOSM:OptInMessage]</p><span class=\"timestampEnc\">Sent By: Encompass on [Time:CentralShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>', \n@CurrentUser,\n'1',  \n'[Date:CentralDateTime]',\nREPLACE(REPLACE('[LG]', '{', ''), '}', '')\n)",
+        "BindTokens": [
+          {
+            "value": "[LN]",
+            "name": "LoanNumber"
+          },
+          {
+            "value": "[CCP]",
+            "name": "CellPhoneCob"
+          },
+          {
+            "value": "[CST]",
+            "name": "FirstLastCob"
+          },
+          {
+            "value": "Encompass",
+            "name": "CurrentUser"
+          },
+          {
+            "value": "[LG]",
+            "name": "LoanGuid"
+          },
+          {
+            "value": "[MessageIdCob]",
+            "name": "MessageIdCob"
+          },
+          {
+            "value": "[CID]",
+            "name": "CompanyId"
+          }
+        ],
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert Opt In Bor",
+      "ActionType": "RunSql",
+      "OrderIndex": 4,
+      "Condition": "[LOSM:CobOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "IF NOT EXISTS (SELECT CellPhone FROM app.TextOptIn WHERE \n CellPhone = @CellPhoneBor )\nBEGIN\nINSERT INTO app.TextOptIn (CompanyId, LoanGuid, DateSent, Name, CellPhone, LoanNumber, Party)\nVALUES (\n@CompanyId,\nREPLACE(REPLACE('[LG]', '{', ''), '}', ''),\n'[Date:CentralDateTime]',\n@FirstLastBor,\n@CellPhoneBor,\n@LoanNumber,\n'borrower'\n)\nEND",
+        "BindTokens": [
+          {
+            "value": "[BST]",
+            "name": "FirstLastBor"
+          },
+          {
+            "value": "[BCP]",
+            "name": "CellPhoneBor"
+          },
+          {
+            "value": "[LN]",
+            "name": "LoanNumber"
+          },
+          {
+            "value": "[CID]",
+            "name": "CompanyId"
+          }
+        ],
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert Agent into Loan",
+      "ActionType": "RunSql",
+      "OrderIndex": 5,
+      "Condition": "[LOSM:CobOptIn] == \"\" && [SendText] == \"yes\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "IF NOT EXISTS (SELECT LoanGuid FROM app.TextLoan\nWHERE LoanGuid = REPLACE(REPLACE('[LG]', '{', ''), '}', '') )\nBEGIN\nINSERT INTO app.TextLoan (LoanGuid, LoanNumber, BorCellPhone, BuyersName, BuyersCellPhone, SellersName, SellersCellPhone)\nValues (\nREPLACE(REPLACE('[LG]', '{', ''), '}', ''),\n'[LN]',\n'[BCP]',\n'[BAN]',\n'[BAC]',\n'[SAN]',\n'[SAC]'\n)\n\nEND\nELSE\nBEGIN\n\nUpdate app.TextLoan\nSet BorCellPhone = '[BCP]', BuyersName = '[BAN]', BuyersCellPhone = '[BAC]', SellersName = '[SAN]', SellersCellPhone = '[SAC]'\nWHERE LoanGuid = REPLACE(REPLACE('[LG]', '{', ''), '}', '')\nEND",
+        "BindTokens": [],
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
