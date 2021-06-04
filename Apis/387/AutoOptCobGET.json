@@ -110,7 +110,7 @@
     {
       "ActionType": "SendMail",
       "OrderIndex": 0,
-      "Condition": "",
+      "Condition": "0",
       "Parameters": {
         "From": "",
         "To": "craig@verticaldemand.com",
@@ -163,7 +163,7 @@
       "Metadata": {}
     },
     {
-      "Description": "Bor - Opt In Message",
+      "Description": "Cob - Opt In Message",
       "ActionType": "TwilioSendSms",
       "OrderIndex": 2,
       "Condition": "[LOSM:CobOptIn] == \"\" && [SendText] == \"yes\"",
@@ -234,7 +234,7 @@
       "Metadata": {}
     },
     {
-      "Description": "Insert Opt In Bor",
+      "Description": "Insert Opt In Cob",
       "ActionType": "RunSql",
       "OrderIndex": 4,
       "Condition": "[LOSM:CobOptIn] == \"\" && [SendText] == \"yes\"",
