@@ -15,13 +15,19 @@
     <footer />
     <header>&lt;style&gt;
 
+.bstrap30 .table&gt;tbody&gt;tr.active&gt;td, .bstrap30 .table&gt;tbody&gt;tr.active&gt;th, .bstrap30 .table&gt;tbody&gt;tr&gt;td.active, .bstrap30 .table&gt;tbody&gt;tr&gt;th.active, .bstrap30 .table&gt;tfoot&gt;tr.active&gt;td, .bstrap30 .table&gt;tfoot&gt;tr.active&gt;th, .bstrap30 .table&gt;tfoot&gt;tr&gt;td.active, .bstrap30 .table&gt;tfoot&gt;tr&gt;th.active, .bstrap30 .table&gt;thead&gt;tr.active&gt;td, .bstrap30 .table&gt;thead&gt;tr.active&gt;th, .bstrap30 .table&gt;thead&gt;tr&gt;td.active, .bstrap30 .table&gt;thead&gt;tr&gt;th.active {
+    background-color: #ffffff;
+}
+
+div.angrid .table&gt;thead&gt;tr&gt;th {
+    border-bottom: 1px solid #fff !important;
+}
+
 div.angrid .angrid-search {
     padding: 25px 0 20px 0;
 }
 
-thead.ng-scope {
-    display: none;
-}
+
 
 .bstrap30 .table&gt;tbody&gt;tr&gt;td {
     border-top: 1px solid #fff;
@@ -31,18 +37,12 @@ thead.ng-scope {
     background-color: #fff;
 }
 
-
-
-.bstrap30 .table-responsive {
-    overflow: hidden!important;
-}
-
  .bubbleBor {
     width: 350px;
      padding: 2px 2px;
     height: auto;
     display: block;
-    background: #2070b7;
+    background: #0026E1;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -52,9 +52,42 @@ thead.ng-scope {
    font-family: Helvetica;
    margin-left: 20px;
   }
-    .txt {
-      padding: 8px 55px 8px 14px;
-}
+
+ .bubbleAgent {
+    width: 350px;
+     padding: 2px 2px;
+    height: auto;
+    display: block;
+    background: #BA0EF6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    // border-radius: 10px;
+   position: relative;
+   letter-spacing: .03em;
+   font-family: Helvetica;
+   margin-left: 20px;
+  }
+
+    .bubble-arrowAgent {
+      position: absolute;
+      width: 0;
+      bottom: 22px;
+      left: -12px;
+      height: 0;
+    }
+
+    .bubble-arrowAgent:after {
+      content: "";
+      position: absolute;
+      border: 0 solid transparent;
+      border-top: 9px solid #BA0EF6;
+      border-radius: 0 20px 0;
+      width: 12px;
+      height: 26px;
+      transform: rotate(139deg);
+    }
+
    .name {
         font-weight: 600;
         font-size: 12px;
@@ -67,20 +100,23 @@ thead.ng-scope {
         margin: 0;
         line-height: 18px;
         color: #fff;
+        padding-left: 10px;
+        padding-bottom: 10px;
       }
-      .timestampBor{
+
+.timestampBor{
         font-size: 11px;
         position: absolute;
         bottom: 2px;
         right: 10px;
-        color: #fcfcfc;
+        color: #e6e6e6;
       }
 
     .bubble-arrow {
       position: absolute;
       width: 0;
-      bottom: 26px;
-      left: -13px;
+      bottom: 22px;
+      left: -12px;
       height: 0;
     }
 
@@ -88,11 +124,11 @@ thead.ng-scope {
       content: "";
       position: absolute;
       border: 0 solid transparent;
-      border-top: 9px solid #2070b7;
+      border-top: 9px solid #0026E1;
       border-radius: 0 20px 0;
       width: 12px;
-      height: 28px;
-      transform: rotate(161deg);
+      height: 26px;
+      transform: rotate(139deg);
     }
 
  .bubbleEnc {
@@ -112,9 +148,16 @@ thead.ng-scope {
    margin-right: 20px;
 
   }
-    .txt {
-      padding: 8px 55px 8px 14px;
+    .txtEnc {
+      padding: 0px 25px 8px 15px;
+      letter-spacing: .05em;
 }
+
+    .txt {
+      padding: 8px 25px 8px 15px;
+      letter-spacing: .05em;
+}
+
    .nameEnc {
         font-weight: 600;
         font-size: 12px;
@@ -124,12 +167,37 @@ thead.ng-scope {
         right: 10px;
       }
 
+   .nameEncLeft {
+        font-weight: 600;
+        font-size: 12px;
+        color: #000;        
+      }
+
+   .nameEncLeftBor {
+        font-weight: 600;
+        font-size: 12px;
+        color: #0026E1;        
+      }
+
+   .nameEncLeftAgent {
+        font-weight: 600;
+        font-size: 12px;
+        color: #BA0EF6;        
+      }
+
+   .nameEncLeftLO {
+        font-weight: 600;
+        font-size: 12px;
+        color: #00D2FF;        
+      }
+
+
   .messageEnc {
         font-size: 12px;
-        padding-top:7px;
-        margin: 0;
+        padding-left: 10px;
         line-height: 18px;
         color: #000;
+        padding-bottom: 10px;
       }
 
       .timestampEnc{
@@ -137,7 +205,7 @@ thead.ng-scope {
         position: absolute;
         bottom: 2px;
         right: 10px;
-        color: #000
+        color: #6d6d6d;
       }
 
     .bubble-arrowEnc {
@@ -161,6 +229,18 @@ thead.ng-scope {
       height: 28px;
       transform: rotate(30deg) scaleY(-1);
     }
+
+.checkMark {
+     color: green;
+     float: right;
+}
+
+.redX {
+     color: red;
+     float: right;
+}
+
+
 
 &lt;/style&gt;</header>
     <iconfile />
@@ -219,7 +299,7 @@ thead.ng-scope {
     &lt;CurrentContext&gt;ExportImport&lt;/CurrentContext&gt;
     &lt;ModuleId&gt;558&lt;/ModuleId&gt;
     &lt;DataSource&gt;{&quot;DefinitionId&quot;:&quot;PlantAnApp.EntityDatasource.0.TextMessage&quot;,&quot;Parameters&quot;:{&quot;InitialSorting&quot;:&quot;DateSent&quot;,&quot;InitialSortingDirection&quot;:{&quot;Value&quot;:&quot;Desc&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;WhereClause&quot;:&quot;LoanGuid=\u0027[Get:LG]\u0027 and CompanyId=\u0027[Get:CID]\u0027&quot;,&quot;WhereClauseBindTokens&quot;:&quot;&quot;},&quot;Fields&quot;:[{&quot;Title&quot;:&quot;CompanyId&quot;,&quot;Name&quot;:&quot;CompanyId&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LoanGuid&quot;,&quot;Name&quot;:&quot;LoanGuid&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LoanNumber&quot;,&quot;Name&quot;:&quot;LoanNumber&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;MessageId&quot;,&quot;Name&quot;:&quot;MessageId&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;TextMessage&quot;,&quot;Name&quot;:&quot;TextMessage&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;TextMessageHTML&quot;,&quot;Name&quot;:&quot;TextMessageHTML&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;DateSent&quot;,&quot;Name&quot;:&quot;DateSent&quot;,&quot;TypeStr&quot;:&quot;System.Nullable`1[[System.DateTimeOffset, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;DeliveryStatus&quot;,&quot;Name&quot;:&quot;DeliveryStatus&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;DeliveryStatusHTML&quot;,&quot;Name&quot;:&quot;DeliveryStatusHTML&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;SentTo&quot;,&quot;Name&quot;:&quot;SentTo&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;CellPhone&quot;,&quot;Name&quot;:&quot;CellPhone&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;SentBy&quot;,&quot;Name&quot;:&quot;SentBy&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;SentByEmail&quot;,&quot;Name&quot;:&quot;SentByEmail&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;Party&quot;,&quot;Name&quot;:&quot;Party&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;Response&quot;,&quot;Name&quot;:&quot;Response&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;TotalCount&quot;,&quot;Name&quot;:&quot;TotalCount&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;TotalCharacters&quot;,&quot;Name&quot;:&quot;TotalCharacters&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;NewFlag&quot;,&quot;Name&quot;:&quot;NewFlag&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:false,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;CreatedBy&quot;,&quot;Name&quot;:&quot;CreatedBy&quot;,&quot;TypeStr&quot;:&quot;System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;CreatedDate&quot;,&quot;Name&quot;:&quot;CreatedDate&quot;,&quot;TypeStr&quot;:&quot;System.Nullable`1[[System.DateTimeOffset, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LastModifiedBy&quot;,&quot;Name&quot;:&quot;LastModifiedBy&quot;,&quot;TypeStr&quot;:&quot;System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LastModifiedDate&quot;,&quot;Name&quot;:&quot;LastModifiedDate&quot;,&quot;TypeStr&quot;:&quot;System.Nullable`1[[System.DateTimeOffset, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:false,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;CreatedByUsername&quot;,&quot;Name&quot;:&quot;CreatedByUsername&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;CreatedByDisplayName&quot;,&quot;Name&quot;:&quot;CreatedByDisplayName&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;CreatedByEmail&quot;,&quot;Name&quot;:&quot;CreatedByEmail&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LastModifiedByUsername&quot;,&quot;Name&quot;:&quot;LastModifiedByUsername&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LastModifiedByDisplayName&quot;,&quot;Name&quot;:&quot;LastModifiedByDisplayName&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;LastModifiedByEmail&quot;,&quot;Name&quot;:&quot;LastModifiedByEmail&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:&quot;&quot;},{&quot;Title&quot;:&quot;Id&quot;,&quot;Name&quot;:&quot;Id&quot;,&quot;TypeStr&quot;:&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:false,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:0}]}&lt;/DataSource&gt;
-    &lt;NoDataMessage&gt;&amp;lt;h4 style=&quot;text-align: center;&quot;&amp;gt;No Communications Found&amp;lt;/h4&amp;gt;&amp;lt;/p&amp;gt;&lt;/NoDataMessage&gt;
+    &lt;NoDataMessage&gt;&amp;lt;h4 style=&quot;text-align: center;&quot;&amp;gt;Currently No Messages&amp;lt;/h4&amp;gt;&amp;lt;/p&amp;gt;&lt;/NoDataMessage&gt;
     &lt;AditionalHtmlHeader /&gt;
     &lt;OnInitJs /&gt;
     &lt;OnRefreshJs /&gt;
@@ -233,7 +313,7 @@ thead.ng-scope {
     &lt;DefaultPageSize&gt;10&lt;/DefaultPageSize&gt;
     &lt;IsDebug&gt;False&lt;/IsDebug&gt;
     &lt;SearchEnabled&gt;True&lt;/SearchEnabled&gt;
-    &lt;HideEmptyGrid&gt;True&lt;/HideEmptyGrid&gt;
+    &lt;HideEmptyGrid&gt;False&lt;/HideEmptyGrid&gt;
     &lt;LoadOnSearch&gt;False&lt;/LoadOnSearch&gt;
     &lt;HideTableHead&gt;False&lt;/HideTableHead&gt;
     &lt;EnableStickyHead&gt;False&lt;/EnableStickyHead&gt;
@@ -310,7 +390,7 @@ thead.ng-scope {
       &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
       &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
       &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
-      &lt;ColumnWidth /&gt;
+      &lt;ColumnWidth&gt;100&lt;/ColumnWidth&gt;
       &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
       &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
       &lt;ColumnWidthCoordinate&gt;%&lt;/ColumnWidthCoordinate&gt;
