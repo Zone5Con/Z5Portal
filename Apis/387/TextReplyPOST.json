@@ -158,13 +158,52 @@
       "Metadata": {}
     },
     {
-      "Description": "Update Text Messages - Insert reply from customer",
+      "Description": "Update Text Messages - Insert reply from Borrowers",
       "ActionType": "RunSql",
       "OrderIndex": 8,
+      "Condition": "[LoanData:Party] == 1",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, TotalCount  ) Values (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"nameBor\">[LoanData:SentTo]</p><br /><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampBor\">[Time:CentralShort]</span></div><div class=\"bubble-arrowBor\"></div></div></div>,\n'[Date:CentralDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, \nTotalCount  ) \nValues (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [LoanData:SentTo]</p><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampBor\">[Time:CentralShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[Date:CentralDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update Text Messages - Insert reply from Agents",
+      "ActionType": "RunSql",
+      "OrderIndex": 9,
+      "Condition": "[LoanData:Party] == \"Agent\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, \nTotalCount  ) \nValues (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleAgent\"><div class=\"txt\"><p class=\"name\">From: [LoanData:SentTo]</p><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampBor\">[Time:CentralShort]</span></div><div class=\"bubble-arrowAgent\"></div></div>',\n'[Date:CentralDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Update Text Messages - Insert reply from LOs",
+      "ActionType": "RunSql",
+      "OrderIndex": 10,
+      "Condition": "[LoanData:Party] == \"LO\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, \nTotalCount  ) \nValues (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleLO\"><div class=\"txt\"><p class=\"name\">From: [LoanData:SentTo]</p><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampLO\">[Time:CentralShort]</span></div><div class=\"bubble-arrowLO\"></div></div>',\n'[Date:CentralDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
@@ -178,7 +217,7 @@
     {
       "Description": "Update Credit Authorization - YES Credit",
       "ActionType": "RunSql",
-      "OrderIndex": 9,
+      "OrderIndex": 11,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "ConnectionString": "",
@@ -197,7 +236,7 @@
     {
       "Description": "Send email to Processor or Manual User",
       "ActionType": "SendMail",
-      "OrderIndex": 10,
+      "OrderIndex": 12,
       "Condition": "[LoanData:Party]  != \"Enc\"",
       "Parameters": {
         "From": "",
