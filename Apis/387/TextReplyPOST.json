@@ -158,9 +158,34 @@
       "Metadata": {}
     },
     {
+      "Description": "Send Opted In Text Message",
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 8,
+      "Condition": "false",
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "2",
+          "EntireGroup": false,
+          "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
+        },
+        "FromNumber": "+18032052806",
+        "ToNumber": "+1[CellFormatted]",
+        "SmsBody": "You have Opted In to receive Text updates from Vert Financial.  Please add us to your Contacts in your phone - Reply STOP to cancel",
+        "StatusCallbackUrl": "[LOSM:CallBackURL]",
+        "OutputMessageId": "[MessageIdOpt]",
+        "OnError": [],
+        "-1": [],
+        "IgnoreErrors": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
       "Description": "Update Text Messages - Insert reply from Borrowers",
       "ActionType": "RunSql",
-      "OrderIndex": 8,
+      "OrderIndex": 9,
       "Condition": "[LoanData:Party] == 1",
       "Parameters": {
         "ConnectionString": "",
@@ -179,7 +204,7 @@
     {
       "Description": "Update Text Messages - Insert reply from Agents",
       "ActionType": "RunSql",
-      "OrderIndex": 9,
+      "OrderIndex": 10,
       "Condition": "[LoanData:Party] == \"Agent\"",
       "Parameters": {
         "ConnectionString": "",
@@ -198,12 +223,12 @@
     {
       "Description": "Update Text Messages - Insert reply from LOs",
       "ActionType": "RunSql",
-      "OrderIndex": 10,
+      "OrderIndex": 11,
       "Condition": "[LoanData:Party] == \"LO\"",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, \nTotalCount  ) \nValues (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleLO\"><div class=\"txt\"><p class=\"name\">From: [LoanData:SentTo]</p><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampLO\">[Time:EasternShort]</span></div><div class=\"bubble-arrowLO\"></div></div>',\n'[Date:EasternDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, LoanGuid, Response, DeliveryStatus, DeliveryStatusHTML, SentTo, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag, TotalCharacters, TotalCount  ) \nValues (\n'[LoanData:CompanyId]',\n'[LoanData:LoanGuid]',\n'[Parsed:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Parsed:Body]',\nN'<div class=\"bubbleLO\"><div class=\"txt\"><p class=\"name\">From: [LoanData:SentTo]</p><p class=\"messageBor\">[Parsed:Body]</p><span class=\"timestampLO\">[Time:EasternShort]</span></div><div class=\"bubble-arrowLO\"></div></div>',\n'[Date:EasternDateTime]',\n'yes',\nLEN('[Parsed:Body]'),\nCASE\n    WHEN LEN('[Parsed:Body]') <= 160 THEN 1\n    WHEN LEN('[Parsed:Body]') > 160 THEN 2\n    WHEN LEN('[Parsed:Body]') >= 320 THEN 3\n    ELSE 4\nEND\n)",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
@@ -217,7 +242,7 @@
     {
       "Description": "Update Credit Authorization - YES Credit",
       "ActionType": "RunSql",
-      "OrderIndex": 11,
+      "OrderIndex": 12,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "ConnectionString": "",
@@ -234,9 +259,45 @@
       "Metadata": {}
     },
     {
+      "Description": "Send email to Processor or Manual User Testing",
+      "ActionType": "SendMail",
+      "OrderIndex": 13,
+      "Condition": "[LoanData:Party]  != \"Enc\"",
+      "Parameters": {
+        "From": "",
+        "To": "support@verticaldemand.com",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "You Have a New Text Message from - [LoanData:SentTo] Loan# [LoanData:LoanNumber]",
+        "Format": {
+          "Expression": "",
+          "Value": "Html",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "DnnEmailTemplate": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/TextMessageReply?CID=[LoanData:CompanyId]&amp;LG=[LoanData:LoanGuid]&amp;CP=[Parsed:From]&amp;ST=[LoanData:SentTo]&amp;LN=[LoanData:LoanNumber]&amp;SBE=[LoanData:SentByEmail]&amp;SB=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n</tbody>\n</table>",
+        "Headers": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "IgnoreErros": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
       "Description": "Get Authorization Token - Yes Credit",
       "ActionType": "PostData",
-      "OrderIndex": 12,
+      "OrderIndex": 14,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "URL": "https://api.elliemae.com/oauth2/v1/token",
@@ -276,7 +337,7 @@
     {
       "Description": "Parse Authorization Token Yes Credit",
       "ActionType": "ParseJsonIntoTokens",
-      "OrderIndex": 13,
+      "OrderIndex": 15,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "JsonString": "[AccessToken]",
@@ -289,10 +350,10 @@
     {
       "Description": "create the PDF -- Yes Credit",
       "ActionType": "GeneratePDF",
-      "OrderIndex": 14,
+      "OrderIndex": 16,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
-        "HTMLCode": "<div style=\"margin: 10px 15px\">  \n\n<div style=\"text-align: left;\"><img src=\"https://z5portal.com/Portals/0/Images/VertFinLogo.png\" style=\"width: 20%;\"></div>\n\n<p><br><br></p><div style=\"text-align: center;\"><span style=\"font-weight: bold; font-size: 130%;\">Vert Financial Credit Authorization via Text Message through Encompass Interface</span></div>\n<!--StartFragment--><br>&nbsp; &nbsp;&nbsp;</div>\n\n\n<div>&nbsp;</div>\n\n\n<div>\n<table style=\"width: 779.281px; margin-left: 30px;\">\n<tbody>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Loan Number:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[LoanData:LoanNumber]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Borrower Name:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[LoanData:SentTo]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">CellPhone:&nbsp;</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[Parsed:From]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Text Message To Borrower:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">You requested Vert Financial to pull your full credit report.  Reply YES CREDIT to confirm your authorization.</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Response From Borrower:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[Parsed:Body]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Date / Time:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[Date:EasternDateTime]</td>\n</tr>\n</tbody>\n</table>\n</div>\n  ",
+        "HTMLCode": "<div style=\"margin: 10px 15px\">  \n\n<div style=\"text-align: left;\"><img src=\"https://z5portal.com/Portals/0/Images/VertFinLogo.png\" style=\"width: 20%;\"></div>\n\n<p><br><br></p><div style=\"text-align: center;\"><span style=\"font-weight: bold; font-size: 130%;\">Vert Financial Credit Authorization via Text Message through Encompass Interface</span></div>\n<!--StartFragment--><br>&nbsp; &nbsp;&nbsp;</div>\n\n\n<div>&nbsp;</div>\n\n\n<div>\n<table style=\"width: 779.281px; margin-left: 30px;\">\n<tbody>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Loan Number:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[LoanData:LoanNumber]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Borrower Name:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[LoanData:SentTo]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">CellPhone:&nbsp;</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[Parsed:From]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Text Message To Borrower:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">You requested Vert Financial to pull your full credit report.  Reply YES CREDIT to confirm your authorization.</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Response From Borrower:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[Parsed:Body]</td>\n</tr>\n<tr>\n<td style=\"width: 208px; height: 30px;\">Date / Time:</td>\n<td style=\"width: 29px; height: 30px;\">&nbsp;</td>\n<td style=\"width: 536.281px; height: 30px;\">[Date:EasternDateTime]&nbsp; -&nbsp; Eastern Time</td>\n</tr>\n</tbody>\n</table>\n</div>\n  ",
         "PDFName": "[LoanData:LoanNumber]-TextCreditApproval",
         "PathDestination": {
           "Expression": "",
@@ -329,7 +390,7 @@
     {
       "Description": "Get Media URL - Yes Credit",
       "ActionType": "PostData",
-      "OrderIndex": 15,
+      "OrderIndex": 17,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "URL": "https://api.elliemae.com/encompass/v1/loans/[LoanData:LoanGuid]/attachments/url",
@@ -378,7 +439,7 @@
     {
       "Description": "Parse Media URL - Yes Credit",
       "ActionType": "ParseJsonIntoTokens",
-      "OrderIndex": 16,
+      "OrderIndex": 18,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "JsonString": "[MediaLink]",
@@ -391,7 +452,7 @@
     {
       "Description": "Convert and upload pdf to Ellie Mae  - Yes Credit",
       "ActionType": "ExecuteToken",
-      "OrderIndex": 17,
+      "OrderIndex": 19,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
         "Token": "[FileManager:UploadFile(FileId=\"[TextReport]\",MediaURL=\"[Media:mediaUrl]\",Bearer=\"[Parsed:access_token]\")]",
@@ -402,9 +463,170 @@
       "Metadata": {}
     },
     {
+      "Description": "Update Encompass Credit Authorization - Yes Credit",
+      "ActionType": "PostData",
+      "OrderIndex": 20,
+      "Condition": "false",
+      "Parameters": {
+        "URL": "https://api.elliemae.com/encompass/v3/loans/[LoanData:LoanGuid]",
+        "UseSSL": true,
+        "Timeout": "",
+        "HttpMethod": {
+          "Expression": "",
+          "Value": "PATCH",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Data": "{\n\n\n\"contacts\": [\n        {\n            \"contactType\": \"CUSTOM\",\n            \"customContactIndex\": 1,\n            \"comments\": \"[Ques:GovtExpDate]\",\n            \"personalLicenseNumber\": \"[Ques:GovtIdNbr]\"\n        }\n ],\n\n\"customFields\": [\n       \n        {\n            \"fieldName\": \"CX.RL.PROP.TITLED\",\n            \"value\": \"[Ques:PropTitled]\"\n        },\n       {\n            \"fieldName\": \"CX.RL.HOA\",\n            \"value\": \"[Ques:HOA]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.HOA.AMOUNT\",\n            \"value\": \"[Ques:HOAAmount]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.HOA.PER\",\n            \"value\": \"[Ques:HOAPer]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.PROP.TYPE\",\n            \"value\": \"[Ques:PropType]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.MOTHER.QTRS\",\n            \"value\": \"[Ques:MotherQtrs]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.RENT\",\n            \"value\": \"[Ques:Rent]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.MORTGAGES\",\n            \"value\": \"[Ques:Mortgages]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.COUNTY\",\n            \"value\": \"[Ques:County]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.LARGE.PYMT\",\n            \"value\": \"[Ques:LargePymt]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.SOLAR\",\n            \"value\": \"[Ques:Solar]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.SE25\",\n            \"value\": \"[Ques:SE25]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.FAMILY.BIZ\",\n            \"value\": \"[Ques:FamilyBiz]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.US.CITIZEN\",\n            \"value\": \"[Ques:USCitizen]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.IMM.DOCS\",\n            \"value\": \"[Ques:IMMDocs]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.SIDE.BIZ\",\n            \"value\": \"[Ques:SideBiz]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.LARGE.LOSS\",\n            \"value\": \"[Ques:LargeLoss]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.COMMISSIONS\",\n            \"value\": \"[Ques:Commissions]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.TITLE\",\n            \"value\": \"[Ques:Title]\"\n        },   \n        {\n            \"fieldName\": \"CX.RL.CHANGE.JOB\",\n            \"value\": \"[Ques:ChangeJob]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.TRAVELING\",\n            \"value\": \"[Ques:Traveling]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.OUT.COUNTRY\",\n            \"value\": \"[Ques:OutCountry]\"\n        },  \n       {\n            \"fieldName\": \"CX.RL.LARGE.PURCHASE\",\n            \"value\": \"[Ques:LargePurchase]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.PLAN.PURCHASE\",\n            \"value\": \"[Ques:PlanPurchase]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.PLAN.OPEN\",\n            \"value\": \"[Ques:PlanOpen]\"\n        },\n         {\n            \"fieldName\": \"CX.RL.SWITCH.BANK\",\n            \"value\": \"[Ques:SwitchBank]\"\n        },   \n        {\n            \"fieldName\": \"CX.RL.POA\",\n            \"value\": \"[Ques:POA]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.DIVORCE\",\n            \"value\": \"[Ques:Divorce]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.ELSE.NEGATIVE\",\n            \"value\": \"[Ques:ElseNegative]\"\n        },\n          {\n            \"fieldName\": \"CX.BIDTYPE\",\n            \"value\": \"[Ques:GovtIdType]\"\n        },\n          {\n            \"fieldName\": \"CX.BIDDOB\",\n            \"value\": \"[Ques:GovtBegDate]\"\n        },\n          {\n            \"fieldName\": \"CX.NONBORSPOUSEEMAIL\",\n            \"value\": \"[Ques:SpouseEmail]\"\n        },\n          {\n            \"fieldName\": \"CX.TITLEHOLDER2\",\n            \"value\": \"[Ques:SpouseName]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.ATTEND.CLOSING\",\n            \"value\": \"[Ques:AttendClosing]\"\n        }\n    ]\n\n}",
+        "DoNotEscapeTokens": "",
+        "DisableReferer": "",
+        "Headers": [
+          {
+            "value": "[Parsed:token_type] [Parsed:access_token]",
+            "name": "Authorization"
+          },
+          {
+            "value": "application/json",
+            "name": "Content-Type"
+          }
+        ],
+        "UseDNNProxySettings": "",
+        "AddCurrentCookies": "",
+        "CookieContainerToken": "",
+        "UrlTokenContext": {
+          "Expression": "",
+          "Value": "Url",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "OutputTokenName": "QuesResponse",
+        "OutputHeaders": "",
+        "IgnoreErrors": false,
+        "OnError": [
+          {
+            "Id": -1,
+            "EventName": "error",
+            "Parameters": {
+              "ConnectionString": "",
+              "QueryTimeout": "",
+              "SqlQuery": "SELECT TRIM('409 Conflict: Conflict. ' FROM '[QuesResponse:ErrorResponse]')",
+              "BindTokens": "",
+              "OutputTokenName": "409Error",
+              "ExtractColumns": "",
+              "OnError": [],
+              "ShowErrors": false
+            },
+            "ActionType": "RunSql",
+            "Definition": {
+              "IsClientAction": false,
+              "Settings": {
+                "Group": "Data"
+              }
+            },
+            "Description": "Error Code Parse",
+            "$_isOpen": false,
+            "$_uid": "action16230246187155265",
+            "$_isLoaded": true
+          },
+          {
+            "Id": -1,
+            "EventName": "error",
+            "Parameters": {
+              "JsonString": "[409Error]",
+              "BaseTokenName": "409"
+            },
+            "ActionType": "ParseJsonIntoTokens",
+            "Definition": {
+              "IsClientAction": false,
+              "Settings": {
+                "Group": "Parsing"
+              }
+            },
+            "Description": "Error JSON",
+            "$_isOpen": false,
+            "$_uid": "action16230246187155496",
+            "$_isLoaded": true
+          },
+          {
+            "Id": -1,
+            "EventName": "error",
+            "Parameters": {
+              "ConnectionString": "",
+              "QueryTimeout": "",
+              "SqlQuery": "Update USQuestions \nSet EncompassUpdate = 'queue'\nWhere LoanGuid = '[Ques:LoanGuid]'",
+              "BindTokens": "",
+              "OutputTokenName": "",
+              "ExtractColumns": "",
+              "OnError": [],
+              "ShowErrors": false
+            },
+            "ActionType": "RunSql",
+            "Definition": {
+              "IsClientAction": false,
+              "Settings": {
+                "Group": "Data"
+              }
+            },
+            "Condition": "",
+            "$_isOpen": false,
+            "$_uid": "action16230246187157471",
+            "$_isLoaded": true
+          },
+          {
+            "Id": -1,
+            "EventName": "error",
+            "Parameters": {
+              "From": "",
+              "To": "craig@verticaldemand.com",
+              "DetermineEmail": "",
+              "ToAllUsers": "",
+              "ReplyTo": "",
+              "Cc": "",
+              "Bcc": "",
+              "Subject": "ERROR - Loan Locked - Import to Encompass USWide",
+              "Format": {
+                "Expression": "",
+                "Value": "Html",
+                "IsExpression": false,
+                "Parameters": {}
+              },
+              "Body": "<p><span style=\"background-color: transparent; font-family: inherit; letter-spacing: 0.1px;\">[409:details]</span><br></p><p><span style=\"background-color: transparent; font-family: inherit; letter-spacing: 0.1px;\">[QuesResponse:ErrorResponse]</span></p><p>LoanNumber = [Ques:LoanNumber]<br></p>",
+              "Headers": "",
+              "PortalFiles": "",
+              "FileToken1": "",
+              "DnnEmailTemplate": {
+                "IsExpression": false,
+                "Expression": "",
+                "Parameters": {}
+              },
+              "IgnoreErros": ""
+            },
+            "ActionType": "SendMail",
+            "Definition": {
+              "IsClientAction": false,
+              "Settings": {
+                "Group": "Email",
+                "Bulk": "False"
+              }
+            },
+            "$_isOpen": false,
+            "$_uid": "action16230246187157388",
+            "$_isLoaded": true,
+            "Condition": "false"
+          }
+        ],
+        "InputParameters": "",
+        "OutputParameters": "",
+        "Events": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
       "Description": "Send email to Processor or Manual User",
       "ActionType": "SendMail",
-      "OrderIndex": 18,
+      "OrderIndex": 21,
       "Condition": "false",
       "Parameters": {
         "From": "",
@@ -428,42 +650,6 @@
           "Parameters": {}
         },
         "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/Email-Reply?CompanyId=[LoanData:CompanyId]&amp;CellPhone=[Parsed:From]&amp;Name=[LoanData:SentTo]&amp;LoanNumber=[LoanData:LoanNumber]&amp;SentByEmail=[LoanData:SentByEmail]&amp;SentBy=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n</tbody>\n</table>",
-        "Headers": "",
-        "PortalFiles": "",
-        "FileToken1": "",
-        "IgnoreErros": ""
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Send email to Processor or Manual User Testing",
-      "ActionType": "SendMail",
-      "OrderIndex": 19,
-      "Condition": "[LoanData:Party]  != \"Enc\" && [Parsed:Body].ToLower != \"yes text\" || [Parsed:Body].ToLower != \"yes text \" || [Parsed:Body].ToLower != \"yestext \" || [Parsed:Body].ToLower != \"yestext\" || [Parsed:Body].ToLower != \" yes text \" || [Parsed:Body].ToLower != \" yes text  \"",
-      "Parameters": {
-        "From": "",
-        "To": "[LoanData:SentByEmail]",
-        "DetermineEmail": "",
-        "ToAllUsers": "",
-        "ReplyTo": "",
-        "Cc": "",
-        "Bcc": "",
-        "Subject": "You Have a New Text Message from - [LoanData:SentTo] Loan# [LoanData:LoanNumber]",
-        "Format": {
-          "Expression": "",
-          "Value": "Html",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "DnnEmailTemplate": {
-          "Expression": "",
-          "Value": "",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/TextMessageReply?CID=[LoanData:CompanyId]&amp;LG=[LoanData:LoanGuid]&amp;CP=[Parsed:From]&amp;ST=[LoanData:SentTo]&amp;LN=[LoanData:LoanNumber]&amp;SBE=[LoanData:SentByEmail]&amp;SB=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n</tbody>\n</table>",
         "Headers": "",
         "PortalFiles": "",
         "FileToken1": "",
