@@ -1,0 +1,11 @@
+{
+  "Name": "CFSDoc",
+  "Description": "Chicago Financial Services - Doc API",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [],
+  "Actions": [],
+  "OnErrorActions": []
+}
