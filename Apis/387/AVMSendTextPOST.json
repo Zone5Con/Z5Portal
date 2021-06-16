@@ -11,7 +11,215 @@
       "OrderIndex": 0,
       "Parameters": {
         "JsonString": "[RawInput]",
-        "BaseTokenName": "AMC"
+        "BaseTokenName": "AVM"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "check phone number",
+      "ActionType": "RunSql",
+      "OrderIndex": 1,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "SELECT CASE\n                 WHEN [AVM:CellPhone] LIKE CONCAT('[23456789]', REPLICATE('[0123456789]', 9))\n                      AND [AVM:CellPhone] LIKE CONCAT('%[^', LEFT([AVM:CellPhone], 1), ']%')\n                   THEN 'yes'\n                 ELSE 'no' \n               END",
+        "BindTokens": "",
+        "OutputTokenName": "Valid",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "CellPhone must be valid",
+      "ActionType": "RawResponse",
+      "OrderIndex": 2,
+      "Condition": "[Valid] == \"no\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The CellPhone parameter is not a valid phone number\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "File Id Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 3,
+      "Condition": "[AVM:FileId] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The FileId parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Loan Number Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 4,
+      "Condition": "[AVM:LoanNumber] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The LoanNumber parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "SentFrom Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 5,
+      "Condition": "[AVM:SentFrom] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The SentFrom parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "SentTo Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 6,
+      "Condition": "[AVM:SentTo] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The SentTo parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "CellPhone Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 7,
+      "Condition": "[AVM:CellPhone] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The CellPhone parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Message Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 8,
+      "Condition": "[AVM:Message] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The Message parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "BorName Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 9,
+      "Condition": "[AVM:BorName] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The BorName parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "PropAddress Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 10,
+      "Condition": "[AVM:PropAddress] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The PropAddress parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "ValueTrac ID Cannot be blank",
+      "ActionType": "RawResponse",
+      "OrderIndex": 11,
+      "Condition": "[AVM:VtMessageId] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The VtMessageId parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -19,7 +227,8 @@
     },
     {
       "ActionType": "TwilioSendSms",
-      "OrderIndex": 1,
+      "OrderIndex": 12,
+      "Condition": "[Valid] == \"yes\"",
       "Parameters": {
         "Credentials": {
           "Type": "twilio.apikeys",
@@ -28,9 +237,9 @@
           "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
         },
         "FromNumber": "+18032052806",
-        "ToNumber": "+1[AMC:CellPhone]",
-        "SmsBody": "[AMC:Message]",
-        "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageStatus",
+        "ToNumber": "+1[AVM:CellPhone]",
+        "SmsBody": "[AVM:Message]",
+        "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
         "OutputMessageId": "MessageId",
         "IgnoreErrors": "",
         "OnError": []
@@ -40,38 +249,35 @@
       "Metadata": {}
     },
     {
-      "ActionType": "PostData",
-      "OrderIndex": 2,
+      "ActionType": "LoadUser",
+      "OrderIndex": 13,
       "Parameters": {
-        "InputParameters": "",
-        "URL": "http://example.com",
-        "UrlTokenContext": {
-          "Expression": "",
-          "Value": "Url",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "UseSSL": "",
-        "Timeout": "",
-        "HttpMethod": {
-          "Expression": "",
-          "Value": "",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "Data": "name=[FirstName]\npage=[Tab:TabName]",
-        "DoNotEscapeTokens": "",
-        "DisableReferer": "",
-        "Headers": "",
-        "UseDNNProxySettings": "",
-        "AddCurrentCookies": "",
-        "OutputParameters": "",
-        "CookieContainerToken": "",
-        "OutputTokenName": "",
-        "OutputHeaders": "",
-        "IgnoreErrors": "",
-        "Events": "",
-        "OnError": []
+        "Id": "craig@goz5.com",
+        "Portal": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.AVMTextMessage",
+      "OrderIndex": 14,
+      "Condition": "[Valid] == \"yes\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "SentFrom": "[AVM:SentFrom]",
+        "SentTo": "[AVM:SentTo]",
+        "CellPhone": "[AVM:CellPhone]",
+        "Message": "[AVM:Message]",
+        "FileId": "[AVM:FileId]",
+        "LoanNumber": "[AVM:LoanNumber]",
+        "BorName": "[AVM:BorName]",
+        "PropAddress": "[AVM:PropAddress]",
+        "OutputToken": "[Output]",
+        "MessageId": "[MessageId]",
+        "DeliveryStatus": "",
+        "VtMessageId": "[AVM:VtMessageId]",
+        "TimeStamp": "[AVM:TimeStamp]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -79,7 +285,7 @@
     },
     {
       "ActionType": "SendMail",
-      "OrderIndex": 3,
+      "OrderIndex": 15,
       "Condition": "0",
       "Parameters": {
         "From": "",
@@ -89,7 +295,7 @@
         "ReplyTo": "",
         "Cc": "",
         "Bcc": "",
-        "Subject": "Message Id",
+        "Subject": "Valid",
         "Format": {
           "Expression": "",
           "Value": "Html",
@@ -102,7 +308,7 @@
           "IsExpression": false,
           "Parameters": {}
         },
-        "Body": "<p>[MessageId]</p>",
+        "Body": "<p><span style=\"background-color: transparent; font-family: inherit;\">[Valid]</span><br></p>",
         "Headers": "",
         "PortalFiles": "",
         "FileToken1": "",
