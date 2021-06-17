@@ -1,6 +1,6 @@
 {
-  "Name": "CFSDoc",
-  "Description": "Chicago Financial Services - Doc API",
+  "Name": "cfslox",
+  "Description": "",
   "HttpMethod": "POST",
   "IsEnabled": true,
   "OrderIndex": 0,
