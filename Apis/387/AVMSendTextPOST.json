@@ -21,6 +21,7 @@
       "Description": "check phone number",
       "ActionType": "RunSql",
       "OrderIndex": 1,
+      "Condition": "[AVM:CellPhone] != \"\"",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
