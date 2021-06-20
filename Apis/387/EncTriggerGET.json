@@ -1,6 +1,6 @@
 {
   "Name": "EncTrigger",
-  "Description": "Encompass Trigger",
+  "Description": "Encompass Trigger Borrowers",
   "HttpMethod": "GET",
   "IsEnabled": true,
   "OrderIndex": 0,
