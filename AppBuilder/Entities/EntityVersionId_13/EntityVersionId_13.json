@@ -9,6 +9,7 @@
   "Name": "Note",
   "PluralName": "Notes",
   "Icon": "table",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": true
 }
