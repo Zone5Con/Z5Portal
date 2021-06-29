@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 322,
+  "ShowDashboardModule": false,
+  "Id": 29,
+  "VersionId": 29,
+  "EntityTabId": 108,
+  "Name": "USLEDoc",
+  "PluralName": "USLEDocs",
+  "Icon": "paperclip",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
