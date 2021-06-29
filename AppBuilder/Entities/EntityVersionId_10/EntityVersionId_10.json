@@ -2,12 +2,14 @@
   "DisplayInMenu": true,
   "ParentPageId": -1,
   "RecordNamePropertyId": 80,
+  "ShowDashboardModule": false,
   "Id": 10,
   "VersionId": 10,
   "EntityTabId": 59,
   "Name": "Test",
   "PluralName": "Tests",
   "Icon": "user-cog",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
