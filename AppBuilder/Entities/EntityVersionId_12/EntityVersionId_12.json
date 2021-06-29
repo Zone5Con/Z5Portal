@@ -9,6 +9,7 @@
   "Name": "Status",
   "PluralName": "Statuses",
   "Icon": "hourglass-start",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
