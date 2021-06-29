@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 395,
+  "ShowDashboardModule": false,
+  "Id": 31,
+  "VersionId": 31,
+  "EntityTabId": 112,
+  "Name": "USQuestion",
+  "PluralName": "USQuestions",
+  "Icon": "question",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
