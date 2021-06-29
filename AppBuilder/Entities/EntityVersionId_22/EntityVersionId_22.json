@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 241,
+  "ShowDashboardModule": false,
+  "Id": 22,
+  "VersionId": 22,
+  "EntityTabId": 90,
+  "Name": "TextAdmin",
+  "PluralName": "TextAdmins",
+  "Icon": "cogs",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
