@@ -1,0 +1,122 @@
+{
+  "Name": "AVMTextMessage",
+  "Description": "Returns the information of a AVMTextMessage record in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 77,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.AVMTextMessage",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "AVMTextMessage"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "TokenId",
+            "value": "[Record:TokenId]"
+          },
+          {
+            "name": "SentFrom",
+            "value": "[Record:SentFrom]"
+          },
+          {
+            "name": "SentTo",
+            "value": "[Record:SentTo]"
+          },
+          {
+            "name": "CellPhone",
+            "value": "[Record:CellPhone]"
+          },
+          {
+            "name": "Message",
+            "value": "[Record:Message]"
+          },
+          {
+            "name": "FileId",
+            "value": "[Record:FileId]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[Record:LoanNumber]"
+          },
+          {
+            "name": "BorName",
+            "value": "[Record:BorName]"
+          },
+          {
+            "name": "PropAddress",
+            "value": "[Record:PropAddress]"
+          },
+          {
+            "name": "DeliveryStatus",
+            "value": "[Record:DeliveryStatus]"
+          },
+          {
+            "name": "MessageId",
+            "value": "[Record:MessageId]"
+          },
+          {
+            "name": "VtMessageId",
+            "value": "[Record:VtMessageId]"
+          },
+          {
+            "name": "TimeStamp",
+            "value": "[Record:TimeStamp]"
+          },
+          {
+            "name": "MessageHTML",
+            "value": "[Record:MessageHTML]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
