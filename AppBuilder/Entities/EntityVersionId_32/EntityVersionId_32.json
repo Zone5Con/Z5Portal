@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 458,
+  "ShowDashboardModule": false,
+  "Id": 32,
+  "VersionId": 32,
+  "EntityTabId": 116,
+  "Name": "LOX",
+  "PluralName": "LOXs",
+  "Icon": "allergies",
+  "NamespaceId": 4,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
