@@ -132,28 +132,6 @@
     "OrderIndex": 6
   },
   {
-    "Id": 45,
-    "EntityVersionId": 7,
-    "Name": "CellPhone",
-    "Type": {
-      "Id": "Phone",
-      "Name": "Phone",
-      "InputType": {
-        "Id": "Phone",
-        "Name": "Phone",
-        "ValueType": "String",
-        "Length": 15,
-        "Icon": "phone"
-      }
-    },
-    "IsDeleted": false,
-    "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
-    "OrderIndex": 7
-  },
-  {
     "Id": 46,
     "EntityVersionId": 7,
     "Name": "Party",
@@ -173,29 +151,7 @@
     "IsSearchable": false,
     "IsFilterable": false,
     "IsSortable": false,
-    "OrderIndex": 8
-  },
-  {
-    "Id": 47,
-    "EntityVersionId": 7,
-    "Name": "OptIn",
-    "Type": {
-      "Id": "Boolean",
-      "Name": "Boolean",
-      "InputType": {
-        "Id": "Boolean",
-        "Name": "Boolean",
-        "ValueType": "Boolean",
-        "Length": 1,
-        "Icon": "check_circle_outline"
-      }
-    },
-    "IsDeleted": false,
-    "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
-    "OrderIndex": 9
+    "OrderIndex": 7
   },
   {
     "Id": 48,
@@ -217,7 +173,7 @@
     "IsSearchable": false,
     "IsFilterable": false,
     "IsSortable": false,
-    "OrderIndex": 10
+    "OrderIndex": 8
   },
   {
     "Id": 49,
@@ -239,7 +195,7 @@
     "IsSearchable": false,
     "IsFilterable": false,
     "IsSortable": false,
-    "OrderIndex": 11
+    "OrderIndex": 9
   },
   {
     "Id": 50,
@@ -261,7 +217,7 @@
     "IsSearchable": false,
     "IsFilterable": false,
     "IsSortable": false,
-    "OrderIndex": 12
+    "OrderIndex": 10
   },
   {
     "Id": 51,
@@ -276,6 +232,50 @@
         "ValueType": "Boolean",
         "Length": 1,
         "Icon": "check_circle_outline"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 11
+  },
+  {
+    "Id": 181,
+    "EntityVersionId": 7,
+    "Name": "OptIn",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 12
+  },
+  {
+    "Id": 182,
+    "EntityVersionId": 7,
+    "Name": "CellPhone",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
       }
     },
     "IsDeleted": false,
