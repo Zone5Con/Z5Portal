@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 278,
+  "ShowDashboardModule": false,
+  "Id": 26,
+  "VersionId": 26,
+  "EntityTabId": 102,
+  "Name": "USCData",
+  "PluralName": "USCdatas",
+  "Icon": "credit-card",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
