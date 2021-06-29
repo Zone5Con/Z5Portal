@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 247,
+  "ShowDashboardModule": false,
+  "Id": 24,
+  "VersionId": 24,
+  "EntityTabId": 97,
+  "Name": "TextMessageAuto",
+  "PluralName": "TextMessageAutos",
+  "Icon": "apple-alt",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
