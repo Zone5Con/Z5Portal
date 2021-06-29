@@ -9,6 +9,7 @@
   "Name": "Activity",
   "PluralName": "Activities",
   "Icon": "user-clock",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
