@@ -9,6 +9,7 @@
   "Name": "Ticket",
   "PluralName": "Tickets",
   "Icon": "question",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": true
 }
