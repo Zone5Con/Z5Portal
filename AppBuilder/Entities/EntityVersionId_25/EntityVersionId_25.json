@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 255,
+  "ShowDashboardModule": false,
+  "Id": 25,
+  "VersionId": 25,
+  "EntityTabId": 100,
+  "Name": "USBorrower",
+  "PluralName": "USBorrowers",
+  "Icon": "people-arrows",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
