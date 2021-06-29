@@ -9,6 +9,7 @@
   "Name": "Activity Type",
   "PluralName": "Activity Types",
   "Icon": "align-justify",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
