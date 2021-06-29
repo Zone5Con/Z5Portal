@@ -9,6 +9,7 @@
   "Name": "Calendar",
   "PluralName": "Calendars",
   "Icon": "calendar-alt",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": true
 }
