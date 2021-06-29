@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 497,
+  "ShowDashboardModule": false,
+  "Id": 34,
+  "VersionId": 34,
+  "EntityTabId": 124,
+  "Name": "DocumentList",
+  "PluralName": "DocumentLists",
+  "Icon": "folder-open",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}

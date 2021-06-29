@@ -1,0 +1,398 @@
+[
+  {
+    "Id": 497,
+    "EntityVersionId": 34,
+    "Name": "LoanGuid",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 498,
+    "EntityVersionId": 34,
+    "Name": "LoanNumber",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 2
+  },
+  {
+    "Id": 499,
+    "EntityVersionId": 34,
+    "Name": "DocumentId",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 3
+  },
+  {
+    "Id": 500,
+    "EntityVersionId": 34,
+    "Name": "DocumentName",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 4
+  },
+  {
+    "Id": 501,
+    "EntityVersionId": 34,
+    "Name": "DocumentStatus",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 5
+  },
+  {
+    "Id": 502,
+    "EntityVersionId": 34,
+    "Name": "OrderStatus",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 6
+  },
+  {
+    "Id": 503,
+    "EntityVersionId": 34,
+    "Name": "OrderStatusDate",
+    "Type": {
+      "Id": "DateTime",
+      "Name": "Date and Time",
+      "InputType": {
+        "Id": "DateTime",
+        "Name": "Date and Time",
+        "ValueType": "DateTime",
+        "Length": 8,
+        "Icon": "today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 7
+  },
+  {
+    "Id": 504,
+    "EntityVersionId": 34,
+    "Name": "Attachments",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 8
+  },
+  {
+    "Id": 505,
+    "EntityVersionId": 34,
+    "Name": "OrderedBy",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 9
+  },
+  {
+    "Id": 506,
+    "EntityVersionId": 34,
+    "Name": "OrderedDate",
+    "Type": {
+      "Id": "DateTime",
+      "Name": "Date and Time",
+      "InputType": {
+        "Id": "DateTime",
+        "Name": "Date and Time",
+        "ValueType": "DateTime",
+        "Length": 8,
+        "Icon": "today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 10
+  },
+  {
+    "Id": 507,
+    "EntityVersionId": 34,
+    "Name": "ReOrderedBy",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 11
+  },
+  {
+    "Id": 508,
+    "EntityVersionId": 34,
+    "Name": "ReOrderedDate",
+    "Type": {
+      "Id": "DateTime",
+      "Name": "Date and Time",
+      "InputType": {
+        "Id": "DateTime",
+        "Name": "Date and Time",
+        "ValueType": "DateTime",
+        "Length": 8,
+        "Icon": "today"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 12
+  },
+  {
+    "Id": 509,
+    "EntityVersionId": 34,
+    "Name": "Queue",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 13
+  },
+  {
+    "Id": 510,
+    "EntityVersionId": 34,
+    "Name": "Queue22",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 14
+  },
+  {
+    "Id": 511,
+    "EntityVersionId": 34,
+    "Name": "FileId",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 15
+  },
+  {
+    "Id": 512,
+    "EntityVersionId": 34,
+    "Name": "FileExt",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 16
+  },
+  {
+    "Id": 513,
+    "EntityVersionId": 34,
+    "Name": "File1Url",
+    "Type": {
+      "Id": "LargeText",
+      "Name": "Large Text",
+      "InputType": {
+        "Id": "LargeText",
+        "Name": "Large Text",
+        "ValueType": "String",
+        "Length": 2147483647,
+        "Icon": "notes"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 17
+  },
+  {
+    "Id": 514,
+    "EntityVersionId": 34,
+    "Name": "Party",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 18
+  }
+]
