@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 291,
+  "ShowDashboardModule": false,
+  "Id": 27,
+  "VersionId": 27,
+  "EntityTabId": 104,
+  "Name": "USCreditInq",
+  "PluralName": "USCreditInqs",
+  "Icon": "retweet",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
