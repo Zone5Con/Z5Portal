@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 474,
+  "ShowDashboardModule": false,
+  "Id": 33,
+  "VersionId": 33,
+  "EntityTabId": 121,
+  "Name": "PaymentHistory",
+  "PluralName": "PaymentHistorys",
+  "Icon": "dollar-sign",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
