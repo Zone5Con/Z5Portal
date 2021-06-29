@@ -9,6 +9,7 @@
   "Name": "CustInfo",
   "PluralName": "CustInfos",
   "Icon": "person-booth",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
