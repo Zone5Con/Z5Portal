@@ -126,7 +126,7 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
+    "IsSearchable": true,
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 6
@@ -148,9 +148,9 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
     "OrderIndex": 7
   },
   {
@@ -170,9 +170,9 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
     "OrderIndex": 8
   },
   {
@@ -192,9 +192,9 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
     "OrderIndex": 9
   },
   {
@@ -214,9 +214,9 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
     "OrderIndex": 10
   },
   {
@@ -236,7 +236,7 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
+    "IsSearchable": true,
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 11
@@ -328,5 +328,93 @@
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 15
+  },
+  {
+    "Id": 192,
+    "EntityVersionId": 8,
+    "Name": "TotalCount",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 16
+  },
+  {
+    "Id": 193,
+    "EntityVersionId": 8,
+    "Name": "TotalCharacters",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 17
+  },
+  {
+    "Id": 233,
+    "EntityVersionId": 8,
+    "Name": "NewFlag",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 18
+  },
+  {
+    "Id": 246,
+    "EntityVersionId": 8,
+    "Name": "CompletedMS",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 19
   }
 ]

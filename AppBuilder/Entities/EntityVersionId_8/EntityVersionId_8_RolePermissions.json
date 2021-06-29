@@ -166,5 +166,101 @@
       "RoleName": "Managers",
       "Value": "all"
     }
+  ],
+  "9": [
+    {
+      "Id": 326,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "all"
+    },
+    {
+      "Id": 327,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "true"
+    },
+    {
+      "Id": 328,
+      "PermissionType": {
+        "Id": 3,
+        "Name": "Can Edit"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "all"
+    },
+    {
+      "Id": 329,
+      "PermissionType": {
+        "Id": 4,
+        "Name": "Can Delete"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "all"
+    }
+  ],
+  "10": [
+    {
+      "Id": 330,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 10,
+      "RoleName": "Support Agent",
+      "Value": "all"
+    },
+    {
+      "Id": 331,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 10,
+      "RoleName": "Support Agent",
+      "Value": "true"
+    },
+    {
+      "Id": 332,
+      "PermissionType": {
+        "Id": 3,
+        "Name": "Can Edit"
+      },
+      "RoleId": 10,
+      "RoleName": "Support Agent",
+      "Value": "all"
+    },
+    {
+      "Id": 333,
+      "PermissionType": {
+        "Id": 4,
+        "Name": "Can Delete"
+      },
+      "RoleId": 10,
+      "RoleName": "Support Agent",
+      "Value": "all"
+    }
+  ],
+  "-1": [
+    {
+      "Id": 334,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": -1,
+      "RoleName": "All Users",
+      "Value": "all"
+    }
   ]
 }

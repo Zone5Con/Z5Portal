@@ -1,13 +1,15 @@
 {
-  "DisplayInMenu": true,
+  "DisplayInMenu": false,
   "ParentPageId": -1,
   "RecordNamePropertyId": 52,
+  "ShowDashboardModule": false,
   "Id": 8,
   "VersionId": 8,
   "EntityTabId": 54,
   "Name": "TextMessage",
   "PluralName": "TextMessages",
   "Icon": "sms",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
