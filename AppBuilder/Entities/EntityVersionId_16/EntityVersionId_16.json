@@ -9,6 +9,7 @@
   "Name": "MepDashboard",
   "PluralName": "MepDashboards",
   "Icon": "chart-area",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
