@@ -1,13 +1,15 @@
 {
-  "DisplayInMenu": true,
+  "DisplayInMenu": false,
   "ParentPageId": -1,
   "RecordNamePropertyId": 68,
+  "ShowDashboardModule": false,
   "Id": 9,
   "VersionId": 9,
   "EntityTabId": 56,
   "Name": "TextQueue",
   "PluralName": "TextQueues",
   "Icon": "warehouse",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
