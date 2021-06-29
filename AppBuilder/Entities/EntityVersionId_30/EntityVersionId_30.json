@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 331,
+  "ShowDashboardModule": false,
+  "Id": 30,
+  "VersionId": 30,
+  "EntityTabId": 110,
+  "Name": "USLoan",
+  "PluralName": "USLoans",
+  "Icon": "dolly-flatbed",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
