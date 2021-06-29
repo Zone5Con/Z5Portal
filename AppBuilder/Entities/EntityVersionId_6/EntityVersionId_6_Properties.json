@@ -38,7 +38,7 @@
     },
     "IsDeleted": false,
     "IsRequired": true,
-    "IsSearchable": false,
+    "IsSearchable": true,
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 2
@@ -59,8 +59,8 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
-    "IsSearchable": true,
+    "IsRequired": false,
+    "IsSearchable": false,
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 3
