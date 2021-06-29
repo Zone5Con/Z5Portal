@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 303,
+  "ShowDashboardModule": false,
+  "Id": 28,
+  "VersionId": 28,
+  "EntityTabId": 106,
+  "Name": "USDoc",
+  "PluralName": "USDocs",
+  "Icon": "folder-open",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
