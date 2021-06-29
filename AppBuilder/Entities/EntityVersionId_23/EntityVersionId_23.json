@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 234,
+  "ShowDashboardModule": false,
+  "Id": 23,
+  "VersionId": 23,
+  "EntityTabId": 92,
+  "Name": "TextCreditAuth",
+  "PluralName": "TextCreditAuths",
+  "Icon": "dollar-sign",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
