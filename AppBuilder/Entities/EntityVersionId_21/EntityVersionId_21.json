@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 184,
+  "ShowDashboardModule": false,
+  "Id": 21,
+  "VersionId": 21,
+  "EntityTabId": 88,
+  "Name": "TextLoan",
+  "PluralName": "TextLoans",
+  "Icon": "ambulance",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
