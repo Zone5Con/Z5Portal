@@ -9,6 +9,7 @@
   "Name": "MepCondition",
   "PluralName": "MepConditions",
   "Icon": "file-medical",
+  "NamespaceId": 3,
   "Type": "UserCreated",
   "EnableIndexing": false
 }
