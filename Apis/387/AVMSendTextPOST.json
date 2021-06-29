@@ -237,9 +237,9 @@
           "EntireGroup": false,
           "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
         },
-        "FromNumber": "+18032052806",
+        "FromNumber": "+16174683541",
         "ToNumber": "+1[AVM:CellPhone]",
-        "SmsBody": "[AVM:Message]",
+        "SmsBody": "Ref: [AVM:PropAddress] - [AVM:Message] - Reply here: http://rply.cc?FID=[AVM:FileId] - STOP to cancel",
         "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
         "OutputMessageId": "MessageId",
         "IgnoreErrors": "",
@@ -278,7 +278,9 @@
         "MessageId": "[MessageId]",
         "DeliveryStatus": "",
         "VtMessageId": "[AVM:VtMessageId]",
-        "TimeStamp": "[AVM:TimeStamp]"
+        "TimeStamp": "[AVM:TimeStamp]",
+        "MessageHTML": "<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [AVM:SentTo]</p><p class=\"messageEnc\">[AVM:Message]</p><span class=\"timestampEnc\">From [AVM:SentFrom] [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>",
+        "TokenId": "[Guid:New]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
