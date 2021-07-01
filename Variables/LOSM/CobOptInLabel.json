@@ -1,0 +1,20 @@
+{
+  "id": 100,
+  "namespace": {
+    "id": 1,
+    "name": "LOSM"
+  },
+  "name": "CobOptInLabel",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "IF EXISTS (SELECT LoanGuid FROM app.TextOptIn \r\nWHERE LoanGuid = '[Get:LG]' and CellPhone = '[Get:CCP]' )\r\nBEGIN\r\nselect OptIn,\r\n\r\nCASE\r\nWhen DateSent IS NULL or DateSent = '' Then N'Send Opt In ➜'\r\nWhen DateSent <> '' and OptIn IS NULL or OptIn = '' Then N'Re-Send Opt In ⌛'\r\nWhen DateSent <> '' and OptIn = 'yes' Then N'Opted In ✔'\r\nWhen DateSent <> '' and OptIn = 'stop' Then N'&#10540; Opted Out &#10540;'\r\n\r\nEND AS Words\r\nfrom app.TextOptIn\r\nwhere LoanGuid = '[Get:LG]' and CellPhone = '[Get:CCP]' and CompanyId = '[Get:CID]'\r\n\r\nEND\r\nELSE\r\nBEGIN\r\n\r\nselect N'Send Opt In ➜' AS Words\r\nEND",
+    "defaultColumn": "OptIn",
+    "columns": "OptIn\nWords",
+    "connectionString": "",
+    "type": "db"
+  }
+}
