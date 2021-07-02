@@ -1,0 +1,194 @@
+{
+  "Name": "PCWire",
+  "Description": "Returns the information of a PCWire record in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 152,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.PCWire",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "PCWire"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "WireId",
+            "value": "[Record:WireId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[Record:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[Record:LoanNumber]"
+          },
+          {
+            "name": "TPOName",
+            "value": "[Record:TPOName]"
+          },
+          {
+            "name": "TPOEmail",
+            "value": "[Record:TPOEmail]"
+          },
+          {
+            "name": "TotalWire",
+            "value": "[Record:TotalWire]"
+          },
+          {
+            "name": "TotalWireRaw",
+            "value": "[Record:TotalWireRaw]"
+          },
+          {
+            "name": "TotalWireShow",
+            "value": "[Record:TotalWireShow]"
+          },
+          {
+            "name": "EscrowABA",
+            "value": "[Record:EscrowABA]"
+          },
+          {
+            "name": "EAcctNbr",
+            "value": "[Record:EAcctNbr]"
+          },
+          {
+            "name": "EName",
+            "value": "[Record:EName]"
+          },
+          {
+            "name": "EAddress",
+            "value": "[Record:EAddress]"
+          },
+          {
+            "name": "ECity",
+            "value": "[Record:ECity]"
+          },
+          {
+            "name": "EState",
+            "value": "[Record:EState]"
+          },
+          {
+            "name": "EZip",
+            "value": "[Record:EZip]"
+          },
+          {
+            "name": "BorName",
+            "value": "[Record:BorName]"
+          },
+          {
+            "name": "WireSent",
+            "value": "[Record:WireSent]"
+          },
+          {
+            "name": "Status",
+            "value": "[Record:Status]"
+          },
+          {
+            "name": "CreatedBy",
+            "value": "[Record:CreatedBy]"
+          },
+          {
+            "name": "CreatedDate",
+            "value": "[Record:CreatedDate]"
+          },
+          {
+            "name": "ApprovedBy",
+            "value": "[Record:ApprovedBy]"
+          },
+          {
+            "name": "ApprovedDate",
+            "value": "[Record:ApprovedDate]"
+          },
+          {
+            "name": "EncUpdate",
+            "value": "[Record:EncUpdate]"
+          },
+          {
+            "name": "BBNbr",
+            "value": "[Record:BBNbr]"
+          },
+          {
+            "name": "BBName",
+            "value": "[Record:BBName]"
+          },
+          {
+            "name": "BBAddress1",
+            "value": "[Record:BBAddress1]"
+          },
+          {
+            "name": "BBAddress2",
+            "value": "[Record:BBAddress2]"
+          },
+          {
+            "name": "AddInst1",
+            "value": "[Record:AddInst1]"
+          },
+          {
+            "name": "AddInst2",
+            "value": "[Record:AddInst2]"
+          },
+          {
+            "name": "AddInst3",
+            "value": "[Record:AddInst3]"
+          },
+          {
+            "name": "Channel",
+            "value": "[Record:Channel]"
+          },
+          {
+            "name": "ECoFileNbr",
+            "value": "[Record:ECoFileNbr]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
