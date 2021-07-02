@@ -1,9 +1,10 @@
 <module type="ActionGrid" version="05.14.06.00">
+    <contentKey />
     <moduleID>699</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
-    <cachemethod />
+    <cachemethod>MemoryModuleCachingProvider</cachemethod>
     <cachetime>0</cachetime>
     <color />
     <containersrc />
@@ -12,7 +13,80 @@
     <displaytitle>true</displaytitle>
     <enddate>0001-01-01T00:00:00</enddate>
     <footer />
-    <header />
+    <header>&lt;style&gt;
+
+div.angrid .table&gt;thead&gt;tr&gt;th {
+    border-bottom: 1px solid #ccc;
+}
+
+.confirm-action-alert {
+    margin-top: 265px;
+}
+
+.bstrap30 .table-striped&gt;tbody&gt;tr:nth-of-type(odd) {
+    background-color: #fff !important;
+}
+.angrid-details .details-content {
+  border: none!important;
+  background-color: #f4f9ff!important;
+}
+
+span.grid-field-value.ng-scope.ng-isolate-scope.block-break {
+    padding-left: 11px;
+}
+
+.btn-white {
+    color: #fff !important;
+    border: none !important;
+}
+div.angrid tr.selected td {
+    background-color: #f3dcbf !important;
+}
+
+.bstrap30 a {
+    color: #337ab7;
+    text-decoration: none!important;
+    font-weight: 500!important;
+    font-family: sans-serif !important;
+    letter-spacing: .05em;
+    font-size: 14px;
+}
+.custom-html-header.ng-scope {
+    Margin-top: -1px;
+    margin-left: 5px;
+}
+
+.bstrap30 p {
+    margin: 0 0 0 !important;
+}
+
+/*
+.select-all.pull-left:after {
+    content: 'Select.All';
+}
+*/
+.select-all {
+    background-color: #fff !important;
+}
+.bstrap30 input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+}
+
+.xz{
+display:none;
+}
+.selected .xz{
+display:block;
+}
+.xy{
+display:block;
+}
+.selected .xy{
+display:none;
+}
+
+&lt;/style&gt;</header>
     <iconfile />
     <inheritviewpermissions>true</inheritviewpermissions>
     <modulepermissions>
@@ -23,14 +97,665 @@
             <rolename>Administrators</rolename>
         </permission>
     </modulepermissions>
-    <title>avt.ActionGrid</title>
+    <title>Loans Ready</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>756d706d-5458-4a09-9ca1-0dc326426f89</uniqueId>
+    <uniqueId>911db208-81f3-47a1-8051-ed2ee5a35c97</uniqueId>
     <visibility>Maximized</visibility>
     <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>Action Grid</definition>
     <moduledefinition>avt.ActionGrid</moduledefinition>
-    <content type="ActionGrid" version="05.14.06.00"><![CDATA[&lt;ActionGrid /&gt;]]></content>
+    <content type="ActionGrid" version="05.14.06.00"><![CDATA[&lt;ActionGrid&gt;
+  &lt;Settings&gt;
+    &lt;Version&gt;5.14.0&lt;/Version&gt;
+    &lt;Build&gt;5.14.6&lt;/Build&gt;
+    &lt;CurrentContext&gt;ExportImport&lt;/CurrentContext&gt;
+    &lt;ModuleId&gt;699&lt;/ModuleId&gt;
+    &lt;DataSource&gt;{&quot;DefinitionId&quot;:&quot;DbTable&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;TableName&quot;:{&quot;Value&quot;:&quot;PCWire&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;IdColumn&quot;:{&quot;Value&quot;:&quot;WireId&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Where&quot;:&quot;status=\u0027ready\u0027 and CreatedBy\u003c\u003e\u0027[Get:CU]\u0027&quot;,&quot;OrderBy&quot;:&quot;TotalWireShow ASC&quot;,&quot;AddUrl&quot;:&quot;&quot;,&quot;EditUrl&quot;:&quot;&quot;,&quot;ViewUrl&quot;:&quot;&quot;},&quot;Fields&quot;:[{&quot;Title&quot;:&quot;WireId&quot;,&quot;Name&quot;:&quot;WireId&quot;,&quot;TypeStr&quot;:&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:false,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;LoanGuid&quot;,&quot;Name&quot;:&quot;LoanGuid&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;LoanNumber&quot;,&quot;Name&quot;:&quot;LoanNumber&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;TPOName&quot;,&quot;Name&quot;:&quot;TPOName&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;TPOEmail&quot;,&quot;Name&quot;:&quot;TPOEmail&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;TotalWire&quot;,&quot;Name&quot;:&quot;TotalWire&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;TotalWireRaw&quot;,&quot;Name&quot;:&quot;TotalWireRaw&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;TotalWireShow&quot;,&quot;Name&quot;:&quot;TotalWireShow&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EscrowABA&quot;,&quot;Name&quot;:&quot;EscrowABA&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EAcctNbr&quot;,&quot;Name&quot;:&quot;EAcctNbr&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EName&quot;,&quot;Name&quot;:&quot;EName&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EAddress&quot;,&quot;Name&quot;:&quot;EAddress&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;ECity&quot;,&quot;Name&quot;:&quot;ECity&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EState&quot;,&quot;Name&quot;:&quot;EState&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EZip&quot;,&quot;Name&quot;:&quot;EZip&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;BorName&quot;,&quot;Name&quot;:&quot;BorName&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;WireSent&quot;,&quot;Name&quot;:&quot;WireSent&quot;,&quot;TypeStr&quot;:&quot;System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Status&quot;,&quot;Name&quot;:&quot;Status&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;CreatedBy&quot;,&quot;Name&quot;:&quot;CreatedBy&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;CreatedDate&quot;,&quot;Name&quot;:&quot;CreatedDate&quot;,&quot;TypeStr&quot;:&quot;System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;ApprovedBy&quot;,&quot;Name&quot;:&quot;ApprovedBy&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;ApprovedDate&quot;,&quot;Name&quot;:&quot;ApprovedDate&quot;,&quot;TypeStr&quot;:&quot;System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;EncUpdate&quot;,&quot;Name&quot;:&quot;EncUpdate&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;BBNbr&quot;,&quot;Name&quot;:&quot;BBNbr&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;BBName&quot;,&quot;Name&quot;:&quot;BBName&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;BBAddress1&quot;,&quot;Name&quot;:&quot;BBAddress1&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;BBAddress2&quot;,&quot;Name&quot;:&quot;BBAddress2&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;AddInst1&quot;,&quot;Name&quot;:&quot;AddInst1&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;AddInst2&quot;,&quot;Name&quot;:&quot;AddInst2&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;AddInst3&quot;,&quot;Name&quot;:&quot;AddInst3&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Channel&quot;,&quot;Name&quot;:&quot;Channel&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;ECoFileNbr&quot;,&quot;Name&quot;:&quot;ECoFileNbr&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:true,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null}]}&lt;/DataSource&gt;
+    &lt;NoDataMessage&gt;&amp;lt;h4 style=&quot;color:DarkRed;&quot;&amp;gt;No Loans Ready for Approval&amp;lt;/h4&amp;gt;&lt;/NoDataMessage&gt;
+    &lt;AditionalHtmlHeader&gt;&amp;lt;h6&amp;gt;Select All&amp;lt;/h6&amp;gt;&lt;/AditionalHtmlHeader&gt;
+    &lt;OnInitJs /&gt;
+    &lt;OnRefreshJs /&gt;
+    &lt;EnableEmbed&gt;False&lt;/EnableEmbed&gt;
+    &lt;ShowCondition /&gt;
+    &lt;SearchPlaceholder&gt;Search ...&lt;/SearchPlaceholder&gt;
+    &lt;SearchDelayTime&gt;300&lt;/SearchDelayTime&gt;
+    &lt;TableHeight /&gt;
+    &lt;PagerStyle&gt;TouchFriendly&lt;/PagerStyle&gt;
+    &lt;PageSizes&gt;[75,150,200]&lt;/PageSizes&gt;
+    &lt;DefaultPageSize&gt;75&lt;/DefaultPageSize&gt;
+    &lt;IsDebug&gt;False&lt;/IsDebug&gt;
+    &lt;SearchEnabled&gt;False&lt;/SearchEnabled&gt;
+    &lt;HideEmptyGrid&gt;False&lt;/HideEmptyGrid&gt;
+    &lt;LoadOnSearch&gt;False&lt;/LoadOnSearch&gt;
+    &lt;HideTableHead&gt;False&lt;/HideTableHead&gt;
+    &lt;EnableStickyHead&gt;False&lt;/EnableStickyHead&gt;
+    &lt;ItemButtonPosition&gt;Right&lt;/ItemButtonPosition&gt;
+    &lt;ItemButtonPositionInColumn&gt;Right&lt;/ItemButtonPositionInColumn&gt;
+    &lt;ItemButtonGroupingOptions&gt;HorizontalAlign&lt;/ItemButtonGroupingOptions&gt;
+    &lt;FiltersEnabled&gt;True&lt;/FiltersEnabled&gt;
+    &lt;ShowFilters&gt;False&lt;/ShowFilters&gt;
+    &lt;SyncUrl&gt;False&lt;/SyncUrl&gt;
+    &lt;IncludeBootstrapJS&gt;True&lt;/IncludeBootstrapJS&gt;
+    &lt;IncludeBootstrapCSS&gt;True&lt;/IncludeBootstrapCSS&gt;
+    &lt;IncludeFontAwesome&gt;True&lt;/IncludeFontAwesome&gt;
+    &lt;AngularnoConflict&gt;True&lt;/AngularnoConflict&gt;
+    &lt;SelectAllPosition&gt;Top&lt;/SelectAllPosition&gt;
+    &lt;LoadingStyle&gt;Results&lt;/LoadingStyle&gt;
+    &lt;SearchPosition&gt;expandabletop&lt;/SearchPosition&gt;
+    &lt;RootCSSClasses /&gt;
+    &lt;ModalRefresh&gt;False&lt;/ModalRefresh&gt;
+    &lt;ShowLoading&gt;True&lt;/ShowLoading&gt;
+    &lt;TabsProLoading&gt;False&lt;/TabsProLoading&gt;
+    &lt;EnableGridSelect&gt;True&lt;/EnableGridSelect&gt;
+    &lt;DataSourceAutoRefreshInterval&gt;1&lt;/DataSourceAutoRefreshInterval&gt;
+    &lt;DataSourceRefreshType&gt;manual&lt;/DataSourceRefreshType&gt;
+    &lt;DateFormat&gt;m/d/yy&lt;/DateFormat&gt;
+    &lt;BaseId&gt;dnn699&lt;/BaseId&gt;
+    &lt;ItemButtonGroups&gt;[]&lt;/ItemButtonGroups&gt;
+    &lt;GridButtonGroups&gt;[]&lt;/GridButtonGroups&gt;
+    &lt;ItemButtons&gt;[{&quot;initialPrimaryKeyValues&quot;:{},&quot;ItemActions&quot;:[{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;DataSource.DetailView&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;Template&quot;:&quot;&amp;lt;div style=\&quot;display: inline-block;\&quot;&amp;gt;\n&amp;lt;p style=\&quot;text-align: left; font-size: 130%;\&quot;&amp;gt;Required Data:&amp;lt;/p&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Escrow Name:&amp;amp;nbsp;&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[EName]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Escrow Address:&amp;amp;nbsp;&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [EAddress]&amp;lt;br&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [ECity], [EState] [EZip]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Escrow ABA:&amp;amp;nbsp;&amp;lt;/strong&amp;gt; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [EscrowABA]&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;Escrow Account #:&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[EAcctNbr]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;For Further Credit:&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[LoanNumber] &amp;amp;nbsp;[BorName]&amp;lt;/p&amp;gt;\n&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block; width: 100px; color: #fff;\&quot;&amp;gt;.&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block;\&quot;&amp;gt;\n&amp;lt;p style=\&quot;text-align: left; font-size: 130%;\&quot;&amp;gt;Optional Data:&amp;lt;/p&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;p&amp;gt;Addl Instructions 1:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[AddInst1]&amp;lt;br&amp;gt;Addl Instructions 2:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[AddInst2]&amp;lt;br&amp;gt;Addl Instructions 3:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[AddInst3]&amp;lt;/p&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;p&amp;gt;TPO Name:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[TPOName]&amp;lt;br&amp;gt;&amp;lt;span style=\&quot;background-color: transparent; font-family: inherit; letter-spacing: 0.1px;\&quot;&amp;gt;TPO Email:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[TPOEmail]&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block; width: 100px; color: #fff;\&quot;&amp;gt;.&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block;\&quot;&amp;gt;\n&amp;lt;p&amp;gt;Beneficiary Name:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [BBName]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;Beneficiary Address:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[BBAddress1]&amp;lt;br&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [BBAddress2]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;Beneficiary Account #:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[BBNbr]&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;\n&amp;lt;/div&amp;gt;&quot;},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false}],&quot;Url&quot;:&quot;&amp;amp;buttonName=NotReady&quot;,&quot;ModuleId&quot;:699,&quot;AutoName&quot;:true,&quot;Name&quot;:&quot;NotReady&quot;,&quot;Title&quot;:&quot;Not Ready&quot;,&quot;Help&quot;:&quot;&quot;,&quot;ShowCondition&quot;:&quot;[ECity] == \&quot;\&quot; || [EState] == \&quot;\&quot; || [EZip] == \&quot;\&quot; || [EscrowABA] == \&quot;\&quot; || [EAcctNbr] == \&quot;\&quot; || [LoanNumber] == \&quot;\&quot; || [TotalWire] == \&quot;\&quot; || [EName] == \&quot;\&quot; || [EAddress] == \&quot;\&quot; || [TotalWireShow] &amp;lt; 0&quot;,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;ItemButton&quot;,&quot;OrderIndex&quot;:0,&quot;CssClass&quot;:&quot;danger&quot;,&quot;CustomCssClass&quot;:null,&quot;IconClass&quot;:&quot;&quot;,&quot;FaIconClass&quot;:null,&quot;PermissionAllUsers&quot;:true,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:false,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to do this?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes, pretty sure&quot;,&quot;ConfirmationCancel&quot;:&quot;No, I&#39;m having second thoughts&quot;,&quot;JsCode&quot;:null,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false,&quot;PermissionsExportJson&quot;:&quot;[]&quot;},{&quot;initialPrimaryKeyValues&quot;:{},&quot;ItemActions&quot;:[{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;DataSource.DetailView&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;Template&quot;:&quot;&amp;lt;div style=\&quot;display: inline-block;\&quot;&amp;gt;\n&amp;lt;p style=\&quot;text-align: left; font-size: 130%;\&quot;&amp;gt;Required Data:&amp;lt;/p&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Escrow Name:&amp;amp;nbsp;&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[EName]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Escrow Address:&amp;amp;nbsp;&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [EAddress]&amp;lt;br&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [ECity], [EState] [EZip]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Escrow ABA:&amp;amp;nbsp;&amp;lt;/strong&amp;gt; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [EscrowABA]&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;Escrow Account #:&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[EAcctNbr]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;For Further Credit:&amp;lt;/strong&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[LoanNumber] &amp;amp;nbsp;[BorName]&amp;lt;/p&amp;gt;\n&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block; width: 100px; color: #fff;\&quot;&amp;gt;.&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block;\&quot;&amp;gt;\n&amp;lt;p style=\&quot;text-align: left; font-size: 130%;\&quot;&amp;gt;Optional Data:&amp;lt;/p&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;p&amp;gt;Addl Instructions 1:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[AddInst1]&amp;lt;br&amp;gt;Addl Instructions 2:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[AddInst2]&amp;lt;br&amp;gt;Addl Instructions 3:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[AddInst3]&amp;lt;/p&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;p&amp;gt;TPO Name:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[TPOName]&amp;lt;br&amp;gt;&amp;lt;span style=\&quot;background-color: transparent; font-family: inherit; letter-spacing: 0.1px;\&quot;&amp;gt;TPO Email:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[TPOEmail]&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block; width: 100px; color: #fff;\&quot;&amp;gt;.&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;display: inline-block;\&quot;&amp;gt;\n&amp;lt;p&amp;gt;Beneficiary Name:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [BBName]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;Beneficiary Address:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[BBAddress1]&amp;lt;br&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; [BBAddress2]&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;lt;/p&amp;gt;\n&amp;lt;p&amp;gt;Beneficiary Account #:&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;[BBNbr]&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;\n&amp;lt;/div&amp;gt;&quot;},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false}],&quot;Url&quot;:&quot;&amp;amp;buttonName=Ready&quot;,&quot;ModuleId&quot;:699,&quot;AutoName&quot;:true,&quot;Name&quot;:&quot;Ready&quot;,&quot;Title&quot;:&quot;Ready&quot;,&quot;Help&quot;:&quot;View Additional Loan Information&quot;,&quot;ShowCondition&quot;:&quot;[EState] != \&quot;\&quot; &amp;amp;&amp;amp; [EZip] != \&quot;\&quot; &amp;amp;&amp;amp; [EscrowABA] != \&quot;\&quot; &amp;amp;&amp;amp; [EAcctNbr] != \&quot;\&quot; &amp;amp;&amp;amp; [LoanNumber] != \&quot;\&quot; &amp;amp;&amp;amp; [TotalWire] != \&quot;\&quot; &amp;amp;&amp;amp; [EName] != \&quot;\&quot; &amp;amp;&amp;amp; [EAddress] != \&quot;\&quot; &amp;amp;&amp;amp; [EAcctNbr] !=\&quot;\&quot; &amp;amp;&amp;amp; [ECity] != \&quot;\&quot; &amp;amp;&amp;amp; [EName] != \&quot;\&quot; &amp;amp;&amp;amp; [TotalWireShow] &amp;gt; 0&quot;,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;ItemButton&quot;,&quot;OrderIndex&quot;:1,&quot;CssClass&quot;:&quot;success&quot;,&quot;CustomCssClass&quot;:null,&quot;IconClass&quot;:&quot;&quot;,&quot;FaIconClass&quot;:null,&quot;PermissionAllUsers&quot;:true,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:false,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to do this?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes, pretty sure&quot;,&quot;ConfirmationCancel&quot;:&quot;No, I&#39;m having second thoughts&quot;,&quot;JsCode&quot;:null,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false,&quot;PermissionsExportJson&quot;:&quot;[]&quot;},{&quot;initialPrimaryKeyValues&quot;:{},&quot;ItemActions&quot;:[{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;RunSql&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;delete from PCWire\nWhere LoanNumber = &#39;[LoanNumber]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;ShowToastAndContinue&quot;,&quot;OrderIndex&quot;:1,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5 style=\&quot;color:white;\&quot;&amp;gt;Loan Deleted Successfully&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;success&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;1500&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;InitActionFormAndContinue&quot;,&quot;OrderIndex&quot;:2,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:930,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;DataSource.Refresh&quot;,&quot;OrderIndex&quot;:3,&quot;Condition&quot;:null,&quot;Parameters&quot;:{},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false}],&quot;Url&quot;:&quot;&amp;amp;buttonName=delete&quot;,&quot;ModuleId&quot;:699,&quot;AutoName&quot;:false,&quot;Name&quot;:&quot;delete&quot;,&quot;Title&quot;:&quot;&quot;,&quot;Help&quot;:&quot;Remove Loan From Loans Ready Tab&quot;,&quot;ShowCondition&quot;:null,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;ItemButton&quot;,&quot;OrderIndex&quot;:2,&quot;CssClass&quot;:&quot;danger&quot;,&quot;CustomCssClass&quot;:null,&quot;IconClass&quot;:&quot;glyphicon-trash&quot;,&quot;FaIconClass&quot;:null,&quot;PermissionAllUsers&quot;:true,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:true,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to Delete this Loan?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes, delete&quot;,&quot;ConfirmationCancel&quot;:&quot;No, cancel&quot;,&quot;JsCode&quot;:null,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false,&quot;PermissionsExportJson&quot;:&quot;[]&quot;}]&lt;/ItemButtons&gt;
+    &lt;GridButtons&gt;[{&quot;initialPrimaryKeyValues&quot;:{},&quot;RequiresSelection&quot;:false,&quot;RequiresData&quot;:false,&quot;ShowCount&quot;:false,&quot;SumColumn&quot;:null,&quot;SumMode&quot;:&quot;Default&quot;,&quot;SumCoefficient&quot;:null,&quot;TextBeforeSum&quot;:null,&quot;TextAfterSum&quot;:null,&quot;ConfirmationPosition&quot;:&quot;centered&quot;,&quot;VerticalPosition&quot;:&quot;Bottom&quot;,&quot;HorizontalPosition&quot;:&quot;Left&quot;,&quot;BulkActions&quot;:[],&quot;BulkActionsAfter&quot;:[],&quot;ItemActions&quot;:[],&quot;Url&quot;:&quot;&amp;amp;buttonName=SelectAll&quot;,&quot;ModuleId&quot;:699,&quot;AutoName&quot;:true,&quot;Name&quot;:&quot;SelectAll&quot;,&quot;Title&quot;:&quot;Select All&quot;,&quot;Help&quot;:null,&quot;ShowCondition&quot;:&quot;false&quot;,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;GridButton&quot;,&quot;OrderIndex&quot;:0,&quot;CssClass&quot;:&quot;default&quot;,&quot;CustomCssClass&quot;:&quot;btn-white&quot;,&quot;IconClass&quot;:null,&quot;FaIconClass&quot;:null,&quot;PermissionAllUsers&quot;:true,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:false,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to do this?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes, pretty sure&quot;,&quot;ConfirmationCancel&quot;:&quot;No, I&#39;m having second thoughts&quot;,&quot;JsCode&quot;:null,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false,&quot;PermissionsExportJson&quot;:&quot;[]&quot;},{&quot;initialPrimaryKeyValues&quot;:{},&quot;RequiresSelection&quot;:true,&quot;RequiresData&quot;:true,&quot;ShowCount&quot;:true,&quot;SumColumn&quot;:null,&quot;SumMode&quot;:&quot;Default&quot;,&quot;SumCoefficient&quot;:null,&quot;TextBeforeSum&quot;:null,&quot;TextAfterSum&quot;:null,&quot;ConfirmationPosition&quot;:&quot;centered&quot;,&quot;VerticalPosition&quot;:&quot;Top&quot;,&quot;HorizontalPosition&quot;:&quot;Left&quot;,&quot;BulkActions&quot;:[],&quot;BulkActionsAfter&quot;:[{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;InitActionFormAndContinue&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:930,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;BulkActionAfter&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;DataSource.Refresh&quot;,&quot;OrderIndex&quot;:1,&quot;Condition&quot;:null,&quot;Parameters&quot;:{},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;BulkActionAfter&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false}],&quot;ItemActions&quot;:[{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:&quot;See if Loans are ready&quot;,&quot;ActionType&quot;:&quot;RunSql&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:&quot;false&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Select TotalWireShow,\nCASE\n    WHEN &#39;[TotalWireShow]&#39; &amp;gt; &#39;0&#39; THEN &#39;yes&#39;\n    ELSE &#39;no&#39;\nEND AS Ready\nFrom PCWire\nWhere LoanNumber = &#39;[LoanNumber]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;Ready&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;RunSql&quot;,&quot;OrderIndex&quot;:1,&quot;Condition&quot;:&quot;&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Update PCWire\nSet Status = &#39;approved&#39;, ApprovedBy = &#39;[Get:CU]&#39;, ApprovedDate = &#39;[Date:CentralDateTime]&#39;\nWhere LoanNumber = &#39;[LoanNumber]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},{&quot;initialPrimaryKeyValues&quot;:{},&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;initialPrimaryKeyValues&quot;:{},&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;ShowToastAndContinue&quot;,&quot;OrderIndex&quot;:2,&quot;Condition&quot;:&quot;&quot;,&quot;Parameters&quot;:{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h4 style=\&quot;color:white;\&quot;&amp;gt;Approving files - Please Wait.......&amp;lt;/h4&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;default&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;800&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:false,&quot;LoaderColor&quot;:&quot;#fff&quot;},&quot;CreateActionEvent&quot;:{&quot;Delegate&quot;:{&quot;type&quot;:&quot;System.Func`4[[DnnSharp.Common.Actions.ActionContext, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[DnnSharp.Common.SettingsDictionary, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[DnnSharp.Common.Actions.ActionEvent, DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;assembly&quot;:&quot;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;target&quot;:&quot;target0&quot;,&quot;targetTypeAssembly&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;targetTypeName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;methodName&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;delegateEntry&quot;:null},&quot;method0&quot;:{&quot;Name&quot;:&quot;&amp;lt;get_CreateActionEvent&amp;gt;b__50_0&quot;,&quot;AssemblyName&quot;:&quot;DnnSharp.Common, Version=5.14.18.0, Culture=neutral, PublicKeyToken=null&quot;,&quot;ClassName&quot;:&quot;DnnSharp.Common.Actions.ActionInfoBase`1[[DnnSharp.ActionGrid.Core.Actions.CommonActionInfo, DnnSharp.ActionGrid.Core, Version=5.14.6.0, Culture=neutral, PublicKeyToken=null]]&quot;,&quot;Signature&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;Signature2&quot;:&quot;DnnSharp.Common.Actions.ActionEvent &amp;lt;get_CreateActionEvent&amp;gt;b__50_0(DnnSharp.Common.Actions.ActionContext, DnnSharp.Common.SettingsDictionary, System.String)&quot;,&quot;MemberType&quot;:8,&quot;GenericArguments&quot;:null}},&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false}],&quot;Url&quot;:&quot;&amp;amp;buttonName=ApproveWires&quot;,&quot;ModuleId&quot;:699,&quot;AutoName&quot;:true,&quot;Name&quot;:&quot;ApproveWires&quot;,&quot;Title&quot;:&quot;Approve Wires&quot;,&quot;Help&quot;:null,&quot;ShowCondition&quot;:null,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;GridButton&quot;,&quot;OrderIndex&quot;:1,&quot;CssClass&quot;:&quot;warning&quot;,&quot;CustomCssClass&quot;:&quot;btnCheckTop&quot;,&quot;IconClass&quot;:null,&quot;FaIconClass&quot;:null,&quot;PermissionAllUsers&quot;:true,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:true,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to Approve these Wires?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes, Approve&quot;,&quot;ConfirmationCancel&quot;:&quot;No, Cancel&quot;,&quot;JsCode&quot;:null,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;EntityLoaded&quot;:false,&quot;IsDeleted&quot;:false,&quot;PermissionsExportJson&quot;:&quot;[]&quot;}]&lt;/GridButtons&gt;
+    &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
+    &lt;TooltipContent /&gt;
+    &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+    &lt;TooltipIcon&gt;glyphicon-info-sign&lt;/TooltipIcon&gt;
+    &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+    &lt;TooltipInEdit&gt;right&lt;/TooltipInEdit&gt;
+    &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+    &lt;TooltipOrientation /&gt;
+    &lt;TooltipTitle /&gt;
+    &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+    &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+    &lt;RefreshOnTabChange&gt;True&lt;/RefreshOnTabChange&gt;
+    &lt;UseDragAndDropActions&gt;False&lt;/UseDragAndDropActions&gt;
+    &lt;DragAndDropActions&gt;[]&lt;/DragAndDropActions&gt;
+    &lt;InitLoadFromTabsPro&gt;False&lt;/InitLoadFromTabsPro&gt;
+    &lt;LockIntoEditMode&gt;False&lt;/LockIntoEditMode&gt;
+    &lt;LockInEditForEachRowActions&gt;[]&lt;/LockInEditForEachRowActions&gt;
+    &lt;LockInEditFinalActions&gt;[]&lt;/LockInEditFinalActions&gt;
+    &lt;Template&gt;grid&lt;/Template&gt;
+    &lt;MobileTemplate&gt;grid&lt;/MobileTemplate&gt;
+    &lt;SwitchingTemplates&gt;False&lt;/SwitchingTemplates&gt;
+    &lt;TemplateConfig&gt;{}&lt;/TemplateConfig&gt;
+  &lt;/Settings&gt;
+  &lt;Fields&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title /&gt;
+      &lt;RefName /&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;false&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;false&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;true&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;false&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
+      &lt;Template&gt;&amp;lt;img class=&quot;xz&quot; src=&quot;https://image.freepik.com/free-icon/checkbox-checked_318-40908.jpg&quot; style=&quot;height: 20px; width: 20px;&quot; /&amp;gt;
+&amp;lt;img class=&quot;xy&quot; src=&quot;https://image.freepik.com/free-icon/checkbox-unchecked-square_318-40919.jpg&quot; style=&quot;height: 20px; width: 20px;&quot; /&amp;gt;&lt;/Template&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnWidth&gt;75px&lt;/ColumnWidth&gt;
+      &lt;ColumnTextAlignment&gt;center&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Template&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Template&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Loan Number&lt;/Title&gt;
+      &lt;RefName&gt;LoanNumber&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Name&lt;/Title&gt;
+      &lt;RefName&gt;BorName&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Total Wire&lt;/Title&gt;
+      &lt;RefName&gt;TotalWireShow&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;Format&gt;Money&lt;/Format&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Created By&lt;/Title&gt;
+      &lt;RefName&gt;CreatedBy&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Created Date&lt;/Title&gt;
+      &lt;RefName&gt;CreatedDate&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
+      &lt;FormatterParameters&gt;
+        &lt;item&gt;
+          &lt;key&gt;
+            &lt;string&gt;Format&lt;/string&gt;
+          &lt;/key&gt;
+          &lt;value&gt;
+            &lt;FormatterParameterInfo xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+              &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+              &lt;DefinitionId&gt;Date&lt;/DefinitionId&gt;
+              &lt;TypeStr&gt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/TypeStr&gt;
+              &lt;Name&gt;Format&lt;/Name&gt;
+              &lt;IsExpression&gt;false&lt;/IsExpression&gt;
+              &lt;Value xsi:type=&quot;xsd:string&quot;&gt;d&lt;/Value&gt;
+            &lt;/FormatterParameterInfo&gt;
+          &lt;/value&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+          &lt;key&gt;
+            &lt;string&gt;ConvertTime&lt;/string&gt;
+          &lt;/key&gt;
+          &lt;value&gt;
+            &lt;FormatterParameterInfo xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+              &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+              &lt;DefinitionId&gt;Date&lt;/DefinitionId&gt;
+              &lt;TypeStr&gt;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/TypeStr&gt;
+              &lt;Name&gt;ConvertTime&lt;/Name&gt;
+              &lt;IsExpression&gt;false&lt;/IsExpression&gt;
+            &lt;/FormatterParameterInfo&gt;
+          &lt;/value&gt;
+        &lt;/item&gt;
+      &lt;/FormatterParameters&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;Format&gt;Date&lt;/Format&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;WireId&lt;/Title&gt;
+      &lt;RefName&gt;WireId&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;false&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;false&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;6&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;false&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;false&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;LoanGuid&lt;/Title&gt;
+      &lt;RefName&gt;LoanGuid&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;false&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;false&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;7&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;false&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;false&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Channel&lt;/Title&gt;
+      &lt;RefName&gt;Channel&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;8&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
+      &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+      &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;FormFields /&gt;
+      &lt;FormSettings&gt;
+        &lt;LabelAlign&gt;
+          &lt;Value&gt;Inside&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelAlign&gt;
+        &lt;LabelWidth&gt;
+          &lt;Value&gt;3&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/LabelWidth&gt;
+        &lt;FieldSpacing&gt;
+          &lt;Value&gt;Normal&lt;/Value&gt;
+          &lt;CanOverride&gt;true&lt;/CanOverride&gt;
+          &lt;Inherit&gt;true&lt;/Inherit&gt;
+        &lt;/FieldSpacing&gt;
+        &lt;FormId&gt;0&lt;/FormId&gt;
+        &lt;Cache&gt;false&lt;/Cache&gt;
+        &lt;MasterCacheKey /&gt;
+      &lt;/FormSettings&gt;
+      &lt;ShowOnMobile&gt;false&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;false&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+  &lt;/Fields&gt;
+&lt;/ActionGrid&gt;]]></content>
 </module>
