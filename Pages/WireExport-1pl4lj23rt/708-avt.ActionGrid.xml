@@ -68,7 +68,7 @@
     &lt;IncludeBootstrapCSS&gt;True&lt;/IncludeBootstrapCSS&gt;
     &lt;IncludeFontAwesome&gt;True&lt;/IncludeFontAwesome&gt;
     &lt;AngularnoConflict&gt;True&lt;/AngularnoConflict&gt;
-    &lt;SelectAllPosition&gt;None&lt;/SelectAllPosition&gt;
+    &lt;SelectAllPosition&gt;Top&lt;/SelectAllPosition&gt;
     &lt;LoadingStyle&gt;EntireGrid&lt;/LoadingStyle&gt;
     &lt;SearchPosition&gt;top&lt;/SearchPosition&gt;
     &lt;RootCSSClasses /&gt;
@@ -102,8 +102,8 @@
     &lt;LockIntoEditMode&gt;False&lt;/LockIntoEditMode&gt;
     &lt;LockInEditForEachRowActions&gt;[]&lt;/LockInEditForEachRowActions&gt;
     &lt;LockInEditFinalActions&gt;[]&lt;/LockInEditFinalActions&gt;
-    &lt;Template /&gt;
-    &lt;MobileTemplate /&gt;
+    &lt;Template&gt;grid&lt;/Template&gt;
+    &lt;MobileTemplate&gt;grid&lt;/MobileTemplate&gt;
     &lt;SwitchingTemplates&gt;False&lt;/SwitchingTemplates&gt;
     &lt;TemplateConfig&gt;{}&lt;/TemplateConfig&gt;
   &lt;/Settings&gt;
