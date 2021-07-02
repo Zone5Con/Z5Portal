@@ -415,7 +415,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 21
+    "OrderIndex": 19
   },
   {
     "Id": 537,
@@ -437,7 +437,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 22
+    "OrderIndex": 20
   },
   {
     "Id": 538,
@@ -459,7 +459,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 23
+    "OrderIndex": 21
   },
   {
     "Id": 539,
@@ -481,7 +481,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 24
+    "OrderIndex": 22
   },
   {
     "Id": 540,
@@ -503,7 +503,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 25
+    "OrderIndex": 23
   },
   {
     "Id": 541,
@@ -525,7 +525,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 26
+    "OrderIndex": 24
   },
   {
     "Id": 542,
@@ -547,7 +547,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 27
+    "OrderIndex": 25
   },
   {
     "Id": 543,
@@ -569,7 +569,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 28
+    "OrderIndex": 26
   },
   {
     "Id": 544,
@@ -591,7 +591,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 29
+    "OrderIndex": 27
   },
   {
     "Id": 545,
@@ -613,7 +613,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 30
+    "OrderIndex": 28
   },
   {
     "Id": 546,
@@ -635,7 +635,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 31
+    "OrderIndex": 29
   },
   {
     "Id": 547,
@@ -657,7 +657,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 32
+    "OrderIndex": 30
   },
   {
     "Id": 548,
@@ -676,10 +676,10 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
-    "OrderIndex": 33
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 31
   },
   {
     "Id": 549,
@@ -698,9 +698,9 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
-    "IsSearchable": false,
-    "IsFilterable": false,
-    "IsSortable": false,
-    "OrderIndex": 34
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 32
   }
 ]
