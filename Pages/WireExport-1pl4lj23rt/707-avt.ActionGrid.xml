@@ -189,7 +189,7 @@ display:none;
       &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
       &lt;IsSortable&gt;false&lt;/IsSortable&gt;
       &lt;CanBeSortable&gt;false&lt;/CanBeSortable&gt;
-      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;IsSearchable&gt;false&lt;/IsSearchable&gt;
       &lt;AllowHtml&gt;true&lt;/AllowHtml&gt;
       &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
       &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
