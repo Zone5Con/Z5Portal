@@ -211,24 +211,6 @@
       "Validations": []
     },
     {
-      "Name": "CreatedBy",
-      "IsDeleted": false,
-      "IsEnabled": true,
-      "OrderIndex": 19,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
-    },
-    {
-      "Name": "CreatedDate",
-      "IsDeleted": false,
-      "IsEnabled": true,
-      "OrderIndex": 20,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
-    },
-    {
       "Name": "ApprovedBy",
       "IsDeleted": false,
       "IsEnabled": true,
@@ -335,6 +317,24 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "WireCreatedBy",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 33,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "WireCreatedDate",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 34,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -361,8 +361,8 @@
         "BorName": "[BorName]",
         "WireSent": "[WireSent]",
         "Status": "[Status]",
-        "CreatedBy": "[CreatedBy]",
-        "CreatedDate": "[CreatedDate]",
+        "WireCreatedDate": "[WireCreatedDate]",
+        "WireCreatedBy": "[WireCreatedBy]",
         "ApprovedBy": "[ApprovedBy]",
         "ApprovedDate": "[ApprovedDate]",
         "EncUpdate": "[EncUpdate]",
