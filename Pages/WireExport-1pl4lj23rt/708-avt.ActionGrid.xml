@@ -64,10 +64,10 @@
     &lt;FiltersEnabled&gt;True&lt;/FiltersEnabled&gt;
     &lt;ShowFilters&gt;False&lt;/ShowFilters&gt;
     &lt;SyncUrl&gt;True&lt;/SyncUrl&gt;
-    &lt;IncludeBootstrapJS&gt;False&lt;/IncludeBootstrapJS&gt;
-    &lt;IncludeBootstrapCSS&gt;False&lt;/IncludeBootstrapCSS&gt;
+    &lt;IncludeBootstrapJS&gt;True&lt;/IncludeBootstrapJS&gt;
+    &lt;IncludeBootstrapCSS&gt;True&lt;/IncludeBootstrapCSS&gt;
     &lt;IncludeFontAwesome&gt;False&lt;/IncludeFontAwesome&gt;
-    &lt;AngularnoConflict&gt;False&lt;/AngularnoConflict&gt;
+    &lt;AngularnoConflict&gt;True&lt;/AngularnoConflict&gt;
     &lt;SelectAllPosition&gt;Top&lt;/SelectAllPosition&gt;
     &lt;LoadingStyle&gt;EntireGrid&lt;/LoadingStyle&gt;
     &lt;SearchPosition&gt;top&lt;/SearchPosition&gt;
