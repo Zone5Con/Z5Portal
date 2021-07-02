@@ -14,6 +14,76 @@
     <enddate>0001-01-01T00:00:00</enddate>
     <footer />
     <header>&lt;style&gt;
+div.angrid .table&gt;thead&gt;tr&gt;th {
+    border-bottom: 1px solid #ccc;
+}
+
+.confirm-action-alert {
+    margin-top: 265px;
+}
+
+.bstrap30 .table-striped&gt;tbody&gt;tr:nth-of-type(odd) {
+    background-color: #fff !important;
+}
+.angrid-details .details-content {
+  border: none!important;
+  background-color: #f4f9ff!important;
+}
+
+span.grid-field-value.ng-scope.ng-isolate-scope.block-break {
+    padding-left: 11px;
+}
+
+.btn-white {
+    color: #fff !important;
+    border: none !important;
+}
+div.angrid tr.selected td {
+    background-color: #f3dcbf !important;
+}
+
+.bstrap30 a {
+    color: #337ab7;
+    text-decoration: none!important;
+    font-weight: 500!important;
+    font-family: sans-serif !important;
+    letter-spacing: .05em;
+    font-size: 14px;
+}
+.custom-html-header.ng-scope {
+    Margin-top: -1px;
+    margin-left: 5px;
+}
+
+.bstrap30 p {
+    margin: 0 0 0 !important;
+}
+
+/*
+.select-all.pull-left:after {
+    content: 'Select.All';
+}
+*/
+.select-all {
+    background-color: #fff !important;
+}
+.bstrap30 input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+}
+
+.xz {
+display:none;
+}
+.selected .xz {
+display:block;
+}
+.xy {
+display:block;
+}
+.selected .xy {
+display:none;
+}
 
 
 &lt;/style&gt;</header>
