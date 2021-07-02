@@ -73,16 +73,16 @@ div.angrid tr.selected td {
     width: 20px;
 }
 
-.xz{
+.xz {
 display:none;
 }
-.selected .xz{
+.selected .xz {
 display:block;
 }
-.xy{
+.xy {
 display:block;
 }
-.selected .xy{
+.selected .xy {
 display:none;
 }
 
