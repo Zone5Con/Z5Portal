@@ -1,9 +1,10 @@
 <module type="avtTabsPro" version="05.14.02.00">
+    <contentKey />
     <moduleID>695</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
-    <cachemethod />
+    <cachemethod>MemoryModuleCachingProvider</cachemethod>
     <cachetime>0</cachetime>
     <color />
     <containersrc />
@@ -12,7 +13,55 @@
     <displaytitle>true</displaytitle>
     <enddate>0001-01-01T00:00:00</enddate>
     <footer />
-    <header />
+    <header>&lt;style&gt;
+.bstrap30 .table&gt;thead:first-child&gt;tr:first-child&gt;th {
+    background-color: #fff !important;
+}
+
+.btnCheckTop {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    opacity: 1!important;
+    margin-left: 118px!important;
+}
+
+.bstrap30 .table-responsive {
+overflow: hidden!important;
+}
+
+.bstrap30 .nav-tabs {
+    font-size: 15px;
+}
+
+.bstrap30 .nav-tabs&gt;li.active&gt;a, .bstrap30 .nav-tabs&gt;li.active&gt;a:focus, .bstrap30 .nav-tabs&gt;li.active&gt;a:hover {
+    color: #fff;
+}
+.nav-tabs&gt;li.active&gt;a:focus {
+    background-color: #337ab7!important;
+}
+
+.bstrap30 .nav-tabs&gt;li.active&gt;a.tabLink, .bstrap30 .nav-tabs&gt;li.active&gt;a:hover, .bstrap30 .nav-tabs&gt;li.active&gt;a:focus {
+    background-color: #337ab7;
+}
+
+.bstrap30 .nav-tabs&gt;li&gt;a:hover {
+    border-color: #337ab7 #337ab7 #337ab7;
+}
+
+.bstrap30 .nav-tabs {
+    border-bottom: 2px solid #337ab7;
+}
+
+.bstrap30 .tab-pane {
+    border: 1px solid #fff!important;
+}
+.bstrap30 h6 {
+    margin-top: -1px!important; 
+    margin-bottom: -1px!important; 
+}
+
+&lt;/style&gt;</header>
     <iconfile />
     <inheritviewpermissions>true</inheritviewpermissions>
     <modulepermissions>
@@ -23,9 +72,9 @@
             <rolename>Administrators</rolename>
         </permission>
     </modulepermissions>
-    <title>avt.TabsPro</title>
+    <title>Top Tabs</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>db53d3a0-9d90-4483-9ab1-da28ddefe90e</uniqueId>
+    <uniqueId>d2493d22-14a6-4a7f-9d0d-f40c9317fdb0</uniqueId>
     <visibility>Maximized</visibility>
     <cultureCode />
     <modulesettings />
