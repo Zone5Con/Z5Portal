@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 518,
+  "ShowDashboardModule": false,
+  "Id": 35,
+  "VersionId": 35,
+  "EntityTabId": 129,
+  "Name": "PCWire",
+  "PluralName": "PCWires",
+  "Icon": "allergies",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
