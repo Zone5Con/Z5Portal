@@ -194,7 +194,7 @@
       "Name": "ApprovedBy",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 20,
+      "OrderIndex": 18,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -203,7 +203,7 @@
       "Name": "ApprovedDate",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 21,
+      "OrderIndex": 19,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -212,7 +212,7 @@
       "Name": "EncUpdate",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 22,
+      "OrderIndex": 20,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -221,7 +221,7 @@
       "Name": "BBNbr",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 23,
+      "OrderIndex": 21,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -230,7 +230,7 @@
       "Name": "BBName",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 24,
+      "OrderIndex": 22,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -239,7 +239,7 @@
       "Name": "BBAddress1",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 25,
+      "OrderIndex": 23,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -248,7 +248,7 @@
       "Name": "BBAddress2",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 26,
+      "OrderIndex": 24,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -257,7 +257,7 @@
       "Name": "AddInst1",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 27,
+      "OrderIndex": 25,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -266,7 +266,7 @@
       "Name": "AddInst2",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 28,
+      "OrderIndex": 26,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -275,7 +275,7 @@
       "Name": "AddInst3",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 29,
+      "OrderIndex": 27,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -284,7 +284,7 @@
       "Name": "Channel",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 30,
+      "OrderIndex": 28,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -293,7 +293,7 @@
       "Name": "ECoFileNbr",
       "IsDeleted": false,
       "IsEnabled": true,
-      "OrderIndex": 31,
+      "OrderIndex": 29,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -302,7 +302,7 @@
       "Name": "WireCreatedBy",
       "IsDeleted": false,
       "IsEnabled": false,
-      "OrderIndex": 32,
+      "OrderIndex": 30,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -311,7 +311,7 @@
       "Name": "WireCreatedDate",
       "IsDeleted": false,
       "IsEnabled": false,
-      "OrderIndex": 33,
+      "OrderIndex": 31,
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
@@ -386,14 +386,6 @@
           {
             "name": "Id",
             "value": "[CreatedRecordId]"
-          },
-          {
-            "name": "WireCreatedBy",
-            "value": "[CreatedRecord:WireCreatedBy]"
-          },
-          {
-            "name": "WireCreatedDate",
-            "value": "[CreatedRecord:WireCreatedDate]"
           },
           {
             "name": "WireId",
@@ -514,6 +506,14 @@
           {
             "name": "ECoFileNbr",
             "value": "[CreatedRecord:ECoFileNbr]"
+          },
+          {
+            "name": "WireCreatedBy",
+            "value": "[CreatedRecord:WireCreatedBy]"
+          },
+          {
+            "name": "WireCreatedDate",
+            "value": "[CreatedRecord:WireCreatedDate]"
           }
         ],
         "Headers": [
