@@ -24,7 +24,7 @@
             <rolename>Administrators</rolename>
         </permission>
     </modulepermissions>
-    <title>avt.ActionGrid</title>
+    <title>Loans Ready Grid</title>
     <startdate>0001-01-01T00:00:00</startdate>
     <uniqueId>1ecfac9a-415b-4920-9c1c-190b94d5edb1</uniqueId>
     <visibility>Maximized</visibility>
@@ -303,7 +303,7 @@
       &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
       &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
       &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
-      &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
+      &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
       &lt;FormatterParameters /&gt;
       &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
       &lt;TooltipOrientation&gt;top&lt;/TooltipOrientation&gt;
@@ -363,7 +363,7 @@
       &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
       &lt;CanBeFilterable&gt;false&lt;/CanBeFilterable&gt;
       &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
-      &lt;OrderIndex&gt;6&lt;/OrderIndex&gt;
+      &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
       &lt;Template&gt;&amp;lt;img class=&quot;xz&quot; src=&quot;https://image.freepik.com/free-icon/checkbox-checked_318-40908.jpg&quot; style=&quot;height: 20px; width: 20px;&quot; /&amp;gt;
 &amp;lt;img class=&quot;xy&quot; src=&quot;https://image.freepik.com/free-icon/checkbox-unchecked-square_318-40919.jpg&quot; style=&quot;height: 20px; width: 20px;&quot; /&amp;gt;&lt;/Template&gt;
       &lt;FormatterParameters /&gt;
