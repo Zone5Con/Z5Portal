@@ -1,0 +1,534 @@
+{
+  "Name": "PCWire",
+  "Description": "Creates a new record of type PCWire",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 151,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [
+    {
+      "Name": "WireId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"WireId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "LoanGuid",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LoanNumber",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"LoanNumber is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TPOName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TPOEmail",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TotalWire",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TotalWireRaw",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "TotalWireShow",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EscrowABA",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EAcctNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EAddress",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "ECity",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EState",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 13,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EZip",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 14,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BorName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 15,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "WireSent",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 16,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Status",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 17,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CreatedBy",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 18,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "CreatedDate",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 19,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "ApprovedBy",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 20,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "ApprovedDate",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 21,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "EncUpdate",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 22,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BBNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 23,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BBName",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 24,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BBAddress1",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 25,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "BBAddress2",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 26,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "AddInst1",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 27,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "AddInst2",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 28,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "AddInst3",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 29,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Channel",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 30,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "ECoFileNbr",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 31,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.PCWire",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "WireId": "[WireId]",
+        "LoanGuid": "[LoanGuid]",
+        "LoanNumber": "[LoanNumber]",
+        "TPOName": "[TPOName]",
+        "TPOEmail": "[TPOEmail]",
+        "TotalWire": "[TotalWire]",
+        "TotalWireRaw": "[TotalWireRaw]",
+        "TotalWireShow": "[TotalWireShow]",
+        "EscrowABA": "[EscrowABA]",
+        "EAcctNbr": "[EAcctNbr]",
+        "EName": "[EName]",
+        "EAddress": "[EAddress]",
+        "ECity": "[ECity]",
+        "EState": "[EState]",
+        "EZip": "[EZip]",
+        "BorName": "[BorName]",
+        "WireSent": "[WireSent]",
+        "Status": "[Status]",
+        "CreatedBy": "[CreatedBy]",
+        "CreatedDate": "[CreatedDate]",
+        "ApprovedBy": "[ApprovedBy]",
+        "ApprovedDate": "[ApprovedDate]",
+        "EncUpdate": "[EncUpdate]",
+        "BBNbr": "[BBNbr]",
+        "BBName": "[BBName]",
+        "BBAddress1": "[BBAddress1]",
+        "BBAddress2": "[BBAddress2]",
+        "AddInst1": "[AddInst1]",
+        "AddInst2": "[AddInst2]",
+        "AddInst3": "[AddInst3]",
+        "Channel": "[Channel]",
+        "ECoFileNbr": "[ECoFileNbr]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "PCWire"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.PCWire",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "PCWire"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "WireId",
+            "value": "[CreatedRecord:WireId]"
+          },
+          {
+            "name": "LoanGuid",
+            "value": "[CreatedRecord:LoanGuid]"
+          },
+          {
+            "name": "LoanNumber",
+            "value": "[CreatedRecord:LoanNumber]"
+          },
+          {
+            "name": "TPOName",
+            "value": "[CreatedRecord:TPOName]"
+          },
+          {
+            "name": "TPOEmail",
+            "value": "[CreatedRecord:TPOEmail]"
+          },
+          {
+            "name": "TotalWire",
+            "value": "[CreatedRecord:TotalWire]"
+          },
+          {
+            "name": "TotalWireRaw",
+            "value": "[CreatedRecord:TotalWireRaw]"
+          },
+          {
+            "name": "TotalWireShow",
+            "value": "[CreatedRecord:TotalWireShow]"
+          },
+          {
+            "name": "EscrowABA",
+            "value": "[CreatedRecord:EscrowABA]"
+          },
+          {
+            "name": "EAcctNbr",
+            "value": "[CreatedRecord:EAcctNbr]"
+          },
+          {
+            "name": "EName",
+            "value": "[CreatedRecord:EName]"
+          },
+          {
+            "name": "EAddress",
+            "value": "[CreatedRecord:EAddress]"
+          },
+          {
+            "name": "ECity",
+            "value": "[CreatedRecord:ECity]"
+          },
+          {
+            "name": "EState",
+            "value": "[CreatedRecord:EState]"
+          },
+          {
+            "name": "EZip",
+            "value": "[CreatedRecord:EZip]"
+          },
+          {
+            "name": "BorName",
+            "value": "[CreatedRecord:BorName]"
+          },
+          {
+            "name": "WireSent",
+            "value": "[CreatedRecord:WireSent]"
+          },
+          {
+            "name": "Status",
+            "value": "[CreatedRecord:Status]"
+          },
+          {
+            "name": "CreatedBy",
+            "value": "[CreatedRecord:CreatedBy]"
+          },
+          {
+            "name": "CreatedDate",
+            "value": "[CreatedRecord:CreatedDate]"
+          },
+          {
+            "name": "ApprovedBy",
+            "value": "[CreatedRecord:ApprovedBy]"
+          },
+          {
+            "name": "ApprovedDate",
+            "value": "[CreatedRecord:ApprovedDate]"
+          },
+          {
+            "name": "EncUpdate",
+            "value": "[CreatedRecord:EncUpdate]"
+          },
+          {
+            "name": "BBNbr",
+            "value": "[CreatedRecord:BBNbr]"
+          },
+          {
+            "name": "BBName",
+            "value": "[CreatedRecord:BBName]"
+          },
+          {
+            "name": "BBAddress1",
+            "value": "[CreatedRecord:BBAddress1]"
+          },
+          {
+            "name": "BBAddress2",
+            "value": "[CreatedRecord:BBAddress2]"
+          },
+          {
+            "name": "AddInst1",
+            "value": "[CreatedRecord:AddInst1]"
+          },
+          {
+            "name": "AddInst2",
+            "value": "[CreatedRecord:AddInst2]"
+          },
+          {
+            "name": "AddInst3",
+            "value": "[CreatedRecord:AddInst3]"
+          },
+          {
+            "name": "Channel",
+            "value": "[CreatedRecord:Channel]"
+          },
+          {
+            "name": "ECoFileNbr",
+            "value": "[CreatedRecord:ECoFileNbr]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://z5portal.com/api/PCWire?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
