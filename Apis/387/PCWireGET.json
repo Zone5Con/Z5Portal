@@ -53,6 +53,14 @@
             "value": "[RecordId]"
           },
           {
+            "name": "WireCreatedBy",
+            "value": "[Record:WireCreatedBy]"
+          },
+          {
+            "name": "WireCreatedDate",
+            "value": "[Record:WireCreatedDate]"
+          },
+          {
             "name": "WireId",
             "value": "[Record:WireId]"
           },
@@ -123,14 +131,6 @@
           {
             "name": "Status",
             "value": "[Record:Status]"
-          },
-          {
-            "name": "CreatedBy",
-            "value": "[Record:CreatedBy]"
-          },
-          {
-            "name": "CreatedDate",
-            "value": "[Record:CreatedDate]"
           },
           {
             "name": "ApprovedBy",
