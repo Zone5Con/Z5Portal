@@ -191,24 +191,6 @@
       "Validations": []
     },
     {
-      "Name": "CreatedBy",
-      "IsDeleted": false,
-      "IsEnabled": true,
-      "OrderIndex": 18,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
-    },
-    {
-      "Name": "CreatedDate",
-      "IsDeleted": false,
-      "IsEnabled": true,
-      "OrderIndex": 19,
-      "Parameters": {},
-      "InputTypeStr": "text",
-      "Validations": []
-    },
-    {
       "Name": "ApprovedBy",
       "IsDeleted": false,
       "IsEnabled": true,
@@ -315,6 +297,24 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "WireCreatedBy",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 32,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "WireCreatedDate",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 33,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -341,8 +341,8 @@
         "BorName": "[BorName]",
         "WireSent": "[WireSent]",
         "Status": "[Status]",
-        "CreatedBy": "[CreatedBy]",
-        "CreatedDate": "[CreatedDate]",
+        "WireCreatedDate": "[WireCreatedDate]",
+        "WireCreatedBy": "[WireCreatedBy]",
         "ApprovedBy": "[ApprovedBy]",
         "ApprovedDate": "[ApprovedDate]",
         "EncUpdate": "[EncUpdate]",
@@ -386,6 +386,14 @@
           {
             "name": "Id",
             "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "WireCreatedBy",
+            "value": "[CreatedRecord:WireCreatedBy]"
+          },
+          {
+            "name": "WireCreatedDate",
+            "value": "[CreatedRecord:WireCreatedDate]"
           },
           {
             "name": "WireId",
@@ -458,14 +466,6 @@
           {
             "name": "Status",
             "value": "[CreatedRecord:Status]"
-          },
-          {
-            "name": "CreatedBy",
-            "value": "[CreatedRecord:CreatedBy]"
-          },
-          {
-            "name": "CreatedDate",
-            "value": "[CreatedRecord:CreatedDate]"
           },
           {
             "name": "ApprovedBy",
