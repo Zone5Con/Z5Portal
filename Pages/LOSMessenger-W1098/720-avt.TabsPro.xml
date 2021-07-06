@@ -56,7 +56,7 @@
     </modulepermissions>
     <title>Sellers</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>28a45e3d-792a-4ddd-9e33-c40575f32d56</uniqueId>
+    <uniqueId>503bf915-baab-4aca-a461-cd37fe73933e</uniqueId>
     <visibility>Maximized</visibility>
     <cultureCode />
     <modulesettings />
@@ -117,7 +117,14 @@
       &lt;Localization&gt;
         &lt;en-US&gt;Sellers&lt;/en-US&gt;
       &lt;/Localization&gt;
-      &lt;Modules /&gt;
+      &lt;Modules&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;726&lt;/ModuleId&gt;
+          &lt;ModuleTitle /&gt;
+          &lt;ModuleOrder&gt;17&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
+      &lt;/Modules&gt;
     &lt;/Tab&gt;
   &lt;/Tabs&gt;
 &lt;/TabsPro&gt;]]></content>
