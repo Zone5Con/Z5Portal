@@ -53,10 +53,6 @@
             "value": "[RecordId]"
           },
           {
-            "name": "TokenId",
-            "value": "[Record:TokenId]"
-          },
-          {
             "name": "SentFrom",
             "value": "[Record:SentFrom]"
           },
@@ -107,6 +103,10 @@
           {
             "name": "MessageHTML",
             "value": "[Record:MessageHTML]"
+          },
+          {
+            "name": "TokenId",
+            "value": "[Record:TokenId]"
           }
         ],
         "Headers": []
