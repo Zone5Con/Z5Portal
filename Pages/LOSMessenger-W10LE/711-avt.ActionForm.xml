@@ -69,6 +69,12 @@ body {
             <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
             <permissionkey>EDIT</permissionkey>
             <allowaccess>true</allowaccess>
+            <rolename>Low-Code Engineer</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
             <rolename>Admins</rolename>
         </permission>
         <permission>
@@ -76,12 +82,6 @@ body {
             <permissionkey>EDIT</permissionkey>
             <allowaccess>true</allowaccess>
             <rolename>Citizen Developers</rolename>
-        </permission>
-        <permission>
-            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
-            <permissionkey>EDIT</permissionkey>
-            <allowaccess>true</allowaccess>
-            <rolename>Low-Code Engineer</rolename>
         </permission>
         <permission>
             <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
@@ -344,14 +344,14 @@ body {
     &lt;/Field&gt;
     &lt;Field&gt;
       &lt;Id&gt;&lt;![CDATA[1491]]&gt;&lt;/Id&gt;
-      &lt;Title&gt;&lt;![CDATA[Opt In Bor]]&gt;&lt;/Title&gt;
+      &lt;Title&gt;&lt;![CDATA[Opt In Broker]]&gt;&lt;/Title&gt;
       &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
       &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
       &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
-      &lt;OverrideName&gt;btnOptInBor&lt;/OverrideName&gt;
-      &lt;Name&gt;btnOptInBor&lt;/Name&gt;
+      &lt;OverrideName&gt;btnOptInBroker&lt;/OverrideName&gt;
+      &lt;Name&gt;btnOptInBroker&lt;/Name&gt;
       &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
-      &lt;ShowCondition&gt;&lt;![CDATA[[LOSM:UtilizeOptIn] == &quot;yes&quot; &amp;&amp; [Get:BCP] != &quot;&quot;]]&gt;&lt;/ShowCondition&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[[LOSM:UtilizeOptIn] == &quot;yes&quot; &amp;&amp; [Get:BKCP] != &quot;&quot;]]&gt;&lt;/ShowCondition&gt;
       &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
       &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
       &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
@@ -396,7 +396,7 @@ body {
       &lt;OverrideName&gt;btnOptInCob&lt;/OverrideName&gt;
       &lt;Name&gt;btnOptInCob&lt;/Name&gt;
       &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
-      &lt;ShowCondition&gt;&lt;![CDATA[[LOSM:UtilizeOptIn] == &quot;yes&quot; &amp;&amp; [Get:CCP] != &quot;&quot;]]&gt;&lt;/ShowCondition&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[[LOSM:UtilizeOptIn] == &quot;yes&quot; &amp;&amp; [Get:BKPCP] != &quot;&quot;]]&gt;&lt;/ShowCondition&gt;
       &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
       &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
       &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
@@ -463,7 +463,7 @@ body {
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
-      &lt;EnableCondition&gt;([LOSM:UtilizeOptIn] == &quot;no&quot; &amp;amp;&amp;amp; [Get:BCP]!= &quot;&quot;) || ([LOSM:UtilizeOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [Get:BCP]!= &quot;&quot; &amp;amp;&amp;amp; [LOSM:BorOptIn] == &quot;yes&quot;)&lt;/EnableCondition&gt;
+      &lt;EnableCondition&gt;([LOSM:UtilizeOptIn] == &quot;no&quot; &amp;amp;&amp;amp; [Get:BKCP]!= &quot;&quot;) || ([LOSM:UtilizeOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [Get:BKCP]!= &quot;&quot; &amp;amp;&amp;amp; [LOSM:BKOptIn] == &quot;yes&quot;)&lt;/EnableCondition&gt;
       &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
       &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
       &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
@@ -481,12 +481,12 @@ body {
     &lt;/Field&gt;
     &lt;Field&gt;
       &lt;Id&gt;&lt;![CDATA[1494]]&gt;&lt;/Id&gt;
-      &lt;Title&gt;&lt;![CDATA[Borrower]]&gt;&lt;/Title&gt;
+      &lt;Title&gt;&lt;![CDATA[Broker]]&gt;&lt;/Title&gt;
       &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
       &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
       &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
-      &lt;OverrideName&gt;BorName&lt;/OverrideName&gt;
-      &lt;Name&gt;BorName&lt;/Name&gt;
+      &lt;OverrideName&gt;BrokerName&lt;/OverrideName&gt;
+      &lt;Name&gt;BrokerName&lt;/Name&gt;
       &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
       &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
       &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
@@ -1139,95 +1139,6 @@ body {
       &lt;GroupValidator /&gt;
       &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
       &lt;ViewOrder&gt;21&lt;/ViewOrder&gt;
-      &lt;RowIndex&gt;9&lt;/RowIndex&gt;
-      &lt;ColSpan&gt;2&lt;/ColSpan&gt;
-      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
-    &lt;/Field&gt;
-    &lt;Field&gt;
-      &lt;Id&gt;&lt;![CDATA[1513]]&gt;&lt;/Id&gt;
-      &lt;Title&gt;&lt;![CDATA[]]&gt;&lt;/Title&gt;
-      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
-      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
-      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
-      &lt;OverrideName&gt;BrokerSelect&lt;/OverrideName&gt;
-      &lt;Name&gt;BrokerSelect&lt;/Name&gt;
-      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
-      &lt;ShowCondition&gt;&lt;![CDATA[0]]&gt;&lt;/ShowCondition&gt;
-      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
-      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
-      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
-      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
-      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
-      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
-      &lt;BindOnChange&gt;&lt;![CDATA[//var $elBroker = $(&#39;#&#39; + form.fields.BrokerName.id);
-//if ([BrokerSelect]) {
-//  $elBroker.removeClass(&#39;FontField&#39;).addClass(&#39;selected&#39;);
-//} 
-//if (![BrokerSelect]) {
-//  $elBroker.removeClass(&#39;selected&#39;).addClass(&#39;FontField&#39;);
-//} 
-//return false;]]&gt;&lt;/BindOnChange&gt;
-      &lt;InputType&gt;closed-truefalse&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;Value&quot;:&quot;&quot;,&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
-      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
-      &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
-      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
-      &lt;IsActive&gt;True&lt;/IsActive&gt;
-      &lt;EnableCondition&gt;[Get:BKCP]!= &quot;&quot; &amp;amp;&amp;amp; [LOSM:BrokerOptIn] == &quot;yes&quot;&lt;/EnableCondition&gt;
-      &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
-      &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
-      &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
-      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
-      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
-      &lt;CustomValidator1 /&gt;
-      &lt;CustomValidator2 /&gt;
-      &lt;ValidationGroup /&gt;
-      &lt;GroupValidator /&gt;
-      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;22&lt;/ViewOrder&gt;
-      &lt;RowIndex&gt;9&lt;/RowIndex&gt;
-      &lt;ColSpan&gt;1&lt;/ColSpan&gt;
-      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
-    &lt;/Field&gt;
-    &lt;Field&gt;
-      &lt;Id&gt;&lt;![CDATA[1514]]&gt;&lt;/Id&gt;
-      &lt;Title&gt;&lt;![CDATA[Broker]]&gt;&lt;/Title&gt;
-      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
-      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
-      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
-      &lt;OverrideName&gt;BrokerName&lt;/OverrideName&gt;
-      &lt;Name&gt;BrokerName&lt;/Name&gt;
-      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
-      &lt;ShowCondition&gt;&lt;![CDATA[0]]&gt;&lt;/ShowCondition&gt;
-      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
-      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
-      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
-      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
-      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
-      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
-      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
-      &lt;InputType&gt;open-text-large&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;Value&quot;:&quot;[Get:BRFN]\n[Get:BRCP]&quot;,&quot;SaveToReport&quot;:false,&quot;AllowTokens&quot;:&quot;&quot;,&quot;SecureInput&quot;:true,&quot;Rows&quot;:&quot;2&quot;}&lt;/InputData&gt;
-      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
-      &lt;AllowTokens /&gt;
-      &lt;SecureInput&gt;True&lt;/SecureInput&gt;
-      &lt;Rows&gt;2&lt;/Rows&gt;
-      &lt;Value&gt;&lt;![CDATA[[Get:BRFN]
-[Get:BRCP]]]&gt;&lt;/Value&gt;
-      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
-      &lt;IsActive&gt;True&lt;/IsActive&gt;
-      &lt;EnableCondition&gt;0&lt;/EnableCondition&gt;
-      &lt;CssClass&gt;&lt;![CDATA[FontField]]&gt;&lt;/CssClass&gt;
-      &lt;FirstCssClass&gt;&lt;![CDATA[FontField]]&gt;&lt;/FirstCssClass&gt;
-      &lt;CssStyles&gt;&lt;![CDATA[overflow:auto; -ms-overflow-y:hidden;]]&gt;&lt;/CssStyles&gt;
-      &lt;LabelCssClass&gt;&lt;![CDATA[FontLabel]]&gt;&lt;/LabelCssClass&gt;
-      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
-      &lt;CustomValidator1 /&gt;
-      &lt;CustomValidator2 /&gt;
-      &lt;ValidationGroup /&gt;
-      &lt;GroupValidator /&gt;
-      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;23&lt;/ViewOrder&gt;
       &lt;RowIndex&gt;9&lt;/RowIndex&gt;
       &lt;ColSpan&gt;2&lt;/ColSpan&gt;
       &lt;ColOffset&gt;0&lt;/ColOffset&gt;
@@ -2521,7 +2432,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-warning&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;far fa-comment-dots&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;localize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Please wait...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-warning&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;far fa-comment-dots&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;localize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Please wait...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -2552,7 +2463,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;Please wait...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -2590,7 +2500,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;far fa-credit-card&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;far fa-credit-card&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -2620,7 +2530,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -2658,7 +2567,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-info&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-sync&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Resetting...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-info&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-sync&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Resetting...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -2689,7 +2598,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;Resetting...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -2727,7 +2635,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-info&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-cogs&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;localize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Please wait...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-xs&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-info&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-cogs&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;localize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Please wait...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -2758,7 +2666,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;Please wait...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -2796,7 +2703,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-bullhorn&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-bullhorn&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -2826,7 +2733,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -3027,7 +2933,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[return false;]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-primary&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-sms&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-primary&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;fas fa-sms&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -3058,7 +2964,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -3096,7 +3001,7 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;button&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-xs&quot;},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-info&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;far fa-sticky-note&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Generating...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[],&quot;HasButtonGroup&quot;:true}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:false,&quot;IsDefaultButton&quot;:false,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-xs&quot;},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{},&quot;Value&quot;:&quot;btn-info&quot;},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;far fa-sticky-note&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;custom&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Generating...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
       &lt;CausesValidation&gt;False&lt;/CausesValidation&gt;
       &lt;IsDefaultButton&gt;False&lt;/IsDefaultButton&gt;
       &lt;ButtonSize&gt;
@@ -3127,7 +3032,6 @@ if ([TextMessage].length + [FooterMessageCount] &gt; 480)
       &lt;ButtonWaitingMessage&gt;Generating...&lt;/ButtonWaitingMessage&gt;
       &lt;ConnectedForms /&gt;
       &lt;Actions /&gt;
-      &lt;HasButtonGroup&gt;True&lt;/HasButtonGroup&gt;
       &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
       &lt;IsRequired&gt;False&lt;/IsRequired&gt;
       &lt;IsActive&gt;True&lt;/IsActive&gt;
@@ -3230,7 +3134,7 @@ sanitize: false,
     &lt;LeftSidebarHtml /&gt;
     &lt;RightSidebarHtml /&gt;
     &lt;RootClasses /&gt;
-    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en-US&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
+    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
     &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
   &lt;/Settings&gt;
   &lt;Actions xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
@@ -3238,7 +3142,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;LoadUser&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Id&quot;:&quot;craig@goz5.com&quot;,&quot;Portal&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3252,7 +3156,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
       &lt;Condition /&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.513&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;IF NOT EXISTS (SELECT LoanGuid FROM app.TextLoan\nWHERE LoanGuid = REPLACE(REPLACE(&#39;[Get:LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;))\nBEGIN\nINSERT INTO app.TextLoan (CompanyId, LoanGuid, LoanNumber, PropertyAddress, BuyersName, BuyersCellPhone, SellersName, SellersCellPhone, BorName, BorCellPhone, CobName, CobCellPhone, LOName, LOCellPhone)\nValues (\n&#39;[Get:CID]&#39;,\nREPLACE(REPLACE(&#39;[Get:LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[Get:LN]&#39;,\n&#39;[Get:PropAddr]&#39;,\n&#39;[Get:BAN]&#39;,\n&#39;[Get:BACP]&#39;,\n&#39;[Get:SAN]&#39;,\n&#39;[Get:SACP]&#39;,\n&#39;[Get:BFN]&#39;,\n&#39;[Get:BCP]&#39;,\n&#39;[Get:CFN]&#39;,\n&#39;[Get:CCP]&#39;,\n&#39;[Get:LOFN]&#39;,\n&#39;[Get:LOCP]&#39;\n)\n\nEND\nELSE\nBEGIN\n\nUpdate app.TextLoan\nSet PropertyAddress = &#39;[Get:PropAddr]&#39;, BuyersName = &#39;[Get:BAN]&#39;, BuyersCellPhone = &#39;[Get:BACP]&#39;, SellersName = &#39;[Get:SAN]&#39;, SellersCellPhone = &#39;[Get:SACP]&#39;, BorCellPhone = &#39;[Get:BCP]&#39;, CobCellPhone = &#39;[Get:CCP]&#39;, BorName = &#39;[Get:BFN]&#39;, CobName = &#39;[Get:CFN]&#39;, LOName = &#39;[Get:LOFN]&#39;, LOCellPhone = &#39;[Get:LOCP]&#39;\nWHERE LoanGuid = REPLACE(REPLACE(&#39;[Get:LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;)\nEND&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3266,7 +3170,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToast&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:ShowOther] == &quot;no&quot; &amp;amp;&amp;amp; [BorSelect] == false &amp;amp;&amp;amp; [CobSelect] == false &amp;amp;&amp;amp; [BuyersSelect] == false &amp;amp;&amp;amp; [SellersSelect] == false &amp;amp;&amp;amp; [LOSelect] == false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.967&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5 style=\&quot;color:#fff;\&quot;&amp;gt;Please select a text recipient&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;warning&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;3000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3279,7 +3183,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.92&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:558,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3292,7 +3196,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.387&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:558,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3305,7 +3209,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;OpenTPPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.373&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:586,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3318,7 +3222,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;OpenTPPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.433&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:595,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3331,7 +3235,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;GeneratePDF&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.497&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;HTMLCode&quot;:&quot;&amp;lt;div style=\&quot;margin: 10px 15px\&quot;&amp;gt;  \n\n&amp;lt;div style=\&quot;text-align: left;\&quot;&amp;gt;&amp;lt;img src=\&quot;https://z5portal.com/Portals/0/Images/VertFinLogo.png\&quot; style=\&quot;width: 20%;\&quot; alt=\&quot;US Wide Financial\&quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/div&amp;gt;\n\n&amp;lt;div style=\&quot;font-size:17px; text-align: center; margin-top:-20px\&quot;&amp;gt;&amp;lt;span style=\&quot;font-family: inherit; background-color: transparent;\&quot;&amp;gt;&amp;lt;br&amp;gt;Loan Number: [Get:LN]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;\n&amp;lt;div style=\&quot;font-size:17px; text-align: center;\&quot;&amp;gt;&amp;lt;span style=\&quot;font-family: inherit; background-color: transparent;\&quot;&amp;gt;Name: [Get:BFN]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;\n\n\n&amp;lt;div style=\&quot;font-size: 20px; text-align: center; letter-spacing: .05em; margin-top:30px\&quot;&amp;gt;&amp;lt;span style=\&quot;font-family: inherit; background-color: transparent;\&quot;&amp;gt;Opt In History&amp;lt;br&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;div style=\&quot;text-align: left;\&quot;&amp;gt;&amp;lt;span style=\&quot;background-color: transparent; font-family: inherit;\&quot;&amp;gt;[LOSM:GetOptInReport]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;hr style=\&quot;max-width:80%\&quot;&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;div style=\&quot;font-size: 20px; text-align: center; letter-spacing: .05em\&quot;&amp;gt;&amp;lt;span style=\&quot;font-family: inherit; background-color: transparent;\&quot;&amp;gt;Communication History&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;\n&amp;lt;br&amp;gt;\n&amp;lt;div style=\&quot;text-align: left;\&quot;&amp;gt;&amp;lt;span style=\&quot;background-color: transparent; font-family: inherit;\&quot;&amp;gt;[LOSM:GetTextReport]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;\n  &amp;lt;/div&amp;gt;&quot;,&quot;PDFName&quot;:&quot;[Get:BFN]-[Get:LN]-[DateTime:Now]&quot;,&quot;PathDestination&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;/&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;OrientationLandscape&quot;:&quot;&quot;,&quot;PaperSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Letter&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Grayscale&quot;:&quot;&quot;,&quot;OtherOptions&quot;:&quot;--encoding \&quot;UTF-8\&quot;&quot;,&quot;StoreFileId&quot;:&quot;&quot;,&quot;StoreAbsoluteURL&quot;:&quot;TextReport&quot;,&quot;StoreRelativeURL&quot;:&quot;&quot;,&quot;StorePhysicalPath&quot;:&quot;&quot;,&quot;StoreLinkClick&quot;:&quot;&quot;,&quot;HtmlInputType&quot;:{&quot;Value&quot;:&quot;richtext&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ForceDownload&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3344,7 +3248,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RedirectToPage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.387&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;PageId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:94,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;EnforceCurrentLocale&quot;:&quot;&quot;,&quot;QueryString&quot;:&quot;CID=[Get:CID]&amp;amp;LG=[Get:LG]&amp;amp;LN=[Get:LN]&amp;amp;BFN=[Get:BFN]&amp;amp;BCP=[Get:BCP]&amp;amp;BEM=[Get:BEM]&amp;amp;CFN=[Get:CFN]&amp;amp;CCP=[Get:CCP]&amp;amp;CEM=[Get:CEM]&amp;amp;LOFN=[Get:LOFN]&amp;amp;LOCP=[Get:LOCP]&amp;amp;BAN=[Get:BAN]&amp;amp;BACP=[Get:BACP]&amp;amp;SAN=[Get:SAN]&amp;amp;SACP=[Get:SACP]&amp;amp;CU=[Get:CU]&amp;amp;CUE=[Get:CUE]&amp;amp;CUPH=[Get:CUPH]&amp;amp;CUP=[Get:CUP]&amp;amp;AF=[Get:AF]&amp;amp;I2P=[Get:I2P]&quot;,&quot;QueryStringUseUrlProvider&quot;:false,&quot;OpenInPopup&quot;:&quot;&quot;,&quot;PopupTitle&quot;:&quot;&quot;,&quot;OpenInNewTab&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3357,7 +3261,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RedirectToPage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.45&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;PageId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:119,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;EnforceCurrentLocale&quot;:&quot;&quot;,&quot;QueryString&quot;:&quot;CID=[Get:CID]&amp;amp;LG=[Get:LG]&amp;amp;LN=[Get:LN]&amp;amp;BFN=[Get:BFN]&amp;amp;BCP=[Get:BCP]&amp;amp;BEM=[Get:BEM]&amp;amp;CFN=[Get:CFN]&amp;amp;CCP=[Get:CCP]&amp;amp;CEM=[Get:CEM]&amp;amp;LOFN=[Get:LOFN]&amp;amp;LOCP=[Get:LOCP]&amp;amp;BAN=[Get:BAN]&amp;amp;BACP=[Get:BACP]&amp;amp;SAN=[Get:SAN]&amp;amp;SACP=[Get:SACP]&amp;amp;CU=[Get:CU]&amp;amp;CUE=[Get:CUE]&amp;amp;CUPH=[Get:CUPH]&amp;amp;CUP=[Get:CUP]&amp;amp;AF=[Get:AF]&amp;amp;I2P=[Get:I2P]&quot;,&quot;QueryStringUseUrlProvider&quot;:false,&quot;OpenInPopup&quot;:&quot;&quot;,&quot;PopupTitle&quot;:&quot;&quot;,&quot;OpenInNewTab&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3370,7 +3274,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RedirectToUrl&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.513&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Url&quot;:&quot;[TextReport]&quot;,&quot;EscapeUrl&quot;:&quot;&quot;,&quot;OpenInPopup&quot;:&quot;&quot;,&quot;PopupTitle&quot;:&quot;&quot;,&quot;OpenInNewTab&quot;:&quot;&quot;,&quot;ForceDownload&quot;:true}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3383,7 +3287,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;InitActionForm&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.933&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:442,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3398,7 +3302,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToast&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:ShowOther] == &quot;yes&quot; &amp;amp;&amp;amp; [BorSelect] == false &amp;amp;&amp;amp; [CobSelect] == false &amp;amp;&amp;amp; [BuyersSelect] == false &amp;amp;&amp;amp; [SellersSelect] == false &amp;amp;&amp;amp; [LOSelect] == false &amp;amp;&amp;amp; [OtherSelect] == false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.98&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5 style=\&quot;color:#fff;\&quot;&amp;gt;Please select a text recipient&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;warning&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;3000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3413,7 +3317,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp1Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.53&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp1Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage1&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3426,7 +3330,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteApiMethod&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.797&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ApiModule&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;387&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;MethodName&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;GetEllieAuth#POST&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;HttpMethod&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ProcessResponseType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;1&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;MethodInputs&quot;:&quot;&quot;,&quot;MethodInputsList&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;Auth&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3439,7 +3343,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToastAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.407&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;p style=\&quot;color:#fff;\&quot;&amp;gt;Form Re-freshed&amp;lt;/p&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;success&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;1000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3454,7 +3358,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp1Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.53&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage1:Temp1Message]&quot;,&quot;name&quot;:&quot;InjectMessage1&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3468,7 +3372,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToast&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
       &lt;Condition&gt;[TextMessage] == &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.98&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5 style=\&quot;color:#fff;\&quot;&amp;gt;Message field cannot be blank&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;warning&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;3000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:&quot;&quot;,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3481,7 +3385,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;InitActionForm&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.407&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:442,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3495,7 +3399,7 @@ sanitize: false,
       &lt;ActionType&gt;ParseJsonIntoTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.827&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JsonString&quot;:&quot;[Auth]&quot;,&quot;BaseTokenName&quot;:&quot;Parsed&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3510,7 +3414,7 @@ sanitize: false,
       &lt;ActionType&gt;PostData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.827&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;InputParameters&quot;:&quot;&quot;,&quot;URL&quot;:&quot;https://api.elliemae.com/encompass/v3/loans/[Get:LG]/documents?includeRemoved=false&amp;amp;requireActiveAttachments=false&quot;,&quot;UrlTokenContext&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Url&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;UseSSL&quot;:true,&quot;Timeout&quot;:&quot;&quot;,&quot;HttpMethod&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;GET&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Data&quot;:&quot;&quot;,&quot;DoNotEscapeTokens&quot;:&quot;&quot;,&quot;DisableReferer&quot;:&quot;&quot;,&quot;Headers&quot;:[{&quot;value&quot;:&quot;[Parsed:Authorization]&quot;,&quot;name&quot;:&quot;Authorization&quot;},{&quot;value&quot;:&quot;application/json&quot;,&quot;name&quot;:&quot;Content-Type&quot;}],&quot;UseDNNProxySettings&quot;:&quot;&quot;,&quot;AddCurrentCookies&quot;:&quot;&quot;,&quot;OutputParameters&quot;:&quot;&quot;,&quot;CookieContainerToken&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;FullList&quot;,&quot;OutputHeaders&quot;:&quot;&quot;,&quot;IgnoreErrors&quot;:&quot;&quot;,&quot;Events&quot;:&quot;&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3524,7 +3428,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp1Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.547&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage1]&quot;,&quot;name&quot;:&quot;TempMessage1&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3538,7 +3442,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToastAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.997&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5 style=\&quot;color: white;\&quot;&amp;gt;Sending message now......&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;default&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:false,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;8000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:true,&quot;LoaderColor&quot;:&quot;#fff&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3554,7 +3458,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp2Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.547&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp2Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage2&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3566,7 +3470,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;LoadUser&lt;/ActionType&gt;
       &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:52.997&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Id&quot;:&quot;craig@goz5.com&quot;,&quot;Portal&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3580,7 +3484,7 @@ sanitize: false,
       &lt;ActionType&gt;LoadEntitiesFromJson&lt;/ActionType&gt;
       &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.843&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JsonModel&quot;:&quot;[FullList]&quot;,&quot;EntityName&quot;:&quot;Bucket&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3593,7 +3497,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteActionsOnEntityList&lt;/ActionType&gt;
       &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
       &lt;Condition&gt;0&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.843&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;EntityName&quot;:&quot;Bucket&quot;,&quot;Filters&quot;:[],&quot;ContextBehavior&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ActionList&quot;:[{&quot;Id&quot;:-1,&quot;$_uid&quot;:&quot;action16230129268336993&quot;,&quot;EventName&quot;:&quot;click&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;IF NOT EXISTS (SELECT DocumentId FROM BucketList \nWHERE DocumentId = &#39;[Bucket:id]&#39; )\nBEGIN\nINSERT INTO BucketList (DocumentId, LoanGuid, LoanNumber, BucketName, OrderStatus, DocStatus)\nValues (\n&#39;[Bucket:id]&#39;,\n&#39;[Get:LG]&#39;,\n&#39;[Get:LN]&#39;,  \n&#39;[Bucket:title]&#39;,\n&#39;[Bucket:status]&#39;,\n&#39;[Bucket:documentTypes]&#39;\n)\nEND\nELSE\nBEGIN\n\nUpdate BucketList\nSet BucketName = &#39;[Bucket:title]&#39;, OrderStatus = &#39;[Bucket:status]&#39;, DocStatus = &#39;[Bucket:documentTypes]&#39;\nWHERE LoanGuid = &#39;[Get:LG]&#39; and DocumentId = &#39;[Bucket:id]&#39; and Queue &amp;lt;&amp;gt; &#39;ready&#39;\nEND&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false},&quot;ActionType&quot;:&quot;RunSql&quot;,&quot;$_isOpen&quot;:false,&quot;$_isLoaded&quot;:true,&quot;$_isFocus&quot;:true,&quot;Definition&quot;:{&quot;IsClientAction&quot;:false,&quot;Settings&quot;:{&quot;Group&quot;:&quot;Data&quot;}},&quot;Condition&quot;:&quot;[Bucket:status] == \&quot;needed\&quot;&quot;,&quot;Description&quot;:&quot;Needed&quot;},{&quot;Id&quot;:-1,&quot;$_uid&quot;:&quot;action1623012926833563&quot;,&quot;EventName&quot;:&quot;click&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;IF NOT EXISTS (SELECT DocumentId FROM BucketList \nWHERE DocumentId = &#39;[Bucket:id]&#39; )\nBEGIN\nINSERT INTO BucketList (DocumentId, LoanGuid, LoanNumber, BucketName, OrderStatus, DocStatus, OrderStatusDate, OrderedBy)\nValues (\n&#39;[Bucket:id]&#39;,\n&#39;[Get:LG]&#39;,\n&#39;[Get:LN]&#39;,  \n&#39;[Bucket:title]&#39;,\n&#39;&amp;lt;div style=\&quot;color:#0000ff;\&quot;&amp;gt;[Bucket:status]&amp;lt;/div&amp;gt;&#39;,\n&#39;[Bucket:documentTypes]&#39;,\n&#39;[Bucket:statusDate]&#39;,\n&#39;[Bucket:requestedBy.entityId]&#39;\n)\nEND\nELSE\nBEGIN\n\nUpdate BucketList\nSet BucketName = &#39;[Bucket:title]&#39;, OrderStatus = &#39;&amp;lt;div style=\&quot;color:#0000ff;\&quot;&amp;gt;[Bucket:status]&amp;lt;/div&amp;gt;&#39;, DocStatus = &#39;[Bucket:documentTypes]&#39;, OrderStatusDate = &#39;[Bucket:statusDate]&#39;, OrderedBy = &#39;[Bucket:requestedBy.entityId]&#39;\nWHERE LoanGuid = &#39;[Get:LG]&#39; and DocumentId = &#39;[Bucket:id]&#39;\nEND&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false},&quot;ActionType&quot;:&quot;RunSql&quot;,&quot;$_isOpen&quot;:false,&quot;$_isLoaded&quot;:true,&quot;$_isFocus&quot;:true,&quot;Definition&quot;:{&quot;IsClientAction&quot;:false,&quot;Settings&quot;:{&quot;Group&quot;:&quot;Data&quot;}},&quot;Condition&quot;:&quot;[Bucket:status] == \&quot;ordered\&quot;&quot;,&quot;Description&quot;:&quot;Ordered&quot;,&quot;Title&quot;:&quot;Run SQL Query&quot;}],&quot;ContinueOnError&quot;:&quot;&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3607,7 +3511,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
       &lt;Condition&gt;[BorSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.013&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[Get:BCP]&quot;,&quot;SmsBody&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdBor]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3622,7 +3526,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp2Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.56&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage2:Temp2Message]&quot;,&quot;name&quot;:&quot;InjectMessage2&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3636,7 +3540,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;6&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp2Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.56&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage2]&quot;,&quot;name&quot;:&quot;TempMessage2&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3650,7 +3554,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;6&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.013&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[Get:BCP]&quot;,&quot;SmsBody&quot;:&quot;https://paymt.cc?LG=[Get:LG]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdBor]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3665,7 +3569,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;7&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp3Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.577&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp3Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage3&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3679,7 +3583,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;7&lt;/OrderIndex&gt;
       &lt;Condition&gt;[BorSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.013&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdBor]&quot;,&quot;TextMessage&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [Get:BFN]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[TextMessage] [FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[Get:BFN]&quot;,&quot;CellPhone&quot;:&quot;[Get:BCP]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;1&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3694,7 +3598,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;8&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp3Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.577&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage3:Temp3Message]&quot;,&quot;name&quot;:&quot;InjectMessage3&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3708,7 +3612,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;8&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.027&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdBor]&quot;,&quot;TextMessage&quot;:&quot;https://paymt.cc?LG=[Get:LG]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [Get:BFN]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;https://paymt.cc?LG=[Get:LG]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[Get:BFN]&quot;,&quot;CellPhone&quot;:&quot;[Get:BCP]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;1&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3723,7 +3627,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.PaymentHistory&lt;/ActionType&gt;
       &lt;OrderIndex&gt;9&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.027&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;PaymentGuid&quot;:&quot;[Guid:New]&quot;,&quot;Action&quot;:&quot;Sent&quot;,&quot;BorName&quot;:&quot;[Get:BFN]&quot;,&quot;BorEmail&quot;:&quot;craig@verticaldemand.com&quot;,&quot;CobName&quot;:&quot;[Get:CFN]&quot;,&quot;CobEmail&quot;:&quot;gocraiganderson@gmail.com&quot;,&quot;BorCellPhone&quot;:&quot;[Get:BCP]&quot;,&quot;CobCellPhone&quot;:&quot;[Get:CCP]&quot;,&quot;Amount&quot;:&quot;[Get:AF]&quot;,&quot;PaymentFor&quot;:&quot;Appraisal&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;MessageSent&quot;:&quot;[TextMessage]&quot;,&quot;DateRequested&quot;:&quot;[Date:Today]&quot;,&quot;EmailTo&quot;:&quot;[Get:CUE]&quot;,&quot;RequestedBy&quot;:&quot;[Get:CU]&quot;,&quot;AF&quot;:&quot;[Get:AF]&quot;,&quot;TransactionId&quot;:&quot;&quot;,&quot;AuthorizationCode&quot;:&quot;&quot;,&quot;ResponseType&quot;:&quot;&quot;,&quot;PaymentMethod&quot;:&quot;&quot;,&quot;DateCharged&quot;:&quot;&quot;,&quot;IPAddress&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3738,7 +3642,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;9&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp3Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.593&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage3]&quot;,&quot;name&quot;:&quot;TempMessage3&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3752,7 +3656,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;10&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp4Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.593&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp4Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage4&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3766,7 +3670,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteJsCodeAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;10&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.043&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;window.FormUpdate = window.FormUpdate || -1;\nclearInterval(window.FormUpdate);\nwindow.FormUpdate = setInterval(function(){ \n$.ajax({\ntype: \&quot;GET\&quot;,\nurl: \&quot;https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageCheck&amp;amp;MessageId=[MessageIdBor]\&quot;,\ndata: { }\n }).done(function(data) {\nif (data.Status != &#39;&#39;)\n{\ndnnsf.api.actionForm.initForm(442,{&#39;Status&#39;:data.Status},true);\nclearInterval(window.FormUpdate);\n}\n});\n}, 3000);&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3782,7 +3686,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;11&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp4Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.607&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage4:Temp4Message]&quot;,&quot;name&quot;:&quot;InjectMessage4&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3796,7 +3700,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;11&lt;/OrderIndex&gt;
       &lt;Condition&gt;[CobSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.043&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[Get:CCP]&quot;,&quot;SmsBody&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdCob]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3811,7 +3715,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;12&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp4Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.607&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage4]&quot;,&quot;name&quot;:&quot;TempMessage4&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3825,7 +3729,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;12&lt;/OrderIndex&gt;
       &lt;Condition&gt;[CobSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.06&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdCob]&quot;,&quot;TextMessage&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [Get:CFN]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[TextMessage] [FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[Get:CFN]&quot;,&quot;CellPhone&quot;:&quot;[Get:CCP]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;1&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3840,7 +3744,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteJsCodeAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;13&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.06&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;window.FormUpdate = window.FormUpdate || -1;\nclearInterval(window.FormUpdate);\nwindow.FormUpdate = setInterval(function(){ \n$.ajax({\ntype: \&quot;GET\&quot;,\nurl: \&quot;https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageCheck&amp;amp;MessageId=[MessageIdCob]\&quot;,\ndata: { }\n }).done(function(data) {\nif (data.Status != &#39;&#39;)\n{\ndnnsf.api.actionForm.initForm(442,{&#39;Status&#39;:data.Status},true);\nclearInterval(window.FormUpdate);\n}\n});\n}, 3000);&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3855,7 +3759,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;13&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp5Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.623&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp5Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage5&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3869,7 +3773,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;14&lt;/OrderIndex&gt;
       &lt;Condition&gt;[BuyersSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.073&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[Get:BACP]&quot;,&quot;SmsBody&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdBuyers]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3884,7 +3788,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;14&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp5Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.623&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage5:Temp5Message]&quot;,&quot;name&quot;:&quot;InjectMessage5&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3898,7 +3802,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;15&lt;/OrderIndex&gt;
       &lt;Condition&gt;[BuyersSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.09&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdBuyers]&quot;,&quot;TextMessage&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftAgent\&quot;&amp;gt;Sent To: [Get:BAN]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[TextMessage] [FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[Get:BAN]&quot;,&quot;CellPhone&quot;:&quot;[Get:BACP]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;Agent&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3913,7 +3817,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;15&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp5Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.64&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage5]&quot;,&quot;name&quot;:&quot;TempMessage5&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3927,7 +3831,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteJsCodeAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;16&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.09&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;window.FormUpdate = window.FormUpdate || -1;\nclearInterval(window.FormUpdate);\nwindow.FormUpdate = setInterval(function(){ \n$.ajax({\ntype: \&quot;GET\&quot;,\nurl: \&quot;https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageCheck&amp;amp;MessageId=[MessageIdBuyers]\&quot;,\ndata: { }\n }).done(function(data) {\nif (data.Status != &#39;&#39;)\n{\ndnnsf.api.actionForm.initForm(442,{&#39;Status&#39;:data.Status},true);\nclearInterval(window.FormUpdate);\n}\n});\n}, 3000);&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3942,7 +3846,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;16&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp6Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.64&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp6Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage6&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3956,7 +3860,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;17&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp6Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.653&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage6:Temp6Message]&quot;,&quot;name&quot;:&quot;InjectMessage6&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3970,7 +3874,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;17&lt;/OrderIndex&gt;
       &lt;Condition&gt;[SellersSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.107&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[Get:SACP]&quot;,&quot;SmsBody&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdSellers]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -3985,7 +3889,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;18&lt;/OrderIndex&gt;
       &lt;Condition&gt;[SellersSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.107&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdSellers]&quot;,&quot;TextMessage&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftAgent\&quot;&amp;gt;Sent To: [Get:SAN]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[TextMessage] [FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[Get:SAN]&quot;,&quot;CellPhone&quot;:&quot;[Get:SACP]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;Agent&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4000,7 +3904,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;18&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp6Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.653&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage6]&quot;,&quot;name&quot;:&quot;TempMessage6&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4014,7 +3918,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;19&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp7Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.67&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp7Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage7&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4028,7 +3932,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteJsCodeAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;19&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.107&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;window.FormUpdate = window.FormUpdate || -1;\nclearInterval(window.FormUpdate);\nwindow.FormUpdate = setInterval(function(){ \n$.ajax({\ntype: \&quot;GET\&quot;,\nurl: \&quot;https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageCheck&amp;amp;MessageId=[MessageIdSellers]\&quot;,\ndata: { }\n }).done(function(data) {\nif (data.Status != &#39;&#39;)\n{\ndnnsf.api.actionForm.initForm(442,{&#39;Status&#39;:data.Status},true);\nclearInterval(window.FormUpdate);\n}\n});\n}, 3000);&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4043,7 +3947,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;20&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp7Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.67&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage7:Temp7Message]&quot;,&quot;name&quot;:&quot;InjectMessage7&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4057,7 +3961,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;20&lt;/OrderIndex&gt;
       &lt;Condition&gt;[BorSelect]==True || [CobSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.123&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;IF NOT EXISTS (SELECT LoanGuid FROM app.TextCreditAuth \nWHERE LoanGuid = &#39;[Get:LG]&#39; )\nBEGIN\nInsert into app.TextCreditAuth (LoanGuid, LoanNumber)\nValues (&#39;[Get:LG]&#39;, &#39;[Get:LN]&#39; )\nEnd&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4072,7 +3976,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;21&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp7Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.69&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage7]&quot;,&quot;name&quot;:&quot;TempMessage7&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4086,7 +3990,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;21&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.123&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[Get:LOCP]&quot;,&quot;SmsBody&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdLO]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4101,7 +4005,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;22&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.137&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdLO]&quot;,&quot;TextMessage&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftLO\&quot;&amp;gt;Sent To: [Get:LOFN]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[TextMessage] [FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[Get:LOFN]&quot;,&quot;CellPhone&quot;:&quot;[Get:LOCP]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;LO&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4116,7 +4020,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;22&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp8Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.69&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp8Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage8&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4130,7 +4034,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;23&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp8Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.7&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage8:Temp8Message]&quot;,&quot;name&quot;:&quot;InjectMessage8&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4144,7 +4048,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteJsCodeAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;23&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.137&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;window.FormUpdate = window.FormUpdate || -1;\nclearInterval(window.FormUpdate);\nwindow.FormUpdate = setInterval(function(){ \n$.ajax({\ntype: \&quot;GET\&quot;,\nurl: \&quot;https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageCheck&amp;amp;MessageId=[MessageIdLO]\&quot;,\ndata: { }\n }).done(function(data) {\nif (data.Status != &#39;&#39;)\n{\ndnnsf.api.actionForm.initForm(442,{&#39;Status&#39;:data.Status},true);\nclearInterval(window.FormUpdate);\n}\n});\n}, 3000);&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4159,7 +4063,7 @@ sanitize: false,
       &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
       &lt;OrderIndex&gt;24&lt;/OrderIndex&gt;
       &lt;Condition&gt;[OtherSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.153&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[OtherCellPhone]&quot;,&quot;SmsBody&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdOther]&quot;,&quot;OnError&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4174,7 +4078,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;24&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp8Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.717&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage8]&quot;,&quot;name&quot;:&quot;TempMessage8&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4188,7 +4092,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;25&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp9Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.717&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Temp9Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage9&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4202,7 +4106,7 @@ sanitize: false,
       &lt;ActionType&gt;PlantAnApp.CreateEntity.0.TextMessage&lt;/ActionType&gt;
       &lt;OrderIndex&gt;25&lt;/OrderIndex&gt;
       &lt;Condition&gt;[OtherSelect]==True&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.153&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;CompanyId&quot;:&quot;[Get:CID]&quot;,&quot;LoanGuid&quot;:&quot;[Get:LG]&quot;,&quot;LoanNumber&quot;:&quot;[Get:LN]&quot;,&quot;MessageId&quot;:&quot;[MessageIdOther]&quot;,&quot;TextMessage&quot;:&quot;[TextMessage] [FooterMessage]&quot;,&quot;TextMessageHTML&quot;:&quot;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeft\&quot;&amp;gt;Sent To: [OtherName]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[TextMessage] [FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: [Get:CU] on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&quot;,&quot;DateSent&quot;:&quot;[Date:EasternDateTime]&quot;,&quot;DeliveryStatus&quot;:&quot;&quot;,&quot;DeliveryStatusHTML&quot;:&quot;&quot;,&quot;SentTo&quot;:&quot;[OtherName]&quot;,&quot;CellPhone&quot;:&quot;[OtherCellPhone]&quot;,&quot;SentBy&quot;:&quot;[Get:CU]&quot;,&quot;SentByEmail&quot;:&quot;[Get:CUE]&quot;,&quot;Party&quot;:&quot;1&quot;,&quot;Response&quot;:&quot;&quot;,&quot;OutputToken&quot;:&quot;&quot;,&quot;TotalCount&quot;:&quot;[Count2]&quot;,&quot;TotalCharacters&quot;:&quot;[FullLength]&quot;,&quot;NewFlag&quot;:&quot;&quot;,&quot;CompletedMS&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4217,7 +4121,7 @@ sanitize: false,
       &lt;ActionType&gt;ExecuteJsCodeAndContinue&lt;/ActionType&gt;
       &lt;OrderIndex&gt;26&lt;/OrderIndex&gt;
       &lt;Condition&gt;false&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.17&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JavascriptCode&quot;:&quot;window.FormUpdate = window.FormUpdate || -1;\nclearInterval(window.FormUpdate);\nwindow.FormUpdate = setInterval(function(){ \n$.ajax({\ntype: \&quot;GET\&quot;,\nurl: \&quot;https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=MessageCheck&amp;amp;MessageId=[MessageIdOther]\&quot;,\ndata: { }\n }).done(function(data) {\nif (data.Status != &#39;&#39;)\n{\ndnnsf.api.actionForm.initForm(442,{&#39;Status&#39;:data.Status},true);\nclearInterval(window.FormUpdate);\n}\n});\n}, 3000);&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4232,7 +4136,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;26&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp9Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.733&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage9:Temp9Message]&quot;,&quot;name&quot;:&quot;InjectMessage9&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4246,7 +4150,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;27&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp9Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.733&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage9]&quot;,&quot;name&quot;:&quot;TempMessage9&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4258,7 +4162,7 @@ sanitize: false,
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;27&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.17&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:558,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4272,7 +4176,7 @@ sanitize: false,
       &lt;ActionType&gt;InitActionForm&lt;/ActionType&gt;
       &lt;OrderIndex&gt;28&lt;/OrderIndex&gt;
       &lt;Condition /&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.183&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:442,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Params&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4287,7 +4191,7 @@ sanitize: false,
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;28&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp10Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.733&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;selectTemp10Message from app.TextAdmin&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;ReturnMessage10&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4301,7 +4205,7 @@ sanitize: false,
       &lt;ActionType&gt;ApplyTokens&lt;/ActionType&gt;
       &lt;OrderIndex&gt;29&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp10Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.747&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Tokens&quot;:[{&quot;value&quot;:&quot;[ReturnMessage10:Temp10Message]&quot;,&quot;name&quot;:&quot;InjectMessage10&quot;}],&quot;RecursionCount&quot;:&quot;2&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4315,7 +4219,7 @@ sanitize: false,
       &lt;ActionType&gt;InjectData&lt;/ActionType&gt;
       &lt;OrderIndex&gt;30&lt;/OrderIndex&gt;
       &lt;Condition&gt;[LOSM:Temp10Message] != &quot;&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.747&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Data&quot;:[{&quot;value&quot;:&quot;[InjectMessage10]&quot;,&quot;name&quot;:&quot;TempMessage10&quot;}]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4328,7 +4232,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToast&lt;/ActionType&gt;
       &lt;OrderIndex&gt;31&lt;/OrderIndex&gt;
       &lt;Condition&gt;[QueryString:Status] == &quot;delivered&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.767&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5&amp;gt;&amp;lt;p style=\&quot;color: white;\&quot;&amp;gt;Your Message was delivered successfully&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;success&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:true,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;2000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:false,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4341,7 +4245,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToast&lt;/ActionType&gt;
       &lt;OrderIndex&gt;32&lt;/OrderIndex&gt;
       &lt;Condition&gt;[QueryString:Status] == &quot;undelivered&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.767&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5&amp;gt;&amp;lt;p style=\&quot;color: white;\&quot;&amp;gt;Your Message was Not Delivered - Please check your phone number and try again!&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;error&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;2000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:false,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
@@ -4354,7 +4258,7 @@ sanitize: false,
       &lt;ActionType&gt;ShowToast&lt;/ActionType&gt;
       &lt;OrderIndex&gt;33&lt;/OrderIndex&gt;
       &lt;Condition&gt;[QueryString:Status] == &quot;failed&quot;&lt;/Condition&gt;
-      &lt;LastModified&gt;2021-07-06T22:12:51.803&lt;/LastModified&gt;
+      &lt;LastModified&gt;2021-07-07T12:08:53.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;Heading&quot;:&quot;&quot;,&quot;Message&quot;:&quot;&amp;lt;h5&amp;gt;&amp;lt;p style=\&quot;color: white;\&quot;&amp;gt;Your Message Failed to send - Please check your phone number and try again!&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/h5&amp;gt;&quot;,&quot;Icon&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;error&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;BgColor&quot;:&quot;&quot;,&quot;Transition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;fade&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;AllowToastClose&quot;:&quot;&quot;,&quot;CallBackJsCode&quot;:&quot;&quot;,&quot;HideTime&quot;:&quot;2000&quot;,&quot;Stack&quot;:&quot;1&quot;,&quot;ToastPosition&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;mid-center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;TextAlignment&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ShowLoader&quot;:false,&quot;LoaderColor&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;711&lt;/ModuleId&gt;
