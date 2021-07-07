@@ -1,0 +1,58 @@
+{
+  "Name": "BKMessageCheck",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Inputs": [
+    {
+      "Name": "MessageId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "RunSql",
+      "OrderIndex": 0,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select Status from AVMTextMessages where MessageId = '[MessageId]'",
+        "BindTokens": "",
+        "OutputTokenName": "BKResult",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "",
+        "Fields": [
+          {
+            "value": "[BKResult]",
+            "name": "Status"
+          }
+        ],
+        "Headers": "",
+        "AllowJsonp": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
