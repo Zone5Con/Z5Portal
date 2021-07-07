@@ -263,10 +263,6 @@
             "value": "[CreatedRecordId]"
           },
           {
-            "name": "TokenId",
-            "value": "[CreatedRecord:TokenId]"
-          },
-          {
             "name": "SentFrom",
             "value": "[CreatedRecord:SentFrom]"
           },
@@ -317,6 +313,10 @@
           {
             "name": "MessageHTML",
             "value": "[CreatedRecord:MessageHTML]"
+          },
+          {
+            "name": "TokenId",
+            "value": "[CreatedRecord:TokenId]"
           }
         ],
         "Headers": [
