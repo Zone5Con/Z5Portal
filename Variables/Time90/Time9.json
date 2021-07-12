@@ -11,7 +11,7 @@
   "cacheTime": 0,
   "cacheLayer": "Global",
   "src": {
-    "value": "[DateTime:Relative(add=\"90 day\")]",
+    "value": "[DateTime:Relative(add=\"90 day\")|\"MM/dd/yyyy]",
     "type": "string"
   }
 }
