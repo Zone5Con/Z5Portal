@@ -1,0 +1,17 @@
+{
+  "id": 504,
+  "namespace": {
+    "id": 13,
+    "name": "Time90"
+  },
+  "name": "Time9",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "[DateTime:Relative(add=\"90 day\")]",
+    "type": "string"
+  }
+}
