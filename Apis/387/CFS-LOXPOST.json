@@ -284,8 +284,27 @@
       "Metadata": {}
     },
     {
-      "ActionType": "LoadUser",
+      "Description": "LOX Cannot be blank",
+      "ActionType": "RawResponse",
       "OrderIndex": 15,
+      "Condition": "[CFS:LOX] == \"\"",
+      "Parameters": {
+        "Content": "{\n    \"error\": \"The LOX parameter cannot be blank\"\n}",
+        "HttpCode": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "ContentType"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "LoadUser",
+      "OrderIndex": 16,
       "Parameters": {
         "Id": "craig@goz5.com",
         "Portal": ""
@@ -296,7 +315,7 @@
     },
     {
       "ActionType": "PlantAnApp.CreateEntity.0.LOX",
-      "OrderIndex": 16,
+      "OrderIndex": 17,
       "Parameters": {
         "ConnectionString": "",
         "LoanGuid": "[CFS:LoanGuid]",
@@ -321,8 +340,8 @@
     },
     {
       "ActionType": "SendMail",
-      "OrderIndex": 17,
-      "Condition": "",
+      "OrderIndex": 18,
+      "Condition": "[CFS:SendEmail] == true",
       "Parameters": {
         "From": "",
         "To": "[CFS:BorEmail]",
@@ -344,7 +363,7 @@
           "IsExpression": false,
           "Parameters": {}
         },
-        "Body": "<!-- [if mso]>\n  <center>\n  <table><tr><td width=\"640\">\n  <![endif]-->\n\n\n\n<div style=\"max-width: 640px; margin: 0 auto;\"><br>\n<table style=\"max-width: 640px; width: 100%;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\n<tbody>\n<tr>\n<td style=\"padding-left: 25px; padding-top: 20px; text-align: left;\" width=\"320\"><a href=\"https://cfsmortgage.com\"> <img style=\"margin: 0; padding: 0; border: none; display: block;\" src=\"https://z5portal.com/Portals/0/Images/cfs-white-transp-logo-final.jpg\" alt=\"Chicage Financial\" width=\"250\" height=\"45\" border=\"0\"></a></td>\n</tr>\n</tbody>\n</table>\n<table style=\"max-width: 640px; width: 100%; text-align: center;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\n<tbody>\n<tr>\n<td style=\"padding: 0 26px; max-width: 600px; text-align: top;\" width=\"600\"><hr></td>\n</tr>\n</tbody>\n</table>\n<table style=\"max-width: 640px; width: 100%; text-align: center;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\n<tbody>\n<tr>\n<td style=\"padding: 0; text-align: top;\">\n<table style=\"width: 85%; margin: auto; padding-bottom: 22px;\">\n<tbody>\n<tr>\n<td style=\"text-align: center; color: #00adef; padding-top: 10px; padding-bottom: 15px; font-family: sans-serif; font-size: 24px; line-height: 26px; font-weight: normal;\"><span style=\"color: #003366;\"><strong>Document Review &amp; Signature</strong></span></td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; padding-bottom: 10px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 25px; font-weight: normal;\">\n<p>Hi [CFS:FirstName],</p>\n<p>The following Letter of Explanation is needed to be reviewed and signed by you.&nbsp; Please click on the button below to be redirected to our secured online portal.</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #752828; font-family: sans-serif; font-size: 18px; line-height: 20px;\">\n<p style=\"text-align: center;\"><span style=\"padding-left: 10px;\">&nbsp;</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"padding: 14px; text-align: center;\"><a href=\"https://z5portal.com/LOX-Sig?LG=[CFS:LoanGuid]\" target=\"_blank\" rel=\"noopener\"><img src=\"https://z5portal.com/Portals/0/Images/ReviewSign.PNG\" alt=\"ReviewSign\" width=\"250px\" height=\"60px\"></a></td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; padding-bottom: 10px;\">\n<p>&nbsp;</p>\n<p>If you have any questions please reach out to Sally Williams at 803-207-9208<br><br></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; padding-bottom: 10px;\"><strong>Thank you for being a Chicago Financial Customer.</strong></td>\n</tr>\n<tr>\n<td class=\"\" style=\"vertical-align: top; font-family: Helvetica, Arial, sans-serif; margin-top: 0px; margin-bottom: 0px; font-size: 19px; line-height: 28px; color: #424651; border-bottom: 1px solid #d3dce0; padding-top: 16px; padding-bottom: 16px; text-align: left;\" width=\"125\">\n<table style=\"width: 516.5px;\">\n<tbody>\n<tr>\n\n</tr>\n</tbody>\n</table>\n<table style=\"max-width: 640px; width: 100%; text-align: center;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#878f95\">\n<tbody>\n<tr>\n<td style=\"padding: 10px; padding-top: 20px; text-align: top;\">\n<table style=\"max-width: 600px; width: 100%; text-align: center;\" border=\"0\" width=\"600\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td style=\"color: #ffffff; font-size: 12px; font-weight: 100; line-height: 14px; text-align: center; font-family: sans-serif; padding-bottom: 10px;\" colspan=\"2\"><a style=\"padding-right: 10px;\" href=\"https://www.facebook.com/BankSouth\"><img style=\"margin: 0; padding: 0; border: none;\" src=\"https://banksouth.verticaldemand.com/Portals/4/Images/fb-icon.png\" alt=\"Find us on Facebook\"></a>&nbsp;&nbsp;<a style=\"padding-right: 10px;\" href=\"https://twitter.com/banksouthmtg\"><img style=\"margin: 0; padding: 0; border: none;\" src=\"https://banksouth.verticaldemand.com/Portals/4/Images/twitter-icon.png\" alt=\"Find us on Twitter\"></a>&nbsp;<a href=\"https://www.youtube.com/channel/UCBo7pdLYf-Zu0u53sXp5PZg\"><img style=\"margin: 0; padding: 0; border: none;\" src=\"https://banksouth.verticaldemand.com/Portals/4/Images/youtube-icon.png\" alt=\"Find us on YouTube\"></a></td>\n</tr>\n<tr>\n<td style=\"color: #ffffff; font-size: 13px; font-weight: 100; line-height: 19px; text-decoration: none; text-align: center; font-family: sans-serif; padding-bottom: 5px;\" colspan=\"2\">\n<p>&nbsp;</p>\n<p>3290 Northside Parkway, Suite 600<br>Chicago, IL 30327<br>(888) 555-6999</p>\n</td>\n</tr>\n<tr>\n<td style=\"color: #ffffff; font-size: 10px; font-weight: 100; line-height: 12px; text-align: center; font-family: sans-serif;\" colspan=\"2\">&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>",
+        "Body": "<!-- [if mso]>\n  <center>\n  <table><tr><td width=\"640\">\n  <![endif]-->\n\n\n\n\n\n\n\n<div style=\"max-width: 640px; margin: 0 auto;\"><br>\n<table style=\"max-width: 640px; width: 100%;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\n<tbody>\n<tr>\n<td style=\"padding-left: 25px; padding-top: 20px; text-align: left;\" width=\"320\"><a href=\"https://cfsmortgage.com\"> <img style=\"margin: 0; padding: 0; border: none; display: block;\" src=\"https://z5portal.com/Portals/0/Images/cfs-white-transp-logo-final.jpg\" alt=\"Chicago Financial\" width=\"250\" height=\"65\" border=\"0\"></a></td>\n</tr>\n</tbody>\n</table>\n<table style=\"max-width: 640px; width: 100%; text-align: center;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\n<tbody>\n<tr>\n</tr>\n</tbody>\n</table>\n<table style=\"max-width: 640px; width: 100%; text-align: center;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">\n<tbody>\n<tr>\n<td style=\"padding: 0; text-align: top;\">\n<table style=\"width: 85%; margin: auto; padding-bottom: 22px;\">\n<tbody>\n<tr>\n<td style=\"text-align: center; color: #00adef; padding-top: 75px; padding-bottom: 15px; font-family: sans-serif; font-size: 24px; line-height: 26px; font-weight: normal;\"><span style=\"color: #003366;\"><strong>Document Review &amp; Signature</strong></span></td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; padding-bottom: 10px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 25px; font-weight: normal;\">\n<p>Hi [CFS:FirstName],</p>\n<p>The following Letter of Explanation is needed to be reviewed and signed by you.&nbsp; Please click on the button below to be redirected to our secured online portal.</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #752828; font-family: sans-serif; font-size: 18px; line-height: 20px;\">\n<p style=\"text-align: center;\"><span style=\"padding-left: 10px;\">&nbsp;</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"padding: 14px; text-align: center;\"><a href=\"https://z5portal.com/LOX-Sig?LG=[CFS:LoanGuid]\" target=\"_blank\" rel=\"noopener\"><img src=\"https://z5portal.com/Portals/0/Images/ReviewSign.PNG\" alt=\"ReviewSign\" width=\"250px\" height=\"60px\"></a></td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; padding-bottom: 10px;\">\n<p>&nbsp;</p>\n<p>If you have any questions please reach out to Sally Williams at 803-207-9208<br><br></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: left; color: #111; font-family: sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; padding-bottom: 10px;\"><strong>Thank you for being a Chicago Financial Customer.</strong></td>\n</tr>\n<tr>\n<td class=\"\" style=\"vertical-align: top; font-family: Helvetica, Arial, sans-serif; margin-top: 0px; margin-bottom: 0px; font-size: 19px; line-height: 28px; color: #424651; border-bottom: 1px solid #d3dce0; padding-top: 16px; padding-bottom: 16px; text-align: left;\" width=\"125\">\n<table style=\"width: 516.5px;\">\n<tbody>\n<tr>\n\n</tr>\n</tbody>\n</table>\n<table style=\"max-width: 640px; width: 100%; text-align: center;\" border=\"0\" width=\"640\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#878f95\">\n<tbody>\n<tr>\n<td style=\"padding: 10px; padding-top: 20px; text-align: top;\">\n<table style=\"max-width: 600px; width: 100%; text-align: center;\" border=\"0\" width=\"600\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td style=\"color: #ffffff; font-size: 12px; font-weight: 100; line-height: 14px; text-align: center; font-family: sans-serif; padding-bottom: 10px;\" colspan=\"2\"><a style=\"padding-right: 10px;\" href=\"https://www.facebook.com/BankSouth\"><img style=\"margin: 0; padding: 0; border: none;\" src=\"https://banksouth.verticaldemand.com/Portals/4/Images/fb-icon.png\" alt=\"Find us on Facebook\"></a>&nbsp;&nbsp;<a style=\"padding-right: 10px;\" href=\"https://twitter.com/banksouthmtg\"><img style=\"margin: 0; padding: 0; border: none;\" src=\"https://banksouth.verticaldemand.com/Portals/4/Images/twitter-icon.png\" alt=\"Find us on Twitter\"></a>&nbsp;<a href=\"https://www.youtube.com/channel/UCBo7pdLYf-Zu0u53sXp5PZg\"><img style=\"margin: 0; padding: 0; border: none;\" src=\"https://banksouth.verticaldemand.com/Portals/4/Images/youtube-icon.png\" alt=\"Find us on YouTube\"></a></td>\n</tr>\n<tr>\n<td style=\"color: #ffffff; font-size: 13px; font-weight: 100; line-height: 19px; text-decoration: none; text-align: center; font-family: sans-serif; padding-bottom: 5px;\" colspan=\"2\">\n<p>&nbsp;</p>\n<p>3290 Northside Parkway, Suite 600<br>Chicago, IL 30327<br>(888) 555-6999</p>\n</td>\n</tr>\n<tr>\n<td style=\"color: #ffffff; font-size: 10px; font-weight: 100; line-height: 12px; text-align: center; font-family: sans-serif;\" colspan=\"2\">&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>",
         "Headers": "",
         "PortalFiles": "",
         "FileToken1": "",
@@ -356,8 +375,8 @@
     },
     {
       "ActionType": "TwilioSendSms",
-      "OrderIndex": 18,
-      "Condition": "",
+      "OrderIndex": 19,
+      "Condition": "[CFS:SendText] == true",
       "Parameters": {
         "Credentials": {
           "Type": "twilio.apikeys",
@@ -367,7 +386,7 @@
         },
         "FromNumber": "+18032052806",
         "ToNumber": "+1[CFS:BorCellPhone]",
-        "SmsBody": "Hi [CFS:FirstName] this is Chicago Financial.  We need the following document reviewed and signed  https://z5portal.com/LOX-Sig?LG=[CFS:LoanGuid]",
+        "SmsBody": "Hi [CFS:FirstName] this is Chicago Financial.  We need the following document reviewed and signed Click Here -  https://z5portal.com/LOX-Sig?LG=[CFS:LoanGuid]",
         "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
         "OutputMessageId": "MessageId",
         "IgnoreErrors": "",
