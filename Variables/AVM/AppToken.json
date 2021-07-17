@@ -1,0 +1,20 @@
+{
+  "id": 544,
+  "namespace": {
+    "id": 12,
+    "name": "AVM"
+  },
+  "name": "AppToken",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "0",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "DECLARE @chars NCHAR(55)\r\n\r\nSET @chars = N'a012bc3456d78ef9pABCqrDEFtuGHvwgIhJxyKLMNzOPQsRSTUVWXYZ'\r\n\r\nDECLARE @result NCHAR(6)\r\n\r\nSET @result = SUBSTRING(@chars, CAST((RAND() * LEN(@chars)) AS INT) + 1, 1)\r\n+ SUBSTRING(@chars, CAST((RAND() * LEN(@chars)) AS INT) + 1, 1)\r\n+ SUBSTRING(@chars, CAST((RAND() * LEN(@chars)) AS INT) + 1, 1)\r\n+ SUBSTRING(@chars, CAST((RAND() * LEN(@chars)) AS INT) + 1, 1)\r\n+ SUBSTRING(@chars, CAST((RAND() * LEN(@chars)) AS INT) + 1, 1)\r\n\r\nSELECT @result",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
