@@ -51,6 +51,7 @@
       "Description": "Format Cell with - - -",
       "ActionType": "RunSql",
       "OrderIndex": 2,
+      "Condition": "false",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
