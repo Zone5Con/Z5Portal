@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 580,
+  "ShowDashboardModule": false,
+  "Id": 40,
+  "VersionId": 40,
+  "EntityTabId": 141,
+  "Name": "AVMAppraiser",
+  "PluralName": "AVMAppraisers",
+  "Icon": "person-booth",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
