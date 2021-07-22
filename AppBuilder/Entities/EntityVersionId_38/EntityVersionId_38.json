@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 568,
+  "ShowDashboardModule": false,
+  "Id": 38,
+  "VersionId": 38,
+  "EntityTabId": 137,
+  "Name": "PCSendWire",
+  "PluralName": "PCSendWires",
+  "Icon": "angle-double-right",
+  "NamespaceId": 5,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
