@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 562,
+  "ShowDashboardModule": false,
+  "Id": 37,
+  "VersionId": 37,
+  "EntityTabId": 135,
+  "Name": "PCQueue",
+  "PluralName": "PCQueues",
+  "Icon": "ankh",
+  "NamespaceId": 5,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
