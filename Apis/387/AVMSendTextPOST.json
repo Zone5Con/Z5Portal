@@ -227,8 +227,62 @@
       "Metadata": {}
     },
     {
-      "ActionType": "TwilioSendSms",
+      "Description": "Add Text Message - First Time for Appraiser",
+      "ActionType": "RunSql",
       "OrderIndex": 12,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "IF NOT EXISTS (SELECT TokenId FROM app.AVMAppraiser \nWHERE FileId = '[AVM:FileId]' and AppraiserCellPhone = '[AVM:CellPhone]' )\nBEGIN\nINSERT INTO app.AVMAppraiser (AppraiserCellPhone, AppraiserName, FileId, TokenId)\nValues (\n'[AVM:CellPhone]',\n'[AVM:SentTo]',\n'[AVM:FileId]',\n'[AVM:AppToken]'\n)\n\nEND",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Delay 1 sec",
+      "ActionType": "RunSql",
+      "OrderIndex": 13,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "WAITFOR DELAY '00:00:01'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Get Token Id",
+      "ActionType": "RunSql",
+      "OrderIndex": 14,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select TokenId from app.AVMAppraiser\nWhere FileId = '[AVM:FileId]' and AppraiserCellPhone = '[AVM:CellPhone]'",
+        "BindTokens": "",
+        "OutputTokenName": "AVT",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 15,
       "Condition": "[Valid] == \"yes\"",
       "Parameters": {
         "Credentials": {
@@ -239,7 +293,7 @@
         },
         "FromNumber": "+16174683541",
         "ToNumber": "+1[AVM:CellPhone]",
-        "SmsBody": "Ref: [AVM:PropAddress] - [AVM:Message] - Reply here: http://rply.cc?FID=[AVM:FileId] - STOP to cancel",
+        "SmsBody": "Ref: [AVM:PropAddress] - [AVM:Message] - Reply here: http://rply.cc?tkn=[AVT:TokenId] - STOP to cancel",
         "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
         "OutputMessageId": "MessageId",
         "IgnoreErrors": "",
@@ -250,37 +304,18 @@
       "Metadata": {}
     },
     {
-      "ActionType": "LoadUser",
-      "OrderIndex": 13,
-      "Parameters": {
-        "Id": "craig@goz5.com",
-        "Portal": ""
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "ActionType": "PlantAnApp.CreateEntity.0.AVMTextMessage",
-      "OrderIndex": 14,
-      "Condition": "[Valid] == \"yes\"",
+      "Description": "Add Appraiser to AVM Appraiser",
+      "ActionType": "RunSql",
+      "OrderIndex": 16,
       "Parameters": {
         "ConnectionString": "",
-        "SentFrom": "[AVM:SentFrom]",
-        "SentTo": "[AVM:SentTo]",
-        "CellPhone": "[AVM:CellPhone]",
-        "Message": "[AVM:Message]",
-        "FileId": "[AVM:FileId]",
-        "LoanNumber": "[AVM:LoanNumber]",
-        "BorName": "[AVM:BorName]",
-        "PropAddress": "[AVM:PropAddress]",
-        "OutputToken": "[Output]",
-        "MessageId": "[MessageId]",
-        "DeliveryStatus": "",
-        "VtMessageId": "[AVM:VtMessageId]",
-        "TimeStamp": "[AVM:TimeStamp]",
-        "MessageHTML": "<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [AVM:SentTo]</p><p class=\"messageEnc\">[AVM:Message]</p><span class=\"timestampEnc\">From [AVM:SentFrom] [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>",
-        "TokenId": "[Guid:New]"
+        "QueryTimeout": "",
+        "SqlQuery": "INSERT INTO app.AVMTextMessage(FileId, VtMessageId, MessageId, LoanNumber, TimeStamp, SentFrom, SentTo, CellPhone, Message, MessageHTML, BorName, PropAddress, TokenId )\nValues (\n'[AVM:FileId]',\n'[AVM:VtMessageId]',\n'[MessageId]',\n'[AVM:LoanNumber]',\n'[AVM:TimeStamp]',\n'[AVM:SentFrom]',\n'[AVM:SentTo]',\n'[AVM:CellPhone]',\n'[AVM:Message]',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [AVM:SentTo]</p><p class=\"messageEnc\">[AVM:Message]</p><span class=\"timestampEnc\">From [AVM:SentFrom] [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>',\n'[AVM:BorName]',\n'[AVM:PropAddress]',\n'[AVT:TokenId]'\n)",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -288,7 +323,7 @@
     },
     {
       "ActionType": "SendMail",
-      "OrderIndex": 15,
+      "OrderIndex": 17,
       "Condition": "0",
       "Parameters": {
         "From": "",
