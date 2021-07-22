@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 552,
+  "ShowDashboardModule": false,
+  "Id": 36,
+  "VersionId": 36,
+  "EntityTabId": 133,
+  "Name": "PCAdmin",
+  "PluralName": "PCAdmins",
+  "Icon": "apple-alt",
+  "NamespaceId": 5,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
