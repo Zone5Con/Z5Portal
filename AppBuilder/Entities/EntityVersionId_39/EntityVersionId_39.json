@@ -1,0 +1,15 @@
+{
+  "DisplayInMenu": false,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 574,
+  "ShowDashboardModule": false,
+  "Id": 39,
+  "VersionId": 39,
+  "EntityTabId": 139,
+  "Name": "PCTPOEmail",
+  "PluralName": "PCTPOEmails",
+  "Icon": "cloud-moon",
+  "NamespaceId": 5,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
