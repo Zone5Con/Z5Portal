@@ -9,7 +9,7 @@
   "Name": "PCWire",
   "PluralName": "PCWires",
   "Icon": "allergies",
-  "NamespaceId": 3,
+  "NamespaceId": 5,
   "Type": "UserCreated",
   "EnableIndexing": false
 }

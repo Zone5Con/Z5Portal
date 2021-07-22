@@ -1,27 +1,5 @@
 [
   {
-    "Id": 516,
-    "EntityVersionId": 35,
-    "Name": "WireId",
-    "Type": {
-      "Id": "Text",
-      "Name": "Text",
-      "InputType": {
-        "Id": "Text",
-        "Name": "Text",
-        "ValueType": "String",
-        "Length": 450,
-        "Icon": "short_text"
-      }
-    },
-    "IsDeleted": false,
-    "IsRequired": true,
-    "IsSearchable": true,
-    "IsFilterable": true,
-    "IsSortable": true,
-    "OrderIndex": 1
-  },
-  {
     "Id": 517,
     "EntityVersionId": 35,
     "Name": "LoanGuid",
@@ -41,7 +19,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 2
+    "OrderIndex": 1
   },
   {
     "Id": 518,
@@ -63,7 +41,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 3
+    "OrderIndex": 2
   },
   {
     "Id": 519,
@@ -85,7 +63,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 4
+    "OrderIndex": 3
   },
   {
     "Id": 520,
@@ -107,7 +85,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 5
+    "OrderIndex": 4
   },
   {
     "Id": 521,
@@ -129,7 +107,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 6
+    "OrderIndex": 5
   },
   {
     "Id": 522,
@@ -151,7 +129,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 7
+    "OrderIndex": 6
   },
   {
     "Id": 523,
@@ -173,7 +151,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 8
+    "OrderIndex": 7
   },
   {
     "Id": 524,
@@ -195,7 +173,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 9
+    "OrderIndex": 8
   },
   {
     "Id": 525,
@@ -217,7 +195,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 10
+    "OrderIndex": 9
   },
   {
     "Id": 526,
@@ -239,7 +217,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 11
+    "OrderIndex": 10
   },
   {
     "Id": 527,
@@ -261,7 +239,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 12
+    "OrderIndex": 11
   },
   {
     "Id": 528,
@@ -283,7 +261,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 13
+    "OrderIndex": 12
   },
   {
     "Id": 529,
@@ -305,7 +283,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 14
+    "OrderIndex": 13
   },
   {
     "Id": 530,
@@ -327,7 +305,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 15
+    "OrderIndex": 14
   },
   {
     "Id": 531,
@@ -349,7 +327,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 16
+    "OrderIndex": 15
   },
   {
     "Id": 532,
@@ -371,7 +349,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 17
+    "OrderIndex": 16
   },
   {
     "Id": 533,
@@ -393,7 +371,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 18
+    "OrderIndex": 17
   },
   {
     "Id": 536,
@@ -415,7 +393,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 19
+    "OrderIndex": 18
   },
   {
     "Id": 537,
@@ -437,7 +415,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 20
+    "OrderIndex": 19
   },
   {
     "Id": 538,
@@ -459,7 +437,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 21
+    "OrderIndex": 20
   },
   {
     "Id": 539,
@@ -481,7 +459,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 22
+    "OrderIndex": 21
   },
   {
     "Id": 540,
@@ -503,7 +481,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 23
+    "OrderIndex": 22
   },
   {
     "Id": 541,
@@ -525,7 +503,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 24
+    "OrderIndex": 23
   },
   {
     "Id": 542,
@@ -547,7 +525,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 25
+    "OrderIndex": 24
   },
   {
     "Id": 543,
@@ -569,7 +547,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 26
+    "OrderIndex": 25
   },
   {
     "Id": 544,
@@ -591,7 +569,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 27
+    "OrderIndex": 26
   },
   {
     "Id": 545,
@@ -613,7 +591,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 28
+    "OrderIndex": 27
   },
   {
     "Id": 546,
@@ -635,7 +613,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 29
+    "OrderIndex": 28
   },
   {
     "Id": 547,
@@ -657,7 +635,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 30
+    "OrderIndex": 29
   },
   {
     "Id": 548,
@@ -679,7 +657,7 @@
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
-    "OrderIndex": 31
+    "OrderIndex": 30
   },
   {
     "Id": 549,
@@ -698,6 +676,28 @@
     },
     "IsDeleted": false,
     "IsRequired": false,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 31
+  },
+  {
+    "Id": 551,
+    "EntityVersionId": 35,
+    "Name": "WireId",
+    "Type": {
+      "Id": "Integer",
+      "Name": "Number (Integer)",
+      "InputType": {
+        "Id": "Integer",
+        "Name": "Number (Integer)",
+        "ValueType": "Integer",
+        "Length": 4,
+        "Icon": "looks_one"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
