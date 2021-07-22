@@ -92,7 +92,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Select Top 1 VtMessageId from app.AVMTextMessage\nWhere  CellPhone = '[CellRaw]'\nOrder By TimeStamp DESC",
+        "SqlQuery": "Select Top 1 FileId from app.AVMTextMessage\nWhere  CellPhone = '[CellRaw]'\nOrder By TimeStamp DESC",
         "BindTokens": "",
         "OutputTokenName": "AVMText",
         "ExtractColumns": "",
@@ -175,7 +175,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Select Top 1 VtMessageId from app.AVMTextMessage\nWhere  CellPhone = '[CellFormatted]'\nOrder By TimeStamp DESC",
+        "SqlQuery": "Select Top 1 FileId from app.AVMTextMessage\nWhere  CellPhone = '[CellRaw]'\nOrder By TimeStamp DESC",
         "BindTokens": "",
         "OutputTokenName": "AVMText",
         "ExtractColumns": "",
