@@ -71,7 +71,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Select Top 1 *  from app.TextMessage  Where\nCellPhone = '[CellFormatted]' and MessageId IS NOT NULL\nOrder By DateSent DESC",
+        "SqlQuery": "Select Top 1 *  from app.TextMessage  Where\nCellPhone = '[CellFormatted]' and MessageId IS NOT NULL and SentByEmail <> ''\nOrder By DateSent DESC",
         "BindTokens": "",
         "OutputTokenName": "LoanData",
         "ExtractColumns": "",
@@ -161,7 +161,7 @@
       "Description": "Send Opted In Text Message",
       "ActionType": "TwilioSendSms",
       "OrderIndex": 8,
-      "Condition": "false",
+      "Condition": "[Parsed:Body].ToLower == \"yes text\" || [Parsed:Body].ToLower == \"yes text \" || [Parsed:Body].ToLower == \"yestext \" || [Parsed:Body].ToLower == \"yestext\" || [Parsed:Body].ToLower == \" yes text \" || [Parsed:Body].ToLower == \" yes text  \"",
       "Parameters": {
         "Credentials": {
           "Type": "twilio.apikeys",
@@ -171,7 +171,7 @@
         },
         "FromNumber": "+18032052806",
         "ToNumber": "+1[CellFormatted]",
-        "SmsBody": "You have Opted In to receive Text updates from Vert Financial.  Please add us to your Contacts in your phone - Reply STOP to cancel",
+        "SmsBody": "You have Opted In to receive Text updates from Vert Financial.  Please add us to your Contacts in your phone - STOP to cancel",
         "StatusCallbackUrl": "[LOSM:CallBackURL]",
         "OutputMessageId": "[MessageIdOpt]",
         "OnError": [],
@@ -588,46 +588,10 @@
       "Metadata": {}
     },
     {
-      "Description": "Send email to Processor or Manual User Testing",
+      "Description": "Send email to Processor or Manual User",
       "ActionType": "SendMail",
       "OrderIndex": 20,
       "Condition": "",
-      "Parameters": {
-        "From": "",
-        "To": "support@verticaldemand.com",
-        "DetermineEmail": "",
-        "ToAllUsers": "",
-        "ReplyTo": "",
-        "Cc": "",
-        "Bcc": "",
-        "Subject": "You Have a New Text Message from - [LoanData:SentTo] Loan# [LoanData:LoanNumber]",
-        "Format": {
-          "Expression": "",
-          "Value": "Html",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "DnnEmailTemplate": {
-          "Expression": "",
-          "Value": "",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/TextMessageReply?CID=[LoanData:CompanyId]&amp;LG=[LoanData:LoanGuid]&amp;CP=[Parsed:From]&amp;ST=[LoanData:SentTo]&amp;LN=[LoanData:LoanNumber]&amp;SBE=[LoanData:SentByEmail]&amp;SB=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n</tbody>\n</table>",
-        "Headers": "",
-        "PortalFiles": "",
-        "FileToken1": "",
-        "IgnoreErros": ""
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Send email to Processor or Manual User",
-      "ActionType": "SendMail",
-      "OrderIndex": 21,
-      "Condition": "false",
       "Parameters": {
         "From": "",
         "To": "[LoanData:SentByEmail]",
@@ -649,7 +613,7 @@
           "IsExpression": false,
           "Parameters": {}
         },
-        "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/Email-Reply?CompanyId=[LoanData:CompanyId]&amp;CellPhone=[Parsed:From]&amp;Name=[LoanData:SentTo]&amp;LoanNumber=[LoanData:LoanNumber]&amp;SentByEmail=[LoanData:SentByEmail]&amp;SentBy=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n[LoanData:SentByEmail]\n</tbody>\n</table>",
+        "Body": "<table id=\"container\" class=\"container\" style=\"margin-top: 0;\" border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody><!-- Logo -->\n<tr>\n<td class=\"logo\" style=\"padding: 22px 0px 20px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\"><br></td>\n</tr>\n<!-- End Logo --> <!-- Headline -->\n<tr>\n<td class=\"headline headline-important \" style=\"font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 26px; color: #221f1f; line-height: 36px; padding: 40px 90px 10px 90px; text-align: center;\">New Text Message Received</td>\n</tr>\n<!-- End Headline --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 34px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">From:&nbsp; <br><span style=\"font-size: 20px;\"><strong><span style=\"color: darkred;\">[LoanData:SentTo]<br><br></span></strong></span></td>\n</tr>\n<!-- End Copy --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 2px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 20px; line-height: 24px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">\n<p>&nbsp;Message:<br><br> <strong><span style=\"color: darkred;\">[Parsed:Body]</span></strong></p>\n</td>\n</tr>\n<!-- End Copy --> <!-- Spacer -->\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<!-- End Account Info Element --> <!-- Copy -->\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 90px 0px; font-family: 'Helvetica Neue', Helvetica, Roboto, 'Segoe UI', sans-serif; font-size: 18px; line-height: 29px; -webkit-font-smoothing: antialiased; color: #221f1f; text-align: center;\">Click on the button below to reply:</td>\n</tr>\n<!-- End Copy --> <!-- End Copy --> <!-- Spacer -->\n<tr class=\"\">\n<td class=\"spacer-1 spacer\" height=\"0\">\n<h6>&nbsp;</h6>\n<div><p style=\"text-align:center;\"><a href=\"https://z5portal.com/TextMessageReply?CID=[LoanData:CompanyId]&amp;LG=[LoanData:LoanGuid]&amp;CP=[Parsed:From]&amp;ST=[LoanData:SentTo]&amp;LN=[LoanData:LoanNumber]&amp;SBE=[LoanData:SentByEmail]&amp;SB=[LoanData:SentBy]\"> <img src=\"https://secured-portal.com/Portals/9/Images/ReplyBtn.png\" alt=\"REPLY\" width=\"150\" height=\"75\"></a></p></div>\n</td>\n</tr>\n<tr class=\"desktop-hide mobile-block\" style=\"display: none; mso-hide: all;\">\n<td class=\"spacer-1 spacer\" style=\"padding: 29px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n<tr>\n<td class=\"copy copy-important \" style=\"padding: 22px 0px; font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased; text-align: center; text-decoration: none!important; color: #ffffff;\">&nbsp;</td>\n</tr>\n<tr class=\"mobile-hide\">\n<td class=\"spacer-1 spacer\" style=\"padding: 12px 0 0 0; font-size: 0; line-height: 0;\" height=\"0\">&nbsp;</td>\n</tr>\n</tbody>\n</table>",
         "Headers": "",
         "PortalFiles": "",
         "FileToken1": "",
