@@ -429,7 +429,7 @@
     {
       "Description": "Send email to Processor or Manual User",
       "ActionType": "SendMail",
-      "OrderIndex": 20,
+      "OrderIndex": 19,
       "Condition": "",
       "Parameters": {
         "From": "",
