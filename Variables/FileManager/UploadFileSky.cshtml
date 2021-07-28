@@ -1,0 +1,95 @@
+@using System;
+@using System.Net;
+@using System.IO;
+
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+
+@functions {
+
+    // helper method to get the file based on FileId.
+    private DotNetNuke.Services.FileSystem.IFileInfo GetFile(int fileId) {
+        var file = new DotNetNuke.Services.FileSystem.FileManager().GetFile(fileId);
+        if (file == null)
+            throw new FileNotFoundException("File id " + fileId + " was not found.");
+
+        return file;
+    }
+
+    // one way to upload a file.
+    private string UploadFile(int fileId, string urlToUploadTo, string bearerToken) {
+        string httpMethodUsedForUpload = "PUT";
+        System.Net.WebClient webClient = new WebClient();
+
+        // add the bearer token.
+        if (!string.IsNullOrWhiteSpace(bearerToken))
+            webClient.Headers.Add("Authorization", bearerToken);
+        
+        //change for skydrive 27/7/2021
+			      webClient.Headers.Add("Content-Type", "application/pdf");
+
+        string fullFilePathOnDisk = GetFile(fileId).PhysicalPath; // eg. returns C:\myFolder\DNNInstance\Portals\0\myDnnFolderInsidePortal\myFile.txt
+
+        var responseArray = webClient.UploadFile(urlToUploadTo, httpMethodUsedForUpload, fullFilePathOnDisk);
+        var response = System.Text.Encoding.UTF8.GetString(responseArray);
+        return response;
+    }
+
+    // another way to upload a file.
+    private string UploadObject(int fileId, string urlToUploadTo, string bearerToken)
+    {
+        HttpWebRequest httpRequest = WebRequest.Create(urlToUploadTo) as HttpWebRequest;
+        httpRequest.Method = "PUT";
+
+        // add the bearer token.
+        if (!string.IsNullOrWhiteSpace(bearerToken))
+            httpRequest.Headers.Add("Authorization", bearerToken);
+           
+           //change for skydrive 27/7/2021
+        httpRequest.Headers.Add("Content-Type", "application/pdf");
+
+        string fullFilePathOnDisk = GetFile(fileId).PhysicalPath; // eg. returns C:\myFolder\DNNInstance\Portals\0\myDnnFolderInsidePortal\myFile.txt
+
+        using (Stream dataStream = httpRequest.GetRequestStream())
+        {
+            var buffer = new byte[8000];
+            using (FileStream fileStream = new FileStream(fullFilePathOnDisk, FileMode.Open, FileAccess.Read))
+            {
+                int bytesRead = 0;
+                while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    dataStream.Write(buffer, 0, bytesRead);
+                }
+            }
+        }
+        HttpWebResponse webResponse = httpRequest.GetResponse() as HttpWebResponse;
+
+        /// Returns "success" as a message. Can be changed.
+        if (webResponse.StatusCode == HttpStatusCode.OK)
+            return "Success";
+
+        string response = "";
+        using (var responseReader = new StreamReader(webResponse.GetResponseStream())) {
+            response = responseReader.ReadToEnd();
+        }
+
+        return response;
+    }
+}
+
+
+@{
+
+    // parsing fileId throws exception if the value is not a valid integer number
+    int fileId = int.Parse(Tokens.TknParams.FileId.Value.ToString());
+    
+    // The URL where i will send the file
+    string mediaUrl = Tokens.TknParams.MediaURL.Value.ToString();
+
+    // supports empty bearer token.
+    string bearerToken = Tokens.TknParams.Bearer.Value.ToString();
+
+    // You can change this method between the 2 methods above.
+    var response = UploadFile(fileId, mediaUrl, bearerToken);
+
+}
+@response

@@ -1,0 +1,19 @@
+{
+  "id": 153,
+  "namespace": {
+    "id": 9,
+    "name": "FileManager"
+  },
+  "name": "UploadFileSky",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "language": "csharp",
+    "additionalAssemblies": "~/bin/DnnSharp.Common.dll\n~/bin/DotNetNuke.Abstractions.dll",
+    "debug": false,
+    "type": "razor"
+  }
+}
