@@ -115,6 +115,42 @@
       },
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "RT",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Description": "Rate - field 3 Encompass",
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LKD",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Description": "Rate Locked Date - field 761 Encompass",
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "LKED",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Description": "Rate Lock Expiration Date - Field 762 Encompass",
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -214,11 +250,11 @@
       "Description": "Get Text Message Wording",
       "ActionType": "RunSql",
       "OrderIndex": 4,
-      "Condition": "[SendText] == \"yes\"",
+      "Condition": "[SendText] == \"yes\" && [TM] != \"RLM\"",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "select TextMessage from app.TextMessageAuto where\nCompanyId = '[CID]' and Number = '[TM]'",
+        "SqlQuery": "select TextMessage from app.TextMessageAuto where\nCompanyId = '[CID]' and TMNumber = '[TM]'",
         "BindTokens": "",
         "OutputTokenName": "Message",
         "ExtractColumns": "",
@@ -271,7 +307,7 @@
       "Description": "Borrower",
       "ActionType": "TwilioSendSms",
       "OrderIndex": 7,
-      "Condition": "[BorOptIn] == \"yes\" && [BCP] != \"\" && [SendText] == \"yes\"",
+      "Condition": "[BorOptIn] == \"yes\" && [BCP] != \"\" && [SendText] == \"yes\" && [TM] != \"RLM\"",
       "Parameters": {
         "Credentials": {
           "Type": "twilio.apikeys",
@@ -281,7 +317,7 @@
         },
         "FromNumber": "+1[LOSM:SMSFrom]",
         "ToNumber": "+1[BCP]",
-        "SmsBody": "Loan Update - [Message] [LOSM:FooterMessage]",
+        "SmsBody": "Vert Financial Update - [Message] [LOSM:FooterMessage]",
         "StatusCallbackUrl": "[LOSM:CallBackURL]",
         "OutputMessageId": "[MessageIdEncBor]",
         "OnError": [],
@@ -332,7 +368,7 @@
       "Description": "Insert for Borrower",
       "ActionType": "RunSql",
       "OrderIndex": 10,
-      "Condition": "[BorOptIn] == \"yes\" && [BCP] != \"\" && [SendText] == \"yes\"",
+      "Condition": "[BorOptIn] == \"yes\" && [BCP] != \"\" && [SendText] == \"yes\" && [TM] != \"RLM\"",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
@@ -352,7 +388,7 @@
       "Description": "Co-Borrower",
       "ActionType": "TwilioSendSms",
       "OrderIndex": 11,
-      "Condition": "[CobOptIn] == \"yes\" && [CCP] != \"\" && [SendText] == \"yes\"",
+      "Condition": "[CobOptIn] == \"yes\" && [CCP] != \"\" && [SendText] == \"yes\" && [TM] != \"RLM\"",
       "Parameters": {
         "Credentials": {
           "Type": "twilio.apikeys",
@@ -362,7 +398,7 @@
         },
         "FromNumber": "+1[LOSM:SMSFrom]",
         "ToNumber": "+1[CCP]",
-        "SmsBody": "Loan Update - [Message] [LOSM:FooterMessage]",
+        "SmsBody": "Vert Financial Update - [Message] [LOSM:FooterMessage]",
         "StatusCallbackUrl": "[LOSM:CallBackURL]",
         "OutputMessageId": "[MessageIdEncCob]",
         "OnError": [],
@@ -377,11 +413,101 @@
       "Description": "Insert for Co-Borrower",
       "ActionType": "RunSql",
       "OrderIndex": 12,
-      "Condition": "[CobOptIn] == \"yes\" && [CCP] != \"\" && [SendText] == \"yes\"",
+      "Condition": "[CobOptIn] == \"yes\" && [CCP] != \"\" && [SendText] == \"yes\" && [TM] != \"RLM\"",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
         "SqlQuery": "Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, CompletedMS, TotalCount, TotalCharacters ) Values (\n'[CID]',\n'[MessageIdEncCob]',\n'delivered',\n'<p><strong><span style=\"color: #339966;\">delivered</span></strong></p>',\n'[LN]',\n'[CCP]',\n'[BST]',\n'[Message] [LOSM:FooterMessage]',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [CST]</p><p class=\"messageEnc\">[Message] [LOSM:FooterMessage]</p><span class=\"timestampEnc\">Sent By: Encompass on [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>',\n'Enc',\n'[SB]',\nREPLACE(REPLACE('[LG]', '{', ''), '}', ''),\n'[Date:EasternDateTime]',\n'[CMS]',\n'[TotalCount]',\n'[TotalLength]'\n)",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false,
+        "-1": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Borrower - Rate Lock",
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 13,
+      "Condition": "[BorOptIn] == \"yes\" && [BCP] != \"\" && [SendText] == \"yes\" && [TM] == \"RLM\"",
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "2",
+          "EntireGroup": false,
+          "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
+        },
+        "FromNumber": "+1[LOSM:SMSFrom]",
+        "ToNumber": "+1[BCP]",
+        "SmsBody": "[LOSM:RateLockMsg]",
+        "StatusCallbackUrl": "[LOSM:CallBackURL]",
+        "OutputMessageId": "[MessageIdEncBor]",
+        "OnError": [],
+        "-1": [],
+        "IgnoreErrors": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert for Borrower - Rate Lock",
+      "ActionType": "RunSql",
+      "OrderIndex": 14,
+      "Condition": "[BorOptIn] == \"yes\" && [BCP] != \"\" && [SendText] == \"yes\" && [TM] == \"RLM\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, \nCompletedMS, TotalCount, TotalCharacters ) Values (\n'[CID]',\n'[MessageIdEncBor]',\n'delivered',\n'<p><strong><span style=\"color: #339966;\">delivered</span></strong></p>',\n'[LN]',\n'[BCP]',\n'[BST]',\n'[LOSM:RateLockMsg]',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [BST]</p><p class=\"messageEnc\">[LOSM:RateLockMsg]</p><span class=\"timestampEnc\">Sent By: Encompass on [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>',\n'Enc',\n'[SB]',\nREPLACE(REPLACE('[LG]', '{', ''), '}', ''),\n'[Date:EasternDateTime]',\n'[CMS]',\n'[TotalCount]',\n'[TotalLength]'\n)",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false,
+        "-1": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Co-Borrower Rate Lock",
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 15,
+      "Condition": "[CobOptIn] == \"yes\" && [CCP] != \"\" && [SendText] == \"yes\" && [TM] == \"RLM\"",
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "2",
+          "EntireGroup": false,
+          "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
+        },
+        "FromNumber": "+1[LOSM:SMSFrom]",
+        "ToNumber": "+1[CCP]",
+        "SmsBody": "[LOSM:RateLockMsg]",
+        "StatusCallbackUrl": "[LOSM:CallBackURL]",
+        "OutputMessageId": "[MessageIdEncCob]",
+        "OnError": [],
+        "-1": [],
+        "IgnoreErrors": ""
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Insert for Co-Borrower Rate Lock",
+      "ActionType": "RunSql",
+      "OrderIndex": 16,
+      "Condition": "[CobOptIn] == \"yes\" && [CCP] != \"\" && [SendText] == \"yes\" && [TM] == \"RLM\"",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, CompletedMS, TotalCount, TotalCharacters ) Values (\n'[CID]',\n'[MessageIdEncCob]',\n'delivered',\n'<p><strong><span style=\"color: #339966;\">delivered</span></strong></p>',\n'[LN]',\n'[CCP]',\n'[BST]',\n'[LOSM:RateLockMsg]',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [CST]</p><p class=\"messageEnc\">[LOSM:RateLockMsg]</p><span class=\"timestampEnc\">Sent By: Encompass on [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>',\n'Enc',\n'[SB]',\nREPLACE(REPLACE('[LG]', '{', ''), '}', ''),\n'[Date:EasternDateTime]',\n'[CMS]',\n'[TotalCount]',\n'[TotalLength]'\n)",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
