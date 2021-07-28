@@ -357,7 +357,7 @@
       "OrderIndex": 16,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
-        "URL": "https://api.elliemae.com/encompass/v1/loans/[LoanData:LoanGuid]/attachments/url",
+        "URL": "https://api.elliemae.com/encompass/v3/loans/[LoanData:LoanGuid]/attachmentUploadUrl",
         "UseSSL": true,
         "Timeout": "",
         "HttpMethod": {
@@ -366,7 +366,7 @@
           "IsExpression": false,
           "Parameters": {}
         },
-        "Data": "{\n  \"FileWithExtension\":\"[LoanData:LoanNumber]-TextCreditApproval.pdf\",\n  \"createReason\": 1,\n  \"title\": \"[LoanData:SentTo]- Text Credit Approval\"\n}",
+        "Data": "{\n  \"file\": {\n      \"contentType\": \"application/pdf\",\n      \"name\": \"[LoanData:SentTo]-TextCreditApproval.pdf\",\n       \"size\": 10000\n    },\n    \"title\": \"[LoanData:SentTo]- Text Credit Approval\"\n}",
         "DoNotEscapeTokens": "",
         "DisableReferer": "",
         "Headers": [
@@ -419,169 +419,8 @@
       "OrderIndex": 18,
       "Condition": "[Parsed:Body].ToLower == 'yes credit'  ||  [Parsed:Body].ToLower == 'yes credit ' || [Parsed:Body].ToLower == 'yescredit'  ||  [Parsed:Body].ToLower == 'yescredit  ' ||  [Parsed:Body].ToLower == ' yes credit' || [Parsed:Body].ToLower == ' yes credit ' || [Parsed:Body].ToLower == 'yes credit  '",
       "Parameters": {
-        "Token": "[FileManager:UploadFile(FileId=\"[TextReport]\",MediaURL=\"[Media:mediaUrl]\",Bearer=\"[Parsed:access_token]\")]",
+        "Token": "[FileManager:UploadFileSky(FileId=\"[TextReport]\",MediaURL=\"[Media:uploadUrl]\",Bearer=\"[Media:authorizationHeader]\")]",
         "OutputTokenName": "Attachment"
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Update Encompass Credit Authorization - Yes Credit",
-      "ActionType": "PostData",
-      "OrderIndex": 19,
-      "Condition": "false",
-      "Parameters": {
-        "URL": "https://api.elliemae.com/encompass/v3/loans/[LoanData:LoanGuid]",
-        "UseSSL": true,
-        "Timeout": "",
-        "HttpMethod": {
-          "Expression": "",
-          "Value": "PATCH",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "Data": "{\n\n\n\"contacts\": [\n        {\n            \"contactType\": \"CUSTOM\",\n            \"customContactIndex\": 1,\n            \"comments\": \"[Ques:GovtExpDate]\",\n            \"personalLicenseNumber\": \"[Ques:GovtIdNbr]\"\n        }\n ],\n\n\"customFields\": [\n       \n        {\n            \"fieldName\": \"CX.RL.PROP.TITLED\",\n            \"value\": \"[Ques:PropTitled]\"\n        },\n       {\n            \"fieldName\": \"CX.RL.HOA\",\n            \"value\": \"[Ques:HOA]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.HOA.AMOUNT\",\n            \"value\": \"[Ques:HOAAmount]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.HOA.PER\",\n            \"value\": \"[Ques:HOAPer]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.PROP.TYPE\",\n            \"value\": \"[Ques:PropType]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.MOTHER.QTRS\",\n            \"value\": \"[Ques:MotherQtrs]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.RENT\",\n            \"value\": \"[Ques:Rent]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.MORTGAGES\",\n            \"value\": \"[Ques:Mortgages]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.COUNTY\",\n            \"value\": \"[Ques:County]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.LARGE.PYMT\",\n            \"value\": \"[Ques:LargePymt]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.SOLAR\",\n            \"value\": \"[Ques:Solar]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.SE25\",\n            \"value\": \"[Ques:SE25]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.FAMILY.BIZ\",\n            \"value\": \"[Ques:FamilyBiz]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.US.CITIZEN\",\n            \"value\": \"[Ques:USCitizen]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.IMM.DOCS\",\n            \"value\": \"[Ques:IMMDocs]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.SIDE.BIZ\",\n            \"value\": \"[Ques:SideBiz]\"\n        },\n           {\n            \"fieldName\": \"CX.RL.LARGE.LOSS\",\n            \"value\": \"[Ques:LargeLoss]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.COMMISSIONS\",\n            \"value\": \"[Ques:Commissions]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.TITLE\",\n            \"value\": \"[Ques:Title]\"\n        },   \n        {\n            \"fieldName\": \"CX.RL.CHANGE.JOB\",\n            \"value\": \"[Ques:ChangeJob]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.TRAVELING\",\n            \"value\": \"[Ques:Traveling]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.OUT.COUNTRY\",\n            \"value\": \"[Ques:OutCountry]\"\n        },  \n       {\n            \"fieldName\": \"CX.RL.LARGE.PURCHASE\",\n            \"value\": \"[Ques:LargePurchase]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.PLAN.PURCHASE\",\n            \"value\": \"[Ques:PlanPurchase]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.PLAN.OPEN\",\n            \"value\": \"[Ques:PlanOpen]\"\n        },\n         {\n            \"fieldName\": \"CX.RL.SWITCH.BANK\",\n            \"value\": \"[Ques:SwitchBank]\"\n        },   \n        {\n            \"fieldName\": \"CX.RL.POA\",\n            \"value\": \"[Ques:POA]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.DIVORCE\",\n            \"value\": \"[Ques:Divorce]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.ELSE.NEGATIVE\",\n            \"value\": \"[Ques:ElseNegative]\"\n        },\n          {\n            \"fieldName\": \"CX.BIDTYPE\",\n            \"value\": \"[Ques:GovtIdType]\"\n        },\n          {\n            \"fieldName\": \"CX.BIDDOB\",\n            \"value\": \"[Ques:GovtBegDate]\"\n        },\n          {\n            \"fieldName\": \"CX.NONBORSPOUSEEMAIL\",\n            \"value\": \"[Ques:SpouseEmail]\"\n        },\n          {\n            \"fieldName\": \"CX.TITLEHOLDER2\",\n            \"value\": \"[Ques:SpouseName]\"\n        },\n          {\n            \"fieldName\": \"CX.RL.ATTEND.CLOSING\",\n            \"value\": \"[Ques:AttendClosing]\"\n        }\n    ]\n\n}",
-        "DoNotEscapeTokens": "",
-        "DisableReferer": "",
-        "Headers": [
-          {
-            "value": "[Parsed:token_type] [Parsed:access_token]",
-            "name": "Authorization"
-          },
-          {
-            "value": "application/json",
-            "name": "Content-Type"
-          }
-        ],
-        "UseDNNProxySettings": "",
-        "AddCurrentCookies": "",
-        "CookieContainerToken": "",
-        "UrlTokenContext": {
-          "Expression": "",
-          "Value": "Url",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "OutputTokenName": "QuesResponse",
-        "OutputHeaders": "",
-        "IgnoreErrors": false,
-        "OnError": [
-          {
-            "Id": -1,
-            "EventName": "error",
-            "Parameters": {
-              "ConnectionString": "",
-              "QueryTimeout": "",
-              "SqlQuery": "SELECT TRIM('409 Conflict: Conflict. ' FROM '[QuesResponse:ErrorResponse]')",
-              "BindTokens": "",
-              "OutputTokenName": "409Error",
-              "ExtractColumns": "",
-              "OnError": [],
-              "ShowErrors": false
-            },
-            "ActionType": "RunSql",
-            "Definition": {
-              "IsClientAction": false,
-              "Settings": {
-                "Group": "Data"
-              }
-            },
-            "Description": "Error Code Parse",
-            "$_isOpen": false,
-            "$_uid": "action16231591372777455",
-            "$_isLoaded": true
-          },
-          {
-            "Id": -1,
-            "EventName": "error",
-            "Parameters": {
-              "JsonString": "[409Error]",
-              "BaseTokenName": "409"
-            },
-            "ActionType": "ParseJsonIntoTokens",
-            "Definition": {
-              "IsClientAction": false,
-              "Settings": {
-                "Group": "Parsing"
-              }
-            },
-            "Description": "Error JSON",
-            "$_isOpen": false,
-            "$_uid": "action1623159137277665",
-            "$_isLoaded": true
-          },
-          {
-            "Id": -1,
-            "EventName": "error",
-            "Parameters": {
-              "ConnectionString": "",
-              "QueryTimeout": "",
-              "SqlQuery": "Update USQuestions \nSet EncompassUpdate = 'queue'\nWhere LoanGuid = '[Ques:LoanGuid]'",
-              "BindTokens": "",
-              "OutputTokenName": "",
-              "ExtractColumns": "",
-              "OnError": [],
-              "ShowErrors": false
-            },
-            "ActionType": "RunSql",
-            "Definition": {
-              "IsClientAction": false,
-              "Settings": {
-                "Group": "Data"
-              }
-            },
-            "Condition": "",
-            "$_isOpen": false,
-            "$_uid": "action16231591372773623",
-            "$_isLoaded": true
-          },
-          {
-            "Id": -1,
-            "EventName": "error",
-            "Parameters": {
-              "From": "",
-              "To": "craig@verticaldemand.com",
-              "DetermineEmail": "",
-              "ToAllUsers": "",
-              "ReplyTo": "",
-              "Cc": "",
-              "Bcc": "",
-              "Subject": "ERROR - Loan Locked - Import to Encompass USWide",
-              "Format": {
-                "Expression": "",
-                "Value": "Html",
-                "IsExpression": false,
-                "Parameters": {}
-              },
-              "Body": "<p><span style=\"background-color: transparent; font-family: inherit; letter-spacing: 0.1px;\">[409:details]</span><br></p><p><span style=\"background-color: transparent; font-family: inherit; letter-spacing: 0.1px;\">[QuesResponse:ErrorResponse]</span></p><p>LoanNumber = [Ques:LoanNumber]<br></p>",
-              "Headers": "",
-              "PortalFiles": "",
-              "FileToken1": "",
-              "DnnEmailTemplate": {
-                "IsExpression": false,
-                "Expression": "",
-                "Parameters": {}
-              },
-              "IgnoreErros": ""
-            },
-            "ActionType": "SendMail",
-            "Definition": {
-              "IsClientAction": false,
-              "Settings": {
-                "Group": "Email",
-                "Bulk": "False"
-              }
-            },
-            "$_isOpen": false,
-            "$_uid": "action1623159137277823",
-            "$_isLoaded": true,
-            "Condition": "false"
-          }
-        ],
-        "InputParameters": "",
-        "OutputParameters": "",
-        "Events": ""
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
