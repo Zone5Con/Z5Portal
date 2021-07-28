@@ -13837,7 +13837,7 @@
           &lt;ActionType&gt;SendMail&lt;/ActionType&gt;
           &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
           &lt;Condition&gt;false&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.013&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.047&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;From&quot;:&quot;&quot;,&quot;To&quot;:&quot;craig@verticaldemand.com&quot;,&quot;DetermineEmail&quot;:&quot;&quot;,&quot;ToAllUsers&quot;:&quot;&quot;,&quot;ReplyTo&quot;:&quot;&quot;,&quot;Cc&quot;:&quot;&quot;,&quot;Bcc&quot;:&quot;&quot;,&quot;Subject&quot;:&quot;API Test&quot;,&quot;Format&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Html&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;DnnEmailTemplate&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Body&quot;:&quot;&amp;lt;p&amp;gt;[LG]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[LN]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[CID]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[BCP]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[BST]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[CCP]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[CST]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[TM]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[CMS]&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[SB]&amp;lt;/p&amp;gt;&quot;,&quot;Headers&quot;:&quot;&quot;,&quot;PortalFiles&quot;:&quot;&quot;,&quot;FileToken1&quot;:&quot;&quot;,&quot;IgnoreErros&quot;:&quot;&quot;}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13852,7 +13852,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BCP] != &quot;&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.03&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.06&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select OptIn from app.TextOptIn where\nCellPhone = &#39;[BCP]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;BorOptIn&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13867,7 +13867,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
           &lt;Condition&gt;[CCP] != &quot;&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.03&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.06&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select OptIn from app.TextOptIn where\nCellPhone = &#39;[CCP]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;CobOptIn&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13882,7 +13882,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BorOptIn] == &quot;yes&quot; || [CobOptIn] == &quot;yes&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.043&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.077&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select Case\n  When &#39;[Time:Eastern]&#39; &amp;gt; &#39;08:05:00&#39; and &#39;[Time:Eastern]&#39; &amp;lt; &#39;20:55:00&#39; Then &#39;yes&#39;\n  Else &#39;no&#39;\n  End&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;SendText&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13897,7 +13897,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
           &lt;Condition&gt;[SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] != &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.043&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.093&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select TextMessage from app.TextMessageAuto where\nCompanyId = &#39;[CID]&#39; and TMNumber = &#39;[TM]&#39;&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;Message&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13912,7 +13912,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BorOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [SendText] == &quot;no&quot; &amp;amp;&amp;amp; [BCP] != &quot;&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.06&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.093&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Insert into app.TextQueue (CompanyId, LoanNumber, CellPhone, SentTo, TextMessage, Party, SentBy, LoanGuid, CompletedMS ) Values (\n&#39;[CID]&#39;,\n&#39;[LN]&#39;,\n&#39;[BCP]&#39;,\n&#39;[BST]&#39;,\n&#39;[Message]&#39;,\n&#39;Enc&#39;,\n&#39;[SB]&#39;,\nREPLACE(REPLACE(&#39;[LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[CMS]&#39;\n)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13927,7 +13927,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;6&lt;/OrderIndex&gt;
           &lt;Condition&gt;[CobOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [SendText] == &quot;no&quot; &amp;amp;&amp;amp; [CCP] != &quot;&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.06&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.107&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Insert into app.TextQueue (CompanyId, LoanNumber, CellPhone, SentTo, TextMessage, Party, SentBy, LoanGuid, CompletedMS ) Values (\n&#39;[CID]&#39;,\n&#39;[LN]&#39;,\n&#39;[CCP]&#39;,\n&#39;[CST]&#39;,\n&#39;[Message]&#39;,\n&#39;Enc&#39;,\n&#39;[SB]&#39;,\nREPLACE(REPLACE(&#39;[LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[CMS]&#39;\n)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13942,9 +13942,9 @@
           &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
           &lt;OrderIndex&gt;7&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BorOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [BCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] != &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.077&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.107&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
-          &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[BCP]&quot;,&quot;SmsBody&quot;:&quot;Loan Update - [Message] [LOSM:FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdEncBor]&quot;,&quot;OnError&quot;:[],&quot;-1&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
+          &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[BCP]&quot;,&quot;SmsBody&quot;:&quot;Vert Financial Update - [Message] [LOSM:FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdEncBor]&quot;,&quot;OnError&quot;:[],&quot;-1&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
           &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
           &lt;ExecutionType&gt;OnExecute&lt;/ExecutionType&gt;
@@ -13956,7 +13956,7 @@
           &lt;Description&gt;Length - total characters&lt;/Description&gt;
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;8&lt;/OrderIndex&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.077&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.107&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT LEN(&#39;[Message] [LOSM:FooterMessage]&#39;)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;TotalLength&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13970,7 +13970,7 @@
           &lt;Description&gt;Total Count of Messages&lt;/Description&gt;
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;9&lt;/OrderIndex&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.09&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.123&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Select \nCASE\nWhen [TotalLength] &amp;gt;= 320 Then 3\nWhen [TotalLength] &amp;gt; 160 Then 2\nWhen [TotalLength] &amp;lt;= 160 Then 1\nEND AS TotalCount&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;TotalCount&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -13985,7 +13985,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;10&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BorOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [BCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] != &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.09&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.123&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, \nCompletedMS, TotalCount, TotalCharacters ) Values (\n&#39;[CID]&#39;,\n&#39;[MessageIdEncBor]&#39;,\n&#39;delivered&#39;,\n&#39;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;span style=\&quot;color: #339966;\&quot;&amp;gt;delivered&amp;lt;/span&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&#39;,\n&#39;[LN]&#39;,\n&#39;[BCP]&#39;,\n&#39;[BST]&#39;,\n&#39;[Message] [LOSM:FooterMessage]&#39;,\n&#39;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [BST]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[Message] [LOSM:FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: Encompass on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&#39;,\n&#39;Enc&#39;,\n&#39;[SB]&#39;,\nREPLACE(REPLACE(&#39;[LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[Date:EasternDateTime]&#39;,\n&#39;[CMS]&#39;,\n&#39;[TotalCount]&#39;,\n&#39;[TotalLength]&#39;\n)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false,&quot;-1&quot;:[]}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -14000,9 +14000,9 @@
           &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
           &lt;OrderIndex&gt;11&lt;/OrderIndex&gt;
           &lt;Condition&gt;[CobOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [CCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] != &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.107&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.14&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
-          &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[CCP]&quot;,&quot;SmsBody&quot;:&quot;Loan Update - [Message] [LOSM:FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdEncCob]&quot;,&quot;OnError&quot;:[],&quot;-1&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
+          &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[CCP]&quot;,&quot;SmsBody&quot;:&quot;Vert Financial Update - [Message] [LOSM:FooterMessage]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdEncCob]&quot;,&quot;OnError&quot;:[],&quot;-1&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
           &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
           &lt;ExecutionType&gt;OnExecute&lt;/ExecutionType&gt;
@@ -14015,7 +14015,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;12&lt;/OrderIndex&gt;
           &lt;Condition&gt;[CobOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [CCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] != &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.107&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.14&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, CompletedMS, TotalCount, TotalCharacters ) Values (\n&#39;[CID]&#39;,\n&#39;[MessageIdEncCob]&#39;,\n&#39;delivered&#39;,\n&#39;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;span style=\&quot;color: #339966;\&quot;&amp;gt;delivered&amp;lt;/span&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&#39;,\n&#39;[LN]&#39;,\n&#39;[CCP]&#39;,\n&#39;[BST]&#39;,\n&#39;[Message] [LOSM:FooterMessage]&#39;,\n&#39;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [CST]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[Message] [LOSM:FooterMessage]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: Encompass on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&#39;,\n&#39;Enc&#39;,\n&#39;[SB]&#39;,\nREPLACE(REPLACE(&#39;[LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[Date:EasternDateTime]&#39;,\n&#39;[CMS]&#39;,\n&#39;[TotalCount]&#39;,\n&#39;[TotalLength]&#39;\n)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false,&quot;-1&quot;:[]}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -14030,7 +14030,7 @@
           &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
           &lt;OrderIndex&gt;13&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BorOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [BCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] == &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.123&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.153&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[BCP]&quot;,&quot;SmsBody&quot;:&quot;[LOSM:RateLockMsg]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdEncBor]&quot;,&quot;OnError&quot;:[],&quot;-1&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -14045,7 +14045,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;14&lt;/OrderIndex&gt;
           &lt;Condition&gt;[BorOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [BCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] == &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.123&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.153&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, \nCompletedMS, TotalCount, TotalCharacters ) Values (\n&#39;[CID]&#39;,\n&#39;[MessageIdEncBor]&#39;,\n&#39;delivered&#39;,\n&#39;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;span style=\&quot;color: #339966;\&quot;&amp;gt;delivered&amp;lt;/span&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&#39;,\n&#39;[LN]&#39;,\n&#39;[BCP]&#39;,\n&#39;[BST]&#39;,\n&#39;[LOSM:RateLockMsg]&#39;,\n&#39;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [BST]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[LOSM:RateLockMsg]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: Encompass on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&#39;,\n&#39;Enc&#39;,\n&#39;[SB]&#39;,\nREPLACE(REPLACE(&#39;[LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[Date:EasternDateTime]&#39;,\n&#39;[CMS]&#39;,\n&#39;[TotalCount]&#39;,\n&#39;[TotalLength]&#39;\n)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false,&quot;-1&quot;:[]}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -14060,7 +14060,7 @@
           &lt;ActionType&gt;TwilioSendSms&lt;/ActionType&gt;
           &lt;OrderIndex&gt;15&lt;/OrderIndex&gt;
           &lt;Condition&gt;[CobOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [CCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] == &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.14&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.17&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;twilio.apikeys&quot;,&quot;Group&quot;:&quot;2&quot;,&quot;EntireGroup&quot;:false,&quot;Entry&quot;:&quot;d5763e2b-6094-464e-a101-e890763b7a6a&quot;},&quot;FromNumber&quot;:&quot;+1[LOSM:SMSFrom]&quot;,&quot;ToNumber&quot;:&quot;+1[CCP]&quot;,&quot;SmsBody&quot;:&quot;[LOSM:RateLockMsg]&quot;,&quot;StatusCallbackUrl&quot;:&quot;[LOSM:CallBackURL]&quot;,&quot;OutputMessageId&quot;:&quot;[MessageIdEncCob]&quot;,&quot;OnError&quot;:[],&quot;-1&quot;:[],&quot;IgnoreErrors&quot;:&quot;&quot;}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
@@ -14075,7 +14075,7 @@
           &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
           &lt;OrderIndex&gt;16&lt;/OrderIndex&gt;
           &lt;Condition&gt;[CobOptIn] == &quot;yes&quot; &amp;amp;&amp;amp; [CCP] != &quot;&quot; &amp;amp;&amp;amp; [SendText] == &quot;yes&quot; &amp;amp;&amp;amp; [TM] == &quot;RLM&quot;&lt;/Condition&gt;
-          &lt;LastModified&gt;2021-06-22T18:34:40.14&lt;/LastModified&gt;
+          &lt;LastModified&gt;2021-07-28T16:07:10.17&lt;/LastModified&gt;
           &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
           &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Insert into app.TextMessage (CompanyId, MessageId, DeliveryStatus, DeliveryStatusHTML, LoanNumber, CellPhone, SentTo, TextMessage, TextMessageHTML, Party, SentBy, LoanGuid, DateSent, CompletedMS, TotalCount, TotalCharacters ) Values (\n&#39;[CID]&#39;,\n&#39;[MessageIdEncCob]&#39;,\n&#39;delivered&#39;,\n&#39;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;span style=\&quot;color: #339966;\&quot;&amp;gt;delivered&amp;lt;/span&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&#39;,\n&#39;[LN]&#39;,\n&#39;[CCP]&#39;,\n&#39;[BST]&#39;,\n&#39;[LOSM:RateLockMsg]&#39;,\n&#39;&amp;lt;div class=\&quot;bubbleEnc\&quot;&amp;gt;&amp;lt;div class=\&quot;txt\&quot;&amp;gt;&amp;lt;p class=\&quot;nameEncLeftBor\&quot;&amp;gt;Sent To: [CST]&amp;lt;/p&amp;gt;&amp;lt;p class=\&quot;messageEnc\&quot;&amp;gt;[LOSM:RateLockMsg]&amp;lt;/p&amp;gt;&amp;lt;span class=\&quot;timestampEnc\&quot;&amp;gt;Sent By: Encompass on [Time:EasternShort]&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=\&quot;bubble-arrowEnc\&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&#39;,\n&#39;Enc&#39;,\n&#39;[SB]&#39;,\nREPLACE(REPLACE(&#39;[LG]&#39;, &#39;{&#39;, &#39;&#39;), &#39;}&#39;, &#39;&#39;),\n&#39;[Date:EasternDateTime]&#39;,\n&#39;[CMS]&#39;,\n&#39;[TotalCount]&#39;,\n&#39;[TotalLength]&#39;\n)&quot;,&quot;BindTokens&quot;:&quot;&quot;,&quot;OutputTokenName&quot;:&quot;&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false,&quot;-1&quot;:[]}&lt;/ActionData&gt;
           &lt;MethodId&gt;107&lt;/MethodId&gt;
