@@ -67,9 +67,47 @@
       "Metadata": {}
     },
     {
-      "Description": "Stop - Update AVPAppraiser with Opt Out",
+      "Description": "Get Text Message Data for Stop",
       "ActionType": "RunSql",
       "OrderIndex": 3,
+      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Select Top 1 * from app.AVMTextMessage\nWhere  CellPhone = '[CellRaw]'\nOrder By TimeStamp DESC",
+        "BindTokens": "",
+        "OutputTokenName": "AVMText",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Delay 3 sec",
+      "ActionType": "RunSql",
+      "OrderIndex": 4,
+      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "WAITFOR DELAY '00:00:03';",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Stop - Update AVPAppraiser with Opt Out",
+      "ActionType": "RunSql",
+      "OrderIndex": 5,
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "ConnectionString": "",
@@ -88,31 +126,12 @@
     {
       "Description": "Stop - Insert New Row - AVMTextMessage",
       "ActionType": "RunSql",
-      "OrderIndex": 4,
+      "OrderIndex": 6,
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "",
-        "BindTokens": "",
-        "OutputTokenName": "AVMText",
-        "ExtractColumns": "",
-        "OnError": [],
-        "ShowErrors": false
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Get Text Message Data for Stop",
-      "ActionType": "RunSql",
-      "OrderIndex": 5,
-      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
-      "Parameters": {
-        "ConnectionString": "",
-        "QueryTimeout": "",
-        "SqlQuery": "Select Top 1 FileId from app.AVMTextMessage\nWhere  CellPhone = '[CellRaw]'\nOrder By TimeStamp DESC",
+        "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'STOP',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[Get:tkn]'\n)",
         "BindTokens": "",
         "OutputTokenName": "AVMText",
         "ExtractColumns": "",
@@ -126,7 +145,7 @@
     {
       "Description": "Post back to ValueTrac with STOP",
       "ActionType": "PostData",
-      "OrderIndex": 6,
+      "OrderIndex": 7,
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "InputParameters": "",
@@ -171,7 +190,7 @@
     {
       "Description": "Start",
       "ActionType": "RunSql",
-      "OrderIndex": 7,
+      "OrderIndex": 8,
       "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || || [AVMReturn:Body].ToLower == ' start  '",
       "Parameters": {
         "ConnectionString": "",
@@ -190,7 +209,7 @@
     {
       "Description": "Get Text Message Data for Start",
       "ActionType": "RunSql",
-      "OrderIndex": 8,
+      "OrderIndex": 9,
       "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || || [AVMReturn:Body].ToLower == ' start  '",
       "Parameters": {
         "ConnectionString": "",
@@ -209,7 +228,7 @@
     {
       "Description": "Post back to ValueTrac with START",
       "ActionType": "PostData",
-      "OrderIndex": 9,
+      "OrderIndex": 10,
       "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || || [AVMReturn:Body].ToLower == ' start  '",
       "Parameters": {
         "InputParameters": "",
@@ -254,7 +273,7 @@
     {
       "Description": "Insert 1 Bor or COB",
       "ActionType": "RunSql",
-      "OrderIndex": 10,
+      "OrderIndex": 11,
       "Condition": "false",
       "Parameters": {
         "ConnectionString": "",
