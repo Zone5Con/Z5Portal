@@ -255,7 +255,7 @@
       "Description": "If they reply to a text outside of the link",
       "ActionType": "TwilioSendSms",
       "OrderIndex": 10,
-      "Condition": "[AVMReturn:Body].ToLower != \"start\" || [AVMReturn:Body].ToLower != \"start \" || [AVMReturn:Body].ToLower != \" start\" || [AVMReturn:Body].ToLower != \" start \" || [AVMReturn:Body].ToLower != \" start  \" || [AVMReturn:Body].ToLower != \"stop\" || [AVMReturn:Body].ToLower != \"stop \" || [AVMReturn:Body].ToLower != \" stop\" || [AVMReturn:Body].ToLower != \" stop \" || [AVMReturn:Body].ToLower != \" stop  \"",
+      "Condition": "[AVMReturn:Body].ToLower != \"start\"",
       "Parameters": {
         "Credentials": {
           "Type": "twilio.apikeys",
