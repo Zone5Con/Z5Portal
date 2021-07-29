@@ -54,7 +54,7 @@
       ]
     },
     {
-      "Name": "OptOut",
+      "Name": "OptOutWeb",
       "IsDeleted": false,
       "IsEnabled": false,
       "OrderIndex": 4,
@@ -70,6 +70,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "OptOutText",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -82,8 +91,9 @@
         "AppraiserCellPhone": "[AppraiserCellPhone]",
         "TokenId": "[TokenId]",
         "FileId": "[FileId]",
-        "OptOut": "[OptOut]",
-        "OptOutDate": "[OptOutDate]"
+        "OptOutText": "[OptOutText]",
+        "OptOutDate": "[OptOutDate]",
+        "OptOutWeb": "[OptOutWeb]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -117,12 +127,8 @@
             "value": "[CreatedRecordId]"
           },
           {
-            "name": "OptOut",
-            "value": "[CreatedRecord:OptOut]"
-          },
-          {
-            "name": "OptOutDate",
-            "value": "[CreatedRecord:OptOutDate]"
+            "name": "OptOutText",
+            "value": "[CreatedRecord:OptOutText]"
           },
           {
             "name": "AppraiserName",
@@ -139,6 +145,14 @@
           {
             "name": "FileId",
             "value": "[CreatedRecord:FileId]"
+          },
+          {
+            "name": "OptOutWeb",
+            "value": "[CreatedRecord:OptOutWeb]"
+          },
+          {
+            "name": "OptOutDate",
+            "value": "[CreatedRecord:OptOutDate]"
           }
         ],
         "Headers": [
