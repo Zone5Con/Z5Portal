@@ -53,12 +53,8 @@
             "value": "[RecordId]"
           },
           {
-            "name": "OptOut",
-            "value": "[Record:OptOut]"
-          },
-          {
-            "name": "OptOutDate",
-            "value": "[Record:OptOutDate]"
+            "name": "OptOutText",
+            "value": "[Record:OptOutText]"
           },
           {
             "name": "AppraiserName",
@@ -75,6 +71,14 @@
           {
             "name": "FileId",
             "value": "[Record:FileId]"
+          },
+          {
+            "name": "OptOutWeb",
+            "value": "[Record:OptOutWeb]"
+          },
+          {
+            "name": "OptOutDate",
+            "value": "[Record:OptOutDate]"
           }
         ],
         "Headers": []
