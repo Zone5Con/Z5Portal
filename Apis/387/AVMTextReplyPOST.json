@@ -265,7 +265,7 @@
         },
         "FromNumber": "+16174683541",
         "ToNumber": "+1[AVMText:CellPhone]",
-        "SmsBody": "Please reply using the following link http://rply.cc?tkn=[AVMText:TokenId]",
+        "SmsBody": "Not Delivered!  Please reply using the link in the text stream",
         "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
         "OutputMessageId": "MessageId",
         "IgnoreErrors": "",
