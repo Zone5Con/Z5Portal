@@ -293,7 +293,7 @@
         },
         "FromNumber": "+16174683541",
         "ToNumber": "+1[AVM:CellPhone]",
-        "SmsBody": "Ref: [AVM:PropAddress] - [AVM:Message] - Reply here: http://rply.cc?tkn=[AVT:TokenId] - STOP to cancel",
+        "SmsBody": "Ref: [AVM:PropAddress] - [AVM:Message] - Reply Here: http://rply.cc?tkn=[AVT:TokenId] - STOP to cancel",
         "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
         "OutputMessageId": "MessageId",
         "IgnoreErrors": "",
