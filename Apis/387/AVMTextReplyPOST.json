@@ -48,25 +48,6 @@
       "Metadata": {}
     },
     {
-      "Description": "Format Cell with - - -",
-      "ActionType": "RunSql",
-      "OrderIndex": 2,
-      "Condition": "false",
-      "Parameters": {
-        "ConnectionString": "",
-        "QueryTimeout": "",
-        "SqlQuery": "Select Format([CellRaw], '###-###-####')",
-        "BindTokens": "",
-        "OutputTokenName": "CellFormatted",
-        "ExtractColumns": "",
-        "OnError": [],
-        "ShowErrors": false
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
       "Description": "Get Text Message Data",
       "ActionType": "RunSql",
       "OrderIndex": 3,
@@ -133,7 +114,7 @@
         "QueryTimeout": "",
         "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'STOP',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[Get:tkn]'\n)",
         "BindTokens": "",
-        "OutputTokenName": "AVMText",
+        "OutputTokenName": "",
         "ExtractColumns": "",
         "OnError": [],
         "ShowErrors": false
@@ -264,6 +245,30 @@
         "OutputHeaders": "",
         "IgnoreErrors": "",
         "Events": "",
+        "OnError": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "If they reply to a text outside of the link",
+      "ActionType": "TwilioSendSms",
+      "OrderIndex": 11,
+      "Condition": "[AVMReturn:Body].ToLower != 'start' || [AVMReturn:Body].ToLower != 'start ' || [AVMReturn:Body].ToLower != ' start' || [AVMReturn:Body].ToLower != ' start ' || [AVMReturn:Body].ToLower != ' start  ' || [AVMReturn:Body].ToLower != 'stop' || [AVMReturn:Body].ToLower != 'stop ' || [AVMReturn:Body].ToLower != ' stop' || [AVMReturn:Body].ToLower != ' stop ' || [AVMReturn:Body].ToLower != ' stop  '",
+      "Parameters": {
+        "Credentials": {
+          "Type": "twilio.apikeys",
+          "Group": "2",
+          "EntireGroup": false,
+          "Entry": "d5763e2b-6094-464e-a101-e890763b7a6a"
+        },
+        "FromNumber": "+16174683541",
+        "ToNumber": "+1[AVMText:CellPhone]",
+        "SmsBody": "Please reply using the following link http://rply.cc?tkn=[AVT:TokenId]",
+        "StatusCallbackUrl": "https://z5portal.com/DesktopModules/DnnSharp/DnnApiEndpoint/Api.ashx?method=AVMMessageStatus",
+        "OutputMessageId": "MessageId",
+        "IgnoreErrors": "",
         "OnError": []
       },
       "IsEnabled": true,
