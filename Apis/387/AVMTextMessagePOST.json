@@ -13,18 +13,7 @@
       "OrderIndex": 0,
       "Parameters": {},
       "InputTypeStr": "text",
-      "Validations": [
-        {
-          "Data": "{\"Message\":\"SentFrom is required.\"}",
-          "Type": "default-required",
-          "IsDeleted": false,
-          "IsEnabled": false,
-          "OrderIndex": 0,
-          "Metadata": {
-            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
-          }
-        }
-      ]
+      "Validations": []
     },
     {
       "Name": "SentTo",
@@ -33,18 +22,7 @@
       "OrderIndex": 1,
       "Parameters": {},
       "InputTypeStr": "text",
-      "Validations": [
-        {
-          "Data": "{\"Message\":\"SentTo is required.\"}",
-          "Type": "default-required",
-          "IsDeleted": false,
-          "IsEnabled": false,
-          "OrderIndex": 0,
-          "Metadata": {
-            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
-          }
-        }
-      ]
+      "Validations": []
     },
     {
       "Name": "CellPhone",
@@ -53,18 +31,7 @@
       "OrderIndex": 2,
       "Parameters": {},
       "InputTypeStr": "text",
-      "Validations": [
-        {
-          "Data": "{\"Message\":\"CellPhone is required.\"}",
-          "Type": "default-required",
-          "IsDeleted": false,
-          "IsEnabled": false,
-          "OrderIndex": 0,
-          "Metadata": {
-            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
-          }
-        }
-      ]
+      "Validations": []
     },
     {
       "Name": "Message",
@@ -73,18 +40,7 @@
       "OrderIndex": 3,
       "Parameters": {},
       "InputTypeStr": "text",
-      "Validations": [
-        {
-          "Data": "{\"Message\":\"Message is required.\"}",
-          "Type": "default-required",
-          "IsDeleted": false,
-          "IsEnabled": false,
-          "OrderIndex": 0,
-          "Metadata": {
-            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
-          }
-        }
-      ]
+      "Validations": []
     },
     {
       "Name": "FileId",
@@ -113,18 +69,7 @@
       "OrderIndex": 5,
       "Parameters": {},
       "InputTypeStr": "text",
-      "Validations": [
-        {
-          "Data": "{\"Message\":\"LoanNumber is required.\"}",
-          "Type": "default-required",
-          "IsDeleted": false,
-          "IsEnabled": false,
-          "OrderIndex": 0,
-          "Metadata": {
-            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
-          }
-        }
-      ]
+      "Validations": []
     },
     {
       "Name": "BorName",
@@ -133,18 +78,7 @@
       "OrderIndex": 6,
       "Parameters": {},
       "InputTypeStr": "text",
-      "Validations": [
-        {
-          "Data": "{\"Message\":\"BorName is required.\"}",
-          "Type": "default-required",
-          "IsDeleted": false,
-          "IsEnabled": false,
-          "OrderIndex": 0,
-          "Metadata": {
-            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
-          }
-        }
-      ]
+      "Validations": []
     },
     {
       "Name": "PropAddress",
