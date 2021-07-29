@@ -67,10 +67,10 @@
       "Metadata": {}
     },
     {
-      "Description": "Get Text Message Data for Stop",
+      "Description": "Get Text Message Data",
       "ActionType": "RunSql",
       "OrderIndex": 3,
-      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
+      "Condition": "",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
@@ -89,7 +89,7 @@
       "Description": "Delay 3 sec",
       "ActionType": "RunSql",
       "OrderIndex": 4,
-      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
+      "Condition": "",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
@@ -182,25 +182,6 @@
         "IgnoreErrors": "",
         "Events": "",
         "OnError": []
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Insert 1 Bor or COB",
-      "ActionType": "RunSql",
-      "OrderIndex": 11,
-      "Condition": "false",
-      "Parameters": {
-        "ConnectionString": "",
-        "QueryTimeout": "",
-        "SqlQuery": "Insert into MepTextMessages (Response, Status, StatusHTML, SentTo, LoanGuid, LoanNumber, SentBy, SentByEmail, TextMessage, TextMessageHTML, DateSent, NewFlag) Values (\n'[Mep2:MessageSid]',\n'received',\n'<p><strong><span style=\"color: #0c84e4;\">Received</span></strong></p>',\n'[LoanData:SentBy]',\n'[LoanData:LoanGuid]',\n'[LoanData:LoanNumber]',\n'[LoanData:SentTo]',\n'[LoanData:SentByEmail]',\nN'[Mep2:Body]',\nN'<div class=\"message-blue\"> <p class=\"message-content\">[Mep2:Body]</p><div class=\"message-timestamp-right\">[LoanData:SentTo]</div></div>',\n'[Date:EasternDateTime]',\n'yes'\n)",
-        "BindTokens": "",
-        "OutputTokenName": "",
-        "ExtractColumns": "",
-        "OnError": [],
-        "ShowErrors": false
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
