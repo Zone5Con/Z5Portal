@@ -70,11 +70,11 @@
       "Description": "Stop",
       "ActionType": "RunSql",
       "OrderIndex": 3,
-      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || || [AVMReturn:Body].ToLower == ' stop  '",
+      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Update app.AVMAppraiser \nSet OptOut = 'yes', OptOutDate = '[Date:EasternDateTime]'\nwhere AppraiserCellPhone = RIGHT('[AVMReturn:From]',10)",
+        "SqlQuery": "Update app.AVMAppraiser \nSet OptOut = 'yes', OptOutDate = '[Date:EasternDateTime]'\nwhere AppraiserCellPhone = '[CellRaw]'",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
@@ -89,7 +89,7 @@
       "Description": "Get Text Message Data for Stop",
       "ActionType": "RunSql",
       "OrderIndex": 4,
-      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || || [AVMReturn:Body].ToLower == ' stop  '",
+      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
@@ -108,7 +108,7 @@
       "Description": "Post back to ValueTrac with STOP",
       "ActionType": "PostData",
       "OrderIndex": 5,
-      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || || [AVMReturn:Body].ToLower == ' stop  '",
+      "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "InputParameters": "",
         "URL": "https://avm-staging.myvalutrac.com/api/sms.aspx?key=IGNYfZXhSD3rZarPu4Jz",
