@@ -112,7 +112,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Update app.AVMAppraiser \nSet OptOut = 'yes', OptOutDate = '[Date:EasternDateTime]'\nwhere AppraiserCellPhone = '[CellRaw]'",
+        "SqlQuery": "Update app.AVMAppraiser \nSet OptOutText = 'yes', OptOutDate = '[Date:EasternDateTime]'\nwhere AppraiserCellPhone = '[CellRaw]'",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
@@ -165,89 +165,6 @@
           "Parameters": {}
         },
         "Data": "{\n      \"VtMessageId\": \"[AVMText:VtMessageId]\",\n      \"TimeStamp\": \"[Date:AVMEastern]\",\n      \"VerticalDemandId\": \"[AVMText:MessageSid]\",\n      \"Status\": \"Stop\",\n      \"Descr\": \"Appraiser has Opted Out\"\n}",
-        "DoNotEscapeTokens": "",
-        "DisableReferer": "",
-        "Headers": [
-          {
-            "value": "application/json",
-            "name": "Content-Type"
-          }
-        ],
-        "UseDNNProxySettings": "",
-        "AddCurrentCookies": "",
-        "OutputParameters": "",
-        "CookieContainerToken": "",
-        "OutputTokenName": "",
-        "OutputHeaders": "",
-        "IgnoreErrors": "",
-        "Events": "",
-        "OnError": []
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Start",
-      "ActionType": "RunSql",
-      "OrderIndex": 8,
-      "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || || [AVMReturn:Body].ToLower == ' start  '",
-      "Parameters": {
-        "ConnectionString": "",
-        "QueryTimeout": "",
-        "SqlQuery": "Update app.TextOptIn \nSet OptIn = 'yes', DateOptIn = '[Date:EasternDateTime]', DateStop = NULL\nwhere CellPhone = RIGHT('[AVMReturn:From]',10)",
-        "BindTokens": "",
-        "OutputTokenName": "",
-        "ExtractColumns": "",
-        "OnError": [],
-        "ShowErrors": false
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Get Text Message Data for Start",
-      "ActionType": "RunSql",
-      "OrderIndex": 9,
-      "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || || [AVMReturn:Body].ToLower == ' start  '",
-      "Parameters": {
-        "ConnectionString": "",
-        "QueryTimeout": "",
-        "SqlQuery": "Select Top 1 FileId from app.AVMTextMessage\nWhere  CellPhone = '[CellRaw]'\nOrder By TimeStamp DESC",
-        "BindTokens": "",
-        "OutputTokenName": "AVMText",
-        "ExtractColumns": "",
-        "OnError": [],
-        "ShowErrors": false
-      },
-      "IsEnabled": true,
-      "ExecutionType": "OnExecute",
-      "Metadata": {}
-    },
-    {
-      "Description": "Post back to ValueTrac with START",
-      "ActionType": "PostData",
-      "OrderIndex": 10,
-      "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || || [AVMReturn:Body].ToLower == ' start  '",
-      "Parameters": {
-        "InputParameters": "",
-        "URL": "https://avm-staging.myvalutrac.com/api/sms.aspx?key=IGNYfZXhSD3rZarPu4Jz",
-        "UrlTokenContext": {
-          "Expression": "",
-          "Value": "Url",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "UseSSL": true,
-        "Timeout": "",
-        "HttpMethod": {
-          "Expression": "",
-          "Value": "POST",
-          "IsExpression": false,
-          "Parameters": {}
-        },
-        "Data": "{\n      \"VtMessageId\": \"[AVMText:VtMessageId]\",\n      \"TimeStamp\": \"[Date:AVMEastern]\",\n      \"VerticalDemandId\": \"[AVMText:MessageSid]\",\n      \"Status\": \"Start\",\n      \"Descr\": \"Appraiser has Opted In\"\n}",
         "DoNotEscapeTokens": "",
         "DisableReferer": "",
         "Headers": [
