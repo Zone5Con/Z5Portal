@@ -15,7 +15,7 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
+    "IsRequired": false,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
@@ -37,7 +37,7 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
+    "IsRequired": false,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
@@ -59,7 +59,7 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
+    "IsRequired": false,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
@@ -81,7 +81,7 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
+    "IsRequired": false,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
@@ -125,7 +125,7 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
+    "IsRequired": false,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
@@ -147,7 +147,7 @@
       }
     },
     "IsDeleted": false,
-    "IsRequired": true,
+    "IsRequired": false,
     "IsSearchable": true,
     "IsFilterable": true,
     "IsSortable": true,
