@@ -90,7 +90,7 @@
   {
     "Id": 581,
     "EntityVersionId": 40,
-    "Name": "OptOut",
+    "Name": "OptOutWeb",
     "Type": {
       "Id": "Text",
       "Name": "Text",
@@ -130,5 +130,27 @@
     "IsFilterable": false,
     "IsSortable": false,
     "OrderIndex": 6
+  },
+  {
+    "Id": 583,
+    "EntityVersionId": 40,
+    "Name": "OptOutText",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 7
   }
 ]
