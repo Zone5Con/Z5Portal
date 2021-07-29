@@ -310,7 +310,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "INSERT INTO app.AVMTextMessage(FileId, VtMessageId, MessageId, LoanNumber, TimeStamp, SentFrom, SentTo, CellPhone, Message, MessageHTML, BorName, PropAddress, TokenId )\nValues (\n'[AVM:FileId]',\n'[AVM:VtMessageId]',\n'[MessageId]',\n'[AVM:LoanNumber]',\n'[AVM:TimeStamp]',\n'[AVM:SentFrom]',\n'[AVM:SentTo]',\n'[AVM:CellPhone]',\n'[AVM:Message]',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [AVM:SentTo]</p><p class=\"messageEnc\">[AVM:Message]</p><span class=\"timestampEnc\">From [AVM:SentFrom] [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>',\n'[AVM:BorName]',\n'[AVM:PropAddress]',\n'[AVT:TokenId]'\n)",
+        "SqlQuery": "INSERT INTO app.AVMTextMessage (FileId, VtMessageId, MessageId, LoanNumber, TimeStamp, SentFrom, SentTo, CellPhone, Message, MessageHTML, BorName, PropAddress, TokenId )\nValues (\n'[AVM:FileId]',\n'[AVM:VtMessageId]',\n'[MessageId]',\n'[AVM:LoanNumber]',\n'[AVM:TimeStamp]',\n'[AVM:SentFrom]',\n'[AVM:SentTo]',\n'[AVM:CellPhone]',\n'[AVM:Message] - STOP to cancel',\n'<div class=\"bubbleEnc\"><div class=\"txt\"><p class=\"nameEncLeftBor\">Sent To: [AVM:SentTo]</p><p class=\"messageEnc\">[AVM:Message] - STOP to cancel</p><span class=\"timestampEnc\">From [AVM:SentFrom] [Time:EasternShort]</span></div><div class=\"bubble-arrowEnc\"></div></div></div>',\n'[AVM:BorName]',\n'[AVM:PropAddress]',\n'[AVT:TokenId]'\n)",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
