@@ -112,7 +112,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'STOP',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[Get:tkn]'\n)",
+        "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'STOP',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[AVMText:TokenId]'\n)",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
@@ -195,7 +195,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'START',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[Get:tkn]'\n)",
+        "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'START',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[AVMText:TokenId]'\n)",
         "BindTokens": "",
         "OutputTokenName": "AVMText",
         "ExtractColumns": "",
