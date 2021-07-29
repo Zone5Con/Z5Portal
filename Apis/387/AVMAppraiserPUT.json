@@ -74,7 +74,7 @@
       ]
     },
     {
-      "Name": "OptOut",
+      "Name": "OptOutWeb",
       "IsDeleted": false,
       "IsEnabled": false,
       "OrderIndex": 5,
@@ -90,6 +90,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "OptOutText",
+      "IsDeleted": false,
+      "IsEnabled": false,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -102,8 +111,9 @@
         "AppraiserCellPhone": "[AppraiserCellPhone]",
         "TokenId": "[TokenId]",
         "FileId": "[FileId]",
-        "OptOut": "[OptOut]",
-        "OptOutDate": "[OptOutDate]"
+        "OptOutText": "[OptOutText]",
+        "OptOutDate": "[OptOutDate]",
+        "OptOutWeb": "[OptOutWeb]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
