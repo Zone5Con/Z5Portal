@@ -105,7 +105,7 @@
       "Metadata": {}
     },
     {
-      "Description": "Stop - Update AVPAppraiser with Opt Out",
+      "Description": "STOP - Update AVPAppraiser with Opt Out",
       "ActionType": "RunSql",
       "OrderIndex": 5,
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
@@ -124,7 +124,7 @@
       "Metadata": {}
     },
     {
-      "Description": "Stop - Insert New Row - AVMTextMessage",
+      "Description": "STOP - Insert New Row - AVMTextMessage",
       "ActionType": "RunSql",
       "OrderIndex": 6,
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
@@ -143,7 +143,7 @@
       "Metadata": {}
     },
     {
-      "Description": "Post back to ValueTrac with STOP",
+      "Description": "STOP - Post back to ValueTrac with STOP",
       "ActionType": "PostData",
       "OrderIndex": 7,
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
@@ -165,6 +165,89 @@
           "Parameters": {}
         },
         "Data": "{\n      \"VtMessageId\": \"[AVMText:VtMessageId]\",\n      \"TimeStamp\": \"[Date:AVMEastern]\",\n      \"VerticalDemandId\": \"[AVMText:MessageSid]\",\n      \"Status\": \"Stop\",\n      \"Descr\": \"Appraiser has Opted Out\"\n}",
+        "DoNotEscapeTokens": "",
+        "DisableReferer": "",
+        "Headers": [
+          {
+            "value": "application/json",
+            "name": "Content-Type"
+          }
+        ],
+        "UseDNNProxySettings": "",
+        "AddCurrentCookies": "",
+        "OutputParameters": "",
+        "CookieContainerToken": "",
+        "OutputTokenName": "",
+        "OutputHeaders": "",
+        "IgnoreErrors": "",
+        "Events": "",
+        "OnError": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "START - Update AVPAppraiser with Opt Back In",
+      "ActionType": "RunSql",
+      "OrderIndex": 8,
+      "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || [AVMReturn:Body].ToLower == ' start  '",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Update app.AVMAppraiser \nSet OptOutText = NULL, OptOutDate = NULL\nwhere AppraiserCellPhone = '[CellRaw]'",
+        "BindTokens": "",
+        "OutputTokenName": "",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "START - Insert New Row - AVMTextMessage",
+      "ActionType": "RunSql",
+      "OrderIndex": 9,
+      "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || [AVMReturn:Body].ToLower == ' start  '",
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "Insert into app.AVMTextMessage (FileId, VTMessageId, LoanNumber, TimeStamp, SentFrom, SentTo, Message, MessageHTML, BorName, PropAddress, TokenId)\nValues\n(\n'[AVMText:FileId]',\n'[AVMText:VtMessageId]',\n'[AVMText:LoanNumber]',\n'[Date:AVMEastern]',\n'[AVMText:SentTo]',\n'Absolute Value',\n'START',\n'<div class=\"bubbleBor\"><div class=\"txt\"><p class=\"name\">From: [AVMText:SentTo]</p><p class=\"messageBor\">STOP</p><span class=\"timestampBor\">[Time:EasternShort]</span></div><div class=\"bubble-arrow\"></div></div>',\n'[AVMText:BorName]',\n'[AVMText:PropAddress]',\n'[Get:tkn]'\n)",
+        "BindTokens": "",
+        "OutputTokenName": "AVMText",
+        "ExtractColumns": "",
+        "OnError": [],
+        "ShowErrors": false
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "START - Post back to ValueTrac with START",
+      "ActionType": "PostData",
+      "OrderIndex": 10,
+      "Condition": "[AVMReturn:Body].ToLower == 'start' || [AVMReturn:Body].ToLower == 'start ' || [AVMReturn:Body].ToLower == ' start' || [AVMReturn:Body].ToLower == ' start ' || [AVMReturn:Body].ToLower == ' start  '",
+      "Parameters": {
+        "InputParameters": "",
+        "URL": "https://avm-staging.myvalutrac.com/api/sms.aspx?key=IGNYfZXhSD3rZarPu4Jz",
+        "UrlTokenContext": {
+          "Expression": "",
+          "Value": "Url",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "UseSSL": true,
+        "Timeout": "",
+        "HttpMethod": {
+          "Expression": "",
+          "Value": "POST",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Data": "{\n      \"VtMessageId\": \"[AVMText:VtMessageId]\",\n      \"TimeStamp\": \"[Date:AVMEastern]\",\n      \"VerticalDemandId\": \"[AVMText:MessageSid]\",\n      \"Status\": \"START\",\n      \"Descr\": \"Appraiser has Opted Back In\"\n}",
         "DoNotEscapeTokens": "",
         "DisableReferer": "",
         "Headers": [
