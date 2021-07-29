@@ -74,7 +74,7 @@
       "Parameters": {
         "ConnectionString": "",
         "QueryTimeout": "",
-        "SqlQuery": "Update app.TextOptIn \nSet OptIn = 'stop', DateOptIn = NULL, DateStop = '[Date:EasternDateTime]'\nwhere CellPhone = RIGHT('[AVMReturn:From]',10)",
+        "SqlQuery": "Update app.AVMAppraiser \nSet OptOut = 'yes', OptOutDate = '[Date:EasternDateTime]'\nwhere AppraiserCellPhone = RIGHT('[AVMReturn:From]',10)",
         "BindTokens": "",
         "OutputTokenName": "",
         "ExtractColumns": "",
