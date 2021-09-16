@@ -1,4 +1,4 @@
-<module type="avtTabsPro" version="05.14.02.00">
+<module type="avtTabsPro" version="05.15.11.00">
     <contentKey />
     <moduleID>544</moduleID>
     <alignment />
@@ -75,7 +75,7 @@
     <tabmodulesettings />
     <definition>avt.TabsPro</definition>
     <moduledefinition>avt.TabsPro</moduledefinition>
-    <content type="avtTabsPro" version="05.14.02.00"><![CDATA[&lt;TabsPro&gt;
+    <content type="avtTabsPro" version="05.15.11.00"><![CDATA[&lt;TabsPro&gt;
   &lt;Theme&gt;ui-lightness&lt;/Theme&gt;
   &lt;TabsLayout&gt;HorizontalTop&lt;/TabsLayout&gt;
   &lt;TabsFullWidth&gt;False&lt;/TabsFullWidth&gt;
@@ -129,14 +129,7 @@
       &lt;Localization&gt;
         &lt;en-US&gt;Borrower&lt;/en-US&gt;
       &lt;/Localization&gt;
-      &lt;Modules&gt;
-        &lt;Module&gt;
-          &lt;ModuleId&gt;565&lt;/ModuleId&gt;
-          &lt;ModuleTitle&gt;Opt In PopUp Bor&lt;/ModuleTitle&gt;
-          &lt;ModuleOrder&gt;14&lt;/ModuleOrder&gt;
-          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
-        &lt;/Module&gt;
-      &lt;/Modules&gt;
+      &lt;Modules /&gt;
     &lt;/Tab&gt;
   &lt;/Tabs&gt;
 &lt;/TabsPro&gt;]]></content>
