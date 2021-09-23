@@ -130,7 +130,7 @@
       "Condition": "[AVMReturn:Body].ToLower == 'stop' || [AVMReturn:Body].ToLower == 'stop ' || [AVMReturn:Body].ToLower == ' stop' || [AVMReturn:Body].ToLower == ' stop ' || [AVMReturn:Body].ToLower == ' stop  '",
       "Parameters": {
         "InputParameters": "",
-        "URL": "https://avm-staging.myvalutrac.com/api/sms.aspx?key=IGNYfZXhSD3rZarPu4Jz",
+        "URL": "https://avm.myvalutrac.com/api/sms.aspx?key=lqqMxU50xrHHMqkPpDXE",
         "UrlTokenContext": {
           "Expression": "",
           "Value": "Url",
