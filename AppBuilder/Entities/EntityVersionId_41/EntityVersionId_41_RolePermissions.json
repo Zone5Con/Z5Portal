@@ -166,5 +166,61 @@
       "RoleName": "Managers",
       "Value": "all"
     }
+  ],
+  "9": [
+    {
+      "Id": 648,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "all"
+    },
+    {
+      "Id": 649,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 9,
+      "RoleName": "Users",
+      "Value": "true"
+    }
+  ],
+  "10": [
+    {
+      "Id": 650,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 10,
+      "RoleName": "Support Agent",
+      "Value": "all"
+    },
+    {
+      "Id": 651,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 10,
+      "RoleName": "Support Agent",
+      "Value": "true"
+    }
+  ],
+  "-1": [
+    {
+      "Id": 652,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": -1,
+      "RoleName": "All Users",
+      "Value": "all"
+    }
   ]
 }

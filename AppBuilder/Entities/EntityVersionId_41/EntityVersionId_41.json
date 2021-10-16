@@ -10,6 +10,8 @@
   "PluralName": "AVMUsers",
   "CreatedDate": "2021-10-16T15:54:22.7666667",
   "CreatedBy": "Craig Anderson",
+  "LastModifiedBy": "Craig Anderson",
+  "LastModifiedOn": "2021-10-16T15:57:36.9366667",
   "Icon": "table",
   "NamespaceId": 3,
   "Type": "UserCreated",
