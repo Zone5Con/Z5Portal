@@ -1,8 +1,10 @@
 <module type="DNNHTML" version="09.09.01.00">
+    <contentKey />
     <moduleID>787</moduleID>
     <alignment />
     <alltabs>false</alltabs>
     <border />
+    <cachemethod />
     <cachetime>0</cachetime>
     <color />
     <displayprint>true</displayprint>
@@ -16,8 +18,9 @@
     <modulepermissions />
     <title>Header</title>
     <startdate>0001-01-01T00:00:00</startdate>
-    <uniqueId>52999ee0-99f7-499c-84db-9b23a8b527b9</uniqueId>
+    <uniqueId>c27807b5-9a79-414e-a509-5afcfcbc3ee0</uniqueId>
     <visibility>Maximized</visibility>
+    <cultureCode />
     <modulesettings />
     <tabmodulesettings />
     <definition>DNN_HTML</definition>
