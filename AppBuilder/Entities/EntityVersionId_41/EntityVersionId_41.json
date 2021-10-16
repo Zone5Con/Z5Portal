@@ -1,0 +1,17 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 585,
+  "ShowDashboardModule": false,
+  "Id": 41,
+  "VersionId": 41,
+  "EntityTabId": 146,
+  "Name": "AVMUser",
+  "PluralName": "AVMUsers",
+  "CreatedDate": "2021-10-16T15:54:22.7666667",
+  "CreatedBy": "Craig Anderson",
+  "Icon": "table",
+  "NamespaceId": 3,
+  "Type": "UserCreated",
+  "EnableIndexing": false
+}
